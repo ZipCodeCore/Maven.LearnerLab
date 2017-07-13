@@ -1,6 +1,6 @@
 # Part 1.0 - Create `Person` Class
 * Create a `Person` class.
-	* `Person` constructor should have a parameter of type `String` which sets the `name` instance-variable to the respective argument.
+	* `Person` constructor should have a parameter of type `String` which sets the `name` instance-variable to the respective value.
 	* `Person` should have a `getName()` method which returns the `Person` object's `name` variable.
 	* `Person` should have a `setName()` method which sets the `Person` object's `name` variable.
 
