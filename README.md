@@ -42,7 +42,7 @@
 		* Method name: `teach`
 		* Method parameters:
 			* `Student student`
-			* `double numberOfHours`
+			* `double numberOfHours`GO SIT NEXT TO 
 		* Method return-type: `void` 
 
 	* `Teacher` should declare a `lecture` method signature:
@@ -122,7 +122,7 @@ static { // static initializer
 	}
 }
 ```
-
+	
 
 -
 # Part 7.0 - Test `TechConnect`
