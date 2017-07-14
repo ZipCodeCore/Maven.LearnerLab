@@ -115,7 +115,7 @@ static { // static initializer
 			"Carlo", "Julia D.", "Natalie", "Julia E.", "Shylee", "Genevieve", "Margo", "Whitney", "Rachel",
 			"Bridget", "Seung", "Jessica", "Harry", "Kesler", "Darin", "Jade", "Dominika", "Nashae", "Brianna",
 			"Laurent", "Rina", "Emily", "Elisha", "Caitlin", "Kierra", "Dana", "Alyssa", "Humaira", "Prajwal",
-			"Cristine", "Blesson", "Brendan" };
+			"Cristine",  "Brendan" };
 	for (String studentName : studentNames) {
 		Student student = new Student(studentName);
 		studentList.add(student);
