@@ -98,7 +98,9 @@ static { // static initializer
 		* Ensure this method invokes the `.fireStaff` method on `ZipCodeWilmington`
 	
 	* Create a `testFireStaff` method which ensures that our `instructorList` in our `ZipCodeWilmington` class `isEmpty` upon invokation.
-	* Create a `testHireStaff` method which ensures that our `instructorList` is populated with respective `Instructor` objects.
+	* Create a `testHireStaff` method which ensures that our `instructorList` is populated with respective `Instructor` object
+	
+	s.
 
 -
 # Part 7.1 - Create `TechConnect` Class
