@@ -48,7 +48,8 @@
 	* `Teacher` should declare a `lecture` method signature:
 		* Method name: `lecture`
 		* Method parameters:
-			* `Student[] student, double numberOfHours`
+			* `Student[] student`
+			* `double numberOfHours`
 		* Method return-type: `void`
 
 		
@@ -58,26 +59,26 @@
 	* `Instructor` is a subclass of `Person`
 	* `Instructor` implements the `Teacher` interface
 	* `Instructor` should have a concrete implementation of the `teach` method which invokes the `learn` method on the specified `Student` object.
-	* `Instructor` should have a concrete implementation of the `lecture` method which invokes the `learn` method on the specified array of `Student` objects.
+	* `Instructor` should have a concrete implementation of the `lecture` method which invokes the `learn` method on each of the elements in the specified array of `Student` objects.
 		* `numberOfHours` should be evenly split amongst the students.
 			* `double numberOfHoursPerStudent = numberOfHours / students.length;`
 
 -
 # Part 5.0 - Test `Instructor`
-* Create an `TestInstructor` class.
+* Create a `TestInstructor` class.
 	* Create a `testImplementation` method that asserts that an `Instructor` is an `instanceof` a `Teacher`.
 	* Create a `testInheritance` method that asserts that a `Instructor` is an `instanceof` a `Person`.
 	* Create a `testTeach` method that ensures when an `Instructor` invokes the `.teach` method, a respective student's `totalStudyTime` instance variable is incremented.
-	* Create a `testLecture` method that ensures when an `Instructor` invokes the `.teach` method, a respective student's `totalStudyTime` instance variable is incremented.
+	* Create a `testLecture` method that ensures when an `Instructor` invokes the `.teach` method, a respective student's `totalStudyTime` instance variable is incremented by the specified `numberOfHours`.
 
 	
 -
 # Part 6.1 - Create `ZipCodeWilmington` Class
 * Create a `ZipCodeWilmington` class.
-	* _Statically_ instantiate a `private` `ArrayList` of `Instructor` objects called `instructorList`.
-	* Create a `public static` method called `hire` which adds an `Instructor` to the `instructorList` and returns `void`.
-	* Create a `public static` method called `getInstructors` which returns the `instructorList`.
-	* Create a `public static` method called `fireStaff` which clears our `instructorList`.
+	* _Statically_ instantiate a `private` `ArrayList` of `Instructor` objects named `instructorList`.
+	* Create a `public static` method named `hire` which adds an `Instructor` to the `instructorList` and returns `void`.
+	* Create a `public static` method named `getInstructors` which returns the `instructorList`.
+	* Create a `public static` method named `fireStaff` which clears our `instructorList`.
 	* Copy and paste this `static initialization block` immediately below your `instructorList` declaration.
 
 ```java
@@ -103,10 +104,10 @@ static { // static initializer
 -
 # Part 7.1 - Create `TechConnect` Class
 * Create a `TechConnect` class.
-	* _Statically_ instantiate a `private` `ArrayList` of `Student` objects called `studentList`.
-	* Create a `public static` method called `recruitStudent` which adds a `Student` to the `studentList` and returns `void`.
-	* Create a `public static` method called `getStudents` which returns the `studentList`.
-	* Create a `public static` method called `removeStudents` which clears our `studentList`.
+	* _Statically_ instantiate a `private` `ArrayList` of `Student` objects named `studentList`.
+	* Create a `public static` method named `recruitStudent` which adds a `Student` to the `studentList` and returns `void`.
+	* Create a `public static` method named `getStudents` which returns the `studentList`.
+	* Create a `public static` method named `removeStudents` which clears our `studentList`.
 	* Copy and paste this `static initialization block` immediately below your `studentList` declaration.
 
 ```java
@@ -136,9 +137,10 @@ static { // static initializer
 -
 # Part 8.1 - Create `ClassRoom` Class
 * Create a `ClassRoom` class.
-	* _Statically_ instantiate a `private` `ArrayList` of `Student` objects called `students` by invoking the `getStudents` method on the `TechConnect` class.
-	* _Statically_ instantiate a `private` `ArrayList` of `Instructor` objects called `instructors` by invoking the `getInstructor` method on the `ZipCodeWilmington` class.
 	* Create a method named `getRoster` which returns a `HashMapping` of `String` to `Person` objects such that our `ZipCodeWilmington` instructors and `TechConnect` students' names map to their respective `Person` object.
+	* Getting started hint below!
+		* instantiate an `ArrayList` of `Student` objects named `students` by invoking the `getStudents` method on the `TechConnect` class.
+		* instantiate an `ArrayList` of `Instructor` objects named `instructors` by invoking the `getInstructor` method on the `ZipCodeWilmington` class.
 
 -
 # Part 8.0 - Test `ClassRoom`
