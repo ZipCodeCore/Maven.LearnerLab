@@ -1,5 +1,5 @@
 # Vehicle Factory
-* **Lab Author** - Leon Hunter
+* **Primary Lab Author** - Leon Hunter
 * **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html)
 
 
