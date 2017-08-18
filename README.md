@@ -1,4 +1,4 @@
-# Student, Instructor, ClassRoom
+# Student, Instructor, Classroom
 * **Lab Author** - Leon Hunter
 * **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html)
 
