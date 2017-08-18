@@ -1,3 +1,8 @@
+# Vehicle Factory
+* **Lab Author** - Leon Hunter
+* **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html)
+
+
 # Part 1.1 - Create `Person` Class
 * Create a `Person` class.
 	* `Person` constructor should have a parameter of type `String` which sets the `name` instance-variable to the respective value.
