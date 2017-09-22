@@ -40,7 +40,7 @@
 	* Create a `testLearn` method that ensures a `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` by invoking the `.learn` method.
 
 -
-# Part 4.0 - Create `Teacher` Interface
+# Part 4.0 - Create `Teacher` Interface 
 * Create a `Teacher` interface.
 	* `Teacher` should declare a `teach` method signature:
 		* Method name: `teach`
