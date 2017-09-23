@@ -79,31 +79,48 @@
 
 
 -
-# Part 6.1 - Create `Cohort` class
-* Create a `Cohort` class.
-	* The class should instantiate an `ArrayList` field of `Student` objects named `studentList`.
-	* The class should define a method named `addStudent` which adds a `Student` to the `studentList`.
-	* The class should define a method named `findStudentById` which makes use of a `long id` parameter to return a `Student` object with the respective `id` field.
-	* The class should define a method named `getStudents` which returns an array representation of the `studentList`.
-	* The class should define a named `removeStudents` which clears our `studentList`.
+# Part 6.1 - Create `People` class
+* Create a `People` class.
+	* The class should instantiate an `ArrayList` field of `Person` objects named `personList`.
+	* The class should define a method named `add` which adds a `Person` to the `personList`.
+	* The class should define a method named `findById` which makes use of a `long id` parameter to return a `Person` object with the respective `id` field.
+	* The class should define a method named `remove` which makes use of a `Person person` parameter to remove a respective `Person` object.
+	* The class should define a method named `remove` which makes use of a `long id` parameter to remove a `Person` object with the respective `id` field.
+	* The class should define a method named `getArray` which returns an array representation of the `personList` field.
+	* The class should define a named `removeAll` which clears our `personList` field.
 	
 -
-# Part 6.0 - Test `Cohort`
-* Create a `TestCohort` class.
-	* Create a `testAddStudent` method which ensures that our `studentList` in our `Cohort` class populated with respective `Student` objects following invokation of the `addStudent` method.
-	* Create a `testRemoveStudents` method which ensures that our `studentList` in our `Cohort` class is **depopulated** with respective `Student` objects following invokation of the `removeStudent` method.
+# Part 6.0 - Test `People`
+* Create a `TestPeople` class.
+	* Create a `testAdd` method which ensures that our `personList` in our `People` class populated with respective `Student` objects following invokation of the `addStudent` method.
+	* Create a `testRemove` method which ensures that the `personList` in a `People` object is **depopulated** with a respective `Person` object following the invokation of the `removeStudent` method.
+	* Create a `testRemoveStudents` method which ensures that our `studentList` in our `People` class is **depopulated** with respective `Perspm` objects following invokation of the `remove` method.
+	* Create a `testFindById` method which ensures that a respective `Person` object with a respective `id` field is returned upon invokation of the `findById` method on a respective `People` object.
+
+
+-
+# Part 7.1 - Create `MyCohort` singleton
+* **Note:** The creation of this class will demonstrate an implementation of [singleton design pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples).
+* Create a `MyCohort` class.
+	* The class should be a subclass of the `People` class.
+	* The class should _statically instantiate_ a `final` field named `INSTANCE` of type `MyCohort`.
+	* The class should define a _private constructor_ which populates the `INSTANCE` field with respective `Student` representations of your colleagues.
+		* Each student should have a unique `id` field.
+	* The class should define a `getInstance` method which returns the `INSTANCE` field.
 	
 	
+
 -
 # Part 7.0 - Test `MyCohort` singleton
 * Create a `TestMyCohort` class.
 	* Create a `test` method which ensures that each of the students in your current cohort are in your `MyCohort` singleton.
 
 -
-# Part 7.1 - Create `MyCohort` singleton
-* Create a `MyCohort` class using the _singleton design pattern_.
-	* The class should populate a composite `private` `Cohort` field with `Student` object-representations of each of your classmates.
-	* The composite `Cohort` field should be exposed to the client via a `getCohort` method.
+# Part 7.2 - Create `ZipCodeInstructors` singleton
+* Use `Part 7.0` and `Part 7.1` as a reference.
+* Create a `ZipCodeInstructors` singleton which represents the set of instructors at ZipCodeWilmington.
+* Create a `TestZipCodeInstructors` class.
+
 
 
 -
