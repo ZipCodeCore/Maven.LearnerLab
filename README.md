@@ -123,76 +123,14 @@
 
 
 -
-# Part 8.0 - Create `ZipCodeWilmington` Class
-* Create a `ZipCodeWilmington` class.
-	* _Statically_ instantiate a `private` `ArrayList` of `Instructor` objects named `instructorList`.
-	* Create a `public static` method named `hire` which adds an `Instructor` to the `instructorList` and returns `void`.
-	* Create a `public static` method named `getInstructors` which returns the `instructorList`.
-	* Create a `public static` method named `fireStaff` which clears our `instructorList`.
-	* Copy and paste this `static initialization block` immediately below your `instructorList` declaration.
-
-```java
-static { // static initializer
-	String[] instructorNames = { "Leon", "Tariq", "Froilan", "David", "Zach", "Iyasu" };
-	for (String instructorName : instructorNames) {
-		Instructor instructor = new Instructor(instructorName);
-		hire(instructor);
-	}
-}
-```
-
+# Part 8.1 - Create `ZipCodeWilmington` Class
+* Use `Part 7` as a reference.
+* Create a `ZipCodeWilmington` singleton.
+	* The class should declare a field that references `MyCohort` called `cohort`.
+	* The class should declare a field that references `ZipCodeInstructors` called `instructors`.
+	* The class should define a method `hostLecture` which makes use of a `long id, double numberOfHours` parameter to identify a respective `Instructor` to host a `lecture` to the composite `people` field in the `cohort` reference.
 
 -
-# Part 6.0 - Test `ZipCodeWilmington`
+# Part 8.0 - Test `ZipCodeWilmington`
 * Create a `TestZipCodeWilmington` class.
-	* Create a method named `setup` which is annotated with `@Before`, takes has no parameters, and returns `void`.
-		* Ensure this method invokes the `.fireStaff` method on `ZipCodeWilmington`
-	
-	* Create a `testFireStaff` method which ensures that our `instructorList` in our `ZipCodeWilmington` class `isEmpty` upon invokation.
-	* Create a `testHireStaff` method which ensures that our `instructorList` is populated with respective `Instructor` objects.
-
--
-# Part 7.1 - Create `Classroom` Class
-* Create a `TechConnect` class.
-	* The class should instantiate an `ArrayList` field of `Student` objects named `studentList`.
-	* Create a `public static` method named `recruitStudent` which adds a `Student` to the `studentList` and returns `void`.
-	* Create a `public static` method named `getStudents` which returns the `studentList`.
-	* Create a `public static` method named `removeStudents` which clears our `studentList`.
-	* Copy and paste this `static initialization block` immediately below your `studentList` declaration.
-
-```java
-static { // static initializer
-	String[] studentNames = { "Karen", "Liel", "Quinn", "Destiny", "Blesson", "Danielle B.", "Andre", "Jeff",
-			"Carlo", "Julia D.", "Natalie", "Julia E.", "Shylee", "Genevieve", "Margo", "Whitney", "Rachel",
-			"Bridget", "Seung", "Jessica", "Harry", "Kesler", "Darin", "Jade", "Dominika", "Nashae", "Brianna",
-			"Laurent", "Rina", "Emily", "Elisha", "Caitlin", "Kierra", "Dana", "Alyssa", "Humaira", "Prajwal",
-			"Cristine",  "Brendan" };
-	for (String studentName : studentNames) {
-		Student student = new Student(studentName);
-		studentList.add(student);
-	}
-}
-```
-
-
--
-# Part 7.0 - Test `TechConnect`
-* Create a `TestTechConnect` class.
-	* Create a method named `setup` which is annotated with `@Before`, takes has no parameters, and returns `void`.
-		* Ensure this method invokes the `.removeStudents` method on `TechConnect`
-	
-	* Create a `testRemoveStudents` method which ensures that our `studentList` in our `TechConnect` class `isEmpty` upon invokation.
-	* Create a `testRecruitStudent` method which ensures that our `studentList` is populated with respective `Student` objects.
-
--
-# Part 8.1 - Create `ClassRoom` Class
-* Create a `ClassRoom` class.
-	* Create a method named `getRoster` which returns a `HashMapping` of `String` to `Person` objects such that our `ZipCodeWilmington` instructors and `TechConnect` students' names map to their respective `Person` object.
-	* Getting started hint below!
-		* instantiate an `ArrayList` of `Student` objects named `students` by invoking the `getStudents` method on the `TechConnect` class.
-		* instantiate an `ArrayList` of `Instructor` objects named `instructors` by invoking the `getInstructor` method on the `ZipCodeWilmington` class.
-
--
-# Part 8.0 - Test `ClassRoom`
-* Create a `TestClassRoom` class.
-	* Assert that the `HashMapping` returned by `getRoster`, returns a `valueSet` containing each of the `Person` objects in `ZipCodeWilmington`'s `instructorList` and `TechConnect`'s `studentList`.
+	* Create a `testHostLecture` method which ensures that each of the `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` upon invoking the `.hostLecture` method.
