@@ -75,9 +75,36 @@
 	* Create a `testTeach` method that ensures when an `Instructor` invokes the `.teach` method, a respective student's `totalStudyTime` instance variable is incremented.
 	* Create a `testLecture` method that ensures when an `Instructor` invokes the `.teach` method, a respective student's `totalStudyTime` instance variable is incremented by the specified `numberOfHours`.
 
+
+-
+# Part 6.1 - Create `Cohort` class
+* Create a `Cohort` class.
+	* The class should instantiate an `ArrayList` field of `Student` objects named `studentList`.
+	* The class should define a method named `addStudent` which adds a `Student` to the `studentList`.
+	* The class should define a method named `getStudents` which returns an array representation of the `studentList`.
+	* The class should define a named `removeStudents` which clears our `studentList`.
 	
 -
-# Part 6.1 - Create `ZipCodeWilmington` Class
+# Part 6.0 - Test `Cohort`
+* Create a `TestCohort` class.
+	* Create a `testAddStudent` method which ensures that our `studentList` in our `Cohort` class populated with respective `Student` objects following invokation of the `addStudent` method.
+	* Create a `testRemoveStudents` method which ensures that our `studentList` in our `Cohort` class is **depopulated** with respective `Student` objects following invokation of the `removeStudent` method.
+	
+	
+-
+# Part 7.0 - Test `MyCohort` singleton
+* Create a `TestMyCohort` class.
+	* Create a `test` method which ensures that each of the students in your current cohort are in your `MyCohort` singleton.
+
+-
+# Part 7.1 - Create `MyCohort` singleton
+* Create a `MyCohort` class using the _singleton design pattern_.
+	* The class should populate a composite `private` `Cohort` field with `Student` object-representations of each of your classmates.
+	* The composite `Cohort` field should be exposed to the client via a `getCohort` method.
+
+
+-
+# Part 8.0 - Create `ZipCodeWilmington` Class
 * Create a `ZipCodeWilmington` class.
 	* _Statically_ instantiate a `private` `ArrayList` of `Instructor` objects named `instructorList`.
 	* Create a `public static` method named `hire` which adds an `Instructor` to the `instructorList` and returns `void`.
@@ -106,9 +133,9 @@ static { // static initializer
 	* Create a `testHireStaff` method which ensures that our `instructorList` is populated with respective `Instructor` objects.
 
 -
-# Part 7.1 - Create `TechConnect` Class
+# Part 7.1 - Create `Classroom` Class
 * Create a `TechConnect` class.
-	* _Statically_ instantiate a `private` `ArrayList` of `Student` objects named `studentList`.
+	* The class should instantiate an `ArrayList` field of `Student` objects named `studentList`.
 	* Create a `public static` method named `recruitStudent` which adds a `Student` to the `studentList` and returns `void`.
 	* Create a `public static` method named `getStudents` which returns the `studentList`.
 	* Create a `public static` method named `removeStudents` which clears our `studentList`.
