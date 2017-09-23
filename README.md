@@ -83,6 +83,7 @@
 * Create a `Cohort` class.
 	* The class should instantiate an `ArrayList` field of `Student` objects named `studentList`.
 	* The class should define a method named `addStudent` which adds a `Student` to the `studentList`.
+	* The class should define a method named `findStudentById` which makes use of a `long id` parameter to return a `Student` object with the respective `id` field.
 	* The class should define a method named `getStudents` which returns an array representation of the `studentList`.
 	* The class should define a named `removeStudents` which clears our `studentList`.
 	
