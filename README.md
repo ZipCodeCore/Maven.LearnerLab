@@ -93,8 +93,7 @@
 # Part 6.0 - Test `People`
 * Create a `TestPeople` class.
 	* Create a `testAdd` method which ensures that our `personList` in our `People` class populated with respective `Student` objects following invokation of the `addStudent` method.
-	* Create a `testRemove` method which ensures that the `personList` in a `People` object is **depopulated** with a respective `Person` object following the invokation of the `removeStudent` method.
-	* Create a `testRemoveStudents` method which ensures that our `studentList` in our `People` class is **depopulated** with respective `Perspm` objects following invokation of the `remove` method.
+	* Create a `testRemove` method which ensures that the `personList` in a `People` object is **depopulated** with a respective `Person` object following the invokation of the `remove` method.
 	* Create a `testFindById` method which ensures that a respective `Person` object with a respective `id` field is returned upon invokation of the `findById` method on a respective `People` object.
 
 
