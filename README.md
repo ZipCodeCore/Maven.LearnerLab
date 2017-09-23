@@ -86,6 +86,7 @@
 	* The class should define a method named `findById` which makes use of a `long id` parameter to return a `Person` object with the respective `id` field.
 	* The class should define a method named `remove` which makes use of a `Person person` parameter to remove a respective `Person` object.
 	* The class should define a method named `remove` which makes use of a `long id` parameter to remove a `Person` object with the respective `id` field.
+	* The class should define a method named `getCount` which returns the size of `oersonList`.
 	* The class should define a method named `getArray` which returns an array representation of the `personList` field.
 	* The class should define a named `removeAll` which clears our `personList` field.
 	
