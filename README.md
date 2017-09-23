@@ -99,7 +99,7 @@
 
 -
 # Part 7.1 - Create `MyCohort` singleton
-* **Note:** The creation of this class will demonstrate an implementation of [singleton design pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples).
+* **Note:** The creation of this class will demonstrate an implementation of [singleton design pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples#eager-initialization).
 * Create a `MyCohort` class.
 	* The class should be a subclass of the `People` class.
 	* The class should _statically instantiate_ a `final` field named `INSTANCE` of type `MyCohort`.
