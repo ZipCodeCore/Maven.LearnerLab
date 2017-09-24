@@ -4,8 +4,8 @@
 
 # Part 1.1 - Create `Person` Class
 * Create a `Person` class.
-	* `Person` constructor should have a parameter of type `String` which sets the `name` instance-variable to the respective value.
 	* The class should declare a `final` field named `id` of type `long`.
+	* `Person` constructor should have a parameter of type `long` which sets the `id` field to the respective value.
 	* The class should define a `getId()` method which returns the `Person` object's `id` field.
 	* The class should define a `getName()` method which returns the `Person` object's `name` field.
 	* The class should define a `setName()` method which sets the `Person` object's `name` field.
@@ -13,6 +13,7 @@
 -
 # Part 1.0 - Test `Person`
 * Create a `TestPerson` class.
+	* Create a `testConstructor` method which ensures that a `Person` object's `id` field is being set upon construction.
 	* Create a `testSetName` method which ensures that a `Person` object's `name` variable is being set by invoking the `.setName` method.
 	* Create a `testConstructor` method which ensures that a `Person` object's `name` variable is being set by invoking the `Person` constructor.
 
