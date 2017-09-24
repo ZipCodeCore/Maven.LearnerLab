@@ -1,5 +1,6 @@
 # Student, Instructor, Classroom
 * **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html)
+* **Objective** - to implement a `ZipCodeWilmington` _singleton_ which _mediates_ a _composite_ `Students` and `Instructors` reference.
 
 
 # Part 1.1 - Create `Person` Class
@@ -100,39 +101,43 @@
 
 
 -
-# Part 7.1 - Create `MyCohort` singleton
+# Part 7.1 - Create `Students` singleton
 * **Note:** The creation of this class will demonstrate an implementation of [singleton design pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples#eager-initialization).
-* Create a `MyCohort` class.
-	* The class should be a subclass of the `People` class.
-	* The class should _statically instantiate_ a `final` field named `INSTANCE` of type `MyCohort`.
-	* The class should define a _private constructor_ which populates the `INSTANCE` field with respective `Student` representations of your colleagues.
-		* Each student should have a unique `id` field.
+* Create a `Students` class.
+	* The class should be an _unextendable_ subclass of the `People` class.
+	* The class should _statically instantiate_ a `final` field named `INSTANCE` of type `Students`.
+	* The class should define a _private nullary constructor_ which populates the `INSTANCE` field with respective `Student` representations of your colleagues.
+		* Each student should have a _relatively_ unique `id` field.
 	* The class should define a `getInstance` method which returns the `INSTANCE` field.
 	
 	
 
 -
-# Part 7.0 - Test `MyCohort` singleton
-* Create a `TestMyCohort` class.
-	* Create a `test` method which ensures that each of the students in your current cohort are in your `MyCohort` singleton.
+# Part 7.0 - Test `Students` singleton
+* Create a `TestStudents` class.
+	* Create a `test` method which ensures that each of the students in your current cohort are in your `Students` singleton.
 
 -
-# Part 7.2 - Create `ZipCodeInstructors` singleton
+# Part 7.2 - Create `Instructors` singleton
 * Use `Part 7.0` and `Part 7.1` as a reference.
-* Create a `ZipCodeInstructors` singleton which represents the set of instructors at ZipCodeWilmington.
-* Create a `TestZipCodeInstructors` class.
+* Create a `Instructors` singleton which represents the set of instructors at ZipCodeWilmington.
+* Create a `TestInstructors` class.
 
 
-
--
 # Part 8.1 - Create `ZipCodeWilmington` Class
 * Use `Part 7` as a reference.
 * Create a `ZipCodeWilmington` singleton.
-	* The class should declare a field that references `MyCohort` called `cohort`.
-	* The class should declare a field that references `ZipCodeInstructors` called `instructors`.
+	* The class should declare a field that references the instance of `Students` called `students`.
+	* The class should declare a field that references the instance of `Instructors` called `instructors`.
 	* The class should define a method `hostLecture` which makes use of a `long id, double numberOfHours` parameter to identify a respective `Instructor` to host a `lecture` to the composite `people` field in the `cohort` reference.
 
 -
 # Part 8.0 - Test `ZipCodeWilmington`
 * Create a `TestZipCodeWilmington` class.
 	* Create a `testHostLecture` method which ensures that each of the `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` upon invoking the `.hostLecture` method.
+
+-
+# Notice the Design Flaw
+* You may have notice that `findById` makes it difficult to intuitively identify _which_ `Person` object is being returned.<br>
+Additionally, it's challengaing to ensure **every** `Person` instance has a unique ID amongst its respective `People` subclass.<br>
+To remedy this issue, we redesign and refactor. Visit the [enum microlab]()
