@@ -140,4 +140,23 @@
 # Notice the Design Flaw
 * You may have notice that `findById` makes it difficult to intuitively identify _which_ `Person` object is being returned.<br>
 Additionally, it's challengaing to ensure **every** `Person` instance has a unique ID amongst its respective `People` subclass.<br>
-To remedy this issue, we redesign and refactor. Visit the [enum microlab]()
+To remedy this issue, we redesign and refactor.
+
+# Part 9.1 - Create `Educator` enum
+* Create an enum named `Educator`.
+	* The enum should implement `Teacher`.
+	* The enum should have an enumeration for each of the instructors represented in the `Instructors` class.
+	* The enum should have an _empty nullary constructor_.
+	
+# Part 9.0 - Test `Educator`
+* Ensure
+
+# Part 10.1 - Modify `Instructor` Class
+* Annotate the constructor with `@Deprecated`.
+	* This constructor should be commented with `//TODO - Remove dependencies`
+* Create a constructor in the `Instructor` class which uses `Educator educator` parameter to set a final `educator` field.
+* The class should differ calls to the `teach` and `lecture` method to the composite `educator` field.
+* Remove any calls being made to the deprecated construcor.
+
+# Part 10.0 - Modify `InstructorTest`
+* Ensure
