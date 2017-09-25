@@ -1,5 +1,5 @@
 # Student, Instructor, Classroom
-* **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html)
+* **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html#java-interface-example)
 * **Objective** - to implement a `ZipCodeWilmington` _singleton_ which _mediates_ a _composite_ `Students` and `Instructors` reference.
 
 
