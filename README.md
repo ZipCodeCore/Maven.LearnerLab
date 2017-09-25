@@ -172,7 +172,7 @@
 
 -
 ### Part 10.0 - Test refactored classes.
-* Ensure that the `TestStudents`, `TestInstructors`, `TestPeople`, `TestZipCodeWilmington` classes were no affected by the refactor.
+* Ensure that the `TestStudents`, `TestInstructors`, `TestPeople`, `TestZipCodeWilmington` classes were not affected by the refactor.
 
 
 
