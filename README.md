@@ -49,14 +49,14 @@
 	* `Teacher` should declare a `teach` method signature:
 		* Method name: `teach`
 		* Method parameters:
-			* `Student student`
+			* `Learner learner`
 			* `double numberOfHours`
 		* Method return-type: `void` 
 
 	* `Teacher` should declare a `lecture` method signature:
 		* Method name: `lecture`
 		* Method parameters:
-			* `Student[] student`
+			* `Learner[] learners`
 			* `double numberOfHours`
 		* Method return-type: `void`
 
@@ -66,10 +66,10 @@
 * Create an `Instructor` class such that:
 	* `Instructor` is a subclass of `Person`
 	* `Instructor` implements the `Teacher` interface
-	* `Instructor` should have a concrete implementation of the `teach` method which invokes the `learn` method on the specified `Student` object.
-	* `Instructor` should have a concrete implementation of the `lecture` method which invokes the `learn` method on each of the elements in the specified array of `Student` objects.
-		* `numberOfHours` should be evenly split amongst the students.
-			* `double numberOfHoursPerStudent = numberOfHours / students.length;`
+	* `Instructor` should have a concrete implementation of the `teach` method which invokes the `learn` method on the specified `Learner` object.
+	* `Instructor` should have a concrete implementation of the `lecture` method which invokes the `learn` method on each of the elements in the specified array of `Learner` objects.
+		* `numberOfHours` should be evenly split amongst the learners.
+			* `double numberOfHoursPerLearner = numberOfHours / learners.length;`
 
 -
 ### Part 5.0 - Test `Instructor`
@@ -95,7 +95,7 @@
 -
 ### Part 6.0 - Test `People`
 * Create a `TestPeople` class.
-	* Create a `testAdd` method which ensures that our `personList` in our `People` class populated with respective `Student` objects following invokation of the `addStudent` method.
+	* Create a `testAdd` method which ensures that our `personList` in our `People` class populated with respective `Person` objects following invokation of the `add` method.
 	* Create a `testRemove` method which ensures that the `personList` in a `People` object is **depopulated** with a respective `Person` object following the invokation of the `remove` method.
 	* Create a `testFindById` method which ensures that a respective `Person` object with a respective `id` field is returned upon invokation of the `findById` method on a respective `People` object.
 
