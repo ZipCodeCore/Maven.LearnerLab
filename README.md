@@ -156,15 +156,19 @@
 -
 ### Part 10.1 - Modify `People` class
 * [Parameterize](https://stackoverflow.com/questions/12551674/what-is-meant-by-parameterized-type) the `People` signature to enforce that it is a container for objects of type `E` such that `E` is a subclass of `Person`.
+* Modify the class signature to declare this class _abstract_.
+	* An [abstract class](http://www.javacoffeebreak.com/faq/faq0084.html) cannot be instantiated; Its concrete implementation is deferred to its subclass.
 * Modify `people` field to enforce that is a container of objects of type `E`.
 * Modify the `add` method to ensure that it handles object of type `E`.
-* Modify the `getArray` method to ensure that it returns an object of type `E[]`.
 * Modify the `findById` method to ensure that it returns an object of type `E`.
+* Modify the `getArray` method signature by declaring it `abstract` of return tyoe `E`.
+	* An abstract method is a subclass's contractual agreement to the deferment of an implementation of a respective method.
 
 -
 ### Part 10.2 - Modify `People` subclasses
 * Modify the `Students` class signature to ensure that it is a subclass of `People` of parameterized type `Student`.
 * Modify the `Instructors` class signature to ensure that it is a subclass of `People` of parameterized type `Instructor`.
+* Provide concrete implementations of the `getArray` method in each of these classes.
 
 -
 ### Part 10.3 - Refactor `ZipCodeWilmington` class
@@ -202,7 +206,7 @@ To remedy this issue, we redesign and refactor.
 * Annotate the constructor with `@Deprecated`.
 * This constructor should be commented with `//TODO - Remove dependencies`
 * Create a constructor in the `Instructor` class which uses `Educator educator` parameter to set a final `educator` field.
-* The class should differ calls to the `teach` and `lecture` method to the composite `educator` field.
+* The class should defer calls to the `teach` and `lecture` method to the composite `educator` field.
 * Remove any calls being made to the deprecated construcor.
 * Remove the deprecated constructor from the class.
 
