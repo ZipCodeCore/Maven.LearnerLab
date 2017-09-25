@@ -118,13 +118,13 @@
 	* Create a `test` method which ensures that each of the students in your current cohort are in your `Students` singleton.
 
 -
-### Part 7.2 - Create `Instructors` singleton
-* Use `Part 7.0` and `Part 7.1` as a reference.
+### Part 8.0 - Create and Test `Instructors` singleton
+* Use `Part 7` as a reference.
 * Create a `Instructors` singleton which represents the set of instructors at ZipCodeWilmington.
 * Create a `TestInstructors` class.
 
 
-### Part 8.1 - Create `ZipCodeWilmington` Class
+### Part 9.1 - Create `ZipCodeWilmington` Class
 * Use `Part 7` as a reference.
 * Create a `ZipCodeWilmington` singleton.
 	* The class should declare a field that references the instance of `Students` called `students`.
@@ -133,7 +133,7 @@
 	* The class should define a method `hostLecture` which makes use of a `long id, double numberOfHours` parameter to identify a respective `Instructor` to host a `lecture` to the composite `people` field in the `cohort` reference.
 
 -
-# Part 8.0 - Test `ZipCodeWilmington`
+### Part 9.0 - Test `ZipCodeWilmington`
 * Create a `TestZipCodeWilmington` class.
 	* Create a `testHostLecture` method which ensures that each of the `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` upon invoking the `.hostLecture` method.
 
@@ -150,21 +150,21 @@
 * You may have noticed that the `findById`, and `hostLecture` methods require an intermediate [casting trick](https://stackoverflow.com/questions/5289393/casting-variables-in-java).
 * To remedy this issue, we can _generify_ the `People` class.
 
-### Part 9.1 - Modify `People` class
+### Part 10.1 - Modify `People` class
 * [Parameterize](https://stackoverflow.com/questions/12551674/what-is-meant-by-parameterized-type) the `People` signature to enfore that it is a container for objects of type `E` such that `E` is a subclass of `Person`.
 * Modify `people` field to enforce that is a container of objects of type `E`.
 * Modify the `add` method to ensure that it handles object of type `E`.
 * Modify the `getArray` method to ensure that it returns an object of type `E[]`.
 * Modify the `findById` method to ensure that it returns an object of type `E`.
 
-### Part 9.2 - Modify `People` subclasses
+### Part 10.2 - Modify `People` subclasses
 * Modify the `Students` class signature to ensure that it is a subclass of `People` of parameterized type `Student`.
 * Modify the `Instructors` class signature to ensure that it is a subclass of `People` of parameterized type `Instructor`.
 
-### Part 9.3 - Refactor `ZipCodeWilmington` class
+### Part 10.3 - Refactor `ZipCodeWilmington` class
 * Refactor the `hostLecture` method in the `ZipCodeWilmington` class by removing any intermediate _casting trick(s)_.
 
-### Part 9.0 - Test refactored classes.
+### Part 10.0 - Test refactored classes.
 * Ensure that the `TestStudents`, `TestInstructors`, `TestPeople`, `TestZipCodeWilmington` classes were no affected by the refactor.
 
 
@@ -178,16 +178,16 @@
 Additionally, it's challengaing to ensure **every** `Person` instance has a unique ID amongst its respective `People` subclass.<br>
 To remedy this issue, we redesign and refactor.
 
-### Part 9.1 - Create `Educator` enum
+### Part 11.1 - Create `Educator` enum
 * Create an enum named `Educator`.
 	* The enum should implement `Teacher`.
 	* The enum should have an enumeration for each of the instructors represented in the `Instructors` class.
 	* The enum should have an _empty nullary constructor_.
 	
-### Part 9.0 - Test `Educator`
+### Part 11.0 - Test `Educator`
 * Use `Part 5` as a reference.
 
-### Part 10.1 - Modify `Instructor` Class
+### Part 12.1 - Modify `Instructor` Class
 * Annotate the constructor with `@Deprecated`.
 * This constructor should be commented with `//TODO - Remove dependencies`
 * Create a constructor in the `Instructor` class which uses `Educator educator` parameter to set a final `educator` field.
@@ -195,6 +195,6 @@ To remedy this issue, we redesign and refactor.
 * Remove any calls being made to the deprecated construcor.
 * Remove the deprecated constructor from the class.
 
-### Part 10.0 - Test `Instructor`
+### Part 12.0 - Test `Instructor`
 * Refactor `TestInstructor` to support the newly created `Instructor` constructor.
 * Ensure the tests were not affected by the refactoring.
