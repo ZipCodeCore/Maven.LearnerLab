@@ -129,6 +129,7 @@
 * Create a `ZipCodeWilmington` singleton.
 	* The class should declare a field that references the instance of `Students` called `students`.
 	* The class should declare a field that references the instance of `Instructors` called `instructors`.
+	* The class should define a method `hostLecture` which makes use of a `Teacher teacher, double numberOfHours` parameter to host a `lecture` to the composite `people` field in the `students` reference.
 	* The class should define a method `hostLecture` which makes use of a `long id, double numberOfHours` parameter to identify a respective `Instructor` to host a `lecture` to the composite `people` field in the `cohort` reference.
 
 -
@@ -136,8 +137,43 @@
 * Create a `TestZipCodeWilmington` class.
 	* Create a `testHostLecture` method which ensures that each of the `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` upon invoking the `.hostLecture` method.
 
+
+
+
+
+
+
+
+
 -
-# Notice the Design Flaw
+# Notice the Design Flaw - Odd Casting Issues
+* You may have noticed that the `findById`, and `hostLecture` methods require an intermediate [casting trick](https://stackoverflow.com/questions/5289393/casting-variables-in-java).
+* To remedy this issue, we can _generify_ the `People` class.
+
+# Part 9.1 - Modify `People` class
+* [Parameterize](https://stackoverflow.com/questions/12551674/what-is-meant-by-parameterized-type) the `People` signature to enfore that it is a container for objects of type `E` such that `E` is a subclass of `Person`.
+* Modify `people` field to enforce that is a container of objects of type `E`.
+* Modify the `add` method to ensure that it handles object of type `E`.
+* Modify the `getArray` method to ensure that it returns an object of type `E[]`.
+* Modify the `findById` method to ensure that it returns an object of type `E`.
+
+# Part 9.2 - Modify `People` subclasses
+* Modify the `Students` class signature to ensure that it is a subclass of `People` of parameterized type `Student`.
+* Modify the `Instructors` class signature to ensure that it is a subclass of `People` of parameterized type `Instructor`.
+
+# Part 9.3 - Refactor `ZipCodeWilmington` class
+* Refactor the `hostLecture` method in the `ZipCodeWilmington` class by removing any intermediate _casting trick(s)_.
+
+# Part 9.0 - Test refactored classes.
+* Ensure that the `TestStudents`, `TestInstructors`, `TestPeople`, `TestZipCodeWilmington` classes were no affected by the refactor.
+
+
+
+
+
+
+-
+# Notice the Design Flaw - Non-Intuitive Orientation
 * You may have notice that `findById` makes it difficult to intuitively identify _which_ `Person` object is being returned.<br>
 Additionally, it's challengaing to ensure **every** `Person` instance has a unique ID amongst its respective `People` subclass.<br>
 To remedy this issue, we redesign and refactor.
