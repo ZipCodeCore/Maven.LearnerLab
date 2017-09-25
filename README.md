@@ -175,7 +175,7 @@
 -
 # Notice the Design Flaw - Non-Intuitive Orientation
 * You may have notice that `findById` makes it difficult to intuitively identify _which_ `Person` object is being returned.<br>
-Additionally, it's challengaing to ensure **every** `Person` instance has a unique ID amongst its respective `People` subclass.<br>
+Additionally, it's challenging to ensure **every** `Person` instance has a unique ID amongst its respective `People` subclass.<br>
 To remedy this issue, we redesign and refactor.
 
 ### Part 11.1 - Create `Educator` enum
