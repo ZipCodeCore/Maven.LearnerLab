@@ -151,7 +151,7 @@
 * To remedy this issue, we can _generify_ the `People` class.
 
 ### Part 10.1 - Modify `People` class
-* [Parameterize](https://stackoverflow.com/questions/12551674/what-is-meant-by-parameterized-type) the `People` signature to enfore that it is a container for objects of type `E` such that `E` is a subclass of `Person`.
+* [Parameterize](https://stackoverflow.com/questions/12551674/what-is-meant-by-parameterized-type) the `People` signature to enforce that it is a container for objects of type `E` such that `E` is a subclass of `Person`.
 * Modify `people` field to enforce that is a container of objects of type `E`.
 * Modify the `add` method to ensure that it handles object of type `E`.
 * Modify the `getArray` method to ensure that it returns an object of type `E[]`.
