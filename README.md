@@ -3,7 +3,7 @@
 * **Objective** - to implement a `ZipCodeWilmington` _singleton_ which _mediates_ a _composite_ `Students` and `Instructors` reference.
 
 
-# Part 1.1 - Create `Person` Class
+### Part 1.1 - Create `Person` Class
 * Create a `Person` class.
 	* The class should declare a `final` field named `id` of type `long`.
 	* `Person` constructor should have a parameter of type `long` which sets the `id` field to the respective value.
@@ -12,14 +12,14 @@
 	* The class should define a `setName()` method which sets the `Person` object's `name` field.
 
 -
-# Part 1.0 - Test `Person`
+### Part 1.0 - Test `Person`
 * Create a `TestPerson` class.
 	* Create a `testConstructor` method which ensures that a `Person` object's `id` field is being set upon construction.
 	* Create a `testSetName` method which ensures that a `Person` object's `name` variable is being set by invoking the `.setName` method.
 	* Create a `testConstructor` method which ensures that a `Person` object's `name` variable is being set by invoking the `Person` constructor.
 
 -
-# Part 2.0 - Create `Learner` Interface
+### Part 2.0 - Create `Learner` Interface
 * Create a `Learner` interface.
 	* `Learner` should declare one method signature:
 		* Method name: `learn`
@@ -27,7 +27,7 @@
 		* Method return-type: `void`
 
 -
-# Part 3.1 - Create `Student` Class
+### Part 3.1 - Create `Student` Class
 * Create a `Student` class such that:
 	* `Student` is a subclass of `Person`
 	* `Student` implements the `Learner` interface
@@ -37,14 +37,14 @@
 
 
 -
-# Part 3.0 - Test `Student`
+### Part 3.0 - Test `Student`
 * Create a `TestStudent` class.
 	* Create a `testImplementation` method that asserts that a `Student` is an `instanceof` a `Learner`.
 	* Create a `testInheritance` method that asserts that a `Student` is an `instanceof` a `Person`.
 	* Create a `testLearn` method that ensures a `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` by invoking the `.learn` method.
 
 -
-# Part 4.0 - Create `Teacher` Interface
+### Part 4.0 - Create `Teacher` Interface
 * Create a `Teacher` interface.
 	* `Teacher` should declare a `teach` method signature:
 		* Method name: `teach`
@@ -62,7 +62,7 @@
 
 		
 -
-# Part 5.1 - Create `Instructor` Class
+### Part 5.1 - Create `Instructor` Class
 * Create an `Instructor` class such that:
 	* `Instructor` is a subclass of `Person`
 	* `Instructor` implements the `Teacher` interface
@@ -72,7 +72,7 @@
 			* `double numberOfHoursPerStudent = numberOfHours / students.length;`
 
 -
-# Part 5.0 - Test `Instructor`
+### Part 5.0 - Test `Instructor`
 * Create a `TestInstructor` class.
 	* Create a `testImplementation` method that asserts that an `Instructor` is an `instanceof` a `Teacher`.
 	* Create a `testInheritance` method that asserts that a `Instructor` is an `instanceof` a `Person`.
@@ -81,7 +81,7 @@
 
 
 -
-# Part 6.1 - Create `People` class
+### Part 6.1 - Create `People` class
 * Create a `People` class.
 	* The class should instantiate an `ArrayList` field of `Person` objects named `personList`.
 	* The class should define a method named `add` which adds a `Person` to the `personList`.
@@ -93,7 +93,7 @@
 	* The class should define a named `removeAll` which clears our `personList` field.
 	
 -
-# Part 6.0 - Test `People`
+### Part 6.0 - Test `People`
 * Create a `TestPeople` class.
 	* Create a `testAdd` method which ensures that our `personList` in our `People` class populated with respective `Student` objects following invokation of the `addStudent` method.
 	* Create a `testRemove` method which ensures that the `personList` in a `People` object is **depopulated** with a respective `Person` object following the invokation of the `remove` method.
@@ -101,7 +101,7 @@
 
 
 -
-# Part 7.1 - Create `Students` singleton
+### Part 7.1 - Create `Students` singleton
 * **Note:** The creation of this class will demonstrate an implementation of [singleton design pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples#eager-initialization).
 * Create a `Students` class.
 	* The class should be an _unextendable_ subclass of the `People` class.
@@ -113,18 +113,18 @@
 	
 
 -
-# Part 7.0 - Test `Students` singleton
+### Part 7.0 - Test `Students` singleton
 * Create a `TestStudents` class.
 	* Create a `test` method which ensures that each of the students in your current cohort are in your `Students` singleton.
 
 -
-# Part 7.2 - Create `Instructors` singleton
+### Part 7.2 - Create `Instructors` singleton
 * Use `Part 7.0` and `Part 7.1` as a reference.
 * Create a `Instructors` singleton which represents the set of instructors at ZipCodeWilmington.
 * Create a `TestInstructors` class.
 
 
-# Part 8.1 - Create `ZipCodeWilmington` Class
+### Part 8.1 - Create `ZipCodeWilmington` Class
 * Use `Part 7` as a reference.
 * Create a `ZipCodeWilmington` singleton.
 	* The class should declare a field that references the instance of `Students` called `students`.
@@ -146,11 +146,11 @@
 
 
 -
-# Notice the Design Flaw - Odd Casting Issues
+### Notice the Design Flaw - Odd Casting Issues
 * You may have noticed that the `findById`, and `hostLecture` methods require an intermediate [casting trick](https://stackoverflow.com/questions/5289393/casting-variables-in-java).
 * To remedy this issue, we can _generify_ the `People` class.
 
-# Part 9.1 - Modify `People` class
+### Part 9.1 - Modify `People` class
 * [Parameterize](https://stackoverflow.com/questions/12551674/what-is-meant-by-parameterized-type) the `People` signature to enfore that it is a container for objects of type `E` such that `E` is a subclass of `Person`.
 * Modify `people` field to enforce that is a container of objects of type `E`.
 * Modify the `add` method to ensure that it handles object of type `E`.
@@ -173,21 +173,21 @@
 
 
 -
-# Notice the Design Flaw - Non-Intuitive Orientation
+### Notice the Design Flaw - Non-Intuitive Orientation
 * You may have notice that `findById` makes it difficult to intuitively identify _which_ `Person` object is being returned.<br>
 Additionally, it's challengaing to ensure **every** `Person` instance has a unique ID amongst its respective `People` subclass.<br>
 To remedy this issue, we redesign and refactor.
 
-# Part 9.1 - Create `Educator` enum
+### Part 9.1 - Create `Educator` enum
 * Create an enum named `Educator`.
 	* The enum should implement `Teacher`.
 	* The enum should have an enumeration for each of the instructors represented in the `Instructors` class.
 	* The enum should have an _empty nullary constructor_.
 	
-# Part 9.0 - Test `Educator`
+### Part 9.0 - Test `Educator`
 * Use `Part 5` as a reference.
 
-# Part 10.1 - Modify `Instructor` Class
+### Part 10.1 - Modify `Instructor` Class
 * Annotate the constructor with `@Deprecated`.
 * This constructor should be commented with `//TODO - Remove dependencies`
 * Create a constructor in the `Instructor` class which uses `Educator educator` parameter to set a final `educator` field.
@@ -195,6 +195,6 @@ To remedy this issue, we redesign and refactor.
 * Remove any calls being made to the deprecated construcor.
 * Remove the deprecated constructor from the class.
 
-# Part 10.0 - Test `Instructor`
+### Part 10.0 - Test `Instructor`
 * Refactor `TestInstructor` to support the newly created `Instructor` constructor.
 * Ensure the tests were not affected by the refactoring.
