@@ -146,7 +146,7 @@
 
 
 -
-### Notice the Design Flaw - Odd Casting Issues
+# Notice the Design Flaw - Odd Casting Issues
 * You may have noticed that the `findById`, and `hostLecture` methods require an intermediate [casting trick](https://stackoverflow.com/questions/5289393/casting-variables-in-java).
 * To remedy this issue, we can _generify_ the `People` class.
 
@@ -157,14 +157,14 @@
 * Modify the `getArray` method to ensure that it returns an object of type `E[]`.
 * Modify the `findById` method to ensure that it returns an object of type `E`.
 
-# Part 9.2 - Modify `People` subclasses
+### Part 9.2 - Modify `People` subclasses
 * Modify the `Students` class signature to ensure that it is a subclass of `People` of parameterized type `Student`.
 * Modify the `Instructors` class signature to ensure that it is a subclass of `People` of parameterized type `Instructor`.
 
-# Part 9.3 - Refactor `ZipCodeWilmington` class
+### Part 9.3 - Refactor `ZipCodeWilmington` class
 * Refactor the `hostLecture` method in the `ZipCodeWilmington` class by removing any intermediate _casting trick(s)_.
 
-# Part 9.0 - Test refactored classes.
+### Part 9.0 - Test refactored classes.
 * Ensure that the `TestStudents`, `TestInstructors`, `TestPeople`, `TestZipCodeWilmington` classes were no affected by the refactor.
 
 
@@ -173,7 +173,7 @@
 
 
 -
-### Notice the Design Flaw - Non-Intuitive Orientation
+# Notice the Design Flaw - Non-Intuitive Orientation
 * You may have notice that `findById` makes it difficult to intuitively identify _which_ `Person` object is being returned.<br>
 Additionally, it's challengaing to ensure **every** `Person` instance has a unique ID amongst its respective `People` subclass.<br>
 To remedy this issue, we redesign and refactor.
