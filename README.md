@@ -185,14 +185,16 @@ To remedy this issue, we redesign and refactor.
 	* The enum should have an _empty nullary constructor_.
 	
 # Part 9.0 - Test `Educator`
-* Ensure
+* Use `Part 5` as a reference.
 
 # Part 10.1 - Modify `Instructor` Class
 * Annotate the constructor with `@Deprecated`.
-	* This constructor should be commented with `//TODO - Remove dependencies`
+* This constructor should be commented with `//TODO - Remove dependencies`
 * Create a constructor in the `Instructor` class which uses `Educator educator` parameter to set a final `educator` field.
 * The class should differ calls to the `teach` and `lecture` method to the composite `educator` field.
 * Remove any calls being made to the deprecated construcor.
+* Remove the deprecated constructor from the class.
 
-# Part 10.0 - Modify `InstructorTest`
-* Ensure
+# Part 10.0 - Test `Instructor`
+* Refactor `TestInstructor` to support the newly created `Instructor` constructor.
+* Ensure the tests were not affected by the refactoring.
