@@ -194,7 +194,9 @@ To remedy this issue, we redesign and refactor.
 * Create an enum named `Educator`.
 	* The enum should implement `Teacher`.
 	* The enum should have an enumeration for each of the instructors represented in the `Instructors` class.
-	* The enum should have an _empty nullary constructor_.
+	* Upon construction each enumeration of the enum should instantiate a respective `Instructor` and assign it to a final `instructor` field upon construction. The `instructor` should be added to the `Instructors` singleton.
+	* Calls to the `teach` and `lecture` method should be differed to the composite `instructor` reference.
+	* The enum should have a `double timeWorked` field which keeps track of the hours that the `Educator` has taught.
 
 -
 ### Part 11.0 - Test `Educator`
@@ -202,16 +204,5 @@ To remedy this issue, we redesign and refactor.
 
 
 -
-### Part 12.1 - Modify `Instructor` Class
-* Annotate the constructor with `@Deprecated`.
-* This constructor should be commented with `//TODO - Remove dependencies`
-* Create a constructor in the `Instructor` class which uses `Educator educator` parameter to set a final `educator` field.
-* The class should defer calls to the `teach` and `lecture` method to the composite `educator` field.
-* Remove any calls being made to the deprecated construcor.
-* Remove the deprecated constructor from the class.
-
-
--
-### Part 12.0 - Test `Instructor`
-* Refactor `TestInstructor` to support the newly created `Instructor` constructor.
-* Ensure the tests were not affected by the refactoring.
+### Part 12.1 - Test `ZipCodeWilmington`
+* Ensure the `hostLecture` method can handle objects of type `Educator`.
