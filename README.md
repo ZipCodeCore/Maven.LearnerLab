@@ -202,5 +202,5 @@
 
 
 -
-### Part 12.1 - Test `ZipCodeWilmington`
+### Part 12.0 - Test `ZipCodeWilmington`
 * Ensure the `hostLecture` method can handle objects of type `Educator`.
