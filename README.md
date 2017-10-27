@@ -1,4 +1,4 @@
-# Student, Instructor, Classroom
+# io.zipcoder.interfaces.Student, Instructor, Classroom
 * **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html#java-interface-example)
 * **Objective** - to implement a `ZipCodeWilmington` _singleton_ which _mediates_ a _composite_ `Students` and `Instructors` reference.
 
@@ -27,21 +27,21 @@
 		* Method return-type: `void`
 
 -
-### Part 3.1 - Create `Student` Class
-* Create a `Student` class such that:
-	* `Student` is a subclass of `Person`
-	* `Student` implements the `Learner` interface
-	* `Student` should have an instance variable `totalStudyTime` of type `double`
-	* `Student` should have a concrete implementation of the `learn` method which increments the `totalStudyTime` variable by the specified `numberOfHours` argument.
-	* `Student` should have a `getTotalStudyTime()` method which returns the `totalStudyTime` instance variable.
+### Part 3.1 - Create `io.zipcoder.interfaces.Student` Class
+* Create a `io.zipcoder.interfaces.Student` class such that:
+	* `io.zipcoder.interfaces.Student` is a subclass of `Person`
+	* `io.zipcoder.interfaces.Student` implements the `Learner` interface
+	* `io.zipcoder.interfaces.Student` should have an instance variable `totalStudyTime` of type `double`
+	* `io.zipcoder.interfaces.Student` should have a concrete implementation of the `learn` method which increments the `totalStudyTime` variable by the specified `numberOfHours` argument.
+	* `io.zipcoder.interfaces.Student` should have a `getTotalStudyTime()` method which returns the `totalStudyTime` instance variable.
 
 
 -
-### Part 3.0 - Test `Student`
+### Part 3.0 - Test `io.zipcoder.interfaces.Student`
 * Create a `TestStudent` class.
-	* Create a `testImplementation` method that asserts that a `Student` is an `instanceof` a `Learner`.
-	* Create a `testInheritance` method that asserts that a `Student` is an `instanceof` a `Person`.
-	* Create a `testLearn` method that ensures a `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` by invoking the `.learn` method.
+	* Create a `testImplementation` method that asserts that a `io.zipcoder.interfaces.Student` is an `instanceof` a `Learner`.
+	* Create a `testInheritance` method that asserts that a `io.zipcoder.interfaces.Student` is an `instanceof` a `Person`.
+	* Create a `testLearn` method that ensures a `io.zipcoder.interfaces.Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` by invoking the `.learn` method.
 
 -
 ### Part 4.0 - Create `Teacher` Interface
@@ -106,7 +106,7 @@
 * Create a `Students` class.
 	* The class should be an _unextendable_ subclass of the `People` class.
 	* The class should _statically instantiate_ a `final` field named `INSTANCE` of type `Students`.
-	* The class should define a _private nullary constructor_ which populates the `INSTANCE` field with respective `Student` representations of your colleagues.
+	* The class should define a _private nullary constructor_ which populates the `INSTANCE` field with respective `io.zipcoder.interfaces.Student` representations of your colleagues.
 		* Each student should have a _relatively_ unique `id` field.
 	* The class should define a `getInstance` method which returns the `INSTANCE` field.
 	
@@ -138,7 +138,7 @@
 -
 ### Part 9.0 - Test `ZipCodeWilmington`
 * Create a `TestZipCodeWilmington` class.
-	* Create a `testHostLecture` method which ensures that each of the `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` upon invoking the `hostLecture` method.
+	* Create a `testHostLecture` method which ensures that each of the `io.zipcoder.interfaces.Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` upon invoking the `hostLecture` method.
 
 
 
@@ -166,7 +166,7 @@
 
 -
 ### Part 10.2 - Modify `People` subclasses
-* Modify the `Students` class signature to ensure that it is a subclass of `People` of parameterized type `Student`.
+* Modify the `Students` class signature to ensure that it is a subclass of `People` of parameterized type `io.zipcoder.interfaces.Student`.
 * Modify the `Instructors` class signature to ensure that it is a subclass of `People` of parameterized type `Instructor`.
 * Provide concrete implementations of the `getArray` method in each of these classes.
 
