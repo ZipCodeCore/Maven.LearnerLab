@@ -38,5 +38,5 @@ public class TestInstructor {
 
         Assert.assertEquals(cohort[2].getTotalStudyTime(), 1, 0.01);
     }
-    
+
 }
