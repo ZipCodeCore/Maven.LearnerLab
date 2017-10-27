@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class People {
 
-    private ArrayList<Person> personList;
+    private ArrayList<Person> personList = new ArrayList<Person>();
 
     public void add(Person passedPerson){
         personList.add(passedPerson);
