@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class People {
 
-    ArrayList<Person> personList = new ArrayList<Person>();
+    static ArrayList<Person> personList = new ArrayList<Person>();
 
-    public void add(Person person){
+    public static void add(Person person){
         personList.add(person);
     }
 
-    public Person findById(long id){
+    public static Person findById(long id){
         Person person = null;
         for (Person findPerson: personList){
             if (findPerson.getId() == id) {
@@ -20,24 +20,24 @@ public class People {
         return person;
     }
 
-    public void remove(Person person){
+    public static void remove(Person person){
         personList.remove(person);
     }
 
-    public void remove(long id){
+    public static void remove(long id){
         personList.remove(findById(id));
     }
 
-    public int getCount(){
+    public static int getCount(){
         return personList.size();
     }
 
-    public Person[] getArray(){
-        Person[] people = new Person[personList.size()];
+    public static Person[] getArray(){
+        Person[] people = new Person[People.getCount()];
         return personList.toArray(people);
     }
 
-    public void removeAll(){
+    public static void removeAll(){
         personList.removeAll(personList);
     }
 
