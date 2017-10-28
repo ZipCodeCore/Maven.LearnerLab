@@ -32,7 +32,6 @@ public final class Students extends People{
             "Zan Cheema"
     };
 
-
     private Students(){
         if (INSTANCE == null) {
             for (int i = 0; i < studentNames.length; i++) {
