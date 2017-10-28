@@ -28,4 +28,8 @@ public class Students extends People{
         INSTANCE.addPerson(abrar);
 
     }
+
+    public static Students getINSTANCE() {
+        return INSTANCE;
+    }
 }
