@@ -15,6 +15,7 @@ package io.zipcoder.interfaces;
 //        The class should define a method named getArray which returns an array representation of the personList field.
 //        The class should define a named removeAll which clears our personList field.
 
+import java.sql.Array;
 import java.util.ArrayList;
 
 public class People {
@@ -52,9 +53,17 @@ public class People {
             return personList.size();
     }
 
-    public String getArray(ArrayList<Person> personList){
+    public String getArray(){
+        String output = "";
 
-        return personList.toArray().toString();
+        for(int i = 0; i < personList.size(); i++){
+            if (i > 0) {
+                output +=", ";
+            }
+            output += personList.get(i).getName();
+        }
+        return output;
+
 
     }
 

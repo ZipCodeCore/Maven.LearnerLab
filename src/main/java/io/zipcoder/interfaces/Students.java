@@ -11,18 +11,25 @@ package io.zipcoder.interfaces;
 //        Each student should have a relatively unique id field.
 //        The class should define a getInstance method which returns the INSTANCE field.
 
+
+import java.sql.Array;
+import java.util.ArrayList;
+
 public class Students extends People{
 
-    private static final Students INSTANCE = new Students();
+    private static final Students INSTANCE;
 
     private Students(){
 
+    }
+
+    static {
+        INSTANCE = new Students();
+
         Student lina = new Student(1231, "Lina");
         Student abrar = new Student(1232, "Abrar");
-        Student greg = new Student(1234, "Greg");
         Student raul = new Student(1235, "Raul");
 
-        INSTANCE.addPerson(greg);
         INSTANCE.addPerson(raul);
         INSTANCE.addPerson(lina);
         INSTANCE.addPerson(abrar);
