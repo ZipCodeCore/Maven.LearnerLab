@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class StudentsTest {
+public class StudentsTest extends PeopleTest{
 
     @Test
     public void allStudentsInCohortTest() {
@@ -44,24 +44,6 @@ public class StudentsTest {
         boolean expected = true;
         boolean actual = allNamesInArray(names, currentCohort.getArray());
         Assert.assertTrue(actual);
-    }
-
-    private boolean allNamesInArray(String[] names, Person[] array) {
-        for(String name: names) {
-            if(!isNameInArray(name, array)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private boolean isNameInArray(String name, Person[] array) {
-        for(Person student: array) {
-            if(student.getName().equals(name)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     @Test

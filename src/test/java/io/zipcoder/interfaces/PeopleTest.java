@@ -120,4 +120,22 @@ public class PeopleTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    public boolean allNamesInArray(String[] names, Person[] array) {
+        for(String name: names) {
+            if(!isNameInArray(name, array)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean isNameInArray(String name, Person[] array) {
+        for(Person student: array) {
+            if(student.getName().equals(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

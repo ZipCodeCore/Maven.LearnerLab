@@ -2,6 +2,7 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class People {
     private List<Person> peopleList = new ArrayList<Person>(128);
@@ -43,5 +44,18 @@ public class People {
 
     public Person[] getArray() {
         return peopleList.toArray(new Person[getCount()]);
+    }
+
+    public long assignNextId() {
+        Random rand = new Random();
+        long nextId;
+        do {
+            nextId = rand.nextLong();
+            if(nextId < 0) {
+                nextId *= -1;
+            }
+        } while(this.findById(nextId) != null);
+
+        return nextId;
     }
 }

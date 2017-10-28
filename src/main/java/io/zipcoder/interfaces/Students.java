@@ -47,17 +47,4 @@ public final class Students extends People{
     public static Students getINSTANCE() {
         return INSTANCE;
     }
-
-    public long assignNextId() {
-        Random rand = new Random();
-        long nextId;
-        do {
-            nextId = rand.nextLong();
-            if(nextId < 0) {
-                nextId *= -1;
-            }
-        } while(super.findById(nextId) != null);
-
-        return nextId;
-    }
 }
