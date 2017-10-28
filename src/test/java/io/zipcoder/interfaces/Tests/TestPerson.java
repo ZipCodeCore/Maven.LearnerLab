@@ -1,4 +1,4 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.Tests;
 
 import io.zipcoder.interfaces.classes.Person;
 import org.junit.Assert;
