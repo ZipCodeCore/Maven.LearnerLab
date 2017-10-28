@@ -5,12 +5,16 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StudentsTest {
+
     @Test
-    public void testGetINSTANCE(){
+    public void getINSTANCE() {
 
-        Students testStudents = new Students();
+        Students test = Students.getINSTANCE();
 
-        System.out.println(testStudents.getINSTANCE());
+        
+
+
+
     }
 
 }

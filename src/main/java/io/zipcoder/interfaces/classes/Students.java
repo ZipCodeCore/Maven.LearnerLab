@@ -2,18 +2,21 @@ package io.zipcoder.interfaces.classes;
 
 public final class Students extends People{
 
-    private static final Students INSTANCE = new Students();
 
-    protected Students(){
+    private static Students INSTANCE = new Students();
+
+    private Students(){
 
         Student zach = new Student(1,"Zach");
+        Student wes = new Student(2,"Bob");
 
-        INSTANCE.add(zach);
     }
 
     public static Students getINSTANCE() {
         return INSTANCE;
+
     }
+
 
 
 }
