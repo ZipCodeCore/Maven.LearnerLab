@@ -18,6 +18,10 @@ public class Student extends Person implements Learner{
         super(id);
     }
 
+    Student(long id, String name){
+        super(id,name);
+    }
+
     public void learn(double numberOfHours){
         totalStudyTime += numberOfHours;
 
