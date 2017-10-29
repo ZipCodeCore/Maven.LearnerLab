@@ -3,13 +3,11 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 public class StudentsTest extends PeopleTest{
 
     @Test
     public void allStudentsInCohortTest() {
-        Students currentCohort = Students.getINSTANCE();
+        Students currentCohort = Students.getInstance();
         String[] names = {
                 "Aaron Herion",
                 "Abrar Mohammed",
@@ -48,7 +46,7 @@ public class StudentsTest extends PeopleTest{
 
     @Test
     public void assignNextIdTest() {
-        Students currentCohort = Students.getINSTANCE();
+        Students currentCohort = Students.getInstance();
         long nextId = -1;
         nextId = currentCohort.assignNextId();
         boolean expected = true;

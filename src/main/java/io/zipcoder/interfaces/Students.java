@@ -44,7 +44,7 @@ public final class Students extends People{
         }
     }
 
-    public static Students getINSTANCE() {
+    public static Students getInstance() {
         return INSTANCE;
     }
 }
