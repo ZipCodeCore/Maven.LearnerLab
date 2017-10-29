@@ -1,18 +1,24 @@
 package io.zipcoder.interfaces;
 
-import com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
-
 public final class Students extends People {
 
-    static{
-        final Students INSTANCE;
-    }
+    private static final Students INSTANCE = new Students();
 
     private Students() {
-        INSTANCE = ;
+
+        String[] names = {"Aaron", "Abrar", "Andrea", "Andrew", "Brian", "Claude", "Donald", "Elliott", "Gabriella", "Graham",
+                "Greg", "Jeff", "Katherine", "Lina", "Linda", "Logan", "Merin", "Oleg", "Pavel", "Raul",
+                "Rob", "Ran", "Samuel", "Tim", "Vince", "Wes", "Zach", "Zan"};
+
+        for (int i = 0; i < names.length; i++) {
+            Student student = new Student();
+            student.setName(names[i]);
+            this.add(student);
+        }
+
     }
 
-    public Students getInstance() {
+    public static Students getInstance() {
         return INSTANCE;
     }
 }

@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class TestStudent {
-    Student student = new Student(001);
+    Student student = new Student();
 
 
     @Test

@@ -1,23 +1,21 @@
 package io.zipcoder.interfaces;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class People {
-    private ArrayList<Person> personList = new ArrayList<Person>();
+public class People<P extends Person> {
 
-    public void add(Person person) {
+    private ArrayList<P> personList = new ArrayList<P>();
+
+    public void add(P person) {
         personList.add(person);
     }
 
-    public Person findById(long id) {
+    public P findById(long id) {
 
-        //personList.contains(Person)
-
-        Person match = null;
+        P match = null;
         for(Person person : personList){
             if((person.getId() == id )) {
-                match = person;
+                match = (P) person;
             }
         }
         return match;

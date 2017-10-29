@@ -4,8 +4,8 @@ public class Student extends Person implements Learner {
 
     private double totalStudyTime;
 
-    public Student(long id) {
-        super(id);
+    public Student() {
+        super(System.nanoTime());
     }
 
     public void learn(double numberOfHours) {

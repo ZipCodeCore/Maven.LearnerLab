@@ -1,9 +1,11 @@
+package io.zipcoder.interfaces;
+
 import io.zipcoder.interfaces.*;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class TestInstructor {
-    Instructor instructor = new Instructor(001);
+    Instructor instructor = new Instructor();
 
     @Test
     public void testImplementation() {
@@ -17,7 +19,7 @@ public class TestInstructor {
 
     @Test
     public void testTeach() {
-        Student student = new Student(001);
+        Student student = new Student();
 
         instructor.teach(student, 15.0);
         double expected = 15.0;
@@ -29,8 +31,8 @@ public class TestInstructor {
 
     @Test
     public void testLecture() {
-        Student s1 = new Student(001);
-        Student s2 = new Student(002);
+        Student s1 = new Student();
+        Student s2 = new Student();
         Learner[] learners = {s1, s2};
 
         instructor.lecture(learners, 20);

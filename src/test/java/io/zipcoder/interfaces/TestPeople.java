@@ -11,8 +11,9 @@ public class TestPeople {
     @Test
     public void testAdd() {
         people.add(p1);
+        people.add(p2);
 
-        int expected = 1;
+        int expected = 2;
         int actual = people.getCount();
 
         Assert.assertEquals(expected, actual);
@@ -39,5 +40,7 @@ public class TestPeople {
         Person expected = p2;
 
         Person actual = people.findById(002);
+
+        Assert.assertEquals(expected, actual);
     }
 }
