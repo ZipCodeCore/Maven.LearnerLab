@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 public class Instructor extends Person implements Teacher {
     public Instructor() {
-        super(System.nanoTime());
+        super(System.currentTimeMillis());
     }
 
     public void teach(Learner learner, double numberOfHours) {

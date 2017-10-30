@@ -29,7 +29,7 @@ public class People<P extends Person> {
         return personList.size();
     }
 
-    public Object getArray() {
+    public Object[] getArray() {
         return personList.toArray();
     }
 
