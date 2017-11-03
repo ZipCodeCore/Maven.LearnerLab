@@ -25,6 +25,10 @@ public final class ZipCodeWilmington {
         instructor.lecture(students.getArray(), numberOfHours);
     }
 
+    public void hostLecture(Educator educator, double numberOfHours) {
+        educator.lecture(students.getArray(), numberOfHours);
+    }
+
     public static Students getStudents() {
         return students;
     }

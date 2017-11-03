@@ -56,4 +56,27 @@ public class ZipCodeWilmingtonTest {
         Assert.assertTrue(actual);
     }
 
+    @Test
+    public void hostLectureEducatorTest() {
+        ZipCodeWilmington currentCohort = ZipCodeWilmington.getINSTANCE();
+        Educator currentEducator = Educator.DOLIO;
+        Student[] currentStudents = currentCohort.getStudents().getArray();
+
+        Double[] initialTotalStudyTime = new Double[currentStudents.length];
+        for(int i = 0; i < initialTotalStudyTime.length; i++){
+            initialTotalStudyTime[i] = currentStudents[i].getTotalStudyTime();
+        }
+
+        currentCohort.hostLecture(currentEducator, 8);
+        boolean actual = true;
+        for(int i = 0; i < initialTotalStudyTime.length; i++) {
+            if(currentStudents[i].getTotalStudyTime() != 8 + initialTotalStudyTime[i]) {
+                actual = false;
+                break;
+            }
+        }
+
+        Assert.assertTrue(actual);
+    }
+
 }
