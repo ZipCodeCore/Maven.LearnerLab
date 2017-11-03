@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class People {
-    private List<Person> peopleList = new ArrayList<Person>(128);
+public abstract class People<E extends Person> {
+    private List<E> peopleList = new ArrayList<E>(128);
 
-    public void add(Person person) {
+    public void add(E person) {
         peopleList.add(person);
     }
 
-    public void remove(Person person) {
+    public void remove(E person) {
         peopleList.remove(person);
     }
 
     public void remove(long id) {
-        Person personToRemove = null;
-        for(Person person: peopleList) {
+        E personToRemove = null;
+        for(E person: peopleList) {
             if(person.getId() == id) {
                 personToRemove = person;
             }
@@ -29,8 +29,8 @@ public class People {
         peopleList.clear();
     }
 
-    public Person findById(long id) {
-        for(Person person: peopleList) {
+    public E findById(long id) {
+        for(E person: peopleList) {
             if(person.getId() == id) {
                 return person;
             }
@@ -42,9 +42,11 @@ public class People {
         return peopleList.size();
     }
 
-    public Person[] getArray() {
-        return peopleList.toArray(new Person[getCount()]);
-    }
+    public abstract E[] getArray();
+
+    public List<E> getArrayList() {
+        return peopleList;
+    };
 
     public long assignNextId() {
         Random rand = new Random();

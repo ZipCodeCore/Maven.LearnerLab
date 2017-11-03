@@ -3,6 +3,9 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class InstructorTest {
 
     @Test
@@ -36,7 +39,9 @@ public class InstructorTest {
         Instructor testInstructor = new Instructor(5, "bob");
         Student testStudent = new Student(3, "hello");
         Student testStudent2 = new Student(4,"goodbye");
+
         Student[] studyGroup = {testStudent, testStudent2};
+
         double expected = 200;
         testInstructor.lecture(studyGroup, 200);
         double actual = testStudent.getTotalStudyTime();

@@ -1,32 +1,44 @@
 package io.zipcoder.interfaces;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class PeopleTest {
 
+    Students studyGroup;
+    Student student1;
+    Student student2;
+    Student student3;
+
+    @Before
+    public void initialize() {
+        studyGroup = Students.getInstance();
+        student1 = new Student(2, "name");
+        student2 = new Student(3, "name");
+        student3 = new Student(4, "name");
+    }
+
     @Test
     public void addPersonTest() {
-        People studyGroup = new People();
-        Student student1 = new Student(2, "name");
-        Student student2 = new Student(3, "name");
         studyGroup.add(student1);
         studyGroup.add(student2);
 
         Student[] expected = {student1, student2};
-        Student[] actual = Arrays.copyOf(studyGroup.getArray(), studyGroup.getCount(), Student[].class);
+        Student[] actual = studyGroup.getArray();
 
         Assert.assertEquals(expected, actual);
+
+        studyGroup.remove(student1);
+        studyGroup.remove(student2);
+        // studyGroup empty at end of test
     }
 
     @Test
     public void removePersonTest() {
-        People studyGroup = new People();
-        Student student1 = new Student(2, "name");
-        Student student2 = new Student(3, "name");
-        Student student3 = new Student(4, "name");
         studyGroup.add(student1);
         studyGroup.add(student2);
         studyGroup.add(student3);
@@ -34,17 +46,17 @@ public class PeopleTest {
         studyGroup.remove(student2);
 
         Student[] expected = {student1, student3};
-        Student[] actual = Arrays.copyOf(studyGroup.getArray(), studyGroup.getCount(), Student[].class);
+        Student[] actual = {studyGroup.getArray()[studyGroup.getCount() - 2], studyGroup.getArray()[studyGroup.getCount() - 1]};
 
         Assert.assertEquals(expected, actual);
+
+        studyGroup.remove(student1);
+        studyGroup.remove(student3);
+        // studyGroup empty at end of test
     }
 
     @Test
     public void removePersonByIdTest() {
-        People studyGroup = new People();
-        Student student1 = new Student(2, "name");
-        Student student2 = new Student(3, "name");
-        Student student3 = new Student(4, "name");
         studyGroup.add(student1);
         studyGroup.add(student2);
         studyGroup.add(student3);
@@ -52,35 +64,39 @@ public class PeopleTest {
         studyGroup.remove(2);
 
         Student[] expected = {student2, student3};
-        Student[] actual = Arrays.copyOf(studyGroup.getArray(), studyGroup.getCount(), Student[].class);
+        Student[] actual = {studyGroup.getArray()[studyGroup.getCount() - 2], studyGroup.getArray()[studyGroup.getCount() - 1]};
 
         Assert.assertEquals(expected, actual);
+
+        studyGroup.remove(student1);
+        studyGroup.remove(student3);
+        // studyGroup empty at end of test
     }
 
     @Test
     public void removePersonByIdNoIdFoundTest() {
-        People studyGroup = new People();
-        Student student1 = new Student(2, "name");
-        Student student2 = new Student(3, "name");
-        Student student3 = new Student(4, "name");
         studyGroup.add(student1);
         studyGroup.add(student2);
-        studyGroup.add(student3);
 
         studyGroup.remove(10);
 
-        Student[] expected = {student1, student2, student3};
-        Student[] actual = Arrays.copyOf(studyGroup.getArray(), studyGroup.getCount(), Student[].class);
+        Student[] expected = {student1, student2};
+        Student[] actual = {studyGroup.getArray()[studyGroup.getCount() - 2], studyGroup.getArray()[studyGroup.getCount() - 1]};
 
         Assert.assertEquals(expected, actual);
+
+        studyGroup.remove(student1);
+        studyGroup.remove(student2);
+        // studyGroup empty at end of test
     }
+
+//    Students is singleton, don't use removeall method
+//    in testing, it will break tests in the students test
+//    class because you cannot create a new instance of
+//    the students class
 
     @Test
     public void removeAllTest() {
-        People studyGroup = new People();
-        Student student1 = new Student(2, "name");
-        Student student2 = new Student(3, "name");
-        Student student3 = new Student(4, "name");
         studyGroup.add(student1);
         studyGroup.add(student2);
         studyGroup.add(student3);
@@ -93,32 +109,35 @@ public class PeopleTest {
         Assert.assertEquals(expected, actual);
     }
 
+
     @Test
     public void findByIdTest() {
-        People studyGroup = new People();
-        Student student1 = new Student(2, "name");
-        Student student2 = new Student(3, "name");
         studyGroup.add(student1);
         studyGroup.add(student2);
 
         Student expected = student1;
-        Student actual = (Student) studyGroup.findById(2);
+        Student actual = studyGroup.findById(2);
 
         Assert.assertEquals(expected, actual);
+
+        studyGroup.remove(student1);
+        studyGroup.remove(student2);
+        // studyGroup empty at end of test
     }
 
     @Test
     public void findByIdReturnsNullTest() {
-        People studyGroup = new People();
-        Student student1 = new Student(2, "name");
-        Student student2 = new Student(3, "name");
         studyGroup.add(student1);
         studyGroup.add(student2);
 
         Student expected = null;
-        Student actual = (Student) studyGroup.findById(4);
+        Student actual = studyGroup.findById(4);
 
         Assert.assertEquals(expected, actual);
+
+        studyGroup.remove(student1);
+        studyGroup.remove(student2);
+        // studyGroup empty at end of test
     }
 
     public boolean allNamesInArray(String[] names, Person[] array) {
@@ -131,8 +150,8 @@ public class PeopleTest {
     }
 
     public boolean isNameInArray(String name, Person[] array) {
-        for(Person student: array) {
-            if(student.getName().equals(name)) {
+        for(Person person: array) {
+            if(person.getName().equals(name)) {
                 return true;
             }
         }

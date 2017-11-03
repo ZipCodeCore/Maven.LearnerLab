@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 import java.util.Random;
 
-public final class Students extends People{
+public final class Students extends People<Student>{
 
     private static final String[] names = {
             "Aaron Herion",
@@ -34,7 +34,7 @@ public final class Students extends People{
             "Zachary Stimmel",
             "Zan Cheema"
     };
-    private static final Students INSTANCE = new Students();
+    private static Students INSTANCE;
 
     private Students() {
         super();
@@ -45,6 +45,16 @@ public final class Students extends People{
     }
 
     public static Students getInstance() {
-        return INSTANCE;
+        if(INSTANCE != null) {
+            return INSTANCE;
+        }
+        else {
+            INSTANCE = new Students();
+            return INSTANCE;
+        }
+    }
+
+    public Student[] getArray() {
+        return super.getArrayList().toArray(new Student[getCount()]);
     }
 }

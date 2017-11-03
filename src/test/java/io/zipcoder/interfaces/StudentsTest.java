@@ -3,6 +3,8 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class StudentsTest extends PeopleTest{
 
     @Test
@@ -41,6 +43,7 @@ public class StudentsTest extends PeopleTest{
 
         boolean expected = true;
         boolean actual = allNamesInArray(names, currentCohort.getArray());
+
         Assert.assertTrue(actual);
     }
 

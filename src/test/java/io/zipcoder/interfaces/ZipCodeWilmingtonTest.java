@@ -4,20 +4,26 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class ZipCodeWilmingtonTest {
 
     @Test
     public void hostLectureTest() {
         ZipCodeWilmington currentCohort = ZipCodeWilmington.getINSTANCE();
-        Person[] currentInstructors = currentCohort.getInstructors().getArray();
-        Instructor currentInstructor = (Instructor) currentInstructors[0];
-        Student[] currentStudents = Arrays.copyOf(currentCohort.getStudents().getArray(), currentCohort.getStudents().getCount(), Student[].class);
+        Instructor[] currentInstructors = currentCohort.getInstructors().getArray();
+        Instructor currentInstructor = currentInstructors[0];
+        Student[] currentStudents = currentCohort.getStudents().getArray();
+
+        Double[] initialTotalStudyTime = new Double[currentStudents.length];
+        for(int i = 0; i < initialTotalStudyTime.length; i++){
+            initialTotalStudyTime[i] = currentStudents[i].getTotalStudyTime();
+        }
 
         currentCohort.hostLecture(currentInstructor, 8);
         boolean actual = true;
-        for(Student student: currentStudents) {
-            if(student.getTotalStudyTime() != 8) {
+        for(int i = 0; i < initialTotalStudyTime.length; i++) {
+            if(currentStudents[i].getTotalStudyTime() != 8 + initialTotalStudyTime[i]) {
                 actual = false;
                 break;
             }
@@ -29,14 +35,19 @@ public class ZipCodeWilmingtonTest {
     @Test
     public void hostLectureByIdTest() {
         ZipCodeWilmington currentCohort = ZipCodeWilmington.getINSTANCE();
-        Person[] currentInstructors = currentCohort.getInstructors().getArray();
-        Instructor currentInstructor = (Instructor) currentInstructors[0];
-        Student[] currentStudents = Arrays.copyOf(currentCohort.getStudents().getArray(), currentCohort.getStudents().getCount(), Student[].class);
+        Instructor[] currentInstructors = currentCohort.getInstructors().getArray();
+        Instructor currentInstructor = currentInstructors[0];
+        Student[] currentStudents = currentCohort.getStudents().getArray();
+
+        Double[] initialTotalStudyTime = new Double[currentStudents.length];
+        for(int i = 0; i < initialTotalStudyTime.length; i++){
+            initialTotalStudyTime[i] = currentStudents[i].getTotalStudyTime();
+        }
 
         currentCohort.hostLecture(currentInstructor.getId(), 8);
         boolean actual = true;
-        for(Student student: currentStudents) {
-            if(student.getTotalStudyTime() != 8) {
+        for(int i = 0; i < initialTotalStudyTime.length; i++) {
+            if(currentStudents[i].getTotalStudyTime() != 8 + initialTotalStudyTime[i]) {
                 actual = false;
                 break;
             }
