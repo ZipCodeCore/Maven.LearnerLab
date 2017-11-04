@@ -1,6 +1,6 @@
 # Student, Instructor, Classroom
 * **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html#java-interface-example)
-* **Objective** - to implement a `ZipCodeWilmington` _singleton_ which _mediates_ a _composite_ `Students` and `Instructors` reference.
+* **Objective** - to implement a `ZipCodeWilmington` class which _mediates_ a _composite_ `Students` and `Instructors` _singleton_ reference.
 
 
 ### Part 1.1 - Create `Person` Class
@@ -16,7 +16,6 @@
 * Create a `TestPerson` class.
 	* Create a `testConstructor` method which ensures that a `Person` object's `id` field is being set upon construction.
 	* Create a `testSetName` method which ensures that a `Person` object's `name` variable is being set by invoking the `.setName` method.
-	* Create a `testConstructor` method which ensures that a `Person` object's `name` variable is being set by invoking the `Person` constructor.
 
 -
 ### Part 2.0 - Create `Learner` Interface
