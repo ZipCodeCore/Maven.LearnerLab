@@ -5,10 +5,12 @@ import org.junit.Test;
 
 public class TestStudent {
 
+    Student student = new Student(1234, "Aaron");
+
     @Test
     public void testImplementation() {
 
-        Assert.assertTrue(Student.instanceOf(Learner));
+        Assert.assertTrue(student instanceof Learner);
 
 
     }
@@ -17,7 +19,7 @@ public class TestStudent {
 
     public void testInheritance() {
 
-        Assert.assertTrue(Student.instanceOf(Person));
+        Assert.assertTrue(student instanceof Person);
 
     }
 
@@ -25,7 +27,11 @@ public class TestStudent {
 
     public void testLearn() {
 
-        
+
+        double expected = 15;
+        double actual = student.learn(15);
+
+        Assert.assertEquals(expected, actual, 0);
 
     }
 
