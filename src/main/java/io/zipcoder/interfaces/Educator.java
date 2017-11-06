@@ -6,12 +6,12 @@ public enum Educator implements Teacher{
     DOLIO ("L. Dolio Durant");
 
     private final Instructor instructor;
-    private final Instructors INSTANCE = Instructors.getInstance();
+    private final Instructors instructors = Instructors.getInstance();
     private double timeWorked = 0;
 
     Educator(String name) {
-        this.instructor = new Instructor(INSTANCE.assignNextId(), name);
-        INSTANCE.add(instructor);
+        this.instructor = new Instructor(instructors.assignNextId(), name);
+        instructors.add(instructor);
     }
 
     public double getTimeWorked() {
