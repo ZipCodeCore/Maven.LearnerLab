@@ -18,10 +18,12 @@ package io.zipcoder.interfaces;
 //        double numberOfHours
 //        Method return-type: void
 
+import java.util.ArrayList;
+
 public interface Teacher {
 
-    public void teach(Learner learner, double numberOfHours);
-    public void lecture(Learner[] learners, double numberOfHours);
+     void teach(Student learner, double numberOfHours);
+     void lecture(Student[] learners, double numberOfHours);
 
 
 }

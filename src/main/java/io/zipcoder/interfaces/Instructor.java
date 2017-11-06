@@ -14,22 +14,36 @@ package io.zipcoder.interfaces;
 //        double numberOfHoursPerLearner = numberOfHours / learners.length;
 
 
+
+
 public class Instructor extends Person implements Teacher {
 
+    private final Educator educator;
+
+    public Instructor(long id, Educator educator){
+        super(id);
+        this.educator = educator;
+    }
+/*
     public Instructor(long id) {
         super(id);
     }
 
-    public void teach(Learner learner, double numberOfHours){
+    public Instructor(long id, String name) {
+        super(id, name);
+*/
+    public void teach(Student learner, double numberOfHours) {
         learner.learn(numberOfHours);
     }
 
-    public void lecture(Learner[] learners, double numberOfHours){
-        double numberOfHoursPerLearner = numberOfHours/learners.length;
+    public void lecture(Student[] learners, double numberOfHours) {
+        double numberOfHoursPerLearner = numberOfHours / learners.length;
 
-        for(Learner currentElement: learners) {
+        for (Learner currentElement : learners) {
             currentElement.learn(numberOfHoursPerLearner);
         }
     }
 
 }
+
+

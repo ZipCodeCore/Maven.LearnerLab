@@ -15,18 +15,19 @@ package io.zipcoder.interfaces;
 //        The class should define a method named getArray which returns an array representation of the personList field.
 //        The class should define a named removeAll which clears our personList field.
 
+import java.sql.Array;
 import java.util.ArrayList;
+/*
+public class People {
 
-public abstract class People<E extends Person> {
+    private ArrayList<Person> personList = new ArrayList<Person>();
 
-    private ArrayList<E> personList = new ArrayList<E>();
-
-    public void addPerson(E person){
+    public void addPerson(Person person){
 
         personList.add(person);
     }
 
-    public E findById(long id){
+    public Person findById(long id){
 
           for(int i = 0; i < personList.size(); i++){
               if(personList.get(i).getId() == id){
@@ -36,7 +37,7 @@ public abstract class People<E extends Person> {
 
     }
 
-    public void removePerson(E person){
+    public void removePerson(Person person){
         personList.remove(person);
     }
 
@@ -52,14 +53,25 @@ public abstract class People<E extends Person> {
             return personList.size();
     }
 
-    public abstract E[] getArray();
 
-    public ArrayList<E> getPersonList() {
+    public Person[] getArray(){
+        Person[] people = new Person[personList.size()];
+
+        for(int i=0; i<people.length; i++) {
+            people[i] = personList.get(i);
+        }
+        return people;
+
+    }
+
+
+
+    public ArrayList<Person> getPersonList() {
         return personList;
     }
 
     public void removeAll(People personList){
         personList.removeAll(personList);
     }
+*/
 
-}

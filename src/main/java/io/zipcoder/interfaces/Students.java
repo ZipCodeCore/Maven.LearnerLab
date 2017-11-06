@@ -15,28 +15,31 @@ package io.zipcoder.interfaces;
 import java.sql.Array;
 import java.util.ArrayList;
 
-public class Students extends People{
+public class Students extends People<Student>{
 
     private static final Students INSTANCE;
 
     private Students(){
-
     }
 
     static {
         INSTANCE = new Students();
-
-        Student lina = new Student(1231, "Lina");
-        Student abrar = new Student(1232, "Abrar");
-        Student raul = new Student(1235, "Raul");
-
-        INSTANCE.addPerson(raul);
-        INSTANCE.addPerson(lina);
-        INSTANCE.addPerson(abrar);
-
     }
 
     public static Students getINSTANCE() {
         return INSTANCE;
     }
+
+    public Student[] getArray(){
+
+        int personListSize = getPersonList().size();
+        Student[] students = new Student[personListSize];
+
+        for(int i=0; i<personListSize; i++) {
+            students[i] = getPersonList().get(i);
+        }
+        return students;
+
+    }
+
 }

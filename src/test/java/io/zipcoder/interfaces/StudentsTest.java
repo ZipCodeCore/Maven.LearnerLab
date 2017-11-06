@@ -20,9 +20,24 @@ public class StudentsTest {
 
     Students cohort = Students.getINSTANCE();
 
-    String expected = "Some array";
-    String actual = cohort.getArray();
+    Student lina = new Student(1231, "Lina");
+    Student abrar = new Student(1232, "Abrar");
+    Student raul = new Student(1235, "Raul");
+    cohort.addPerson(raul);
+    cohort.addPerson(lina);
+    cohort.addPerson(abrar);
 
+    Students anotherCohort = Students.getINSTANCE();
+
+    Student kathryn = new Student(1237, "Kathryn");
+    Student andrea = new Student(1238, "Andrea");
+    Student gabriela = new Student(1239, "Gabriela");
+    anotherCohort.addPerson(kathryn);
+    anotherCohort.addPerson(andrea);
+    anotherCohort.addPerson(gabriela);
+
+    int expected = 6;
+    int actual = cohort.getArray().length;
 
     Assert.assertEquals(expected,actual);
 
