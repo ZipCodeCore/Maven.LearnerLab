@@ -13,9 +13,9 @@ public class ZipCodeWilmingtonTest {
 
         String before=zipCodeWilmington.getStudyTime();
         zipCodeWilmington.hostLectures(22,1000);
-    //    String after=zipCodeWilmington.getStudyTime();
+        String after=zipCodeWilmington.getStudyTime();
 
-     //   Assert.assertNotEquals(before,after);
+        Assert.assertNotEquals(before,after);
     }
 
     @Test

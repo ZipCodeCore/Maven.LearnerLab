@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestPerson {
-    Person person=new Person(123);
+    Person<Person> person=new Person<Person>(123);
     @Test
     public void getId() throws Exception {
         long expected=123;

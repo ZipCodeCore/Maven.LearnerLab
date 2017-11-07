@@ -1,6 +1,8 @@
 package io.zipcoder.interfaces;
 
-public final class ZipCodeWilmington extends People {
+import java.util.ArrayList;
+
+public final class ZipCodeWilmington {
     private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
 
     private Instructors instructors = Instructors.getInstance();
@@ -9,27 +11,37 @@ public final class ZipCodeWilmington extends People {
     private ZipCodeWilmington() {
     }
 
+
     public static ZipCodeWilmington getInstance() {
         return INSTANCE;
     }
 
     public void hostLectures(Teacher teacher, double numberOfHours) {
+        Student[] studentsArray=students.getArray();
+        for(Student ss:studentsArray){
+            ss.getTotalStudyTime();
+        }
 
-        studyTime="";
-         for (int i=0; i<students.getCount(); i++) {
-             studyTime+="ID: "+ students.getArray()[i].getId()+"TotalStudyTime: "+students.getArray()[i].getTotalStudyTime()+"\n";
+        studyTime="Before\n****\n";
+        for (int i=0; i<students.getCount(); i++) {
+             studyTime+="ID: "+ students.getArray()[i]+"TotalStudyTime: "+students.getArray()[i].getTotalStudyTime()+"\n";
          }
-             System.out.println(studyTime);
+            //System.out.println(studyTime);
 
         teacher.lecture(students.getArray(), numberOfHours);
 
+        for (int i=0; i<students.getCount(); i++) {
+            studyTime+="ID: "+ students.getArray()[i]+"TotalStudyTime: "+students.getArray()[i].getTotalStudyTime()+"\n";
+        }
+        System.out.println(studyTime);
     }
 
     public void hostLectures(long id, double numberOfHours) {
 
-        Teacher teacher = instructors.findById(id);
 
-        hostLectures(teacher, numberOfHours);
+        Instructor teacher = instructors.findById(id);
+
+       hostLectures(teacher, numberOfHours);
     }
 
     public String getStudyTime(){

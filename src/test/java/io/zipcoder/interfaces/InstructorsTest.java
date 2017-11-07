@@ -5,8 +5,6 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
-
 public class InstructorsTest {
     @Test
     public void getInstance() throws Exception {
@@ -18,7 +16,7 @@ public class InstructorsTest {
         for (int i=0; i<4; i++)
             expected[i]=new Instructor(i+21);
 
-        Person [] persons=Instructors.getInstance().getArray();
+        Person<Person>[] persons=Instructors.getInstance().getArray();
 
 
         Assert.assertEquals(Arrays.toString(expected), Arrays.toString(persons));

@@ -2,9 +2,9 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public class  People<E extends Person> {
+public abstract class  People<E extends Person> {
 
-    private ArrayList<E> personList;
+    public ArrayList<E> personList;
 
     public People ( ){
         personList=new ArrayList<E>();
@@ -22,6 +22,10 @@ public class  People<E extends Person> {
         return null;
     }
 
+    public ArrayList<E> getPersonList() {
+        return personList;
+    }
+
     public void remove(E person) {
         personList.remove(person);
     }
@@ -35,10 +39,8 @@ public class  People<E extends Person> {
         return personList.size();
     }
 
-    public E [] getArray(){
+  public abstract E[] getArray();
 
-        return (E[]) personList.toArray();
-    }
 
     public void removeAll() {
         personList.clear();
