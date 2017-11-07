@@ -22,18 +22,10 @@ public final class ZipCodeWilmington {
             ss.getTotalStudyTime();
         }
 
-        studyTime="Before\n****\n";
-        for (int i=0; i<students.getCount(); i++) {
-             studyTime+="ID: "+ students.getArray()[i]+"TotalStudyTime: "+students.getArray()[i].getTotalStudyTime()+"\n";
-         }
-            //System.out.println(studyTime);
+
 
         teacher.lecture(students.getArray(), numberOfHours);
 
-        for (int i=0; i<students.getCount(); i++) {
-            studyTime+="ID: "+ students.getArray()[i]+"TotalStudyTime: "+students.getArray()[i].getTotalStudyTime()+"\n";
-        }
-        System.out.println(studyTime);
     }
 
     public void hostLectures(long id, double numberOfHours) {
