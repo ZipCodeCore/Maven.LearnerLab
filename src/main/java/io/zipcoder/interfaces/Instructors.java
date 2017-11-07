@@ -22,12 +22,12 @@ public class Instructors extends People<Instructor>{
 
     static {
         INSTANCE = new Instructors();
-        Instructor tariq = new Instructor(123, Educator.TARIQ);
-        Instructor leon = new Instructor(124, Educator.LEON);
-        Instructor dolio = new Instructor(125, Educator.DOLIO);
-        INSTANCE.addPerson(tariq);
-        INSTANCE.addPerson(leon);
-        INSTANCE.addPerson(dolio);
+//        Instructor tariq = new Instructor(123, Educator.TARIQ);
+//        Instructor leon = new Instructor(124, Educator.LEON);
+//        Instructor dolio = new Instructor(125, Educator.DOLIO);
+//        INSTANCE.addPerson(tariq);
+//        INSTANCE.addPerson(leon);
+//        INSTANCE.addPerson(dolio);
     }
 
     public static Instructors getINSTANCE() {

@@ -11,17 +11,19 @@ public class ZIpCodeWilimingtonTest {
         Instructors instructors = Instructors.getINSTANCE();
         ZipCodeWilmington zipcoders = ZipCodeWilmington.getINSTANCE();
 
-        double expected = 5;
+        double expected = 3;
 
         Student student1 = new Student(98);
+        Student student2 = new Student(43);
         Instructor instructor = new Instructor(123);
 
 
         students.addPerson(student1);
-        instructors.addPerson(instructor);
+        students.addPerson(student2);
+     //   instructors.addPerson(instructor);
 
 
-        zipcoders.hostLecture(instructor, 5);
+        zipcoders.hostLecture(instructor, 6);
 
         double actual = student1.getTotalStudyTime();
 
