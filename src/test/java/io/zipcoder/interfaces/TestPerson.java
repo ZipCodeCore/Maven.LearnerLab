@@ -14,7 +14,7 @@ public class TestPerson {
         //actual
         long actualId = wes.getId();
         //test
-        Assert.assertEquals("Longs are equal",expectedId,actualId);
+        Assert.assertEquals(expectedId,actualId);
 
     }
 
@@ -28,7 +28,7 @@ public class TestPerson {
         wes.setName(expectedName);
         String actualName = wes.getName();
         //test
-        Assert.assertEquals("name are the same",expectedName,actualName);
+        Assert.assertEquals(expectedName,actualName);
     }
 
     @Test
@@ -40,6 +40,6 @@ public class TestPerson {
         //actual
         String actualName = wes.getName();
         //test
-        Assert.assertEquals("Name are the same",expectedName,actualName);
+        Assert.assertEquals(expectedName,actualName);
     }
 }
