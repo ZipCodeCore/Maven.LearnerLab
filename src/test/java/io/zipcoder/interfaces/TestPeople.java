@@ -3,8 +3,6 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 public class TestPeople {
     Person bob = new Person(3);
     Person jim = new Person(6);
