@@ -6,10 +6,20 @@ import org.junit.Test;
 public class TestStudent {
 
     @Test
-    public void testImplementation(){
-    Student implementationTest = new Student(111);
-    double expected = implementationTest.learn(5.0);
-        Assert.assertEquals(expected, implementationTest.learn(5.0));
+    public void testImplementation() {
+        Student student = new Student(111);
+        Assert.assertTrue(student instanceof Learner);
     }
 
+    @Test
+    public void testInheritance(){
+        Student student = new Student(111);
+        Assert.assertTrue(student instanceof Person);
+    }
+
+    @Test
+    public void testLearn(){
+        Student student = new Student(111);
+        student.learn(10);
+    }
 }
