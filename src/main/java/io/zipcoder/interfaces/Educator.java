@@ -2,38 +2,47 @@ package io.zipcoder.interfaces;
 
 public enum Educator implements Teacher{
 
-    TARIQ {
-    @Override
-    public void teach(Student learner, double numberOfHours) {
+    TARIQ,
+    LEON,
+    DOLIO;
+
+    private double timeworked;
+    private final Instructor instructor;
+
+    Educator(){
+        Instructors instructors = Instructors.getINSTANCE();
+        Instructor instructor = new Instructor(instructors.getCount(), this.name()){
+            @Override
+            public void teach(Student learner, double hoursTaught){
+                super.teach(learner, hoursTaught);
+                timeworked += hoursTaught;
+            }
+
+        };
+        instructors.addPerson(instructor);
+        this.instructor = instructors.findById(instructor.getId());
 
     }
 
-    @Override
-    public void lecture(Student[] learners, double numberOfHours) {
 
+    public Instructor getInstructor() {
+        return instructor;
     }
-},
-    LEON {
-    @Override
-    public void teach(Student learner, double numberOfHours) {
 
+    public double getTimeworked() {
+        return timeworked;
     }
 
     @Override
-    public void lecture(Student[] learners, double numberOfHours) {
-
-    }
-},
-    DOLIO {
-    @Override
-    public void teach(Student learner, double numberOfHours) {
-
+    public void teach(Student learner, double hours){
+        instructor.teach(learner, hours);
     }
 
     @Override
-    public void lecture(Student[] learners, double numberOfHours) {
-
+    public void lecture(Student[] learners, double hours){
+        instructor.lecture(learners, hours);
+        timeworked += hours;
     }
-}
+
 }
 

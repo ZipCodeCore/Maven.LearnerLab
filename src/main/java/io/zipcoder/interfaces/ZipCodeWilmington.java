@@ -16,11 +16,7 @@ public class ZipCodeWilmington{
 
     public void hostLecture(Teacher teacher, double numberOfHours){
 
-        Student[] studentArray = new Student[students.getArray().length];
-        for(int i = 0; i<students.getPersonList().size(); i++) {
-            studentArray[i] = students.getArray()[i];
-        }
-
+        Student[] studentArray = students.getArray();
         teacher.lecture(studentArray,numberOfHours);
     }
 
