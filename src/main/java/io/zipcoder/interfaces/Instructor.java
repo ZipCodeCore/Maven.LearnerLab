@@ -26,15 +26,16 @@ public class Instructor extends Person implements Teacher {
         super(id, name);
 
     }
-    public void teach(Student learner, double numberOfHours) {
+    public void teach(Learner learner, double numberOfHours) {
+      //  System.out.printf("Teaching [ %s ] %s number of hours", ((Person)learner).getName(), numberOfHours);
         learner.learn(numberOfHours);
     }
 
-    public void lecture(Student[] learners, double numberOfHours) {
+    public void lecture(Learner[] learners, double numberOfHours) {
         double numberOfHoursPerLearner = numberOfHours / learners.length;
 
         for (Learner currentElement : learners) {
-            currentElement.learn(numberOfHoursPerLearner);
+            teach(currentElement, numberOfHoursPerLearner);
         }
     }
 

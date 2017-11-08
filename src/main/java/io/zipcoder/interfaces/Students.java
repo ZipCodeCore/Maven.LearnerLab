@@ -17,13 +17,11 @@ import java.util.ArrayList;
 
 public class Students extends People<Student>{
 
-    private static final Students INSTANCE;
+    private static final Students INSTANCE = new Students();
 
     private Students(){
-    }
-
-    static {
-        INSTANCE = new Students();
+        addPerson(new Student(0, "Greg"));
+        addPerson(new Student(1, "Greg"));
     }
 
     public static Students getINSTANCE() {

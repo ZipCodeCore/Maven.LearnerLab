@@ -19,8 +19,6 @@ public class EducatorTest {
     public void testEducatorHostLecture() {
         ZipCodeWilmington zippers = ZipCodeWilmington.getINSTANCE();
 
-        zippers.hostLecture(Educator.TARIQ, 4);
-        zippers.hostLecture(Educator.DOLIO, 3);
         zippers.hostLecture(Educator.LEON, 2);
 
         String expected = "Name: LEON\nID: 1\nHrs: 2.0";

@@ -22,8 +22,8 @@ import java.util.ArrayList;
 
 public interface Teacher {
 
-     void teach(Student learner, double numberOfHours);
-     void lecture(Student[] learners, double numberOfHours);
+     void teach(Learner learner, double numberOfHours);
+     void lecture(Learner[] learners, double numberOfHours);
 
 
 }

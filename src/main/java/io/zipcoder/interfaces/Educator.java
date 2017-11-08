@@ -13,15 +13,14 @@ public enum Educator implements Teacher{
         Instructors instructors = Instructors.getINSTANCE();
         Instructor instructor = new Instructor(instructors.getCount(), this.name()){
             @Override
-            public void teach(Student learner, double hoursTaught){
+            public void teach(Learner learner, double hoursTaught){
                 super.teach(learner, hoursTaught);
-                timeworked += hoursTaught;
+                Educator.this.timeworked += hoursTaught;
             }
 
         };
         instructors.addPerson(instructor);
-        this.instructor = instructors.findById(instructor.getId());
-
+        this.instructor = instructor;
     }
 
 
@@ -34,14 +33,13 @@ public enum Educator implements Teacher{
     }
 
     @Override
-    public void teach(Student learner, double hours){
+    public void teach(Learner learner, double hours){
         instructor.teach(learner, hours);
     }
 
     @Override
-    public void lecture(Student[] learners, double hours){
+    public void lecture(Learner[] learners, double hours){
         instructor.lecture(learners, hours);
-        timeworked += hours;
     }
 
 }
