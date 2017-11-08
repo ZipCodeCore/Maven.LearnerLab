@@ -6,6 +6,7 @@ import org.junit.Test;
 public class TestInstructor {
     long thisPesronId;
     Instructor instructor = new Instructor(0,"Tariq");
+    Students students = Students.getInstance();
     @Test
     public void testImplementation(){
         //:given
@@ -18,11 +19,11 @@ public class TestInstructor {
     }
 @Test
     public void testTeach(){
-        Student student = new Student(thisPesronId);
-       double  expected = student.getTotalStudyTime() + 5;
 
-      instructor.teach(student,5);
-        double actual = student.getTotalStudyTime();
+       double  expected = students.getArray()[1].getTotalStudyTime() + 5;
+
+      instructor.teach(students.getArray()[1],5);
+        double actual = students.getArray()[1].getTotalStudyTime();
 
 
         Assert.assertEquals(expected, actual, 0);
@@ -41,16 +42,13 @@ public class TestInstructor {
 
     @Test
     public void testLecture(){
-        Student student = new Student(thisPesronId);
-        Student student2 = new Student(thisPesronId);
-        Learner[] learn = {student, student2};
 
-        double  expected =  student.getTotalStudyTime() + 3;
+        double  expected =  students.getArray()[1].getTotalStudyTime() + 2;
 
-        instructor.lecture(learn,6);
+        instructor.lecture(students.getArray(),54);
 
 
-        double actual = student2.getTotalStudyTime();
+        double actual = students.getArray()[1].getTotalStudyTime();
 
 
         Assert.assertEquals(expected, actual, 0);

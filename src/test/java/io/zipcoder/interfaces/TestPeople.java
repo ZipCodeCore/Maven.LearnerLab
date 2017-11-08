@@ -6,23 +6,19 @@ import org.junit.Assert;
 import java.util.ArrayList;
 
 public class TestPeople {
-    Student student1 = new Student(1,"Raul");
-    Student student2 = new Student(1,"Greg");
-
+    Student student1 = new Student (1,"Raul");
+    Student student2 = new Student(2,"Greg");
+    ArrayList<Person> personList = new ArrayList<Person>();
 
     @Test
 
     public void testAdd() {
-
-        //: Given
-        ArrayList<Person> personList = new ArrayList<Person>();
+        //:Given
+        personList.add(student1);
+        personList.add(student2);
         int expected = 2;
 
 
-        //: when
-        System.out.println(personList.size());
-        personList.add(student1);
-        personList.add(student2);
 
         int actual = personList.size();
 
@@ -37,7 +33,6 @@ public class TestPeople {
     public void testRemove() {
 
         //: Given
-        ArrayList<Person> personList = new ArrayList<Person>();
         personList.add(student1);
         personList.add(student2);
         System.out.println(personList.size());
@@ -52,6 +47,26 @@ public class TestPeople {
 
 
         Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testFindById(){
+        Students students = new Students();
+        students.add(student1);
+        students.add(student2);
+
+
+        String expected = "Greg";
+
+        String actual = students.findById(2).toString();
+
+        Assert.assertEquals("The two names are the same", expected,actual);
+
+
+
+
+
 
     }
 

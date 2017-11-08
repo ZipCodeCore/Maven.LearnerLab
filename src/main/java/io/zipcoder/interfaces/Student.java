@@ -1,7 +1,11 @@
 package io.zipcoder.interfaces;
 
+import java.util.ArrayList;
+
 public class Student extends Person implements Learner {
     private double totalStudyTime;
+
+
 
     public Student(long id) {
         super(id);
@@ -20,6 +24,13 @@ public class Student extends Person implements Learner {
 
     public double getTotalStudyTime() {
         return totalStudyTime;
+    }
+
+    @Override
+
+    public String toString (){
+
+        return getName().toString();
     }
 
 
