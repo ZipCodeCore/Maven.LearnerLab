@@ -16,7 +16,7 @@ public class InstructorsTest {
         for (int i=0; i<4; i++)
             expected[i]=new Instructor(i+21);
 
-        Person<Person>[] persons=Instructors.getInstance().getArray();
+        Person[] persons=Instructors.getInstance().getArray();
 
 
         Assert.assertEquals(Arrays.toString(expected), Arrays.toString(persons));

@@ -14,7 +14,7 @@ public class testPeople {
 
     @Test
     public void addTest() throws Exception {
-        int expected=1;
+        int expected=5;
         people.add(person1);
         int actual=people.getCount();
 
@@ -24,39 +24,39 @@ public class testPeople {
 
     @Test
     public void findByIdTest() throws Exception {
-        Person<Person> expected=person2;
+        Person expected=person2;
         people.add(person1);
         people.add(person2);
-        Person<Person> actual=people.findById(81);
+        Person actual=people.findById(23);
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void removeTestByPerson() throws Exception {
-        Person<Person> expected=null;
+        Person expected=null;
         people.add(person1);
         people.add(person2);
         people.remove(person1);
-        Person<Person> actual=people.findById(22);
+        Person actual=people.findById(22);
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void removeTestById() throws Exception {
-        Person<Person> expected=null;
-        people.add(person1);
-        people.add(person2);
+        Person expected=null;
+        people.add(person3);
+        people.add(person4);
         people.remove(81);
-        Person<Person> actual=people.findById(81);
+        Person actual=people.findById(81);
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void getCountTest() throws Exception {
-        int expected=2;
+        int expected=6;
         people.add(person1);
         people.add(person2);
         int actual=people.getCount();
@@ -69,7 +69,7 @@ public class testPeople {
        // Person<Person>[] expected=new Person<Person>[] {person1, person2};
         people.add(person1);
         people.add(person2);
-        Person<Person>[] actual=people.getArray();
+        Person[] actual=people.getArray();
 
         //System.out.println(expected);
 

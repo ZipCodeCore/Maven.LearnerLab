@@ -1,6 +1,6 @@
 package io.zipcoder.interfaces;
 
-public class Person<E extends Person> {
+public class Person {
 
     private final long id;
     private String name;
