@@ -8,8 +8,8 @@ public class testStudents {
     @Test
     public void TestSingleton() {
         Students students = Students.getInstance();
-        int expected = students.getCount();
-        int actual = 24;
+        int expected = 24;
+        int actual = students.getCount();
         Assert.assertEquals(expected, actual);
     }
 }
