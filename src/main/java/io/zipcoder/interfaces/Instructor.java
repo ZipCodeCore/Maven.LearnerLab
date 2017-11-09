@@ -14,8 +14,10 @@ package io.zipcoder.interfaces;
      public void lecture(Learner[] learners, double numberOfHours){
        double numberOfHoursPerLearner = numberOfHours / learners.length;
 
-       for (int i = 0; i <= learners.length; i++){
-           learners[i].learn(numberOfHours);
+       for (int i = 0; i < learners.length; i++){
+           learners[i].learn(numberOfHoursPerLearner);
+
+
        }
      }
 

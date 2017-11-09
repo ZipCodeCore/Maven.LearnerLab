@@ -1,10 +1,10 @@
 package io.zipcoder.interfaces;
 
-import io.zipcoder.interfaces.Person;
+
 
 public class Student extends Person implements Learner {
 
-    public double totalStudyTime;
+    public double totalStudyTime =1.00;
 
     public Student(long id, String name) {
         super(id, name);
