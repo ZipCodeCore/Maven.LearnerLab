@@ -31,5 +31,10 @@
       <artifactId>junit</artifactId>
       <version>RELEASE</version>
     </dependency>
+      <dependency>
+          <groupId>io.zipcoder</groupId>
+          <artifactId>interfaces-1</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
   </dependencies>
 </project>

@@ -5,7 +5,7 @@ public final class Instructors extends People {
     private static Instructors INSTANCE;
     //lambda expression
     static final String[] instructorsName = {
-            "kca83", "nehctuk", "kozman31"
+            "Kazuo Ishiguro", "Michael Rosbash", "Barry Barish"
     };
 
     private Instructors(){
