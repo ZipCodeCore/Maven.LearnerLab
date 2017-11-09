@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 
 public class ZipCodeWilmington extends People {
-    private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
+    private static ZipCodeWilmington INSTANCE;
 
     Students students = Students.getINSTANCE();
     Instructors instructors = Instructors.getINSTANCE();
@@ -16,4 +16,15 @@ public class ZipCodeWilmington extends People {
         Instructor instructor = (Instructor) instructors.findById(id);
         instructor.lecture(students.getArray(), numberOfHours);
     }
+
+    public static ZipCodeWilmington getINSTANCE(){
+        if (INSTANCE != null){
+            return INSTANCE;
+        }
+        else {
+            INSTANCE = new ZipCodeWilmington();
+            return INSTANCE;
+        }
+    }
+
 }
