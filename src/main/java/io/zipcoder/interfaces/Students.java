@@ -6,9 +6,10 @@ public final class Students extends People {
 
     private Students() {
 
-        add(new Person(123, "Zan"));
-        add(new Person(456, "Jeff"));
-        add(new Person(789, "Sam"));
+       super.add(new Student(1,"Zan"));
+       super.add(new Student(2,"Jeff"));
+       super.add(new Student(3,"Claude"));
+
     }
 
     public static Students getInstance() {
@@ -16,7 +17,7 @@ public final class Students extends People {
         return INSTANCE;
     }
 
-    public Student[] getArray() {
+    public Student[] getStudentArray() {
         Person[] persons = getArray();
         Student[] students = new Student[getCount()];
         for (int i = 0; i < students.length; i++) {
