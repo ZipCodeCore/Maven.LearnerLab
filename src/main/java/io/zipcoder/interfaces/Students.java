@@ -3,7 +3,7 @@ package io.zipcoder.interfaces;
 public final class Students extends People {
 
     private static Students INSTANCE;
-    // lambda expression
+
     private static final String[] studentsNames = {
         "Ivan Groznii", "Debi Grigorevichi", "Kovo Eshe"
     };
