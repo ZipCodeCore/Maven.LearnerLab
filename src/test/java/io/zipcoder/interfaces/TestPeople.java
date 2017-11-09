@@ -31,7 +31,7 @@ public class TestPeople {
         Person person2 = new Person(13, "Tom");
         people.add(person2);
         people.remove(13);
-        //  Assert.assertFalse(people.personList.contains(person2));
+        Assert.assertFalse(people.personList.contains(person2));
     }
 
     @Test

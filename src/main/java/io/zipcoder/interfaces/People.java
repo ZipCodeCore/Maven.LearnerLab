@@ -22,10 +22,18 @@ public class People {
     }
 
     public void remove(long id) {
-        for (Person person : personList) {
-            if (person.getId() == id) personList.remove(person);
+//        Person personRemove = null;
+//        for (Person person : personList) {
+//            if (person.getId() == id) personRemove = person;
+//        }
+//        personList.remove(personRemove);
+//    }
+        //regular for loop will work with the remove method better
+        for (int i = 0; i < personList.size(); i++) {
+            if (personList.get(i).getId() == id) personList.remove(personList.get(i));
         }
     }
+
 
     public int getCount() {
         return personList.size();
