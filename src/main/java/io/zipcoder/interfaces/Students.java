@@ -9,8 +9,9 @@ public class Students extends People{
             "Raul Cubila Perez", "Rob Kruzel", "Ryan Maiale", "SAMUEL HAILE", "Timothy Rager", "Vince Paris",
             "Wesley Connors","Zan Cheema"};
     private Students(){
+        double studyTime = 1.00;
         for (int i=0;i<names.length;i++){
-            Person person = new Student(i+1,names[i],0);
+            Person person = new Student(i+1,names[i],studyTime++);
             personList.add(person);
         }
     }

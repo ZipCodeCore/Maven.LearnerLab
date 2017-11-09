@@ -1,6 +1,16 @@
 package io.zipcoder.interfaces;
 
 public class ZipCodeWilmington {
+    private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
+
+
+    public static ZipCodeWilmington getINSTANCE() {
+        return INSTANCE;
+    }
+    private ZipCodeWilmington(){
+
+    }
+
     private Students students = Students.getInstance();
     private Instructors instructors = Instructors.getINSTRUCTORSINSTANCE();
 
