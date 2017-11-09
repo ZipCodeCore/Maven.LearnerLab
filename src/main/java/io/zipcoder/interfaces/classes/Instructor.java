@@ -6,7 +6,7 @@ import io.zipcoder.interfaces.interfaces.Teacher;
 public class Instructor extends Person implements Teacher {
 
 
-    public Instructor(long id){
+    public Instructor(long id) {
         super(id);
     }
 
@@ -15,8 +15,10 @@ public class Instructor extends Person implements Teacher {
     }
 
     public void lecture(Learner[] learners, double numberOfHours) {
-        double numberOfHoursPerLearner = numberOfHours/learners.length;
-        for(int i = 0;i < learners.length;i++){
+
+        double numberOfHoursPerLearner = numberOfHours / learners.length;
+
+        for (int i = 0; i < learners.length; i++) {
             learners[i].learn(numberOfHoursPerLearner);
         }
 
