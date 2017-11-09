@@ -2,13 +2,9 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public abstract class People <E> extends Person {
+public class People {
 
     ArrayList<Person> personList = new ArrayList<Person>();
-
-    public People(long id) {
-        super(id);
-    }
 
 
     public void add(Person person){
