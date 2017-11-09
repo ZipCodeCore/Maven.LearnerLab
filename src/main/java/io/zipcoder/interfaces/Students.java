@@ -3,7 +3,7 @@ package io.zipcoder.interfaces;
 public final class Students extends People {
 
     private static Students INSTANCE;
-
+    // lambda expression
     private static final String[] studentsNames = {
         "Ivan Groznii", "Debi Grigorevichi", "Kovo Eshe"
     };
@@ -13,7 +13,7 @@ public final class Students extends People {
             super.add(new Student(studentsNames[i], Long.valueOf(i)));
         }
     }
-
+    //lazy initialization
     public static Students getINSTANCE() {
         if(INSTANCE != null){
             return INSTANCE;
@@ -24,6 +24,8 @@ public final class Students extends People {
         }
     }
 
-    public String
+    public String[] contains(String[] studentsNames) {
+        return studentsNames;
+    }
 
 }

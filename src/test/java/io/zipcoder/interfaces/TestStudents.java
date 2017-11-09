@@ -1,5 +1,6 @@
 package io.zipcoder.interfaces;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class TestStudents {
@@ -11,6 +12,8 @@ public class TestStudents {
                 "Ivan Groznii", "Debi Grigorevichi", "Kovo Eshe"
         };
         boolean actual = true;
-        boolean expected = allStudents()
+        String expected = String.valueOf(students.contains(studentsNames));
+        Assert.assertTrue(expected, actual);
+
     }
 }
