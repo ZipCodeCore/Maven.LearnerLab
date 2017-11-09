@@ -8,16 +8,15 @@ public class Instructor extends Person implements Teacher {
         super(id, name);
     }
 
-    public double teach(Learner learner, double numberOfHours) {
+    public void teach(Learner learner, double numberOfHours) {
 
-        return totalStudyTime += numberOfHours;
-
+        learner.learn(numberOfHours);
     }
 
-    public double lecture(Learner learners[], double numberOfHours) {
+    public void lecture(Learner learners[], double numberOfHours) {
 
+        learners[30].learn(numberOfHours);
         double numberOfHoursPerLearner = numberOfHours / learners.length;
-        return numberOfHoursPerLearner;
 
 
     }

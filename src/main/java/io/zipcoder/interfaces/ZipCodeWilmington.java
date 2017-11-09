@@ -1,18 +1,37 @@
 package io.zipcoder.interfaces;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public final class ZipCodeWilmington {
 
-    private Students students = Students.getInstance();
-    private Instructors instructors = Instructors.getInstance();
+    private final static ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
+    private final static Instructors instructors = Instructors.getInstance();
+    private final static Students students = Students.getInstance();
 
-    public void hostLecture(Teacher teacher, double numberOfHours){
+    private ZipCodeWilmington() {
 
-        //made this method void as I was not entirely clear on what the method/method body was supposed to do
     }
 
-    public void hostLecture(long id, double numberofHours){
+    public void hostLecture(Teacher teacher, double numberOfHours) {
+        teacher.lecture(students.getArray(), numberOfHours);
+    }
 
+    public void hostLecture(long id, double numberOfHours) {
         Instructor instructor = (Instructor) instructors.findById(id);
-        //as above, not clear on what to do to "host lecture to the composite people field" in instructions
+        instructor.lecture(students.getArray(), numberOfHours);
+
+    }
+
+    public static ZipCodeWilmington getInstance() {
+        return INSTANCE;
+    }
+
+    public Map<Student, Double> getMap() {
+        Map<Student, Double> map = new HashMap<Student, Double>();
+        for(Student student : students.getArray()) {
+            map.put(student, student.getTotalStudyTime());
+        }
+        return map;
     }
 }

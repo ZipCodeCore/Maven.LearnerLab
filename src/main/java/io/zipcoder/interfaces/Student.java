@@ -9,12 +9,11 @@ public class Student extends Person implements Learner {
         super(id, name);
     }
 
-    public double learn(double numberOfHours) {
+    public void learn(double numberOfHours) {
 
-        return totalStudyTime += numberOfHours;
     }
 
-    double getTotalStudyTime() {
+    public double getTotalStudyTime() {
 
         return totalStudyTime;
     }

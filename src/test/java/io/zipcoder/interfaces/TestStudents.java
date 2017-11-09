@@ -11,7 +11,7 @@ public class TestStudents {
 
         long[] expectedStudents = {123, 456, 789};
         Students actualStudents = Students.getInstance();
-        for (int p = 0; p <= expectedStudents.length; p++) {
+        for (int p = 0; p < expectedStudents.length; p++) {
 
             Person actualStudent = actualStudents.findById(expectedStudents[p]);
 

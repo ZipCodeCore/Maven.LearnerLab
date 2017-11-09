@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public abstract class People {
+public class People {
 
     ArrayList<Person> personList = new ArrayList<Person>();
 
@@ -48,9 +48,9 @@ public abstract class People {
         return personList.size();
     }
 
-    public Object[] getArray() {
-
-        return personList.toArray();
+    public Person[] getArray() {
+        Person[]person = personList.toArray(new Person[personList.size()]);
+        return person;
     }
 
     public void removeAll() {

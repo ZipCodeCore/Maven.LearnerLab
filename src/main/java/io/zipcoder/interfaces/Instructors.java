@@ -6,9 +6,9 @@ public final class Instructors extends People {
 
     private Instructors() {
 
-        INSTANCE.add(new Person(123, "Leon"));
-        INSTANCE.add(new Person(456, "Dolio"));
-        INSTANCE.add(new Person(789, "Tyriq"));
+        add(new Person(123, "Leon"));
+        add(new Person(456, "Dolio"));
+        add(new Person(789, "Tyriq"));
     }
 
     public static Instructors getInstance() {

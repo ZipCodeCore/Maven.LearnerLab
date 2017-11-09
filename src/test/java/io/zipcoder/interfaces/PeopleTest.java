@@ -12,10 +12,11 @@ public class PeopleTest {
     @Test
     public void testAdd(){
 
+
         people.add(person);
         long expected = 101010;
         long actual = people.findById(expected).getId();
-        Assert.assertEquals(expected, actual, 0);
+        Assert.assertEquals(expected, actual);
 
     }
 
@@ -26,7 +27,7 @@ public class PeopleTest {
         people.remove(person);
         long expected = 0;
         long actual = people.getCount();
-        Assert.assertEquals(expected, actual, 0);
+        Assert.assertEquals(expected, actual);
 
     }
 
@@ -36,7 +37,7 @@ public class PeopleTest {
         people.add(person);
         long expected = 101010;
         long actual = people.findById(expected).getId();
-        Assert.assertEquals(expected, actual, 0);
+        Assert.assertEquals(expected, actual);
     }
 
 

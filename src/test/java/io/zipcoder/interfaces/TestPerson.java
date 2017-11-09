@@ -19,10 +19,10 @@ public class TestPerson {
 
     @Test
     public void testSetName() {
+        Person person = new Person(101010, "Aaron");
 
         String expected = "Aaron";
-        Person person = new Person(101010, expected);
-
+        person.setName(expected);
         String actual = person.getName();
 
         Assert.assertEquals(expected, actual);
