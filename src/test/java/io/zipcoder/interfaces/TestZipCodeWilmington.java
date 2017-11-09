@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class TestZipCodeWilmington {
     @Test
     public void hostLecture() throws Exception {
-        ZipCodeWilmington zipcode = new ZipCodeWilmington();
+        ZipCodeWilmington zipcode = ZipCodeWilmington.getInstance();
         Students students = Students.getInstance();
         Instructors instructors = Instructors.getInstance();
 
