@@ -45,7 +45,7 @@ public class TestInstructor {
         double actual = bob.getTotalStudyTime();
 
         Assert.assertEquals(expected, actual, 0.00);
-        Assert.assertEquals(expected, kelly.getTotalStudyTime(), 00);
+        Assert.assertEquals(expected, kelly.getTotalStudyTime(), 0.0);
 
     }
 

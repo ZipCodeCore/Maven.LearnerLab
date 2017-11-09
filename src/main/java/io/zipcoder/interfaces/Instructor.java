@@ -1,14 +1,16 @@
 package io.zipcoder.interfaces;
 
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Instructor extends Person implements Teacher {
     public Instructor(long id) {
+
         super(id);
     }
+    public Instructor(long id, String name){
+
+        super(id, name);
+    }
+
 
     public void teach(Learner learner, double numberOfHours) {
         learner.learn(numberOfHours);
