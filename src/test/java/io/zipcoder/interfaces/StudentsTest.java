@@ -20,6 +20,8 @@ class StudentsTest {
     @Test
     void getInstance() {
 
+        System.out.println(students.getArray()[19]);
+
         String expected = "Aaron Herion,Abrar Mohammed,Andrea Susnick,Andrew Kutchen,Brian Sutton," +
                 "Claude McAlpin,Donald Fountain,Elliott Kozulak,Gabriela Lisboa,Graham Nilsen," +
                 "Greg Patselas,Jeff Lawrence,Katherine Anderson,Kevin Buckley,Lina Zhang,Linda Qiu," +

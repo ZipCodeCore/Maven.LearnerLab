@@ -11,14 +11,9 @@ public class TestInstructors {
 
         //: Given
 
-        Instructors instructors = new Instructors();
-        Instructor instructor = new Instructor(1, "Tariq");
-        Instructor instructor2 = new Instructor(1, "Lean");
-        instructors.getInstance().add(instructor);
-        instructors.getInstance().add(instructor2);
+        Instructors instructors = Instructors.getInstance();
 
-        int expected;
-        expected = 2;
+        int expected = 3;
 
         int actual = instructors.getInstance().getCount();
 

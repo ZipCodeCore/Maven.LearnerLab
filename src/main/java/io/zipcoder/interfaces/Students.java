@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public final class Students extends People<Student> {
 
     private static final Students INSTANCE = new Students();
-    private ArrayList<Student> studentsList= new ArrayList<>();
+    //private ArrayList<Student> studentsList= new ArrayList<>();
 
    private String[] studentName = {"Aaron Herion", "Abrar Mohammed","Andrea Susnick","Andrew Kutchen",
            "Brian Sutton","Claude McAlpin", "Donald Fountain" , "Elliott Kozulak", "Gabriela Lisboa",
@@ -20,17 +20,17 @@ public final class Students extends People<Student> {
 
         for (int i=0; i< studentName.length ; i++) {
             Student student = new Student(i, studentName[i]);
-            studentsList.add(student);
+            add(student);
 
         }
 
     }
 
     public Student[] getArray() {
-      Student[] student = new Student[studentsList.size()];
+      Student[] student = new Student[personList.size()];
 
       for (int i = 0; i< student.length; i++)
-         student[i] = studentsList.get(i);
+         student[i] = personList.get(i);
 
         return student;
     }
@@ -45,7 +45,7 @@ public final class Students extends People<Student> {
     public String toString (){
         String studentName = "";
 
-        for (Student s: studentsList)
+        for (Student s: personList)
 
       studentName +=  s.toString() + "," ;
 

@@ -4,7 +4,6 @@ package io.zipcoder.interfaces;
 import java.util.ArrayList;
 
 public final class Instructors extends People<Instructor> {
-    ArrayList<Instructor> instructorsList = new ArrayList<>();
 
     private static final Instructors INSTANCE = new Instructors();
 
@@ -13,7 +12,7 @@ public final class Instructors extends People<Instructor> {
      Instructors(){
          for (int i = 0; i <3; i++) {
              Instructor instructor = new Instructor(i, instructorName[i]);
-             instructorsList.add(instructor);
+             add(instructor);
 
          }
 
@@ -22,10 +21,10 @@ public final class Instructors extends People<Instructor> {
      }
 
     public Instructor[] getArray() {
-        Instructor[] instructor = new Instructor[instructorsList.size()];
+        Instructor[] instructor = new Instructor[personList.size()];
 
         for(int i =0; i< instructor.length; i++){
-            instructor[i] = instructorsList.get(i);
+            instructor[i] = personList.get(i);
         }
 
         return instructor;
@@ -41,7 +40,7 @@ public final class Instructors extends People<Instructor> {
     public String toString (){
         String studentName = "";
 
-        for (Instructor instructor: instructorsList)
+        for (Instructor instructor: personList)
 
             studentName +=  instructor.toString() + "," ;
 
