@@ -13,12 +13,13 @@ public class ZipCodeWilmingtonTest {
     @Test
     public void testHostLecture() {
         ZipCodeWilmington test = new ZipCodeWilmington();
-        String expected = "";
+        double expected = 3;
 
-        test.hostLecture((Instructor) instructors.findById(0), 10);
-        String actual = students.personList.get(1).getName();
+        test.hostLecture((Instructor) instructors.findById(0), 100);
+        Student teststudent = (Student)students.findById(1);
+        double actual = Math.floor(teststudent.getTotalStudyTime());
 
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual,0);
 
     }
 
