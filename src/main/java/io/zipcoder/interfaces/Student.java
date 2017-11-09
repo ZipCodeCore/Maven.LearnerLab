@@ -5,11 +5,11 @@ public class Student extends Person implements Learner {
     double totalStudyTime;
 
     public Student(long id) {
-        super(id, "Oleg");
+        super(id);
     }
 
-    public Student() {
-        super();
+    public Student(String name, long id){
+        super(name, id);
     }
 
     public void learn(double numberOfHours) {

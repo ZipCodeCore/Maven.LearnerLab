@@ -5,11 +5,14 @@ public class Person {
     long id;
     private String name;
 
-    public Person(long id, String oleg) {
+    public Person(String name, long id) {
+        this.name = name;
         this.id = id;
     }
 
-    public Person() {}
+    public Person(long id, String s) {
+        this.id = id;
+    }
 
     public long getId() {
         return id;

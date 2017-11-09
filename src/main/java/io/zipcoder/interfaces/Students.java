@@ -1,4 +1,29 @@
 package io.zipcoder.interfaces;
 
-public class Students {
+public final class Students extends People {
+
+    private static Students INSTANCE;
+
+    private static final String[] studentsNames = {
+        "Ivan Groznii", "Debi Grigorevichi", "Kovo Eshe"
+    };
+
+    private Students(){
+        for(int i = 0; i < studentsNames.length; i++){
+            super.add(new Student(studentsNames[i], Long.valueOf(i)));
+        }
+    }
+
+    public static Students getINSTANCE() {
+        if(INSTANCE != null){
+            return INSTANCE;
+        }
+        else {
+            INSTANCE = new Students();
+            return INSTANCE;
+        }
+    }
+
+    public String
+
 }
