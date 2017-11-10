@@ -16,7 +16,6 @@
 * Create a `TestPerson` class.
 	* Create a `testConstructor` method which ensures that a `Person` object's `id` field is being set upon construction.
 	* Create a `testSetName` method which ensures that a `Person` object's `name` variable is being set by invoking the `.setName` method.
-	* Create a `testConstructor` method which ensures that a `Person` object's `name` variable is being set by invoking the `Person` constructor.
 
 -
 ### Part 2.0 - Create `Learner` Interface
