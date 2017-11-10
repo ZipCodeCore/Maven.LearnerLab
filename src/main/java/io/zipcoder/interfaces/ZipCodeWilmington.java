@@ -1,19 +1,28 @@
 package io.zipcoder.interfaces;
 
-public final class ZipCodeWilmington {
+public class ZipCodeWilmington {
 
-    private final static ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
-
-    private static Students students = Students.getInstance();
-
-    private static Instructors instructors = Instructors.getInstance();
+    private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
+    Students students = Students.getInstance();
+    Instructors instructors = Instructors.getInstance();
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
-        teacher.lecture((Learner[]) students.getArray(), numberOfHours);
+        Student[] studentArray = new Student[students.getCount()];
+
+        for (int i = 0; i < studentArray.length; i++) {
+            studentArray[i] = (Student) students.findById(i);
+        }
+
+        teacher.lecture(studentArray, numberOfHours);
     }
 
     public void hostLecture(Long id, double numberOfHours) {
+        Instructor instructor = (Instructor) instructors.findById(id);
+        hostLecture(instructor, numberOfHours);
+    }
 
+    public static ZipCodeWilmington getInstance() {
+        return INSTANCE;
     }
 
 
