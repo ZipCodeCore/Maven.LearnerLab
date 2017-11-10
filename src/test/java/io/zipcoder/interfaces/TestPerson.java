@@ -5,12 +5,12 @@ import org.junit.Test;
 
 
 public class TestPerson {
-    Person person = new Person(001);
+    Person person = new Person(1, "");
 
 
     @Test
     public void testGetId(){
-        long expected = 001;
+        long expected = 1;
         long actual = person.getId();
         Assert.assertEquals(expected, actual);
     }

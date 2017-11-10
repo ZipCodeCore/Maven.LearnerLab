@@ -5,8 +5,8 @@ import org.junit.Assert;
 
 public class PeopleTest {
     People people = new People();
-    Person Andrea = new Person(001);
-    Person Lina = new Person(005);
+    Person Andrea = new Person(1, "");
+    Person Lina = new Person(2, "");
 
     @Test
     public void testAdd(){
@@ -30,7 +30,7 @@ public class PeopleTest {
     public void testFindByID(){
         people.add(Andrea);
         Person expected = Andrea;
-        Person actual = people.findByID(001);
+        Person actual = people.findByID(1);
         Assert.assertEquals(expected, actual);
     }
 }
