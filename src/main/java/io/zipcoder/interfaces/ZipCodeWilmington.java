@@ -24,8 +24,18 @@ public class ZipCodeWilmington {
 
     public void hostLecture(long passedId, double passedNumberOfHours){
 
-      instructors.findById(passedId).lecture(
-              students.getArray(), passedNumberOfHours);
+          for (Educator e : Educator.values()){
+              if (e.getInstructor().getId()==passedId){
+                  this.hostLecture(e, passedNumberOfHours);
+                  break;
+              }
+          }
+
+    }
+
+    public void hostLecture(Educator educator, double passedNumberOfHours){
+
+        educator.lecture(students.getArray(), passedNumberOfHours);
 
     }
 

@@ -8,14 +8,23 @@ public class Instructor extends Person implements Teacher {
         super(passedID, passedName);
     }
 
-    public void teach(Learner learner, double passedNumberOfHours){
-        learner.learn(passedNumberOfHours);
+    public void teach(Learner learner, double passedNumberOfHours)
+    {
+        for (Educator e : Educator.values()){
+            if (this.getId()==e.getInstructor().getId()){
+                e.teach(learner, passedNumberOfHours);
+                break;
+            }
+        }
     }
 
+
     public void lecture(Learner[] learners, double passedNumberOfHours){
-        double numberOfHoursPerStudent=passedNumberOfHours/learners.length;
-        for(Learner learner : learners){
-            learner.learn(numberOfHoursPerStudent);
+        for (Educator e : Educator.values()){
+            if (this.getId()==e.getInstructor().getId()){
+                e.lecture(learners, passedNumberOfHours);
+                break;
+            }
         }
     }
 

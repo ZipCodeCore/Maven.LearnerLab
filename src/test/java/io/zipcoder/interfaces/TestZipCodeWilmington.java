@@ -19,4 +19,18 @@ public class TestZipCodeWilmington {
 
 
     }
+
+    @Test
+    public void testZipCodeWilmingtonEducator() {
+
+        ZipCodeWilmington zcw = ZipCodeWilmington.getInstance();
+
+
+        zcw.hostLecture(Educator.TARIQHOOK, 86);
+        for (Person p: Students.getInstance().getArray()){
+            Assert.assertEquals(86/Students.getInstance().getCount(), ((Student)p).getTotalStudyTime(), .1);
+        }
+
+
+    }
 }

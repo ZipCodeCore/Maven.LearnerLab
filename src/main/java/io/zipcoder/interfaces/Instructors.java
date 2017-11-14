@@ -5,13 +5,14 @@ public class Instructors extends People<Instructor> {
 
     private Instructors(){
 
-        String[] listOfInstructors =
-                {"Tariq Hook", "Iyasu Watts", "L. Dolio Durant", "Leon Hunter", "Froilan Miranda"};
-
-        for (int i = 0; i < listOfInstructors.length; i++) {
-                this.add(new Instructor(i, listOfInstructors[i]));
-
+        for (Educator e : Educator.values()){
+            this.add(e.getInstructor());
         }
+
+//        for (int i = 0; i < listOfInstructors.length; i++) {
+//                this.add(new Instructor(i, listOfInstructors[i]));
+//
+//        }
 
     }
 

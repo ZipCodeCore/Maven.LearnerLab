@@ -19,9 +19,13 @@ public final class Students extends People<Student> {
                         "Vince Paris", "Wesley Connors", "Zan Cheema",
                         "Zachary Stimmel"};
 
-            for (int i = 0; i < listOfStudentNames.length; i++) {
-                this.add(new Student(i, listOfStudentNames[i]));
+            int i=0;
+            for (String s : listOfStudentNames)
+            {
+                this.add(new Student(i, s));
+                i++;
             }
+        
         }
 
     public static Students getInstance() {
