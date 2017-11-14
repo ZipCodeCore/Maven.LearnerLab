@@ -15,12 +15,23 @@ public class ZipCodeWilmingtonTest {
         ZipCodeWilmington test = new ZipCodeWilmington();
         double expected = 3;
 
-        test.hostLecture((Instructor) instructors.findById(0), 100);
-        Student teststudent = (Student)students.findById(1);
+        test.hostLecture(instructors.findById(0), 100);
+        Student teststudent = students.findById(1);
         double actual = Math.floor(teststudent.getTotalStudyTime());
 
         Assert.assertEquals(expected, actual,0);
 
     }
 
+    @Test
+    public void testHostLecture2(){
+        ZipCodeWilmington test = new ZipCodeWilmington();
+        double expected = 44;
+        Student teststudent = students.findById(0);
+        test.hostLecture(1,1200);
+        double actual = Math.floor(teststudent.getTotalStudyTime());
+
+        Assert.assertEquals(expected,actual,0);
+
+    }
 }

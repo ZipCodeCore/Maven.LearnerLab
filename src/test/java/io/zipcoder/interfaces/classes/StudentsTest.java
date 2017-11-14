@@ -13,14 +13,16 @@ public class StudentsTest {
         Students test = Students.getINSTANCE();
         String expected = "Zach Stimmel";
 
-        Student teststudent = (Student)test.findById(25);
+        Student teststudent = test.findById(25);
         String actual = teststudent.getName();
 
         Assert.assertEquals(expected,actual);
-
-
-
-
     }
+    @Test
+    public void testStudentsGetArray(){
+        String expected = "Zach Stimmel";
+        String actual = Students.getINSTANCE().getArray().get(25).getName();
 
+        Assert.assertEquals(expected,actual);
+    }
 }

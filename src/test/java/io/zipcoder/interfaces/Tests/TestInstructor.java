@@ -1,6 +1,7 @@
 package io.zipcoder.interfaces.Tests;
 
 import io.zipcoder.interfaces.classes.Instructor;
+import io.zipcoder.interfaces.classes.Instructors;
 import io.zipcoder.interfaces.classes.Person;
 import io.zipcoder.interfaces.classes.Student;
 import io.zipcoder.interfaces.interfaces.Learner;
@@ -13,7 +14,7 @@ public class TestInstructor {
     Instructor testInstructor = new Instructor(1);
     Student testStudentOne = new Student(1);
     Student testStudentTwo = new Student(2);
-    private Learner[] students = {testStudentOne,testStudentTwo};
+    private Learner[] students = {testStudentOne, testStudentTwo};
 
     @Test
     public void testImplementation() {
@@ -40,16 +41,25 @@ public class TestInstructor {
 
         Assert.assertEquals(expected, actual, 0);
     }
+
     @Test
-    public void testLecture(){
+    public void testLecture() {
 
         double expected = 5;
-
-        testInstructor.lecture(students,10);
+        //2 students 10/2=5
+        testInstructor.lecture(students, 10);
 
         double actual = testStudentOne.getTotalStudyTime();
 
-        Assert.assertEquals(expected,actual,0);
+        Assert.assertEquals(expected, actual, 0);
     }
 
+    @Test
+    public void testGetArray() {
+
+        int expected = 3;
+        int actual = Instructors.getInstance().getArray().size();
+
+        Assert.assertEquals(expected, actual);
+    }
 }
