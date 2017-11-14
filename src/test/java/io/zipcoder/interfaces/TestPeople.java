@@ -6,30 +6,29 @@ import org.junit.Test;
 public class TestPeople {
 
     //ArrayList<Person> personList = new ArrayList<Person>();
-    People people = new People();
+    Students students = Students.getINSTANCE();
+
     @Test
     public void testAdd() {
-        Person expected = new Person(15);
-        people.add(expected);
+        Student expected = new Student(15);
+        students.add(expected);
 
-        Assert.assertTrue(people.contains(expected));
+        Assert.assertTrue(students.contains(expected));
     }
 
     @Test
     public void testFindById(){
-        int id = 15;
-        Person expected = new Person(id);
-        people.add(expected);
-        Person actual = people.findById(id);
+        Student expected = new Student(15);
+        students.add(expected);
+        Person actual = students.findById(15);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testRemove(){
-        int id = 15;
-        Person expected = new Person(id);
-        people.remove(expected);
-        Assert.assertFalse(people.contains(expected));
+        Student expected = new Student(15);
+        students.remove(expected);
+        Assert.assertFalse(students.contains(expected));
     }
 
 }

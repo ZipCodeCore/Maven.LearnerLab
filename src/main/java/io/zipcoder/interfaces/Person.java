@@ -27,4 +27,5 @@ public class Person {
         return name;
     }
 
+    public void learn(double numberOfHoursPerLearner) {}
 }

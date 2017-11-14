@@ -1,8 +1,6 @@
 package io.zipcoder.interfaces;
-import java.util.Arrays;
 
-
-public class ZipCodeWilmington extends People {
+public class ZipCodeWilmington extends People<Person> {
     private static ZipCodeWilmington INSTANCE;
 
     Students students = Students.getINSTANCE();
@@ -13,7 +11,7 @@ public class ZipCodeWilmington extends People {
     }
 
     public void hostLecture(long id, double numberOfHours){
-        Instructor instructor = (Instructor) instructors.findById(id);
+        Instructor instructor = instructors.findById(id);
         instructor.lecture(students.getArray(), numberOfHours);
     }
 
@@ -27,4 +25,7 @@ public class ZipCodeWilmington extends People {
         }
     }
 
+    public Person[] getArray() {
+        return personList.toArray(new Person[personList.size()]);
+    }
 }

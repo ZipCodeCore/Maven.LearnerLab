@@ -17,7 +17,6 @@ public class Student extends Person implements Learner {
         super(i);
     }
 
-
     public void learn(double numberOfHours) {
         totalStudyTime += numberOfHours;
     }
