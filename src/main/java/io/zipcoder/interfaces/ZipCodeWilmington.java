@@ -9,15 +9,12 @@ public class ZipCodeWilmington {
 
     private ZipCodeWilmington(){ }
 
-    public static void hostLecture(Teacher teacher, double numberOfHours){
-        Person[] people = Students.getArray();
-        Student[] students = (Student[])people;
-
-        teacher.lecture(students, numberOfHours);
+    public void hostLecture(Teacher teacher, double numberOfHours){
+        teacher.lecture(students.getArray(), numberOfHours);
     }
 
-    public static void hostLecture(long id, double numberOfHours){
-        ((Instructor)(Instructors.findById(id))).lecture((Student[])Students.getArray(), numberOfHours);
+    public void hostLecture(long id, double numberOfHours){
+        (instructors.findById(id)).lecture(students.getArray(), numberOfHours);
     }
 
     public static ZipCodeWilmington getInstance(){
