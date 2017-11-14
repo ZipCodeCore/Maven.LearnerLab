@@ -6,9 +6,10 @@ public final class  Instructors extends People<Instructor> {
 
     private static final Instructors INSTANCE=new Instructors();
 
+
     private Instructors(){
-        for(int i=21; i<25; i++){
-            super.add(new Instructor(i));
+        for(int i=0; i<2; i++){
+            super.add(new Instructor(i, Educator.values()[i]));
         }
     }
 

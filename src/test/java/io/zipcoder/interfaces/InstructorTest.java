@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class InstructorTest {
 
-    Instructor instructor=new Instructor(333);
+    Instructor instructor=new Instructor(0,Educator.values()[0]);
     Student student=new Student(666);
     Learner [] learners= new Learner []{student, new Student(222)};
 

@@ -12,7 +12,7 @@ public class ZipCodeWilmingtonTest {
     public void hostLecturesTest() throws Exception {
 
         String before=zipCodeWilmington.getStudyTime();
-        zipCodeWilmington.hostLectures(22,1000);
+        zipCodeWilmington.hostLectures(0,1000);
         String after=zipCodeWilmington.getStudyTime();
 
         Assert.assertNotEquals(before,after);
@@ -20,6 +20,7 @@ public class ZipCodeWilmingtonTest {
 
     @Test
     public void hostLectures1Test() throws Exception {
+
     }
 
 }

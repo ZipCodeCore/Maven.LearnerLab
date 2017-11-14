@@ -1,9 +1,10 @@
 package io.zipcoder.interfaces;
 
 public class Instructor extends Person implements Teacher{
+Educator name;
 
-    public Instructor(int id){
-        super(id);
+    public Instructor(int id, Educator name){
+        super(id);this.name=name;
     }
 
     public void teach (Learner learner, double numberOfHours){

@@ -6,8 +6,6 @@ import org.junit.Test;
 public class testPeople {
 
     People people =Instructors.getInstance();
-    Instructor person1=new Instructor(22);
-    Instructor person2=new Instructor(23);
     Student person3 =new Student(81);
     Student person4 =new Student(82);
 
@@ -15,7 +13,7 @@ public class testPeople {
     @Test
     public void addTest() throws Exception {
         int expected=5;
-        people.add(person1);
+        people.add(person3);
         int actual=people.getCount();
 
 
@@ -24,10 +22,10 @@ public class testPeople {
 
     @Test
     public void findByIdTest() throws Exception {
-        Person expected=person2;
-        people.add(person1);
-        people.add(person2);
-        Person actual=people.findById(23);
+        Person expected=person3;
+        people.add(person3);
+        people.add(person4);
+        Person actual=people.findById(81);
 
         Assert.assertEquals(expected, actual);
     }
@@ -35,10 +33,10 @@ public class testPeople {
     @Test
     public void removeTestByPerson() throws Exception {
         Person expected=null;
-        people.add(person1);
-        people.add(person2);
-        people.remove(person1);
-        Person actual=people.findById(22);
+        people.add(person3);
+        people.add(person4);
+        people.remove(person3);
+        Person actual=people.findById(81);
 
         Assert.assertEquals(expected, actual);
     }
@@ -48,18 +46,19 @@ public class testPeople {
         Person expected=null;
         people.add(person3);
         people.add(person4);
-        people.remove(81);
-        Person actual=people.findById(81);
+        people.remove(82);
+        Person actual=people.findById(82);
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void getCountTest() throws Exception {
-        int expected=6;
-        people.add(person1);
-        people.add(person2);
+        int expected=4;
+        people.add(person3);
+        people.add(person4);
         int actual=people.getCount();
+
 
         Assert.assertEquals(expected, actual);
     }
@@ -67,9 +66,9 @@ public class testPeople {
     @Test
     public void getArrayTest() throws Exception {
        // Person<Person>[] expected=new Person<Person>[] {person1, person2};
-        people.add(person1);
-        people.add(person2);
-        Person[] actual=people.getArray();
+        people.add(person3);
+        people.add(person4);
+        //Person[] actual=people.getArray();
 
         //System.out.println(expected);
 
@@ -80,8 +79,8 @@ public class testPeople {
     @Test
     public void removeAllTest() throws Exception {
         int expected=0;
-        people.add(person1);
-        people.add(person2);
+        people.add(person3);
+        people.add(person4);
         people.removeAll();
         int actual=people.getCount();
 

@@ -11,12 +11,12 @@ public class InstructorsTest {
 
         String actual="";
 
-        Instructor [] expected = new Instructor[4];
+        Instructor [] expected = new Instructor[2];
 
-        for (int i=0; i<4; i++)
-            expected[i]=new Instructor(i+21);
+        for (int i=0; i<2; i++)
+            expected[i]=new Instructor(i,Educator.values()[i]);
 
-        Person[] persons=Instructors.getInstance().getArray();
+        Instructor[] persons=Instructors.getInstance().getArray();
 
 
         Assert.assertEquals(Arrays.toString(expected), Arrays.toString(persons));
