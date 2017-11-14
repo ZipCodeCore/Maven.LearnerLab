@@ -1,44 +1,55 @@
 package io.zipcoder.interfaces;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
 
 
 public class TestPeople {
 
+    @Before
+    public void clearLists(){
+        Students students = Students.getInstance();
+        students.removeAll();
+        Instructors instructors = Instructors.getInstance();
+        instructors.removeAll();
+
+    }
+
     @Test
     public void testAdd(){
-        People people = new People();
+        Students people = Students.getInstance();
+
 
         for (int i=0; i<5; i++) {
-            Person person = new Person();
+            Student person = new Student();
             people.add(person);
         }
-        Assert.assertEquals(5, people.getArray().length);
+        Assert.assertEquals(5, people.getCount());
     }
 
     @Test
     public void testRemove(){
-        People people = new People();
-        Person person = new Person();
+        Students people = Students.getInstance();
+        Student person = new Student();
         for (int i=0; i<5; i++) {
-            person = new Person();
+            person = new Student();
             people.add(person);
         }
         people.remove(person);
 
-        Assert.assertEquals(4, people.personCount());
+        Assert.assertEquals(4, people.getCount());
     }
 
     @Test
     public void testFindById(){
-        People people = new People();
-        Person tim = new Person(21907522,"tim");
+        Students people = Students.getInstance();
+        Student tim = new Student(21907522,"tim");
         people.add(tim);
 
-        Person person = new Person();
+        Student person;
         for (int i=0; i<5; i++) {
-            person = new Person();
+            person = new Student();
             people.add(person);
         }
 

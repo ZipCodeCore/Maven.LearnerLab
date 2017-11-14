@@ -2,45 +2,35 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public class People {
+public abstract class People <E extends Person>{
 
-    private ArrayList<Person> personList = new ArrayList<Person>();
+    protected ArrayList<E> personList = new ArrayList<>();
 
-    public void add(Person passedPerson){
+    public void add(E passedPerson){
         personList.add(passedPerson);
     }
 
-    public Person findById(long searchForThisId){
-        for (Person p : personList)
-        {
-            if (p.getId()==searchForThisId)
-            {
-                return p;
-            }
-        }
-        return null;
+    public E findById(long searchForThisId){
+
+        return personList.stream().filter(p->p.getId()==searchForThisId).findAny().get();
+
     }
 
-    public void remove(Person person){
+    public void remove(E person){
         personList.remove(person);
 
 
     }
 
     public void remove(long searchForThisId){
-        remove(findById(searchForThisId));
+        personList.remove(findById(searchForThisId));
     }
 
-    public int personCount(){
+    public int getCount(){
         return personList.size();
     }
 
-    public Person[] getArray(){
-        Person[] p;
-        p=new Person[personList.size()];
-
-        return(personList.toArray(p));
-    }
+    public abstract E[] getArray();
 
     public void removeAll(){
         personList.clear();

@@ -36,7 +36,11 @@ public class TestInstructor {
         }
         teacher.lecture(cohort, 30);
 
-        Assert.assertEquals(cohort[2].getTotalStudyTime(), 1, 0.01);
+        for (Student s : cohort)
+            Assert.assertEquals(s.getTotalStudyTime(), 1, 0.01);
+
+
+
     }
 
 }
