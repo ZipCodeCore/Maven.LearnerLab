@@ -10,45 +10,43 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class PeopleTest {
-    Person aPerson;
-    People aPeople;
+    Student aPerson;
+    Students students;
 
     @Before
     public void setUp(){
-        aPeople = new People();
-        aPerson = new Person("Andrew",1);
-
+        aPerson = new Student("Andrew",1);
+        students = Students.getInstance();
     }
 
     @After
         public void breakDown(){
-        aPeople = new People();
-        aPerson = new Person("Andrew",1);
-    }
+        students.remove(aPerson);
 
+    }
 
     @Test
     public void testAdd() {
         String expected = "Andrew";
-        aPeople.personList.add(aPerson);
-        String actual = aPeople.personList.get(0).getName();
+        students.add(aPerson);
+        String actual = students.getPersonList().get(students.getCount()-1).getName();
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testRemove_InputPerson() {
-        aPeople.personList.add(aPerson);
-        int expected = 0;
-        aPeople.personList.remove(aPerson);
-        int actual = aPeople.personList.size();
+        students.add(aPerson);
+        int expected = 26;
+        students.remove(aPerson);
+        int actual = students.getPersonList().size();
         Assert.assertEquals(expected,actual);
     }
 
     @Test
     public void testFindById() {
-        aPeople.personList.add(aPerson);
+        students.getPersonList().add(aPerson);
         long expected = 1;
-        long actual = aPeople.findById(1).id;
+        long actual = students.findById(1).getId();
         Assert.assertEquals(expected,actual);
     }
 

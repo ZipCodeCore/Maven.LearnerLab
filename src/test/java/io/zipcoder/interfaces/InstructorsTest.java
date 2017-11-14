@@ -19,7 +19,7 @@ public class InstructorsTest {
         Instructors instructors = Instructors.getInstance();
         int numCount = 0;
         for (int i = 0; i <= teacherNameList.length-1; i++) {
-            if (instructors.personList.get(i).getName() == teacherNameList[i]) {
+            if (instructors.getPersonList().get(i).getName() == teacherNameList[i]) {
                 numCount++;
             }
         }

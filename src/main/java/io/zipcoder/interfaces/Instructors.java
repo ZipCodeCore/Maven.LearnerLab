@@ -1,24 +1,23 @@
 package io.zipcoder.interfaces;
 
-public class Instructors extends People {
+public class Instructors extends People<Instructor> {
     private static final Instructors INSTANCE = new Instructors();
 
-    private String[] teacherNameList = new String[]{
-            "Tariq Hook",
-            "Dolio Durant",
-            "Leon Hunter",
-            "Mikaila Akeredolu",
-            "Yassu"
-    };
-
     private Instructors() {
-        for (int i = 0; i < teacherNameList.length; i++) {
-            super.add(new Instructor(teacherNameList[i], Long.valueOf(i)));
+        int countId = 0;
+        for (Educator aEducator:Educator.values()) {
+            super.add(new Instructor(aEducator.toString(), countId));
+            countId++;
         }
     }
 
     public static Instructors getInstance(){
         return Instructors.INSTANCE;
+    }
+
+
+    public Instructor[] getArray() {
+        return INSTANCE.getPersonList().toArray(new Instructor[INSTANCE.getCount()]);
     }
 }
 

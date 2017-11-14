@@ -43,7 +43,7 @@ public class StudentsTest {
         Students students = Students.getInstance();
         int numCount = 0;
         for (int i = 0; i <= studentNameList.length-1; i++) {
-            if (students.personList.get(i).getName() == studentNameList[i]) {
+            if (students.getPersonList().get(i).getName() == studentNameList[i]) {
                 numCount++;
             }
         }
