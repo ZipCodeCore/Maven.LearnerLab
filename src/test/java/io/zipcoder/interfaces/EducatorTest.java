@@ -3,32 +3,11 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class InstructorTest {
-
+public class EducatorTest {
     Instructor instructor=new Instructor(0,Educator.values()[0].getName());
     Student student=new Student(666);
     Learner [] learners= new Learner []{student, new Student(222)};
 
-
-    @Test
-    public void testImplementation(){
-        boolean expected=true;
-
-        boolean actual=instructor instanceof Teacher;
-
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testInheritance(){
-        boolean expected=true;
-
-        boolean actual=instructor instanceof Person;
-
-        Assert.assertEquals(expected, actual);
-    }
     @Test
     public void teach() throws Exception {
         double expected=10;
@@ -38,6 +17,7 @@ public class InstructorTest {
         double actual=student.getTotalStudyTime();
 
         Assert.assertEquals(expected, actual,.00);
+       Assert.assertEquals(10,instructor.getTimeWorked(),.00);
     }
 
     @Test
@@ -48,6 +28,10 @@ public class InstructorTest {
 
         Student one=(Student) learners[0];
         double actual = one.getTotalStudyTime();
+
+        Assert.assertEquals(expected, actual,.00);
+        Assert.assertEquals(40,instructor.getTimeWorked(),.00);
     }
+
 
 }

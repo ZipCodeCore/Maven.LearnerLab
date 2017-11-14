@@ -18,8 +18,8 @@ public final class ZipCodeWilmington {
 
     public void hostLectures(Teacher teacher, double numberOfHours) {
         Student[] studentsArray=students.getArray();
-        for(Student ss:studentsArray){
-            ss.getTotalStudyTime();
+        for(Student student:studentsArray){
+            student.getTotalStudyTime();
         }
 
 

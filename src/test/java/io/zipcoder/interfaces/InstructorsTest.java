@@ -11,10 +11,10 @@ public class InstructorsTest {
 
         String actual="";
 
-        Instructor [] expected = new Instructor[2];
+        Instructor [] expected = new Instructor[3];
 
-        for (int i=0; i<2; i++)
-            expected[i]=new Instructor(i,Educator.values()[i]);
+        for (int i=0; i<3; i++)
+            expected[i]=new Instructor(i+1,Educator.values()[i].getName());
 
         Instructor[] persons=Instructors.getInstance().getArray();
 

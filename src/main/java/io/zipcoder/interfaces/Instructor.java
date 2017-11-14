@@ -1,22 +1,27 @@
 package io.zipcoder.interfaces;
 
-public class Instructor extends Person implements Teacher{
-Educator name;
+public class Instructor extends Person implements Teacher {
+    Educator educator;
 
-    public Instructor(int id, Educator name){
-        super(id);this.name=name;
+    public Instructor(int id, String name) {
+        super(id, name);
+        educator=Educator.valueOf(name);
     }
 
-    public void teach (Learner learner, double numberOfHours){
-        learner.learn(numberOfHours);
+    public double getTimeWorked(){
+        return educator.getTimeWorked();
     }
 
-    public void lecture (Learner [] learners,double numberOfHours){
+    public void teach(Learner learner, double numberOfHours) {
+        educator.teach(learner, numberOfHours);
+    }
 
-        double numberOfHoursPerLearner=numberOfHours/learners.length;
-        for (Learner learner :learners){
-            learner.learn(numberOfHoursPerLearner);
-        }
-   }
+    public void lecture(Learner[] learners, double numberOfHours) {
+        educator.lecture(learners, numberOfHours);
+        //double numberOfHoursPerLearner=numberOfHours/learners.length;
+        //for (Learner learner :learners){
+        //    learner.learn(numberOfHoursPerLearner);
+        // }
+    }
 
 }

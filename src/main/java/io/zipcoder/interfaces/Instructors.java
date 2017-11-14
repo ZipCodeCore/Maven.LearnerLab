@@ -8,8 +8,8 @@ public final class  Instructors extends People<Instructor> {
 
 
     private Instructors(){
-        for(int i=0; i<2; i++){
-            super.add(new Instructor(i, Educator.values()[i]));
+        for(int i=0; i<3; i++){
+            super.add(new Instructor(i+1, Educator.values()[i].getName()));
         }
     }
 
