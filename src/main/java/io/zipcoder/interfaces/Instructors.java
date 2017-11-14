@@ -13,9 +13,9 @@ public final class  Instructors extends People<Instructor> {
     }
 
     public Instructor[] getArray() {
-        ArrayList<Instructor> instructors=super.getPersonList();
-        Instructor [] instructorsArray=instructors.toArray(new Instructor[instructors.size()]);
-        return  instructorsArray;
+
+        return personList.toArray(new Instructor[personList.size()]);
+
     }
 
     public static Instructors getInstance(){
