@@ -1,6 +1,8 @@
 package io.zipcoder.interfaces.Class;
 
-public final class Instructors extends People{
+import java.util.ArrayList;
+
+public final class Instructors extends People<Instructor>{
     private final static Instructors INSTRUCTORS = new Instructors();
 
     public static Instructors getInstructors(){
@@ -16,5 +18,9 @@ public final class Instructors extends People{
             currentInstructor.setName(name);
             add(currentInstructor);
         }
+    }
+
+    public ArrayList<Instructor> getArray() {
+        return super.peopleList;
     }
 }

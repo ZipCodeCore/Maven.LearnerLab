@@ -1,23 +1,23 @@
 package io.zipcoder.interfaces;
-
-import io.zipcoder.interfaces.Class.People;
 import io.zipcoder.interfaces.Class.Person;
-import io.zipcoder.interfaces.Class.Person;
+import io.zipcoder.interfaces.Class.Student;
+import io.zipcoder.interfaces.Class.Students;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestPeople {
+public class TestPeople{
 
-    People people = new People();
-    Person Person = new Person(123);
+    //Student students = new Students();
+    Students students = new Students();
+    Student person = new Student(123);
     @Test
     public void testAdd(){
 
-        people.add(Person);
+        students.add(person);
 
-        int expected = 1;
+        long expected = 123;
 
-        int actual = people.getCount();
+        long actual = students.findById(123).getId();
 
         Assert.assertEquals(expected,actual);
     }
@@ -26,13 +26,13 @@ public class TestPeople {
     public void testRemove(){
 
 
-        int expected1 = 1;
-        int expected2 = 0;
+        long expected1 = 123;
+        Student expected2 = null;
 
-        people.add(Person);
-        int actual1 = people.getCount();
-        people.remove(Person);
-        int actual2 = people.getCount();
+        students.add(person);
+        long actual1 = students.findById(123).getId();
+        students.remove(person);
+        Student actual2 = students.findById(123);
 
         Assert.assertEquals(expected1,actual1);
         Assert.assertEquals(expected2,actual2);
@@ -41,9 +41,9 @@ public class TestPeople {
 
     @Test
     public void testFindById(){
-        Person expected = Person;
-        people.add(Person);
-        Person actual = people.findById(123);
+        Person expected =person;
+        students.add(person);
+        Person actual = students.findById(123);
         Assert.assertEquals(expected,actual);
     }
 

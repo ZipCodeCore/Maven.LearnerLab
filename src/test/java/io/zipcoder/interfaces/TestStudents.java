@@ -19,4 +19,11 @@ public class TestStudents {
         Assert.assertEquals(expected,actual);
     }
 
+    @Test
+    public void getArrayTest(){
+        String expected = "Wes";
+        String actual = Students.getINSTANCE().getArray().get(25).getName();
+        Assert.assertEquals(expected,actual);
+    }
+
 }
