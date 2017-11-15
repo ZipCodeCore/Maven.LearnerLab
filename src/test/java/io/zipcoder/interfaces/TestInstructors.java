@@ -8,7 +8,7 @@ public class TestInstructors {
     @Test
     public void testInstructors(){
         Instructors instructors = Instructors.getINSTRUCTORSINSTANCE();
-        int expected = 4;
+        int expected = 3;
         int actual = instructors.personList.size();
         System.out.println(actual);
         Assert.assertEquals(expected,actual);
