@@ -16,6 +16,7 @@ public class Instructor extends Person implements Teacher {
            learners[i].learn(numberOfHoursPerLearner);
        }
     }
+
 }
 
 
