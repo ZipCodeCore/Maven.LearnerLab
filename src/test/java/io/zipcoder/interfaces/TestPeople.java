@@ -4,12 +4,21 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class TestPeople {
-    People people = new People();
+
+    public class NotPeople extends People {
+
+        public Person[] getArray() {
+            return (Person[]) personList.toArray(new Person[personList.size()]);
+        }
+    }
+
+    NotPeople people = new NotPeople();
+
     Person p1 = new Person(001);
     Person p2 = new Person(002);
 
     @Test
-    public void testAdd() {
+    public void testAdd_Count() {
         people.add(p1);
         people.add(p2);
 

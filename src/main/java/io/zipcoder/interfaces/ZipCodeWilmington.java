@@ -16,12 +16,12 @@ public final class ZipCodeWilmington {
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
-        teacher.lecture((Student[]) students.getArray(), numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours) {
-        Teacher teacher = (Teacher) instructors.findById(id);
-        teacher.lecture((Learner[]) students.getArray(), numberOfHours);
+        Teacher teacher = instructors.findById(id);
+        teacher.lecture( students.getArray(), numberOfHours);
     }
 
 }
