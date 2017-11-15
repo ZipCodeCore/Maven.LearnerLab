@@ -7,7 +7,6 @@ import org.junit.Test;
 
 public class TestPeople{
 
-    //Student students = new Students();
     Students students = new Students();
     Student person = new Student(123);
     @Test
@@ -24,8 +23,6 @@ public class TestPeople{
 
     @Test
     public void testRemove(){
-
-
         long expected1 = 123;
         Student expected2 = null;
 

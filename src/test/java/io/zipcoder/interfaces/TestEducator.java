@@ -1,6 +1,5 @@
 package io.zipcoder.interfaces;
 
-import io.zipcoder.interfaces.Class.Person;
 import io.zipcoder.interfaces.Class.Student;
 import io.zipcoder.interfaces.Enum.Educator;
 import io.zipcoder.interfaces.Interface.Learner;
