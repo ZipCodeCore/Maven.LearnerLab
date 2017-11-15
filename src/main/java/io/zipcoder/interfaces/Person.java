@@ -1,19 +1,20 @@
 package io.zipcoder.interfaces;
 
-
-
-
-
 public class Person {
 
     //instance fields
-    final long id;
+    public final long id;
     String name;
 
     //constructor never has void
    public Person(long id){
 
-       this.id = id;
+       this.id= id;
+   }
+
+    public Person(String name, long id){
+        this.name = name;
+        this.id= id;
     }
 
     //Methods
@@ -22,27 +23,15 @@ public class Person {
     }
 
 
-
-
-
     public String getName()
     {
         return name;
     }
 
 
-    public void  setName(String name)
+    public void setName(String name)
     {
 
-        this.name = name;
+       this.name = name;
     }
 }
-
-
-
-
-
-
-
-
-

@@ -5,41 +5,45 @@ import org.junit.Test;
 
 public class TestPerson {
 
+    /*Create a testConstructor method which
+    ensures that a Person object's id field
+    is being set upon construction.
+     */
     @Test
     public void getIDTest()
     {
-        //: Given
-        Person person1 = new Person(123);
-        long expected = 123;
+        Person person1 = new Person(888);
 
-        //:When
+        long expected = 888;
         long actual = person1.getID();
-
-        //:Then
-
-        Assert.assertEquals("Everything equals", expected, actual );
+        Assert.assertEquals(expected, actual);
 
     }
 
 
-@Test
-public void getNameTest(){
+    @Test
+    public void secondConstructor(){
 
-    //Given
-    Person person2 = new Person(1);
-    String expected = "linda";
-    person2.setName("linda");
+        Person person3 = new Person("Linda",321);
+        String expected = "Linda";
+        String actual = person3.getName();
+        Assert.assertEquals(expected,actual);
+    }
 
-    //When
-    String actual = person2.getName();
+    /* Create a testSetName method which ensures that a
+    Person object's name variable is being set by
+    invoking the .setName method. */
 
-    //Then
-    Assert.assertEquals("same name,", expected, actual);
+    @Test
+    public void setNameTest()
+    {
+        Person person2 = new Person(1);
+        person2.setName("linda");
+
+        String expected = "linda";
+        String actual = person2.getName();
+        Assert.assertEquals(expected, actual);
+
+    }
 }
-
-
-
-
-
-    }
 

@@ -2,26 +2,47 @@ package io.zipcoder.interfaces;
 
 public class Student extends Person implements Learner {
 
-    double totalStudyTime;
+private double totalStudyTime = 0;
 
-    public Student(long id) {
+public Student(long id) {
+
         super(id);
     }
 
-    public void learn(double numberOfHours) {
+public Student(String name, long id) {
+    super(name, id);
+    }
 
+  //learn method from Learner interface that was incomplete
 
-        totalStudyTime += numberOfHours;
+    public void learn(double numberOfHours){
+        this.totalStudyTime += numberOfHours;
+    }
 
+    public double getTotalStudyTime(){
+        return this.totalStudyTime;
     }
 
 
-    public double getTotalStudyTime() {
-        return totalStudyTime;
 
-    }
+
+
+
+
+
+
+
+
+
+
 
 
 }
 
 
+/*
+Student should have a concrete
+implementation of the learn method which
+increments the totalStudyTime variable by
+the specified numberOfHours argument.
+ */
