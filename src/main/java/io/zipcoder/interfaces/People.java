@@ -2,20 +2,22 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public class People {
+public abstract class People <E extends Person>{
 
-    ArrayList<Person> personList = new ArrayList<Person>();
+    //No casting tricks were used in the people class (as per 10.1 and 10.2
 
-    public void add(Person person) {
+    ArrayList<E> personList = new ArrayList<E>();
+
+    public void add(E person) {
 
         personList.add(person);
     }
 
-    public Person findById(long id) {
+    public E findById(long id) {
 
-        Person returnPerson = null;
+        E returnPerson = null;
 
-        for (Person p : personList) {
+        for (E p : personList) {
             if (p.getId() == id) {
                 returnPerson = p;
                 break;
@@ -48,15 +50,14 @@ public class People {
         return personList.size();
     }
 
-    public Person[] getArray() {
-        Person[] persons = new Person[personList.size()];
-        for (int i = 0; i < personList.size(); i++) {
-            persons[i] = personList.get(i);
-        }
+    public abstract E[] getStudentArray();
+//        Person[] persons = new Person[personList.size()];
+//        for (int i = 0; i < personList.size(); i++) {
+//            persons[i] = personList.get(i);
+//        }
+//
+//        return persons;
 
-        return persons;
-
-    }
 
     public void removeAll() {
 

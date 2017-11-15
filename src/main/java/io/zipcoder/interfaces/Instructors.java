@@ -2,20 +2,20 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public final class Instructors extends People {
+public final class Instructors extends People <Instructor> {
 
     static final Instructors INSTANCE = new Instructors();
 
     public Instructors() {
 
-        ArrayList<String> instructors = new ArrayList<String>();
-        instructors.add(0,"Leon");
-        instructors.add(1,"Tariq");
-        instructors.add(2,"Dolio");
+        ArrayList<String> Educator = new ArrayList<String>();
+        Educator.add(0,"Leon");
+        Educator.add(1,"Tariq");
+        Educator.add(2,"Dolio");
 
-        for(int i = 0; i < instructors.size(); i++){
+        for(int i = 0; i < Educator.size(); i++){
 
-            super.add(new Instructor(i, instructors.get(i)));
+            super.add(new Instructor(i, Educator.get(i)));
         }
     }
 
@@ -24,4 +24,7 @@ public final class Instructors extends People {
         return INSTANCE;
     }
 
+    public Instructor[] getStudentArray() {
+        return new Instructor[0];
+    }
 }
