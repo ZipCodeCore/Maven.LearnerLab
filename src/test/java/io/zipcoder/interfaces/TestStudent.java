@@ -9,12 +9,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestStudent {
-
+    Student newStudent = new Student(123456789, "Martha");
     @Test
     public void testImplementation() {
         boolean studentIsLearner;
 
-        Student newStudent = new Student(123456789, "Martha");
+
         if (newStudent instanceof Learner) {
             studentIsLearner = true;
         } else {
@@ -24,7 +24,7 @@ public class TestStudent {
     }
     @Test
     public void testInheritance() {
-        Student newStudent = new Student(123456789, "Martha");
+       // Student newStudent = new Student(123456789, "Martha");
         boolean studentIsPerson;
 
         if (newStudent instanceof Person) {

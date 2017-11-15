@@ -4,11 +4,18 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class PeopleTest {
-    People people = new People();
+
     Person person = new Person(12345,"Kendall");
     Person person2 = new Person(23456,"Kendall1");
     Person person3 = new Person(34567,"Anna1");
     Person person4 = new Person(45678,"Anna2");
+    People people = new People() {
+        @Override
+        public Person[] getArray() {
+            return new Person[0];
+        }
+    };
+
 
     @Test
     public void add() throws Exception {
