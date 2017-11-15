@@ -13,6 +13,7 @@ public class Instructor extends Person implements Teacher {
 
 
     public void teach(Learner learner, double numberOfHours) {
+
         learner.learn(numberOfHours);
     }
 

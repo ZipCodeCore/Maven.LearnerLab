@@ -3,13 +3,22 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestPeople {
+
+public class TestPeople{
+    public class Fakepeople extends People<Person>{
+
+        @Override
+        public Person[] getArray() {
+            return new Person[0];
+        }
+    }
+
     Person bob = new Person(3);
     Person jim = new Person(6);
-    People soManyPeople = new People();
+    Fakepeople soManyPeople = new Fakepeople();
 
     @Test
-    public void testAdd(){
+    public void testAdd() {
         soManyPeople.add(bob);
         Person expected = bob;
         Person actual = soManyPeople.personList.get(0);
@@ -17,7 +26,7 @@ public class TestPeople {
     }
 
     @Test
-    public void testRemovePerson(){
+    public void testRemovePerson() {
         soManyPeople.add(bob);
         soManyPeople.add(jim);
         soManyPeople.remove(bob);
@@ -28,7 +37,7 @@ public class TestPeople {
     }
 
     @Test
-    public void testRemoveById(){
+    public void testRemoveById() {
         soManyPeople.add(bob);
         soManyPeople.add(jim);
         soManyPeople.remove(3);
@@ -39,12 +48,11 @@ public class TestPeople {
 
 
     @Test
-    public void testFindById(){
+    public void testFindById() {
         soManyPeople.add(bob);
         Person expected = bob;
         Person actual = soManyPeople.findById(3);
         Assert.assertEquals(expected, actual);
-
     }
-
 }
+
