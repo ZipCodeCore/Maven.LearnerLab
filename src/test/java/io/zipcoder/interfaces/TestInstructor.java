@@ -23,14 +23,26 @@ public class TestInstructor {
     }
 
     @Test
-    public void testTeach(){
+    public void testTeach() {
+        Student student = new Student(2, "Jeff");
+        instructor.teach(student, 15);
 
-        double expected = 10000;
-        //need feedback below... I guess that it's not seeing the way I am passing the number in as a double
-        //it is clearly double
-        //double actual = instructor.teach(10000.00);
+        double expected = 15;
+        double actual = student.getTotalStudyTime();
 
-        //Assert.assertEquals(expected, actual, 0);
+        Assert.assertEquals(expected, actual, 0);
+
+    }
+
+    @Test
+    public void testLecture() {
+        Student student = new Student(3, "Claude");
+        instructor.teach(student, 30);
+
+        double expected = 30;
+        double actual = student.getTotalStudyTime();
+
+        Assert.assertEquals(expected, actual, 0);
 
     }
 

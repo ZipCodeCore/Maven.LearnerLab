@@ -15,10 +15,10 @@ public class TestStudents {
 
             Person actualStudent = actualStudents.findById(expectedStudents[p]);
 
-            Assert.assertTrue(actualStudent != null);
-
 
         }
+
+        Assert.assertTrue(actualStudents != null);
 
     }
 

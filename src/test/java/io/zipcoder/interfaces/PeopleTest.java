@@ -15,38 +15,37 @@ public class PeopleTest {
     };
 
 
+    @Test
+    public void testAdd() {
 
-        @Test
-        public void testAdd() {
 
-
-            people.add(person);
-            long expected = 101010;
-            long actual = people.findById(expected).getId();
-            Assert.assertEquals(expected, actual);
-
-        }
-
-        @Test
-        public void testRemove() {
-
-            people.add(person);
-            people.remove(person);
-            long expected = 0;
-            long actual = people.getCount();
-            Assert.assertEquals(expected, actual);
-
-        }
-
-        @Test
-        public void testFindById() {
-
-            people.add(person);
-            long expected = 101010;
-            long actual = people.findById(expected).getId();
-            Assert.assertEquals(expected, actual);
-        }
-
+        people.add(person);
+        long expected = 101010;
+        long actual = people.findById(expected).getId();
+        Assert.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void testRemove() {
+
+        people.add(person);
+        people.remove(person);
+        long expected = 0;
+        long actual = people.getCount();
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testFindById() {
+
+        people.add(person);
+        long expected = 101010;
+        long actual = people.findById(expected).getId();
+        Assert.assertEquals(expected, actual);
+    }
+
+
+}
 

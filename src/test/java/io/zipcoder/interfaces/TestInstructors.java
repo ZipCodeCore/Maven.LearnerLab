@@ -15,10 +15,10 @@ public class TestInstructors {
 
             Person actualInstructor = actualInstructors.findById(expectedInstructors[p]);
 
-            Assert.assertTrue(actualInstructor != null);
-
 
         }
+
+        Assert.assertTrue(actualInstructors != null);
 
     }
 

@@ -5,33 +5,20 @@ import org.junit.Test;
 
 public class ZipCodeWilmingtonTest {
 
-    //DO NOT run both tests at same time, they only pass if run individually
 
-   ZipCodeWilmington cohort = ZipCodeWilmington.getInstance();
-   Students students = Students.getInstance();
+
+    ZipCodeWilmington cohort = ZipCodeWilmington.getInstance();
+    //Students students = Students.getInstance();
+
 
 
     @Test
     public void testHostLecture() {
 
-
-
-
-    }
-
-    @Test
-    public void testLecture2() {
-
-
-
-
+        cohort.hostLecture(Educator.DOLIO, 5.0);
+        Assert.assertEquals(5.0, Educator.DOLIO.getTimeWorked(),0);
 
     }
-
-
-
-
-
 
 
 //    @Test

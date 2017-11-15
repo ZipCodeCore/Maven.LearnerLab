@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public abstract class People <E extends Person>{
+public abstract class People<E extends Person> {
 
     //No casting tricks were used in the people class (as per 10.1 and 10.2
 
@@ -51,13 +51,6 @@ public abstract class People <E extends Person>{
     }
 
     public abstract E[] getStudentArray();
-//        Person[] persons = new Person[personList.size()];
-//        for (int i = 0; i < personList.size(); i++) {
-//            persons[i] = personList.get(i);
-//        }
-//
-//        return persons;
-
 
     public void removeAll() {
 

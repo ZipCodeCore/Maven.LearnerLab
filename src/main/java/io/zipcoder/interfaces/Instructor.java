@@ -1,6 +1,6 @@
 package io.zipcoder.interfaces;
 
-public class Instructor extends Person implements Teacher {
+public class Instructor extends Person implements Teacher{
 
     private double totalStudyTime = 0;
 
