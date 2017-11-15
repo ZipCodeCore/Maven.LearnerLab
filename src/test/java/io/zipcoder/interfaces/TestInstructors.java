@@ -7,7 +7,7 @@ public class TestInstructors {
     @Test
     public void test() {
 
-        long[] expected = {123,456,789};
+        long[] expected = {0,1,2};
         Instructors actual = Instructors.getInstance();
 
         for(int i = 0; i < expected.length; i++){

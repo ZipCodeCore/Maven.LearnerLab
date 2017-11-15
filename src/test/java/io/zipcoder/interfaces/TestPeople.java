@@ -5,7 +5,12 @@ import org.junit.*;
 
 public class TestPeople {
     Person person = new Person(786, "Zan");
-    People p1 = new People();
+    People p1 = new People() {
+        @Override
+        public Person[] getStudentArray() {
+            return new Person[23];
+        }
+    };
 
     @Test
     public void testAdd() {

@@ -6,7 +6,7 @@ public class TestStudent {
     @Test
     public void testImplementation() {
         boolean studentIsLearner;
-        Student student = new Student(40000, "Rob");
+        Student student = new Student(22, "Rob Kruzel");
 
         if (student instanceof Learner) {
             studentIsLearner = true;
@@ -20,7 +20,7 @@ public class TestStudent {
     @Test
     public void testInheritance() {
         boolean studentIsPerson;
-        Student student = new Student(40000, "Rob");
+        Student student = new Student(22, "Rob Kruzel");
 
         if (student instanceof Person) {
             studentIsPerson = true;
@@ -34,7 +34,7 @@ public class TestStudent {
 
     @Test
     public void testLearn() {
-        Student student = new Student(38402802, "Kruzel");
+        Student student = new Student(22, "Rob Kruzel");
         student.learn(4.5);
 
         double expected = 4.5;

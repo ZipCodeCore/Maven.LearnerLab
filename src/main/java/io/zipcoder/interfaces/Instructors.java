@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public final class Instructors extends People {
+public final class Instructors  extends People <Instructor> {
 
     private static Instructors INSTANCE = new Instructors();
 
@@ -20,9 +20,15 @@ public final class Instructors extends People {
         }
     }
 
+    public Instructor[] getStudentArray() {
+        return new Instructor[0];
+    }
+
     public static Instructors getInstance() {
-
-        return INSTANCE;
-
+        if(INSTANCE != null) {
+            return INSTANCE;
+        }else{
+            return INSTANCE;
+        }
     }
 }

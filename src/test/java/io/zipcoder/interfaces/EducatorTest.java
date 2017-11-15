@@ -3,8 +3,22 @@ package io.zipcoder.interfaces;
 import org.junit.*;
 
 
-public class TestInstructor {
+public class EducatorTest {
     Instructor instructor = new Instructor(0, "Tariq");
+    Student student = new Student(19, "Zan Cheema");
+    Educator tariq = Educator.TARIQ;
+
+    @Test
+    public void getTimeWorked(){
+
+        double initialTimeWorked = tariq.getTimeWorked();
+        double expected = 20;
+        tariq.teach(student,20);
+        double actual = student.getTotalStudyTime();
+        Assert.assertEquals(expected, actual,0);
+
+    }
+
 
     @Test
     public void testImplementation(){
@@ -35,7 +49,7 @@ public class TestInstructor {
 
     @Test
     public void testTeach(){
-        Student student = new Student(1, "Aaron Heiron");
+
         instructor.teach(student,20);
 
         double expected = 20;
@@ -47,7 +61,7 @@ public class TestInstructor {
 
     @Test
     public void testLecture(){
-        Student student = new Student(1,"Aaron Heiron");
+
         instructor.teach(student,10);
 
         double expected = 10;
