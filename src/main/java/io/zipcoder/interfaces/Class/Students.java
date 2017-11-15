@@ -24,8 +24,8 @@ public final class Students extends People<Student>{
 
     }
 
-    public ArrayList<Student> getArray() {
+    public Student[] getArray() {
         //return getINSTANCE().peopleList;
-        return super.peopleList;
+        return super.getPeopleList().toArray(new Student[getCount()]);
     }
 }

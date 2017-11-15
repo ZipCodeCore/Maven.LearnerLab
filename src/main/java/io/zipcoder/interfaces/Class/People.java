@@ -3,11 +3,7 @@ package io.zipcoder.interfaces.Class;
 import java.util.ArrayList;
 
 public abstract class People<E extends Person> {
-    ArrayList<E> peopleList = new ArrayList();
-
-    //private static People INSTANCE = new People<E>();
-
-
+    private ArrayList<E> peopleList = new ArrayList<E>();
 
     public void add(E person){
         peopleList.add(person);
@@ -39,11 +35,11 @@ public abstract class People<E extends Person> {
         return peopleList.size();
     }
 
-    public abstract ArrayList<E> getArray();
+    public ArrayList<E> getPeopleList() {
+        return peopleList;
+    }
 
-//    {
-//        return peopleList;
-//    }
+    public abstract E[] getArray();
 
     public void removeAll(){
         peopleList.clear();
