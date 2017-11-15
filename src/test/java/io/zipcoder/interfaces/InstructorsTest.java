@@ -10,6 +10,7 @@ public class InstructorsTest {
     public void getInstance() throws Exception {
 
         String actual="";
+        String expectedString="";
 
         Instructor [] expected = new Instructor[3];
 
@@ -18,8 +19,12 @@ public class InstructorsTest {
 
         Instructor[] persons=Instructors.getInstance().getArray();
 
+        for (Instructor i:persons)
+            actual+=i.educator+"\n";
+        for (Instructor i:expected)
+            expectedString+=i.educator+"\n";
 
-        Assert.assertEquals(Arrays.toString(expected), Arrays.toString(persons));
+        Assert.assertEquals(expectedString, actual);
     }
 
 }
