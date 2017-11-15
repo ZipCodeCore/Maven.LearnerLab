@@ -24,25 +24,4 @@ public Student(String name, long id) {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-/*
-Student should have a concrete
-implementation of the learn method which
-increments the totalStudyTime variable by
-the specified numberOfHours argument.
- */

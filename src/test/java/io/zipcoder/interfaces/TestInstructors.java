@@ -11,7 +11,7 @@ public class TestInstructors {
 
                 Instructors instructors = Instructors.getInstance();
                 int expected = 5;
-                int actual = instructors.personList.size();
+                int actual = instructors.instructorList.size();
                 Assert.assertEquals(expected,actual);
             }
 }

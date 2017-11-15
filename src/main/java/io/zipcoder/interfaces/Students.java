@@ -1,10 +1,14 @@
 package io.zipcoder.interfaces;
 
+import java.util.ArrayList;
+
 public class Students extends People{
+
+    ArrayList<Student> studentList = new ArrayList<Student>();
 
     private static final Students INSTANCE = new Students();
 
-    private String[] studentNames=
+    private String[] studentNames =
             {
             "Aaron Herion", "Abrar Mohammed","Andrea Susnick","Andrew Kutchen",
             "Brian Sutton", "Donald Fountain" , "Elliott Kozulak", "Gabriela Lisboa",
@@ -18,8 +22,8 @@ public class Students extends People{
     {
         for(int i=0;i<studentNames.length;i++)
         {
-            Person person= new Student(studentNames[i], i+1);
-            personList.add(person);
+            Student student = new Student(studentNames[i], i+1);
+            studentList.add(student);
         }
     }
 

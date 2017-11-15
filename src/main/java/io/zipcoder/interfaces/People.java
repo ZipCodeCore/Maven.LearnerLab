@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class People
     {
-    ArrayList<Person> personList = new ArrayList<>();
+        private ArrayList<Person> personList = new ArrayList<>();
 
 
     public void add(Person person) {
@@ -47,10 +47,16 @@ public class People
         return personList.size();
     }
 
+
+
     public  Person[] getArray()
     {
         return personList.toArray(new Person[personList.size()]);
     }
+
+
+
+
 
     public void removeAll()
     {
