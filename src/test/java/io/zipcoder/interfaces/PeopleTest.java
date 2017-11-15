@@ -4,15 +4,25 @@ import org.junit.Test;
 import org.junit.Assert;
 
 public class PeopleTest {
-    People people = new People();
-    Person Andrea = new Person(1, "");
-    Person Lina = new Person(2, "");
+
+    public class Peeps extends People{
+
+        Person[] getArray() {
+            return (Person[]) personList.toArray(new Person[personList.size()]);
+        }
+    }
+
+    Peeps people = new Peeps();
+    Person Andrea = new Person(1);
+    Person Lina = new Person(2);
 
     @Test
     public void testAdd(){
         people.add(Andrea);
+        Person[] array = people.getArray();
+
         Person expected = Andrea;
-        Person actual = People.personList.get(0);
+        Person actual = array[0];
         Assert.assertEquals(expected, actual);
     }
 
@@ -21,8 +31,10 @@ public class PeopleTest {
         people.add(Andrea);
         people.add(Lina);
         people.remove(Andrea);
+        Person[] array = people.getArray();
+
         Person expected = Lina;
-        Person actual = People.personList.get(0);
+        Person actual = array[0];
         Assert.assertEquals(expected, actual);
     }
 

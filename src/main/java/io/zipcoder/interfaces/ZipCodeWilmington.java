@@ -17,11 +17,11 @@ public class ZipCodeWilmington {
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours){
-        teacher.lecture(students.getStudentArray(), numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours){
-        Instructor instructor = (Instructor) instructors.findByID(id);
-        instructor.lecture(students.getStudentArray(), numberOfHours);
+        Instructor instructor = instructors.findByID(id);
+        instructor.lecture(students.getArray(), numberOfHours);
     }
 }

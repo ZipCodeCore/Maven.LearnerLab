@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class StudentTest {
-    Student student = new Student(1, "");
+    Student student = new Student(1);
 
     @Test
     public void testImplementation(){
@@ -22,7 +22,7 @@ public class StudentTest {
 
     @Test
     public void testLearn(){
-        double expected = 20;
+        double expected = 20.0;
         student.learn(10);
         double actual = student.getTotalStudyTime();
         Assert.assertEquals(expected, actual, 0);
