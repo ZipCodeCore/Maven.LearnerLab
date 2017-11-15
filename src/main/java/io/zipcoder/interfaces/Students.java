@@ -1,6 +1,7 @@
 package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public final class  Students extends People<Student>{
     private static final Students INSTANCE=new Students();
@@ -12,9 +13,9 @@ public final class  Students extends People<Student>{
 
 
     public Student[] getArray() {
+        Student [] students=personList.stream().toArray(Student[]::new);
 
-
-        return personList.toArray(new Student[personList.size()]);
+        return students;
 
     }
 

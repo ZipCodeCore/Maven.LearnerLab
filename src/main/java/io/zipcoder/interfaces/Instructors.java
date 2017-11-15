@@ -14,8 +14,8 @@ public final class  Instructors extends People<Instructor> {
     }
 
     public Instructor[] getArray() {
-
-        return personList.toArray(new Instructor[personList.size()]);
+        Instructor[] instructors=personList.stream().toArray(Instructor[]::new);
+        return instructors;
 
     }
 
