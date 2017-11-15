@@ -16,7 +16,7 @@ public class ZipCodeWilmington {
         teacher.lecture(students.personList.toArray(new Learner[students.personList.size()]),numberOfHours);
     }
     public void hostLecture(long id, double numberOfHours){
-        Instructor instructor =(Instructor) instructors.findById(id);
+        Instructor instructor =instructors.findById(id);
         instructor.lecture(students.personList.toArray(new Learner[students.personList.size()]),numberOfHours);
     }
 

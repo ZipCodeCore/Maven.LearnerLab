@@ -4,43 +4,47 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestPeople {
-
-
     @Test
     public void testAdd() {
-        People people = new People();
-        Person person1 = new Person(12, "Lina");
-        people.add(person1);
-        Person expected = person1;
-        Person actual = people.personList.get(0);
-        Assert.assertEquals(expected, actual);
+        Students students = Students.getInstance();
+
+        Student person1 = new Student(121, "Lina",4.0);
+        students.add(person1);
+        Student actual = students.findById(121);
+        //System.out.println(person1);
+        Assert.assertEquals(person1, students.findById(121));
     }
 
     @Test
     public void testRemove() {
-        People people = new People();
-        Person person1 = new Person(12, "Lina");
-        people.add(person1);
-        people.remove(person1);
-        Assert.assertFalse(people.personList.contains(person1));
+        Students students = Students.getInstance();
+
+        Student person1 = new Student(14, "Merin",4.0);
+        students.add(person1);
+        students.remove(person1);
+        Assert.assertFalse(students.personList.contains(person1));
     }
 
     @Test
     public void testRemoveId() {
-        People people = new People();
-        Person person2 = new Person(13, "Tom");
-        people.add(person2);
-        people.remove(13);
-        Assert.assertFalse(people.personList.contains(person2));
+        //People people = new People();
+        Students students = Students.getInstance();
+
+        Student person2 = new Student(13, "Tom",1.0);
+        students.add(person2);
+        students.remove(13);
+        Assert.assertFalse(students.personList.contains(person2));
     }
 
     @Test
     public void testFindId() {
-        People people = new People();
-        Person person3 = new Person(14, "Jerry");
-        people.add(person3);
-        Person expected = person3;
-        Person actual = people.findById(person3.getId());
+        //People people = new People();
+        Students students = Students.getInstance();
+
+        Student person3 = new Student(123, "Jerry",12.0);
+        students.add(person3);
+        Student expected = person3;
+        Student actual = students.findById(person3.getId());
         Assert.assertEquals(expected, actual);
 
     }
