@@ -1,6 +1,6 @@
 package io.zipcoder.interfaces.classes;
 
-import io.zipcoder.interfaces.interfaces.Learner;
+
 import io.zipcoder.interfaces.interfaces.Teacher;
 
 public class ZipCodeWilmington {
@@ -10,13 +10,13 @@ public class ZipCodeWilmington {
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
         //lecture takes an Array of Learners(Students) and a number of hours
-        //references Students instance and turns it into a arrary of learners?
-        teacher.lecture(students.personList.toArray(new Learner[students.personList.size()]), numberOfHours);
+        //references Students instance and turns it into a array of learners?
+        teacher.lecture(students.getArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours) {
         Instructor instructor = instructors.findById(id);
-        instructor.lecture(students.personList.toArray(new Learner[students.personList.size()]), numberOfHours);
+        instructor.lecture(students.getArray(), numberOfHours);
 
     }
 

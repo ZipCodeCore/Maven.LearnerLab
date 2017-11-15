@@ -21,7 +21,7 @@ public class StudentsTest {
     @Test
     public void testStudentsGetArray(){
         String expected = "Zach Stimmel";
-        String actual = Students.getINSTANCE().getArray().get(25).getName();
+        String actual = (Students.getINSTANCE().getArray())[25].getName();
 
         Assert.assertEquals(expected,actual);
     }

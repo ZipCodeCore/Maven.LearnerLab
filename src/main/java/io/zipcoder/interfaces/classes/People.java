@@ -35,7 +35,7 @@ public abstract class People<E extends Person> {
         return personList.size();
     }
 
-    public abstract ArrayList<E> getArray();
+    public abstract E[] getArray();
 
     public void removeAll() {
         personList.clear();

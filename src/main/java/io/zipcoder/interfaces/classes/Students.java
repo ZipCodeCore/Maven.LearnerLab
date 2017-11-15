@@ -54,7 +54,7 @@ public final class Students extends People<Student> {
     }
 
 
-    public ArrayList<Student> getArray() {
-        return getINSTANCE().personList;
+    public Student[] getArray() {
+        return super.personList.toArray(new Student[personList.size()]);
     }
 }

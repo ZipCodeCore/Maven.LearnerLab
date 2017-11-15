@@ -1,4 +1,4 @@
-package io.zipcoder.interfaces.Tests;
+package io.zipcoder.interfaces.Enum;
 
 import io.zipcoder.interfaces.classes.Instructor;
 import io.zipcoder.interfaces.classes.Instructors;
@@ -7,11 +7,11 @@ import io.zipcoder.interfaces.classes.Student;
 import io.zipcoder.interfaces.interfaces.Learner;
 import io.zipcoder.interfaces.interfaces.Teacher;
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-public class TestInstructor {
+public class EducatorTest {
 
-    Instructor testInstructor = new Instructor(1);
+    Educator testEducator = Educator.TARIQ;
     Student testStudentOne = new Student(1);
     Student testStudentTwo = new Student(2);
     private Learner[] students = {testStudentOne, testStudentTwo};
@@ -20,23 +20,23 @@ public class TestInstructor {
     public void testImplementation() {
 
         boolean expected = true;
-        boolean actual = testInstructor instanceof Teacher;
+        boolean actual = testEducator instanceof Teacher;
 
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void testInheritance() {
-        boolean expected = true;
-        boolean actual = testInstructor instanceof Person;
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void testInheritance() {
+//        boolean expected = true;
+//        boolean actual = testEducator instanceof Person;
+//        Assert.assertEquals(expected, actual);
+//    }
 
     @Test
     public void testTeach() {
 
         double expected = 20;
-        testInstructor.teach(testStudentOne, expected);
+        testEducator.teach(testStudentOne, expected);
         double actual = testStudentOne.getTotalStudyTime();
 
         Assert.assertEquals(expected, actual, 0);
@@ -47,7 +47,7 @@ public class TestInstructor {
 
         double expected = 5;
         //2 students 10/2=5
-        testInstructor.lecture(students, 10);
+        testEducator.lecture(students, 10);
 
         double actual = testStudentOne.getTotalStudyTime();
 
@@ -62,4 +62,14 @@ public class TestInstructor {
 
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void testGetID(){
+        long expected = 2;
+        long actual = Educator.LEON.getId();
+
+        Assert.assertEquals(expected,actual);
+
+    }
 }
+
+
