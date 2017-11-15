@@ -11,9 +11,9 @@ public final class Instructors extends People<Instructor>{
 
     private Instructors() {
         super();
-//        for(String name: names) {
+//        for(Educator educator: Educator.values()) {
 //            long nextId = assignNextId();
-//            add(new Instructor(nextId, name));
+//            add(new Instructor(nextId, educator.name()));
 //        }
     }
 

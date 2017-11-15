@@ -8,10 +8,12 @@ public enum Educator implements Teacher{
     private final Instructor instructor;
     private final Instructors instructors = Instructors.getInstance();
     private double timeWorked = 0;
+    private String fullname;
 
     Educator(String name) {
         this.instructor = new Instructor(instructors.assignNextId(), name);
         instructors.add(instructor);
+        fullname = name;
     }
 
     public double getTimeWorked() {
@@ -28,4 +30,7 @@ public enum Educator implements Teacher{
         instructor.lecture(learners, numberOfHours);
     }
 
+    public String getFullname() {
+        return fullname;
+    }
 }
