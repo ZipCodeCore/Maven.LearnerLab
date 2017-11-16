@@ -10,10 +10,10 @@ public class TestInstructors {
 
     @Test
     public void testInstructorInstance(){
-        Instructors instructor = Instructors.getInstance();
+//        Instructors instructor = Instructors.getInstance();
         String expected = "Dolio";
 
-        String actual = instructor.findById(1).getName();
+        String actual = Instructors.getInstance().findById(007).getName();
 
         Assert.assertEquals(expected, actual);
     }

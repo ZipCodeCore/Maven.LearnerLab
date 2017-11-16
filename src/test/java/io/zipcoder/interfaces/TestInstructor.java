@@ -1,9 +1,6 @@
 package io.zipcoder.interfaces;
 
-import io.zipcoder.interfaces.donald.fountain.classroomLab.Instructor;
-import io.zipcoder.interfaces.donald.fountain.classroomLab.Person;
-import io.zipcoder.interfaces.donald.fountain.classroomLab.Student;
-import io.zipcoder.interfaces.donald.fountain.classroomLab.Teacher;
+import io.zipcoder.interfaces.donald.fountain.classroomLab.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,36 +8,35 @@ import java.util.ArrayList;
 
 public class TestInstructor {
 
-    long idNumber = 100000;
+    long idNumber = 1;
 
     @Test
     public void testImplementation() {
         //: Given
-        Instructor instructor = new Instructor(idNumber);
+//        Instructor instructor = new Instructor(idNumber);
 
         //: Then
-        Assert.assertTrue(instructor instanceof Teacher);
+        Assert.assertTrue(Instructors.getInstance().findById(007) instanceof Teacher);
     }
 
     @Test
     public void testInheritance(){
         //: Given
-        Instructor leon = new Instructor(idNumber);
 
         //: When
-        Assert.assertTrue(leon instanceof Person);
+        Assert.assertTrue(Instructors.getInstance().findById(007) instanceof Person);
     }
 
     @Test
     public void testConstructor(){
         //: Given
-        Instructor leon = new Instructor(idNumber);
-        String name = "Leon";
-        String expected = name + leon.getId();
+//        Instructor leon = new Instructor(idNumber);
+//        String name = "Leon";
+        String expected = "Dolio" + "7";
 
         //: When
-        leon.setName(name);
-        String actual = leon.getName() + leon.getId();
+//        leon.setName(name);
+        String actual = Instructors.getInstance().findById(007).getName() + Instructors.getInstance().findById(007).getId();
 
         //: Then
         Assert.assertEquals(expected, actual);
@@ -49,18 +45,17 @@ public class TestInstructor {
     @Test
     public void testTeach(){
         //: Given
-        Instructor leon = new Instructor(idNumber);
-        double teachingHours = 90;
-        double expected = 30;
+//        Instructor leon = new Instructor(idNumber);
+        double teachingHoursExpected = 4;
 
 
         //: When
-        Student donald = new Student(idNumber), jeff = new Student(idNumber), sam = new Student(idNumber);
-        Student[] students = {donald, sam, jeff};
-        leon.lecture(students, teachingHours);
-        double actual = donald.getTotalStudyTime();
+//        Student donald = new Student(idNumber), jeff = new Student(idNumber), sam = new Student(idNumber);
+//        Student[] students = Students.getInstance().getArray();
+        Instructors.getInstance().findById(007).teach(Students.getInstance().findById(1), teachingHoursExpected);
+        double actual = Students.getInstance().findById(1).getTotalStudyTime();
 
         //: Then
-        Assert.assertEquals(expected, actual, 0);
+        Assert.assertEquals(teachingHoursExpected, actual, 0);
     }
 }

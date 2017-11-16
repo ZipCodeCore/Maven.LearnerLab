@@ -15,7 +15,17 @@ public class TestPeople {
     Student donald = new Student(idNumber1);
     Student jeff = new Student(idNumber2);
     Student sam = new Student(idNumber3);
-    People zipcode = new People();
+    People zipcode = new People<Person>() {
+
+        @Override
+        public Person[] getArray() {
+            Person[] students = new Student[personList.size()];
+            for(int i = 0; i < personList.size(); i++){
+                students[i] = personList.get(i);
+            }
+            return students;
+        }
+    };
 
     @Test
     public void testAdd(){

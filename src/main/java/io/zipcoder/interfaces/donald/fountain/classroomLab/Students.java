@@ -1,6 +1,9 @@
 package io.zipcoder.interfaces.donald.fountain.classroomLab;
 
-public final class Students extends People {
+import java.util.HashMap;
+import java.util.Map;
+
+public final class Students extends People<Student> {
 
     private final static Students INSTANCE = new Students();
 
@@ -14,7 +17,7 @@ public final class Students extends People {
         for (String name : names) {
             count++;
 
-            Person student = new Student(count);
+            Student student = new Student(count);
             student.setName(name);
 
             super.addPerson(student);
@@ -25,4 +28,21 @@ public final class Students extends People {
         return INSTANCE;
     }
 
+    @Override
+    public Student[] getArray() {
+//        Student[] students = new Student[personList.size()];
+//        for(int i = 0; i < personList.size(); i++){
+//            students[i] = personList.get(i);
+//        }
+//        super.personList.stream().toArray(Student[] :: new);
+        return personList.toArray(new Student[personList.size()]);
+    }
+
+    public Map<Student,Double> getStudyMap() {
+        Map<Student, Double> studyMap = new HashMap<>();
+        for (Student student: personList) {
+            studyMap.put(student, student.getTotalStudyTime());
+        }
+        return studyMap;
+    }
 }
