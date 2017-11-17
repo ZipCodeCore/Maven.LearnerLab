@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 public enum Educator implements Teacher {
 
-    Tariq(1, "Tariq"), Leon(2, "Leon"),Samantha(3, "Samantha");
+    Tariq(1, "Tariq"), Leon(2, "Leon"),Zach(3, "Zach");
 
     private double timeWorked = 0.0;
     private String name;
