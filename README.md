@@ -1,4 +1,4 @@
-# Student, Instructor, Classroom
+# Leon's Lengthy Learner Lab 
 * **Purpose** - to demonstrate the use of [Java interfaces](http://tutorials.jenkov.com/java/interfaces.html#java-interface-example)
 * **Objective** - to implement a `ZipCodeWilmington` class which _mediates_ a _composite_ `Students` and `Instructors` _singleton_ reference.
 
