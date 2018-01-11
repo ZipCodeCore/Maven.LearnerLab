@@ -6,6 +6,7 @@
 ### Part 1.1 - Create `Person` Class
 * Create a `Person` class.
 	* The class should declare a `final` field named `id` of type `long`.
+	* The class should declare a field named `name` of type `String`.	
 	* `Person` constructor should have a parameter of type `long` which sets the `id` field to the respective value.
 	* The class should define a `getId()` method which returns the `Person` object's `id` field.
 	* The class should define a `getName()` method which returns the `Person` object's `name` field.
@@ -75,8 +76,8 @@
 * Create a `TestInstructor` class.
 	* Create a `testImplementation` method that asserts that an `Instructor` is an `instanceof` a `Teacher`.
 	* Create a `testInheritance` method that asserts that a `Instructor` is an `instanceof` a `Person`.
-	* Create a `testTeach` method that ensures when an `Instructor` invokes the `.teach` method, a respective student's `totalStudyTime` instance variable is incremented.
-	* Create a `testLecture` method that ensures when an `Instructor` invokes the `.teach` method, a respective student's `totalStudyTime` instance variable is incremented by the specified `numberOfHours`.
+	* Create a `testTeach` method that ensures when an `Instructor` invokes the `teach` method, a respective student's `totalStudyTime` instance variable is incremented by the specified `numberOfHours`.
+	* Create a `testLecture` method that ensures when an `Instructor` invokes the `lecture` method, a respective array of students' `totalStudyTime` instance variables is incremented by `numberOfHours/students.length`.
 
 
 -
