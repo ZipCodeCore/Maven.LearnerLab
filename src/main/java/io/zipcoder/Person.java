@@ -9,6 +9,11 @@ public class Person {
         this.id = id;
     }
 
+    public Person(){
+        this.name = "";
+        this.id = 0;
+    }
+
     public long getId() {
         return id;
     }
