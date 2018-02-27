@@ -1,4 +1,4 @@
-package io.zipcoder.interfaces;
+package io.zipcoder;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -24,6 +24,13 @@ public class TestPerson {
     public void constructorIDTest(){
         long expected = 1;
         long actual = tester.getId();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setNameTest(){
+        String expected = "Tester";
+        String actual = tester.getName();
         Assert.assertEquals(expected, actual);
     }
 
