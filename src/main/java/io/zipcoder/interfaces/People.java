@@ -1,5 +1,4 @@
 package io.zipcoder.interfaces;
 
-public class TestPerson {
-
+public class People {
 }
