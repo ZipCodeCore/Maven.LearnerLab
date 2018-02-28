@@ -19,10 +19,8 @@ public final class Instructors extends People {
         return INSTANCE;
     }
 
-    /*  Might not need this method
-    public static Students[] getStudentsArray() {
-        return (Students[]) getInstance().getPersonList().toArray();
+    public static Instructors[] getInstructorsArray() {
+        return (Instructors[]) Instructors.getInstance().getPersonList().toArray();
     }
-    */
 
 }
