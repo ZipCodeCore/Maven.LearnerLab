@@ -8,14 +8,17 @@ public class TestZipCodeWilmington {
     @Test
     public void hostLectureTest() {
         ZipCodeWilmington.getInstance().hostLecture(12, 9);
-        People people = new People();
-        Student student = new Student(1);
-        people.addPerson(student);
+
+        for((Learner) Student student: Students.getInstance().getArray()) {
+            student.getTotalStudyTime();
+        }
+
+        Students.getInstance().getArray()[0].
 
         double expected = 9;
+        Students.getInstance().getArray().
         double actual = student.getTotalStudyTime();
 
         Assert.assertEquals(expected, actual);
     }
-
 }
