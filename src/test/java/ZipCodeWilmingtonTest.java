@@ -7,7 +7,7 @@ public class ZipCodeWilmingtonTest {
     public void testHostLectureId(){
         Student student = Students.getInstance().getArray()[0];
         double before = 0;
-        ZipCodeWilmington.getInstance().hostLecture(99999, 20);
+        ZipCodeWilmington.getInstance().hostLecture(11111, 20);
         double after= student.getTotalStudyTime();
         double expected = after - before;
         double actual = after;
@@ -18,8 +18,8 @@ public class ZipCodeWilmingtonTest {
     public void testHostLectureTeacher(){
         Student student = Students.getInstance().getArray()[0];
         double before = 0;
-        Instructor tariq = Instructors.getInstance().findById(99999);
-        ZipCodeWilmington.getInstance().hostLecture(tariq, 10);
+        Instructor vince = Instructors.getInstance().findById(11111);
+        ZipCodeWilmington.getInstance().hostLecture(vince, 10);
         double after = student.getTotalStudyTime();
         double expected = after - before;
         double actual = after;
