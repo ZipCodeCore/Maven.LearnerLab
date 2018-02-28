@@ -10,6 +10,7 @@ public class StudentsTest {
     Student ricky;
     Student danny;
     Student terri;
+    Student kibret;
 
     @Before
     public void setup() {
@@ -17,16 +18,19 @@ public class StudentsTest {
         ricky = new Student(12);
         danny = new Student(13);
         terri = new Student(14);
+        kibret = new Student(15);
     }
 
     @Test
     public void studentsTest() {
+        // uses methods add, remove, and getCount
         Students instance = Students.getInstance();
         instance.add(marky);
         instance.add(ricky);
         instance.add(danny);
         instance.add(terri);
-        int expected = 4;
+        instance.remove(ricky);
+        int expected = 3;
         int actual = instance.getCount();
         Assert.assertEquals(expected, actual);
     }

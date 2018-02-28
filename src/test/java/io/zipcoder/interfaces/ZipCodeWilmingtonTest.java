@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class ZipCodeWilmingtonTest {
 
-    private Instructor tariq;
+//    private Instructor tariq;
     private Instructor froilan;
     private Instructor leon;
     private Instructor wilhem;
@@ -20,12 +20,12 @@ public class ZipCodeWilmingtonTest {
 
     @Before
     public void setup() {
-        tariq = new Instructor(1);
+//        tariq = new Instructor(1);
         froilan = new Instructor(2);
         leon = new Instructor(3);
         wilhem = new Instructor(4);
         testInstructors = Instructors.getInstance();
-        testInstructors.add(tariq);
+//        testInstructors.add(tariq);
         testInstructors.add(froilan);
         testInstructors.add(leon);
         testInstructors.add(wilhem);
@@ -43,10 +43,11 @@ public class ZipCodeWilmingtonTest {
 
     @Test
     public void zipCodeWilmingtonTest1() {
-        testZcw.hostLecture(2, 100);
+        testZcw.hostLecture(Educator.TARIQ, 100);
         double expected = 25;
         double actual = ricky.getTotalStudyTime();
         Assert.assertEquals(expected, actual, 0.005);
     }
+
 
 }

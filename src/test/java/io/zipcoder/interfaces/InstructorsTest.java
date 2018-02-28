@@ -10,6 +10,7 @@ public class InstructorsTest {
     Instructor froilan;
     Instructor leon;
     Instructor wilhem;
+    Instructor kibret;
     Instructors instructors;
 
     @Before
@@ -38,4 +39,12 @@ public class InstructorsTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void removeAllTest() {
+        instructors.add(kibret);
+        instructors.removeAll();
+        int expected = 0;
+        int actual = instructors.getCount();
+        Assert.assertEquals(expected,actual);
+    }
 }
