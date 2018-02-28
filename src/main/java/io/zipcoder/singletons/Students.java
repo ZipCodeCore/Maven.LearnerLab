@@ -1,6 +1,9 @@
-package io.zipcoder;
+package io.zipcoder.singletons;
 
-public final class Students extends People{
+import io.zipcoder.People;
+import io.zipcoder.Student;
+
+public final class Students extends People {
     private static final Students INSTANCE = new Students();
 
     private Students() {

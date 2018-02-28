@@ -5,7 +5,7 @@ import io.zipcoder.interfaces.Teacher;
 
 public class Instructor extends Person implements Teacher{
 
-    Instructor(String name, long id){
+    public Instructor(String name, long id){
         super(name, id);
     }
 

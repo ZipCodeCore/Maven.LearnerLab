@@ -6,7 +6,7 @@ public class Student extends Person implements Learner{
 
     protected double totalStudyTime = 0;
 
-    Student(String name, long id){
+    public Student(String name, long id){
         super(name, id);
     }
 
