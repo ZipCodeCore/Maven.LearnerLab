@@ -10,9 +10,9 @@ public class PersonTest {
 
     @Test
     public void testConstructor(){
-        person = new Person(2147483649L);
-
+    //be careful with primitives and wrappers in testing
         long expected = 2147483649L;
+        person = new Person(expected);
         long actual = person.getId();
 
         Assert.assertEquals(expected, actual);
@@ -20,8 +20,9 @@ public class PersonTest {
 
     @Test
     public void setName() {
+
         person = new Person(5147483649L);
-        String name = "Katrice";
+        //String name = "Katrice";
         String expected = "Katrice";
 
 
