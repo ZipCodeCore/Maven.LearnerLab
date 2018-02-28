@@ -1,10 +1,10 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.Person;
 
 public class Person<E> {
     private final long id;
     private String name;
 
-    Person(long id) {
+    public Person(long id) {
         this.id = id;
     }
 

@@ -1,5 +1,8 @@
 package io.zipcoder.interfaces;
 
+import io.zipcoder.interfaces.People.People;
+import io.zipcoder.interfaces.People.PeopleC;
+import io.zipcoder.interfaces.Person.Person;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

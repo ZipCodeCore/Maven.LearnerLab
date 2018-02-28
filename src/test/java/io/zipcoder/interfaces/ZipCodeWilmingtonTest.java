@@ -1,5 +1,8 @@
 package io.zipcoder.interfaces;
 
+import io.zipcoder.interfaces.People.Students;
+import io.zipcoder.interfaces.Enums.Educator;
+import io.zipcoder.interfaces.Person.Student;
 import org.junit.Assert;
 import org.junit.Test;
 

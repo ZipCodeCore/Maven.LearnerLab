@@ -1,4 +1,7 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.People;
+
+import io.zipcoder.interfaces.Enums.ZipcodeStudents;
+import io.zipcoder.interfaces.Person.Student;
 
 /**
  * filename:

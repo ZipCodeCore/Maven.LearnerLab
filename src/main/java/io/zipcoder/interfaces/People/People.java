@@ -1,4 +1,6 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.People;
+
+import io.zipcoder.interfaces.Person.Person;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +23,7 @@ public abstract class People<E extends Person<E>> {
     }
 
     public E findById(long id) {
-        for (E p: personList) {
+        for (E p : personList) {
             if (p.getId() == id)
                 return p;
         }

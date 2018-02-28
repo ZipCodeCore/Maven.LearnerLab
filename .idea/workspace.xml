@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="255e0e99-81a8-4d5a-843f-db03a3f8d4dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Educator.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Educator.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Educator.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/Educator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructor.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Instructor.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructors.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Instructors.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Learner.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Interfaces/Learner.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/People.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/PeopleC.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/PeopleC.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Person.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Student.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Student.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Students.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Students.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Teacher.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Interfaces/Teacher.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipCodeWilmington.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipCodeWilmington.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipcodeStudents.java" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/ZipcodeStudents.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorsTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorsTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/PeopleTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/PeopleTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentsTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentsTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPerson.java" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPerson.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/ZipCodeWilmingtonTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/ZipCodeWilmingtonTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,108 +34,84 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Students.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Students.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Students.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="31" lean-forward="true" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-              <folding>
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="People.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#283#284#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#390#391#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-                <element signature="e#690#691#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-                <element signature="e#820#821#0" expanded="true" />
-                <element signature="e#854#855#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZipCodeWilmington.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipCodeWilmington.java">
+      <file leaf-file-name="Instructors.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Instructors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
               <folding>
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#803#804#0" expanded="true" />
-                <element signature="e#871#872#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZipCodeWilmingtonTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PeopleC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/PeopleC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestPerson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPerson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZipCodeWilmingtonTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/ZipCodeWilmingtonTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PeopleTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/PeopleTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Educator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Educator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/Educator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            <state relative-caret-position="60">
+              <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding>
-                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Instructor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructor.java">
+      <file leaf-file-name="ZipCodeWilmington.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipCodeWilmington.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,22 +119,40 @@
       <file leaf-file-name="InstructorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="45">
+              <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+              <folding>
+                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstructorsTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorsTest.java">
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#145#146#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
+                <element signature="e#200#201#0" expanded="true" />
+                <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#256#257#0" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#323#324#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,26 +183,38 @@
       <list>
         <option value="$PROJECT_DIR$/interfaces-1.iml" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Learner.java" />
-        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPerson.java" />
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipcodeInstructors.java" />
         <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipcodeStudents.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/PeopleC.java" />
-        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructors.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Educator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/PeopleTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Students.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People.java" />
-        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/ZipCodeWilmingtonTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Instructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Interfaces/Learner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Interfaces/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/ZipcodeStudents.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Instructor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person.java" />
+        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/PeopleTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/People.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/PeopleC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Students.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Instructors.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/Educator.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipCodeWilmington.java" />
+        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPerson.java" />
+        <option value="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/ZipCodeWilmingtonTest.java" />
       </list>
     </option>
   </component>
@@ -262,6 +285,42 @@
               <item name="interfaces-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="CR-MacroLabs-OOP-InstructorStudentClassroom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="Enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="interfaces-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CR-MacroLabs-OOP-InstructorStudentClassroom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="interfaces-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CR-MacroLabs-OOP-InstructorStudentClassroom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="People" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="interfaces-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CR-MacroLabs-OOP-InstructorStudentClassroom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="Person" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="interfaces-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CR-MacroLabs-OOP-InstructorStudentClassroom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,6 +361,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="io.zipcoder.interfaces" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="io.zipcoder.interfaces" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -318,7 +380,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ZipCodeWilmingtonTest.testHostLectureById">
+  <component name="RunManager" selected="JUnit.io.zipcoder.interfaces in interfaces-1">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -343,7 +405,7 @@
     <configuration name="StudentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="PATTERN" value="io.zipcoder.interfaces.Enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -368,7 +430,7 @@
     <configuration name="ZipCodeWilmingtonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="PATTERN" value="io.zipcoder.interfaces.Enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -393,7 +455,7 @@
     <configuration name="ZipCodeWilmingtonTest.testHostLectureByEducator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="PATTERN" value="io.zipcoder.interfaces.Enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -418,7 +480,7 @@
     <configuration name="ZipCodeWilmingtonTest.testHostLectureById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="PATTERN" value="io.zipcoder.interfaces.Enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -463,7 +525,7 @@
     <configuration name="io.zipcoder.interfaces in interfaces-1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="PATTERN" value="io.zipcoder.interfaces.Enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -534,10 +596,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ZipCodeWilmingtonTest.testHostLectureById" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ZipCodeWilmingtonTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ZipCodeWilmingtonTest.testHostLectureByEducator" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.io.zipcoder.interfaces in interfaces-1" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.io.zipcoder.interfaces in interfaces-1" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ZipCodeWilmingtonTest.testHostLectureById" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ZipCodeWilmingtonTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ZipCodeWilmingtonTest.testHostLectureByEducator" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.StudentTest" />
       </list>
     </recent_temporary>
@@ -557,17 +619,11 @@
       <updated>1519762637987</updated>
       <workItem from="1519762639240" duration="10520000" />
       <workItem from="1519784780770" duration="704000" />
-      <workItem from="1519831760652" duration="16215000" />
+      <workItem from="1519831760652" duration="17327000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StudentTest - 2018.02.28 at 15h 01m 53s.xml">
-      <configuration name="StudentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StudentTest_testLearn - 2018.02.28 at 15h 01m 48s.xml">
-      <configuration name="StudentTest.testLearn" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ZipCodeWilmingtonTest - 2018.02.28 at 15h 16m 20s.xml">
       <configuration name="ZipCodeWilmingtonTest" configurationId="JUnit" />
     </history-entry>
@@ -583,6 +639,9 @@
     <history-entry file="ZipCodeWilmingtonTest_testHostLectureById - 2018.02.28 at 17h 16m 31s.xml">
       <configuration name="ZipCodeWilmingtonTest.testHostLectureById" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ZipCodeWilmingtonTest_testHostLectureById - 2018.02.28 at 17h 27m 13s.xml">
+      <configuration name="ZipCodeWilmingtonTest.testHostLectureById" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="io_zipcoder_interfaces_in_interfaces-1 - 2018.02.28 at 15h 02m 12s.xml">
       <configuration name="io.zipcoder.interfaces in interfaces-1" configurationId="JUnit" />
     </history-entry>
@@ -592,13 +651,15 @@
     <history-entry file="io_zipcoder_interfaces_in_interfaces-1 - 2018.02.28 at 17h 03m 50s.xml">
       <configuration name="io.zipcoder.interfaces in interfaces-1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="io_zipcoder_interfaces_in_interfaces-1 - 2018.02.28 at 17h 44m 18s.xml">
+      <configuration name="io.zipcoder.interfaces in interfaces-1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27439000" />
+    <option name="totallyTimeSpent" value="28551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1400" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -608,26 +669,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22827688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22827688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39897698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -673,28 +734,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Students.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Students.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding>
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipcodeStudents.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/ZipcodeStudents.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding>
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#811#812#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -713,34 +771,31 @@
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#350#351#0" expanded="false" />
+            <element signature="e#401#402#0" expanded="false" />
+            <element signature="e#450#451#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Students.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Students.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipcodeStudents.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/ZipcodeStudents.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#811#812#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -759,8 +814,8 @@
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#350#351#0" expanded="false" />
+            <element signature="e#401#402#0" expanded="false" />
+            <element signature="e#450#451#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,217 +864,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPerson.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/ZipcodeStudents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding>
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#811#812#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#344#345#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Instructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#342#343#0" expanded="false" />
+            <element signature="e#367#368#0" expanded="false" />
+            <element signature="e#431#432#0" expanded="false" />
+            <element signature="e#475#476#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Interfaces/Learner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Teacher.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Interfaces/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipcodeStudents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding>
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Learner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding>
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Educator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="e#518#519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/PeopleC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/PeopleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#159#160#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="285">
+          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Students.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/PeopleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" lean-forward="true" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+        <state relative-caret-position="482">
+          <caret line="36" column="57" lean-forward="false" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
           <folding>
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/People.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Person/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
             <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/ZipCodeWilmingtonTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/PeopleC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Students.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People/Instructors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Enums/Educator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding>
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipCodeWilmington.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/InstructorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
           <folding>
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/StudentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/ZipCodeWilmingtonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

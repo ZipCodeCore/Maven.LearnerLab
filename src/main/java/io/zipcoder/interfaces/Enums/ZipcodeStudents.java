@@ -1,4 +1,4 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.Enums;
 
 /**
  * filename:
@@ -44,7 +44,7 @@ public enum ZipcodeStudents {
 
     long value;
 
-   ZipcodeStudents(long id) {
+    ZipcodeStudents(long id) {
         this.value = id;
     }
 

@@ -1,4 +1,6 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.Person;
+
+import io.zipcoder.interfaces.Interfaces.Learner;
 
 /**
  * filename:
@@ -9,7 +11,7 @@ package io.zipcoder.interfaces;
 public class Student extends Person<Student> implements Learner {
     private double totalStudyTime;
 
-    Student(long id) {
+    public Student(long id) {
         super(id);
     }
 

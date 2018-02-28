@@ -1,4 +1,7 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.People;
+
+import io.zipcoder.interfaces.Enums.Educator;
+import io.zipcoder.interfaces.Person.Instructor;
 
 /**
  * filename:
@@ -8,14 +11,10 @@ package io.zipcoder.interfaces;
  */
 public final class Instructors extends People<Instructor> {
     private Instructors() {
-       super();
+        super();
 
-       for (Educator i : Educator.values())
-           this.add(i.getInstructor());
-    }
-
-    private static class InstructorsHelper {
-       private static final Instructors INSTANCE = new Instructors();
+        for (Educator i : Educator.values())
+            this.add(i.getInstructor());
     }
 
     public static Instructors getInstance() {
@@ -24,5 +23,9 @@ public final class Instructors extends People<Instructor> {
 
     public Instructor[] getArray() {
         return personList.toArray(new Instructor[0]);
+    }
+
+    private static class InstructorsHelper {
+        private static final Instructors INSTANCE = new Instructors();
     }
 }

@@ -1,4 +1,6 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.People;
+
+import io.zipcoder.interfaces.Person.Person;
 
 /**
  * filename:

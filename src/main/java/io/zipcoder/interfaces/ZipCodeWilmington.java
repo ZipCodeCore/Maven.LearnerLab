@@ -1,5 +1,10 @@
 package io.zipcoder.interfaces;
 
+import io.zipcoder.interfaces.Enums.Educator;
+import io.zipcoder.interfaces.People.Instructors;
+import io.zipcoder.interfaces.People.Students;
+import io.zipcoder.interfaces.Person.Instructor;
+
 /**
  * filename:
  * project: interfaces-1
@@ -10,10 +15,7 @@ public final class ZipCodeWilmington {
     private static final Students students = Students.getInstance();
     private static final Instructors instructors = Instructors.getInstance();
 
-    private ZipCodeWilmington() {}
-
-    private static class ZipCodeWilmingtonHelper {
-        private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
+    private ZipCodeWilmington() {
     }
 
     public static ZipCodeWilmington getInstance() {
@@ -30,5 +32,9 @@ public final class ZipCodeWilmington {
 
     public void hostLecture(Educator educator, double numberOfHours) {
         hostLecture(educator.getInstructor(), numberOfHours);
+    }
+
+    private static class ZipCodeWilmingtonHelper {
+        private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
     }
 }

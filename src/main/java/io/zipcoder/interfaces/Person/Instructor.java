@@ -1,4 +1,7 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.interfaces.Person;
+
+import io.zipcoder.interfaces.Interfaces.Learner;
+import io.zipcoder.interfaces.Interfaces.Teacher;
 
 /**
  * filename:
@@ -7,7 +10,7 @@ package io.zipcoder.interfaces;
  * date: 2/27/18
  */
 public class Instructor extends Person<Instructor> implements Teacher {
-    Instructor(long id) {
+    public Instructor(long id) {
         super(id);
     }
 
