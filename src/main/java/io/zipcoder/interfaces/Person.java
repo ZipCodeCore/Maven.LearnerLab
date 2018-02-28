@@ -5,6 +5,9 @@ public class Person {
     private final long id;
     private String name;
 
+    Person() {
+
+    }
 
     public Person(long id) {
         this.id = id;
