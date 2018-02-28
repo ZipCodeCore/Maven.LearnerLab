@@ -20,6 +20,14 @@ public enum Educator implements Teacher{
         return timeWorked;
     }
 
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void addTimeWorked(double hours){
+        this.timeWorked += hours;
+    }
+
     Educator(String name, long id){
         this.instructor = new Instructor(name, id);
         Instructors.getInstance().add(this.instructor);

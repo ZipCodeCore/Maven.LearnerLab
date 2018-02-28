@@ -1,5 +1,6 @@
 package io.zipcoder.singletons;
 
+import io.zipcoder.Educator;
 import io.zipcoder.Student;
 import io.zipcoder.interfaces.Teacher;
 import org.junit.Assert;
@@ -31,6 +32,23 @@ public class ZipCodeWilmingtonTest {
         double expected = tempStudent.getTotalStudyTime() + 1;
         zcw.hostLecture(0000L, 8);
         double actual = tempStudent.getTotalStudyTime();
+        Assert.assertEquals(expected, actual, 0);
+    }
+
+    @Test
+    public void hostLectureByEducatorTest(){
+        Student tempStudent = zcw.students.getArray()[0];
+        double expected = tempStudent.getTotalStudyTime() + 1;
+        zcw.hostLecture(Educator.TARIQ, 8);
+        double actual = tempStudent.getTotalStudyTime();
+        Assert.assertEquals(expected, actual, 0);
+    }
+
+    @Test
+    public void hostLectureByEducatorHoursTest(){
+        double expected = Educator.TARIQ.getTimeWorked() + 8;
+        zcw.hostLecture(Educator.TARIQ, 8);
+        double actual = Educator.TARIQ.getTimeWorked();
         Assert.assertEquals(expected, actual, 0);
     }
 
