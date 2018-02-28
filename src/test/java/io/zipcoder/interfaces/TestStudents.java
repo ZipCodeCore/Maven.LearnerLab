@@ -17,4 +17,14 @@ public class TestStudents {
         Assert.assertSame(students1, students2);
 
     }
+
+    @Test
+    public void teststudentsarray(){
+        Students students1 = Students.getInstance();
+        Student[] s = students1.getStudentArray();
+        System.out.println(s.length);
+        System.out.println(s[0].getName());
+        Assert.assertEquals(s.length, 15);
+
+    }
 }

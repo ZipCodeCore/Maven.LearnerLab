@@ -7,7 +7,7 @@ import java.util.Collection;
 
 public class People {
 
-    ArrayList<Person> personList;
+    ArrayList<Person> personList = new ArrayList<Person>();
     Person person;
 
     {
@@ -31,10 +31,6 @@ public class People {
         return null;
     }
 
-    public Boolean remove(Person person) {
-        return personList.remove(person);
-    }
-
     public void remove(long id) {
         personList.remove(id);
     }
@@ -44,8 +40,9 @@ public class People {
     }
 
     public Person[] getArray(){
-       return (Person[]) personList.toArray();
+       Person[] person =  personList.toArray(new Person[0]);
        // have to cast to person []
+        return person;
     }
 
     public void removeAll() {

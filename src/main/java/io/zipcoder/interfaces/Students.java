@@ -1,10 +1,12 @@
 package io.zipcoder.interfaces;
 
-public final class Students {
+public final class Students extends People{
 
     private static final Students INSTANCE = new Students();
+private Student[] studentsArray;
 
     private Students(){
+
         Student april = new Student(1, "April");
         Student karen = new Student(2, "Karen");
         Student kibret = new Student(3, "Kibret");
@@ -21,8 +23,15 @@ public final class Students {
         Student bo = new Student(14, "Bo");
         Student luis = new Student(15, "Luis");
 
+        studentsArray = new Student[]{april, karen, kibret, frankie, madeline, brian,
+                lawrence, patrick, anthony, josh, keith, kat, kay, bo, luis};
+
     }
     public static Students getInstance(){
         return INSTANCE;
+    }
+
+    public Student[] getStudentArray () {
+    return this.studentsArray;
     }
 }
