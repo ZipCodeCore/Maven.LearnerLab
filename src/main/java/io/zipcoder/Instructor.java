@@ -5,6 +5,10 @@ import io.zipcoder.interfaces.Teacher;
 
 public class Instructor extends Person implements Teacher{
 
+    Instructor(String name, long id){
+        super(name, id);
+    }
+
     @Override
     public void teach(Learner learner, double numberOfHours) {
         learner.learn(numberOfHours);
