@@ -6,7 +6,7 @@ public class Person {
 
     private String name;
     private static AtomicInteger nextId = new AtomicInteger();
-    private long id = 0;
+    private final long id;
 
     public Person(){
         this(nextId.incrementAndGet(), null);
