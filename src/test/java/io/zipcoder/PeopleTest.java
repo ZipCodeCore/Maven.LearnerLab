@@ -67,4 +67,10 @@ public class PeopleTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void removeByIDTest(){
+        test.remove(1234);
+        Assert.assertFalse(test.personList.contains(carol));
+    }
+
 }

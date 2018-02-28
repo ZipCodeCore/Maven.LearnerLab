@@ -2,7 +2,6 @@ package io.zipcoder.singletons;
 
 import io.zipcoder.interfaces.Learner;
 import io.zipcoder.interfaces.Teacher;
-import java.util.Arrays;
 
 public final class ZipCodeWilmington {
 
@@ -10,12 +9,12 @@ public final class ZipCodeWilmington {
     public Instructors instructors = Instructors.getInstance();
 
     public void hostLecture(Teacher teacher, double numberOfHours){
-        Learner[] learners = Arrays.copyOf(students.getArray(), students.getArray().length, Learner[].class);
+        Learner[] learners = students.getArray();
         teacher.lecture(learners, numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours){
-        hostLecture((Teacher)instructors.findById(id), numberOfHours);
+        hostLecture(instructors.findById(id), numberOfHours);
     }
 
 }

@@ -29,6 +29,12 @@ public abstract class People<E extends Person>{
         }
 	}
 
+    public void remove(long id){
+        for (int i = 0; i < this.personList.size(); i++){
+            if (this.personList.get(i).getId() == id) this.personList.remove(i);
+        }
+    }
+
 	public int getCount(){
 		return this.personList.size();
 	}
