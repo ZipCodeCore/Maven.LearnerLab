@@ -11,14 +11,14 @@ import org.junit.Test;
  */
 public class ZipCodeWilmingtonTest {
     @Test
-    public void testHostLecture() {
+    public void testHostLectureByEducator() {
         int totalStudents = Students.getInstance().getCount();
         double expected = 5;
         double lectureHours = totalStudents * expected;
 
         ZipCodeWilmington zcw = ZipCodeWilmington.getInstance();
 
-        zcw.hostLecture(2, lectureHours);
+        zcw.hostLecture(Educator.LEON, lectureHours);
 
         for (Student s : Students.getInstance().getArray())
             Assert.assertEquals(expected, s.getTotalStudyTime(), 0.01);

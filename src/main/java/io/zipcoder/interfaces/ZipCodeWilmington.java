@@ -20,11 +20,15 @@ public final class ZipCodeWilmington {
         return ZipCodeWilmingtonHelper.INSTANCE;
     }
 
-    private void hostLecture(Teacher teacher, double numberOfHours) {
+    private void hostLecture(Instructor teacher, double numberOfHours) {
         teacher.lecture(students.getArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours) {
         hostLecture(instructors.findById(id), numberOfHours);
+    }
+
+    public void hostLecture(Educator educator, double numberOfHours) {
+        hostLecture(educator.getInstructor(), numberOfHours);
     }
 }
