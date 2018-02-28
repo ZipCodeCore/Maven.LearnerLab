@@ -5,13 +5,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestStudent {
+public class StudentTest {
 
     Student testStudent;
 
     @Before
     public void setup(){
-        testStudent = new Student();
+        testStudent = new Student("Rick", 1);
     }
 
     @Test

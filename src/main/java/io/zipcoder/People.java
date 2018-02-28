@@ -1,10 +1,15 @@
 package io.zipcoder;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class People{
 
 	protected ArrayList<Person> personList;
+
+	public People(){
+	    this.personList = new ArrayList<>();
+    }
 
 	public void add(Person person){
 		this.personList.add(person);
@@ -20,7 +25,9 @@ public class People{
 	}
 
 	public void remove(Person person){
-		
+        for (int i = 0; i < this.personList.size(); i++){
+            if (this.personList.get(i).equals(person)) this.personList.remove(i);
+        }
 	}
 
 	public int getCount(){
