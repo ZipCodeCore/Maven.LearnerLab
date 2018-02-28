@@ -1,22 +1,21 @@
 package io.zipcoder;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class People{
+public abstract class People<E extends Person>{
 
-	protected ArrayList<Person> personList;
+	protected ArrayList<E> personList;
 
 	public People(){
 	    this.personList = new ArrayList<>();
     }
 
-	public void add(Person person){
+	public void add(E person){
 		this.personList.add(person);
 	}
 
-	public Person findById(long id){
-        for (Person person:this.personList) {
+	public E findById(long id){
+        for (E person:this.personList) {
             if (person.getId() == id){
                 return person;
             }
@@ -34,10 +33,7 @@ public class People{
 		return this.personList.size();
 	}
 
-	public Person[] getArray(){
-		Person[] returnArray = personList.toArray(new Person[personList.size()]);
-        return returnArray;
-    }
+	public abstract E[] getArray();
 
 	public void removeAll(){
 		this.personList = new ArrayList<>();

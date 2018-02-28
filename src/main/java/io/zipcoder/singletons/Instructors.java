@@ -1,6 +1,9 @@
-package io.zipcoder;
+package io.zipcoder.singletons;
 
-public final class Instructors extends People {
+import io.zipcoder.Instructor;
+import io.zipcoder.People;
+
+public final class Instructors extends People<Instructor> {
     private static final Instructors INSTANCE = new Instructors();
 
     private Instructors() {
@@ -18,6 +21,11 @@ public final class Instructors extends People {
         personList.add(wilhelm);
         personList.add(froilan);
         personList.add(nhu);
+    }
+
+    @Override
+    public Instructor[] getArray() {
+        return personList.toArray(new Instructor[0]);
     }
 
     public static Instructors getInstance() {

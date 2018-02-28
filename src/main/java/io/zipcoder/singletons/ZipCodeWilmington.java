@@ -1,6 +1,5 @@
 package io.zipcoder.singletons;
 
-import io.zipcoder.Instructors;
 import io.zipcoder.interfaces.Learner;
 import io.zipcoder.interfaces.Teacher;
 import java.util.Arrays;

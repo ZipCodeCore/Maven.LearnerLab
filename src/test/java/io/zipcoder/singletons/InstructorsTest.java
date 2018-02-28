@@ -1,6 +1,5 @@
 package io.zipcoder.singletons;
 
-import io.zipcoder.Instructors;
 import io.zipcoder.Person;
 import org.junit.Assert;
 import org.junit.Test;

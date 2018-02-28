@@ -3,7 +3,7 @@ package io.zipcoder.singletons;
 import io.zipcoder.People;
 import io.zipcoder.Student;
 
-public final class Students extends People {
+public final class Students extends People<Student> {
     private static final Students INSTANCE = new Students();
 
     private Students() {
@@ -23,6 +23,10 @@ public final class Students extends People {
         personList.add(Corrine);
         personList.add(Pat);
         personList.add(Lawrence);
+    }
+
+    public Student[] getArray(){
+        return personList.toArray(new Student[0]);
     }
 
     public static Students getInstance() {
