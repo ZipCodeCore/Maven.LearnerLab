@@ -1,6 +1,5 @@
 package io.zipcoder.interfaces;
 
-import java.util.ArrayList;
 
 public final class ZipCodeWilmington {
 
@@ -16,26 +15,21 @@ public final class ZipCodeWilmington {
 
     public static ZipCodeWilmington getInstance() {
 
-        if (INSTANCE == null) {
-            new ZipCodeWilmington();
-        }
         return INSTANCE;
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
 
-//        ArrayList<Person> abc = students.getArray();
-//
-//        Student[] sa = abc.toArray();
+        teacher.lecture(students.getStudentsArray(), numberOfHours);
 
-
-        teacher.lecture((Student[]) students.getArray().toArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours) {
+
         Instructor t = (Instructor) instructors.findByID(id);
 
-        t.lecture((Student[]) students.getArray().toArray(), numberOfHours);
+        t.lecture(students.getStudentsArray(), numberOfHours);
+
     }
 
 

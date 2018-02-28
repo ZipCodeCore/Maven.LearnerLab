@@ -9,9 +9,7 @@ public class Instructors extends People {
     }
 
     public static Instructors getInstance() {
-        if (INSTANCE == null) {
-            new Instructors();
-        }
+
         return INSTANCE;
     }
 

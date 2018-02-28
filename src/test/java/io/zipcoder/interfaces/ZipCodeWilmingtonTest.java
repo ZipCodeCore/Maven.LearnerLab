@@ -43,25 +43,10 @@ public class ZipCodeWilmingtonTest {
 
     @Test
     public void zipCodeWilmingtonTest1() {
-        testZcw.hostLecture(froilan, 100);
+        testZcw.hostLecture(2, 100);
         double expected = 25;
         double actual = ricky.getTotalStudyTime();
         Assert.assertEquals(expected, actual, 0.005);
     }
-
-    @Test
-    public void zipCodeWilmingtonTest2() {
-
-
-
-    }
-
-    @Test
-    public void zipCodeWilmingtonTest3() {
-
-
-
-    }
-
 
 }

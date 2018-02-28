@@ -19,25 +19,15 @@ public class InstructorsTest {
         leon = new Instructor(3);
         wilhem = new Instructor(4);
         instructors = Instructors.getInstance();
+        instructors.add(tariq);
+        instructors.add(froilan);
+        instructors.add(leon);
+        instructors.add(wilhem);
     }
+
 
     @Test
     public void instructorsTest1() {
-        instructors.add(tariq);
-        instructors.add(froilan);
-        instructors.add(leon);
-        instructors.add(wilhem);
-        int expected = 4;
-        int actual = instructors.getCount();
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void instructorsTest2() {
-        instructors.add(tariq);
-        instructors.add(froilan);
-        instructors.add(leon);
-        instructors.add(wilhem);
         Instructors i2 = Instructors.getInstance();
         Instructor kris = new Instructor(5);
         Instructor dolio = new Instructor(6);
