@@ -1,4 +1,4 @@
-public final class Instructors extends People {
+public final class Instructors extends People<Instructor> {
     private static final Instructors INSTANCE = new Instructors();
 
     public static Instructors getInstance() {
@@ -6,9 +6,24 @@ public final class Instructors extends People {
     }
 
     private Instructors() {
-        for (int i = 0; i < 4; i++){
-            Instructor instructor = new Instructor(personList.size());
-            add(instructor);
-        }
+
+//        Instructor tariq = new Instructor(99999);
+//        Instructor leon = new Instructor(88888);
+//        Instructor froilan = new Instructor(77777);
+//        Instructor nhu = new Instructor(66666);
+//
+//        personList.add(tariq);
+//        personList.add(leon);
+//        personList.add(froilan);
+//        personList.add(nhu);
+          Instructor vince = new Instructor(11111);
+          personList.add(vince);
     }
+
+    @Override
+    public Instructor[] getArray() {
+        return personList.toArray(new Instructor[0]);
+    }
+
+
 }

@@ -14,10 +14,13 @@ public class ZipCodeWilmington  {
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
-        teacher.lecture(students.becomeLearner(), numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
     }
     public void hostLecture(long id, double numberOfHours){
-        Instructor lectureInstructor = (Instructor) instructors.findById(id);
-        lectureInstructor.lecture(students.becomeLearner(), numberOfHours);
+        Instructor lectureInstructor = instructors.findById(id);
+        lectureInstructor.lecture(students.getArray(), numberOfHours);
+    }
+    public void hostLecture(Educator educator, double numberOfHours){
+        educator.lecture(students.getArray(), numberOfHours);
     }
 }

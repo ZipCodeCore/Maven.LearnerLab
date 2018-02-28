@@ -3,27 +3,27 @@ import io.zipcoder.interfaces.Learner;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class People {
+public abstract class People <E extends Person> {
 
-    ArrayList<Person> personList = new ArrayList<Person>();
+    ArrayList<E> personList = new ArrayList<>();
 
-    public void add(Person person){
+    public void add(E person){
         personList.add(person);
     }
-    public Person findById(long id){
-        for (Person personId : personList){
+    public E findById(long id){
+        for (E personId : personList){
             if (id == personId.getId()){
                 return personId;
             }
         }
         return null;
     }
-    public void remove(Person person){
+    public void remove(E person){
         personList.remove(person);
         }
 
     public void remove(long id) {
-        for (Person personId : personList) {
+        for (E personId : personList) {
             if (id == personId.getId()) {
                 personList.remove(personId);
             }
@@ -32,21 +32,22 @@ public class People {
     public int getCount(){
         return personList.size();
     }
-    public Person[] getArray(){
-        Person[] personArray = new Person[personList.size()];
-        for (int i = 0; i < personArray.length; i++){
-            personArray[i] = personList.get(i);
-        }
-        return personArray;
-    }
+    public abstract E[] getArray();
+    //{
+//        Person[] personArray = new Person[personList.size()];
+//        for (int i = 0; i < personArray.length; i++){
+//            personArray[i] = personList.get(i);
+//        }
+//        return personArray;
+    //}
 
-    public Learner[] becomeLearner(){
-        Learner[] learnerArray = new Learner[getArray().length];
-        for (int i = 0; i < learnerArray.length; i++){
-            learnerArray[i] = (Student) personList.get(i);
-        }
-        return learnerArray;
-    }
+//    public Learner[] becomeLearner(){
+//        Learner[] learnerArray = new Learner[getArray().length];
+//        for (int i = 0; i < learnerArray.length; i++){
+//            learnerArray[i] = (Student) personList.get(i);
+//        }
+//        return learnerArray;
+//    }
     public void removeAll(){
         personList.clear();
     }
