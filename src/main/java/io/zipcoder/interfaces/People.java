@@ -25,7 +25,7 @@ public class People {
         return null;
     }
 
-    public int getCount(ArrayList<Person> personList){
+    public int getCount(){
         return personList.size();
     }
 
@@ -33,7 +33,7 @@ public class People {
         return personList.toArray(new Person[]{});
     }
 
-    public void removeAll(ArrayList<Person> personList){
+    public void removeAll(){
         personList.clear();
     }
 

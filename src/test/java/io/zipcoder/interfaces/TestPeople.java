@@ -18,7 +18,7 @@ public class TestPeople {
         int expected = 1;
 
         //then
-        int actual = people.getCount(personList);
+        int actual = people.getCount();
         Assert.assertEquals(expected, actual);
     }
 
@@ -39,7 +39,7 @@ public class TestPeople {
         int expected = 2;
 
         //then
-        int actual = people.getCount(personList);
+        int actual = people.getCount();
         Assert.assertEquals(expected, actual);
     }
 
@@ -77,11 +77,11 @@ public class TestPeople {
         personList.add(personTim);
 
         //when
-        people.removeAll(personList);
+        people.removeAll();
         int expected = 0;
 
         //then
-        int actual = people.getCount(personList);
+        int actual = people.getCount();
         Assert.assertEquals(expected, actual);
 
     }
