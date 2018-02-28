@@ -9,27 +9,32 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class StudentsTest {
-    People listofPeople;
+
 
     @Before
     public void setUp() throws Exception {
 
-        listofPeople = new People();
-        long id = 0;
-        for (StudentNames names : StudentNames.values()) {
-            id++;
-            listofPeople.add(new Student(id));
-            Person person = listofPeople.findById(id);
-            person.setName(names.toString());
-        }
     }
 
     @Test
-    public void getInstance() {
-        Person[] expected = listofPeople.getPersonAsArray();
-        Students actual = Students.getInstance();
+    public void testStudents() {
+        Students s = Students.getInstance();
+        Person[] expected = s.getPersonAsArray();
+        int count = s.getCount();
+        int classSize = StudentNames.values().length;
 
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(count, classSize);
+    }
+
+    @Test
+    public void testStudentsGetNames(){
+
+        Students s = Students.getInstance();
+        Person[] expected = s.getPersonAsArray();
+        String expectedName = expected[0].getName();
+        String actual = String.valueOf(StudentNames.VINCE);
+
+        Assert.assertEquals(expectedName, actual);
 
     }
 }

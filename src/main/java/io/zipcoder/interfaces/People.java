@@ -3,17 +3,17 @@ package io.zipcoder.interfaces;
 import java.util.ArrayList;
 
 public class People {
-    private ArrayList<Person> personList;
+    protected ArrayList<Person> personList;
 
     public People(ArrayList personList) {
         this.personList = personList;
     }
     public People(){
-
+      this.personList = new ArrayList<Person>();
     }
 
     public boolean add(Person thePerson) {
-        if ( this.personList == null  ||!this.personList.contains(thePerson)) {
+        if ( this.personList == null || !this.personList.contains(thePerson)) {
             return personList.add(thePerson);
         }
         return false;

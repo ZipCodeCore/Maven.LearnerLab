@@ -3,19 +3,24 @@ package io.zipcoder.interfaces;
 import java.util.ArrayList;
 
 public final class Students extends People {
-    private static final Students INSTANCE = new Students();
+    private static Students instance = null;
 
     private Students() {
+        super();
         long id = 0;
-        for (StudentNames names : StudentNames.values()) {
+        for (StudentNames name : StudentNames.values()) {
             id++;
-            INSTANCE.add(new Student(id));
-            Person person = findById(id);
-            person.setName(names.toString());
+            Student s = new Student(id);
+            s.setName(name.toString());
+            personList.add(s);
+
         }
     }
 
     public static Students getInstance() {
-        return INSTANCE;
+        if(instance == null){
+            instance = new Students();
+        }
+        return instance;
     }
 }
