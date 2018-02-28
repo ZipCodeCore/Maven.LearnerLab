@@ -7,12 +7,29 @@ public class ZipCodeWilmingtonTest {
 
     @Test
     public void testHostLecture() {
-        Instructor instructor = new Instructor(223234);
+        Students studentInstance = Students.getInstance();
 
-        ZipCodeWilmington.hostLecture(long id, double numberOfHours);
-        double expected = 0;
-        double actual = instructor.lecture(Students, 25);
-        Assert.assertEquals(expected, actual);
+        Student student1 = new Student(32401298);
+        Student student2 = new Student(22324329);
+        Student student3 = new Student(98722112);
+        Student student4 = new Student(23424542);
+        Student student5 = new Student(32442346);
+        Student student6 = new Student(35566742);
+
+        studentInstance.add(student1);
+        studentInstance.add(student2);
+        studentInstance.add(student3);
+        studentInstance.add(student4);
+        studentInstance.add(student5);
+        studentInstance.add(student6);
+
+        Instructor leon = new Instructor(223234);
+
+        ZipCodeWilmington.hostLecture(leon, 60);
+
+        double expected = 10;
+        double actual = student1.getTotalStudyTime();
+        Assert.assertEquals(expected, actual, 0.05);
     }
 
 }
