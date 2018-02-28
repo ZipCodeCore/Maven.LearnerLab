@@ -14,7 +14,7 @@ public class InstructorTest {
 
     @Before
     public void setup(){
-        instructor = new Instructor();
+        instructor = new Instructor("Kim", 0);
         student = new Student("Jill", 1);
         student2 = new Student("Bill", 2);
     }
