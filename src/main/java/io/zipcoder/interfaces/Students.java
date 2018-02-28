@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 public final class Students extends People{
 
-    private static Students INSTANCE;
+    private static final Students INSTANCE= new Students();
 
     private Students(){
     Student Karl = new Student(444);
@@ -18,12 +18,26 @@ public final class Students extends People{
     this.add(Chuck);
     this.add(Chris);
     this.add(Alburto);
+
     }
 
     public static Students getInstance(){
-        if (INSTANCE == null){
-            INSTANCE = new Students();
-        }
+//        if (INSTANCE == null){
+//            INSTANCE = new Students();
+//        }
         return INSTANCE;
     }
+
+    public Student[] getStudentArray(){
+
+        Student[] arrayOfStudents = new Student[getArray().length];
+
+        for(int i = 0; i < getArray().length; i++){
+            arrayOfStudents[i] = (Student) getArray()[i];
+        }
+        return arrayOfStudents;
+    }
+
+
+
 }

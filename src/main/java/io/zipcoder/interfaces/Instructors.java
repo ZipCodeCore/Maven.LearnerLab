@@ -5,12 +5,12 @@ public final class Instructors extends People{
     private static Instructors INSTANCE;
 
     private Instructors(){
-        Student Tariq = new Student(151);
-        Student Wilhem = new Student(251);
-        Student Steve = new Student(351);
-        Student Froilan = new Student(451);
-        Student Nhu = new Student(551);
-        Student Leon = new Student(651);
+        Instructor Tariq = new Instructor(151);
+        Instructor Wilhem = new Instructor(251);
+        Instructor Steve = new Instructor(351);
+        Instructor Froilan = new Instructor(451);
+        Instructor Nhu = new Instructor(551);
+        Instructor Leon = new Instructor(651);
 
         this.add(Tariq);
         this.add(Wilhem);
