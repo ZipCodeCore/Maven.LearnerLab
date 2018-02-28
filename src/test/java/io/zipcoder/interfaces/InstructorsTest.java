@@ -11,7 +11,12 @@ public class InstructorsTest {
     @Test
     public void instructorsTest() {
         //Given
-        Instructors.getInstance();
+        Student spanky = new Student(69);
+        Educator.LEON.teach(spanky,0);
+        Educator.TARIQ.teach(spanky,0);
+        Educator.FROILAN.teach(spanky,0);
+
+
 
         //When
         int expected = 3;

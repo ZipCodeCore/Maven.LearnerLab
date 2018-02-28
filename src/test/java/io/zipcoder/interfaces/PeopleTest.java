@@ -20,7 +20,7 @@ public class PeopleTest {
         stinkyPete = new Student(20);
         curlyCarlton = new Student(30);
         jankyJoe = new Student(40);
-        test = new People();
+        test = new PeopleConcrete();
     }
 
     @Test

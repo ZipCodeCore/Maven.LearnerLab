@@ -1,16 +1,17 @@
 package io.zipcoder.interfaces;
 
-public final class Instructors extends People {
+public final class Instructors extends People<Instructor> {
 
     private static Instructors instructorsSingleton;
 
     private Instructors(){
-        Instructor tariq = new Instructor(100);
+        /*Instructor tariq = new Instructor(100);
         Instructor leon = new Instructor(150);
         Instructor froilan = new Instructor(200);
         this.add(tariq);
         this.add(leon);
-        this.add(froilan);
+        this.add(froilan);*/
+
 
     }
 
@@ -21,4 +22,8 @@ public final class Instructors extends People {
         return instructorsSingleton;
     }
 
+    @Override
+    public Instructor[] getArray() {
+        return this.personList.toArray(new Instructor[0]);
+    }
 }

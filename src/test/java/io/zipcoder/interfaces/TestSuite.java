@@ -13,7 +13,9 @@ import org.junit.runners.Suite;
         StudentsTest.class,
         StudentTest.class,
         TestPerson.class,
-        ZipCodeWilmingtonTest.class
+        //Run the tests in these classes independently
+        //ZipCodeWilmingtonTest.class,
+        //EducatorTest.class
 
 
 })

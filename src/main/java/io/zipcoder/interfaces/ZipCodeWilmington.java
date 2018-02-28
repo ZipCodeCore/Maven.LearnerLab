@@ -20,19 +20,12 @@ public final class ZipCodeWilmington {
           return instance;
      }
 
-     public void hostLecture(Teacher teacher, double numberOfHours){
-
-          for(Person p : students.getArray()){
-               teacher.teach((Student) p, numberOfHours/students.getArray().length);
-          }
-
+     public void hostLecture(Educator teacher, double numberOfHours){
+          teacher.lecture(students.getArray(), numberOfHours);
      }
 
-     public void hostLecture(long ID, double numberOfHours){
-          Teacher teacher = (Instructor) instructors.findByID(ID);
-          for(Person p : students.getArray()){
-               teacher.teach((Student) p, numberOfHours/students.getArray().length);
-          }
+     public void hostLecture(long ID, double numberOfHours) {
+          instructors.findByID(ID).lecture(students.getArray(), numberOfHours);
      }
 
 }
