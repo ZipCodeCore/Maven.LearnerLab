@@ -13,14 +13,14 @@ public class ZipCodeWilmington {
     }
 
     public void hostLecture(long id, double numberOfHours) {
-        Teacher teacher = (Teacher) Instructors.getInstance().findById(id);
+        Teacher teacher = Instructors.getInstance().findById(id);
         teacher.lecture(convertStudentsToLearnerArray(students), numberOfHours);
     }
 
     public Learner[] convertStudentsToLearnerArray(Students originalStudents) {
         Learner[] learnerArray = new Learner[originalStudents.getPersonList().size()];
         for (int i = 0; i < learnerArray.length; i++) {
-            learnerArray[i] = (Learner) originalStudents.getPersonList().get(i);
+            learnerArray[i] = originalStudents.getPersonList().get(i);
         }
         return learnerArray;
     }
