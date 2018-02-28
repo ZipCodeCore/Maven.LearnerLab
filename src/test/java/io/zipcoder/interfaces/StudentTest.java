@@ -50,7 +50,7 @@ public class StudentTest {
         Student student = new Student();
         double expectedTotalStudyTime = 3;
         //When
-        student.learn(3);
+        student.learn(expectedTotalStudyTime);
         double actualTotalStudyTime = student.getTotalStudyTime();
 
         //Then
