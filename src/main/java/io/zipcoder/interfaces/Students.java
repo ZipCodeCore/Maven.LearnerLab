@@ -1,6 +1,7 @@
 package io.zipcoder.interfaces;
 
-public final class Students extends People {
+
+public final class Students extends People<Student> {
     private static final Students INSTANCE = new Students();
 
     private Students(){
@@ -17,4 +18,7 @@ public final class Students extends People {
         return INSTANCE;
     }
 
+    public Student[] getArray() {
+        return personList.stream().toArray(Student[]::new);
+    }
 }

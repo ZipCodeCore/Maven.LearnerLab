@@ -10,19 +10,11 @@ public final class ZipCodeWilmington {
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours){
-        Student[] studentArray = new Student[Students.getInstance().getArray().length];
-        for (int i =0; i<studentArray.length; i++){
-            studentArray[i] = (Student) Students.getInstance().getArray()[i];
-        }
-        teacher.lecture(studentArray, numberOfHours);
+        teacher.lecture(Students.getInstance().getArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours){
-        Instructor instructor = (Instructor) Instructors.getInstance().findById(id);
-        Student[] studentArray = new Student[Students.getInstance().getArray().length];
-        for (int i =0; i<studentArray.length; i++){
-            studentArray[i] = (Student) Students.getInstance().getArray()[i];
-        }
-        instructor.lecture(studentArray, numberOfHours);
+        Instructor instructor = Instructors.getInstance().findById(id);
+        instructor.lecture(Students.getInstance().getArray(), numberOfHours);
     }
 }
