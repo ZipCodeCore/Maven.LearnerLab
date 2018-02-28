@@ -3,64 +3,98 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 public class PeopleTest{
-
+        People people = new People();
     @Test
     public void addTest(){
-        //Given
-        ArrayList<Person> personListTest = new ArrayList<Person>();
-        //When
-        Person person1= new Person(3);
-        personListTest.addPerson(person1);
-        //Then
-        boolean actual = personListTest.contains(person1);
-        Assert.assertTrue(actual);
+        Person expected = new Person("Sue",3);
+        people.addPerson(expected);
+
+        Person actual = people.findById(3);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void removeTest(){
-        //Given
-        ArrayList<Person> personListTest = new ArrayList<Person>();
-        //When
-        Person person1= new Person(3);
-        Person person2= new Person(6);
-        personListTest.add(person1);
-        personListTest.add(person2);
-        personListTest.removePerson(person2);
-        //Then
+
+        Person person1= new Person("Sue", 3);
+        Person person2= new Person("Sally", 6);
+        people.addPerson(person1);
+        people.addPerson(person2);
+        people.removePerson(person2);
+
         Integer expected = 1;
-        Integer actual = personListTest.size();
+        Integer actual = people.getCount();
         Assert.assertEquals(expected,actual);
     }
 
     @Test
-    public void removeTest2(){
-        //Given
-        ArrayList<Person> personListTest = new ArrayList<Person>();
-        //When
-        Person person1= new Person(3);
-        Person person2= new Person(6);
-        personListTest.add(person1);
-        personListTest.add(person2);
-        personListTest.removePerson(person2);
-        //Then
-        boolean actual = personListTest.contains(person2);
-        Assert.assertFalse(actual);
+    public void findByIdTest(){
+        Person person1= new Person("Sue", 3);
+        Person person2= new Person("Sally", 6);
+        people.addPerson(person1);
+        people.addPerson(person2);
+
+        Person expected = person1;
+        Person actual = people.findById(3);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void findByIdTest(){
+    public void removeByIdTest(){
+        Person person1= new Person("Sue",3);
+        Person person2= new Person("Sally",6);
+        people.addPerson(person1);
+        people.addPerson(person2);
+        people.removeById(6);
+
+        Integer expected = 1;
+        Integer actual = people.getCount();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void getCountTest(){
         //Given
-        ArrayList<Person> personListTest = new ArrayList<Person>();
+        Integer expected = 2;
+        Person person1= new Person("Sue", 3);
+        Person person2= new Person("Sally", 6);
+        people.addPerson(person1);
+        people.addPerson(person2);
         //When
-        Person person1= new Person(3);
-        Person person2= new Person(6);
-        personListTest.add(person1);
-        personListTest.add(person2);
-        personListTest.findById(3);
+        Integer actual = people.getCount();
         //Then
-        
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getArrayTest(){
+        //Given
+        Person person1= new Person("Sue",3);
+        Person person2= new Person("Sally",6);
+        people.addPerson(person1);
+        people.addPerson(person2);
+        Person[] expected = {person1, person2};
+        //When
+        Person[] actual = people.getArray();
+        //Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void removeAllTest(){
+        //Given
+        Integer expected = 0;
+        //When
+        Person person1= new Person("Sue",3);
+        Person person2= new Person("Sally", 6);
+        people.addPerson(person1);
+        people.addPerson(person2);
+        people.removeAll();
+        Integer actual = people.getCount();
+        //Then
+        Assert.assertEquals(expected, actual);
+
     }
 }

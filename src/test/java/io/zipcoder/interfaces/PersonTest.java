@@ -10,7 +10,7 @@ public class PersonTest {
         //Given
         long expected = 85849;
         //When
-        Person newPerson = new Person(expected);
+        Person newPerson = new Person("Bob", expected);
         long actual = newPerson.getId();
         //Then
         Assert.assertEquals(expected,actual);
@@ -23,7 +23,7 @@ public class PersonTest {
         long id = 85849;
         String expected = "Elvira";
         //When
-        Person newPerson = new Person(id);
+        Person newPerson = new Person(expected, id);
         newPerson.setName(expected);
         String actual = newPerson.getName();
         //Then

@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class StudentTest{
-    Student studentTest = new Student(3);
+    Student studentTest = new Student("Sue", 3);
     static final double constant = 0;
 
     @Test

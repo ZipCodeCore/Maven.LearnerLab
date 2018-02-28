@@ -4,7 +4,7 @@ public class Person {
     private final long id;
     private String name;
 
-    public Person(long id) {
+    public Person(String name, long id) {
         this.id = id;
     }
 

@@ -5,8 +5,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class InstructorTest {
-    Instructor instructorTest = new Instructor(3);
-    Student studentTest = new Student(3);
+    Instructor instructorTest = new Instructor("Sue", 3);
+    Student studentTest = new Student("Sally",3);
     @Test
     public void implementationTest(){
         Assert.assertTrue(instructorTest instanceof Teacher);
@@ -31,8 +31,8 @@ public class InstructorTest {
     @Test
     public void lectureTest(){
         //Given
-        Student student1 = new Student(6);
-        Student student2 = new Student(9);
+        Student student1 = new Student("Sue", 6);
+        Student student2 = new Student("Sally", 9);
         Student[] studentListTest = new Student[2];
         studentListTest[0] = student1;
         studentListTest[1] = student2;

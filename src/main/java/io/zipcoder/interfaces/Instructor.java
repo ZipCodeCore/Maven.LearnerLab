@@ -5,8 +5,8 @@ import Interfaces.Teacher;
 
 public class Instructor extends Person implements Teacher {
 
-    public Instructor(long id){
-        super(id);
+    public Instructor(String name, long id){
+        super(name, id);
     }
 
     public void teach(Learner learner, double numberOfHours) {
