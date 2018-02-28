@@ -25,17 +25,20 @@ public class PeopleTest {
         int actual = temp.size();
 
         //Then
-        Assert.assertEquals(expected, actual);
+        Assert.assertTrue(temp.contains(person1));
+        Assert.assertTrue(temp.contains(person2));
+
     }
 
     @Test
     public void findById() {
         //Given
         People people = new People();
-        ArrayList<Person> temp = new ArrayList<Person>();
+//        ArrayList<Person> temp = new ArrayList<Person>();
         Person person1 = new Student(111);
         Person person2 = new Student(222);
         Person person3 = new Student(333);
+        //Person person3 = new Person(333)  also WORKS!
 
         //When
         people.add(person1);

@@ -14,6 +14,7 @@ public class StudentsTest {
         Students instance1 = Students.getInstance();
         Students instance2 = Students.getInstance();
 
+
         instance1.add(new Student(1));
         instance2.add(new Student(2));
         instance1.add(new Student(3));

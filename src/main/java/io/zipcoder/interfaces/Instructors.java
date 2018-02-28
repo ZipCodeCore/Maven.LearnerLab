@@ -11,4 +11,5 @@ public final class Instructors extends People {
         return INSTANCE;
     }
 
-}
+}//singleton classs. a class is turned in to a object 'kind of"
+// and put in to a new class

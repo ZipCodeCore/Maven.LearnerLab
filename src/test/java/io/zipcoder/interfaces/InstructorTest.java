@@ -40,6 +40,7 @@ public class InstructorTest {
     public void teach() {
         //Given
         Instructor instructor = new Instructor(12345);
+        //OR Teacher teacher = new Instructor(221);
         Student student = new Student(9999);
 
         //When
@@ -56,19 +57,17 @@ public class InstructorTest {
     public void lecture() {
         //Given
         Instructor instructor = new Instructor(12345);
-        Learner[] learners = new Learner[3];
+        Student[] learners = new Student[3];
         double numberOfHours = 9;
-
-
-        //When
         learners[0] = new Student(9991);
         learners[1] = new Student(9992);
         learners[2] = new Student(9993);
-        instructor.lecture(learners, numberOfHours);
 
+        //When
+
+        instructor.lecture(learners, numberOfHours);
         double expected = numberOfHours / learners.length;
-        //learners[0] is downcasted to Student to call getTotalStudyTime
-        double actual = Student.class.cast(learners[0]).getTotalStudyTime();
+        double actual = (learners[0]).getTotalStudyTime();
 
         //Then
         Assert.assertEquals(expected, actual, .001);

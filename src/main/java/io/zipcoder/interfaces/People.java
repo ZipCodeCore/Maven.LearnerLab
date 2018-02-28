@@ -3,7 +3,8 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public class People {
+public class People<E>  {
+
 
     ArrayList<Person> personList = new ArrayList<Person>();
 
@@ -41,6 +42,5 @@ public class People {
 
     public void removeAll(){
         personList.clear();
-
     }
 }
