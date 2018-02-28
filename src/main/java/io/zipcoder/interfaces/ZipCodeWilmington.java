@@ -9,8 +9,8 @@ public final class ZipCodeWilmington {
         return INSTANCE;
     }
 
-    public void hostLecture(Teacher teacher, double numberOfHours){
-        teacher.lecture(Students.getInstance().getArray(), numberOfHours);
+    public void hostLecture(Educator educator, double numberOfHours){
+        educator.lecture(Students.getInstance().getArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours){
