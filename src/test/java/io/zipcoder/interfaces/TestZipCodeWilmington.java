@@ -7,18 +7,24 @@ public class TestZipCodeWilmington {
 
     @Test
     public void hostLectureTest() {
-        ZipCodeWilmington.getInstance().hostLecture(12, 9);
+        ZipCodeWilmington.getInstance().hostLecture(12, 25);
+        Student student1 = Students.getInstance().getArray()[0];
 
-        for((Learner) Student student: Students.getInstance().getArray()) {
-            student.getTotalStudyTime();
-        }
+        double expected = 5;
+        double actual = student1.getTotalStudyTime();
 
-        Students.getInstance().getArray()[0].
+        Assert.assertEquals(expected, actual, 1e-15);
+    }
 
-        double expected = 9;
-        Students.getInstance().getArray().
-        double actual = student.getTotalStudyTime();
+    @Test
+    public void hostLectureTest2() {
+        Instructor instructor1 = new Instructor(32342);
+        Student student1 = Students.getInstance().getArray()[0];
+        ZipCodeWilmington.getInstance().hostLecture(instructor1, 25);
 
-        Assert.assertEquals(expected, actual);
+        double expected = 5;
+        double actual = student1.getTotalStudyTime();
+
+        Assert.assertEquals(expected, actual, 1e-15);
     }
 }

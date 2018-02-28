@@ -26,4 +26,14 @@ public final class Students extends People{
     public static Students getInstance() {
             return INSTANCE;
     }
+
+    public Student[] getArray() {
+        int index = 0;
+        Student[] studentsArray = new Student[personList.size()];
+        for (Object student: personList) {
+            studentsArray[index] = (Student) student;
+            index++;
+        }
+        return studentsArray;
+    }
 }

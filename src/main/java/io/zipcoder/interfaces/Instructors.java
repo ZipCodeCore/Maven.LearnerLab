@@ -33,4 +33,14 @@ public final class Instructors extends People {
     public static Instructors getInstance() {
         return INSTANCE;
     }
+
+    public Instructor[] getArray() {
+        int index = 0;
+        Instructor[] instructorsArray = new Instructor[personList.size()];
+        for (Object instructor: personList) {
+            instructorsArray[index] = (Instructor) instructor;
+            index++;
+        }
+        return instructorsArray;
+    }
 }

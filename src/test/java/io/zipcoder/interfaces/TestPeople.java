@@ -11,109 +11,106 @@ public class TestPeople {
 
     @Test
     public void addPersonTest() {
-        People people = new People();
-        Person person1 = new Person(12);
+        Person person1 = new Student(11);
         person1.setName("Bob");
-        people.addPerson(person1);
+        Students.getInstance().addPerson(person1);
 
-        String expected = "[Bob: 12]";
-        String actual = Arrays.toString(people.getArray());
+        String expected = "[Anthony: 1, Bo: 2, Brian: 3, Katrina: 4, Kay: 5, Bob: 11]";
+        String actual = Arrays.toString(Students.getInstance().getArray());
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void removePersonTest() {
-        People people = new People();
-        List<Person> testPersonList = new ArrayList<Person>();
-        Person person1 = new Person(12);
-        Person person2 = new Person(13);
-        Person person3 = new Person(14);
+        Person person1 = new Student(12);
+        Person person2 = new Student(13);
+        Person person3 = new Student(14);
 
         person1.setName("Bob");
         person2.setName("Sally");
         person3.setName("Max");
 
-        people.addPerson(person1);
-        people.addPerson(person2);
-        people.addPerson(person3);
+        Students.getInstance().addPerson(person1);
+        Students.getInstance().addPerson(person2);
+        Students.getInstance().addPerson(person3);
 
-        people.remove(person1);
+        Students.getInstance().remove(person1);
 
-        Person[] expected = {person2, person3};
-        Person[] actual = people.getArray();
+        String expected = "[Anthony: 1, Bo: 2, Brian: 3, Katrina: 4, Kay: 5, Sally: 13, Max: 14]";
+        String actual = Arrays.toString(Students.getInstance().getArray());
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void findByIdTest() {
-        People people = new People();
-        Person person1 = new Person(12);
-        Person person2 = new Person(15);
+
+        Person person1 = new Student(12);
+        Person person2 = new Student(15);
         person1.setName("Sue");
         person2.setName("Max");
 
-        people.addPerson(person1);
-        people.addPerson(person2);
+        Students.getInstance().addPerson(person1);
+        Students.getInstance().addPerson(person2);
 
         Person expected = person1;
-        Person actual = people.findById(12);
+        Person actual = Students.getInstance().findById(12);
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void removeByIdTest() {
-        People people = new People();
-        Person person1 = new Person(12);
-        Person person2 = new Person(15);
+
+        Person person1 = new Student(12);
+        Person person2 = new Student(15);
         person1.setName("Sue");
         person2.setName("Max");
 
-        people.addPerson(person1);
-        people.addPerson(person2);
+        Students.getInstance().addPerson(person1);
+        Students.getInstance().addPerson(person2);
 
-        people.remove(12);
+        Students.getInstance().remove(12);
 
-        Person[] expected = {person2};
-        Person[] actual = people.getArray();
+        String expected = "[Anthony: 1, Bo: 2, Brian: 3, Katrina: 4, Kay: 5, Max: 15]";
+        String actual = Arrays.toString(Students.getInstance().getArray());
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void getCountTest() {
-        People people = new People();
-        Person person1 = new Person(12);
-        Person person2 = new Person(15);
+
+        Person person1 = new Student(12);
+        Person person2 = new Student(15);
         person1.setName("Sue");
         person2.setName("Max");
 
-        people.addPerson(person1);
-        people.addPerson(person2);
+        Students.getInstance().addPerson(person1);
+        Students.getInstance().addPerson(person2);
 
-        int expected = 2;
-        int actual = people.getCount();
+        int expected = 7;
+        int actual = Students.getInstance().getCount();
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void removeAllTest() {
-        People people = new People();
-        Person person1 = new Person(12);
-        Person person2 = new Person(15);
+
+        Person person1 = new Student(12);
+        Person person2 = new Student(15);
         person1.setName("Sue");
         person2.setName("Max");
 
-        people.addPerson(person1);
-        people.addPerson(person2);
+        Students.getInstance().addPerson(person1);
+        Students.getInstance().addPerson(person2);
 
-        people.removeAll();
+        Students.getInstance().removeAll();
 
         int expected = 0;
-        int actual = people.getCount();
+        int actual = Students.getInstance().getCount();
 
         Assert.assertEquals(expected, actual);
     }
