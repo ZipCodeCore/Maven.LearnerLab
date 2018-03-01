@@ -9,6 +9,11 @@ public class Instructor extends Person implements Teacher{
         this.name = name;
     }
 
+    @Override
+    public long getId() {
+        return id;
+    }
+
     public void teach(Learner learner, double numberOfHours) {
         learner.learn(numberOfHours);
     }

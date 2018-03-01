@@ -8,6 +8,10 @@ public class Student extends Person implements Learner {
         super(id);
     }
 
+    @Override
+    public long getId(){
+        return super.id;
+    }
     public void setTotalStudyTime(double totalStudyTime) {
         this.totalStudyTime = totalStudyTime;
     }
