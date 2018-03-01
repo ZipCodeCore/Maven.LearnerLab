@@ -40,6 +40,15 @@ public class People {
         return personArray;
     }
 
+    public Student[] getStudentArray(){
+        Student[] studentArray = new Student[personList.size()];
+        for (int i = 0; i < personList.size(); i++){
+            studentArray[i] = (Student) personList.get(i);
+        }
+        return studentArray;
+
+    }
+
     public void removeAll(){
         personList.clear();
     }

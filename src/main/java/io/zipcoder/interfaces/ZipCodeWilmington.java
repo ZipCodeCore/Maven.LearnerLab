@@ -9,15 +9,16 @@ public final class ZipCodeWilmington {
     private Students students = Students.getInstance();
     private Instructors instructors = Instructors.getInstance();
 
-
-    public void hostLecture(Teacher teacher, double numberOfHours){
-        teacher.lecture((Learner[]) students.getArray(), numberOfHours);
-    }
-
     public void hostLecture(long id, double numberOfHours){
         Instructor instructor1 = (Instructor) instructors.findById(id);
-        instructor1.lecture((Learner[]) students.getArray(), numberOfHours);
+        instructor1.lecture(students.getStudentArray(), numberOfHours);
     }
+
+    public void hostLecture(Teacher teacher, double numberOfHours){
+        teacher.lecture(students.getStudentArray(), numberOfHours);
+    }
+
+
 
     public static ZipCodeWilmington getInstance(){
         return ZIPCODEWILMINGTON;
