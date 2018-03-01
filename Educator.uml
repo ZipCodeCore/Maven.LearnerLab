@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>io.zipcoder.Educator</OriginalElement>
+  <nodes>
+    <node x="0.0" y="496.0">io.zipcoder.singletons.ZipCodeWilmington</node>
+    <node x="30.0" y="200.0">io.zipcoder.Student</node>
+    <node x="676.0" y="11.0">io.zipcoder.interfaces.Teacher</node>
+    <node x="171.42592592592592" y="378.0">io.zipcoder.singletons.Students</node>
+    <node x="0.0" y="22.0">io.zipcoder.interfaces.Learner</node>
+    <node x="294.9259259259259" y="0.0">io.zipcoder.Person</node>
+    <node x="401.4259259259259" y="378.0">io.zipcoder.singletons.Instructors</node>
+    <node x="290.0" y="145.0">io.zipcoder.People</node>
+    <node x="506.0" y="200.0">io.zipcoder.Instructor</node>
+    <node x="782.0" y="167.0">io.zipcoder.Educator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="io.zipcoder.Instructor" target="io.zipcoder.Person">
+      <point x="-64.0" y="-36.5" />
+      <point x="570.0" y="120.0" />
+      <point x="460.7592592592593" y="120.0" />
+      <point x="66.33333333333337" y="47.5" />
+    </edge>
+    <edge source="io.zipcoder.singletons.Instructors" target="io.zipcoder.People">
+      <point x="0.0" y="-36.5" />
+      <point x="512.4259259259259" y="353.0" />
+      <point x="437.0" y="353.0" />
+      <point x="49.0" y="91.5" />
+    </edge>
+    <edge source="io.zipcoder.singletons.Students" target="io.zipcoder.People">
+      <point x="0.0" y="-36.5" />
+      <point x="276.4259259259259" y="353.0" />
+      <point x="339.0" y="353.0" />
+      <point x="-49.0" y="91.5" />
+    </edge>
+    <edge source="io.zipcoder.Student" target="io.zipcoder.interfaces.Learner">
+      <point x="-60.0" y="-36.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="io.zipcoder.Student" target="io.zipcoder.Person">
+      <point x="60.0" y="-36.5" />
+      <point x="210.0" y="120.0" />
+      <point x="328.09259259259255" y="120.0" />
+      <point x="-66.33333333333337" y="47.5" />
+    </edge>
+    <edge source="io.zipcoder.Instructor" target="io.zipcoder.interfaces.Teacher">
+      <point x="64.0" y="-36.5" />
+      <point x="698.0" y="120.0" />
+      <point x="740.0" y="120.0" />
+      <point x="-64.0" y="36.5" />
+    </edge>
+    <edge source="io.zipcoder.People" target="io.zipcoder.Person">
+      <point x="0.0" y="-91.5" />
+      <point x="388.0" y="120.0" />
+      <point x="394.4259259259259" y="120.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="io.zipcoder.Educator" target="io.zipcoder.interfaces.Teacher">
+      <point x="0.0" y="-69.5" />
+      <point x="910.0" y="120.0" />
+      <point x="868.0" y="120.0" />
+      <point x="64.0" y="36.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="872.0" y="170.0000000000001" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
