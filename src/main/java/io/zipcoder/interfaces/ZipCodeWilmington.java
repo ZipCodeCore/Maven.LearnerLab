@@ -15,7 +15,7 @@ public class ZipCodeWilmington {
 
     //method
     public void hostLecture(Teacher teacher, double numberOfHours){
-        teacher.lecture(students.getStudentArray(), numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
     }
 
 
@@ -24,7 +24,7 @@ public class ZipCodeWilmington {
         return INSTANCE;
     }
     public void hostLecture(long id, double numberOfHours){
-        Instructor instructor1 = (Instructor) instructors.findById(id);
-        instructor1.lecture(students.getStudentArray(), numberOfHours);
+        Instructor instructor1 =  instructors.findById(id);
+        instructor1.lecture(students.getArray(), numberOfHours);
     }
 }
