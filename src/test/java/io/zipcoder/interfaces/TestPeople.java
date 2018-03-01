@@ -9,12 +9,12 @@ public class TestPeople {
     @Test
     public void testAdd(){
         //given
-        People people = new People();
-        ArrayList<Person> personList = new ArrayList<Person>();
+     People people = new People();
+//        ArrayList<Person> personList = new ArrayList<Person>();
         Person person = new Person("Joe", 123);
 
         //when
-        personList.add(person);
+        people.add(person);
         int expected = 1;
 
         //then
@@ -26,16 +26,16 @@ public class TestPeople {
     public void testRemove(){
         //given
         People people = new People();
-        ArrayList<Person> personList = new ArrayList<Person>();
+        //ArrayList<Person> personList = new ArrayList<Person>();
         Person personJoe = new Person("Joe", 123);
         Person personBob = new Person("Bob", 124);
         Person personTim = new Person("Tim", 125);
-        personList.add(personJoe);
-        personList.add(personBob);
-        personList.add(personTim);
+        people.add(personJoe);
+        people.add(personBob);
+        people.add(personTim);
 
         //when
-        personList.remove(personBob);
+        people.remove(personBob);
         int expected = 2;
 
         //then
@@ -58,10 +58,10 @@ public class TestPeople {
         people.add(person3);
 
         // When
-        String expected = "Tim";
+        Person expected = person2;
 
         //Then
-        String actual = people.findById(11);
+        Person actual = people.findById(11);
         Assert.assertEquals(expected, actual);
     }
 

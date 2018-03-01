@@ -6,13 +6,25 @@ public class Students extends People {
 
     private static final Students INSTANCE = new Students();
 
-    ArrayList<Student> studentList = new ArrayList<Student>();
+   // private ArrayList<Student> studentList = new ArrayList<Student>();
     @Override
     public Person[] getArray() {
-        return studentList.toArray(new Student[]{});
+        return personList.toArray(new Student[]{});
     }
 
     private Students(){
+        Student keith = new Student(1234);
+        Student corinne  = new Student(432);
+        Student bo = new Student(54321);
+        Student josh = new Student(87654);
+        Student pat = new Student(98475);
+
+
+        personList.add(keith);
+        personList.add(corinne);
+        personList.add(bo);
+        personList.add(josh);
+        personList.add(pat);
 
     }
 
@@ -20,10 +32,11 @@ public class Students extends People {
         return INSTANCE;
     }
 
-//    public Student[] getStudentArray(){
-//        for (int i = 0; i < getArray().length; i++){
-//            studentArray[i] = (Student) getArray()[i];
-//        }
-//        return studentArray;
-//    }
+    public Student[] getStudentArray(){
+        Student[] studentArray = new Student[getArray().length];
+        for (int i = 0; i < getArray().length; i++){
+           studentArray[i]  = (Student) getArray()[i];
+        }
+        return studentArray;
+    }
 }

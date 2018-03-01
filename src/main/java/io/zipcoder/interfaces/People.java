@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class People {
 
-    ArrayList<Person> personList = new ArrayList<Person>();
+     ArrayList<Person> personList = new ArrayList<Person>();
 
 
     //methods
@@ -16,10 +16,10 @@ public class People {
         personList.remove(removeperson);
     }
 
-    public String findById(long id) {
+    public Person findById(long id) {
         for (Person p : personList) {
             if (p.getId() == (id)) {
-                return p.getName();
+                return p;
             }
         }
         return null;

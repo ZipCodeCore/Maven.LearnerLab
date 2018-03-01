@@ -1,7 +1,7 @@
 package io.zipcoder.interfaces;
 
 public class Instructor extends Person implements Teacher{
-   double totalStudyTime;
+    private double totalStudyTime;
     public Instructor(long id){
         super(id);
     }

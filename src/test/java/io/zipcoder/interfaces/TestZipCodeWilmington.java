@@ -6,34 +6,31 @@ import org.junit.Test;
 public class TestZipCodeWilmington {
 
     @Test
-    public void testHostLecture() {
-        // given
-
-        //when
-
-        //then
+    public void hostLecture2Test(){
+        //Given
+        Instructor instructor =(Instructor) Instructors.getInstance().personList.get(1);
+        ZipCodeWilmington.getInstance().hostLecture(instructor,150);
+        Student student = (Student) Students.getInstance().personList.get(0);
+        double expected = 30;
+        //When
+        double actual = student.getTotalStudyTime();
+        Assert.assertEquals(expected, actual,0);
 
     }
+
 
     @Test
-        public void testGetStudentArray(){
+    public void hostLectureTest(){
+        //Given
+        ZipCodeWilmington.getInstance().hostLecture(9871,150);
+        Student student = (Student) Students.getInstance().personList.get(0);
+        double expected = 30;
+        //When
+        double actual = student.getTotalStudyTime();
+        Assert.assertEquals(expected, actual,0);
 
-        // given
-        Students students = Students.getInstance();
-        students.add(new Student(12345678));
-        students.add(new Student(15555555));
-        students.add(new Student(12767677));
-        students.add(new Student(98765454));
-        int actual = students.getArray().length;
-        //then
-
-
-        Student[] studentarray = students.getArray();
-        //when
-        Student expected = 12345678;
-        Student actual = studentarray[0];
-        Assert.assertEquals(expected, actual);
     }
+
 }
 
 

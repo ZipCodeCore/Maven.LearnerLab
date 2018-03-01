@@ -9,7 +9,7 @@ public class TestInstructors {
         // given
         Instructors instructors = Instructors.getInstance();
         instructors.add(new Instructor(12345678));
-        int expected =  1;
+        int expected =  4;
         int actual = instructors.getArray().length;
         //then
         Assert.assertEquals(expected, actual);
