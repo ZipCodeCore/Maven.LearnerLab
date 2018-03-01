@@ -9,7 +9,7 @@ public class TestInstructors {
 
     @Test
     public void getInstanceTest() {
-        String expected = "[Tariq: 10, Leon: 11, Kris: 12, Wilhelm: 13, Froilan: 14, Nhu: 15]";
+        String expected = "[Tariq: 10]";
         String actual = Arrays.toString(Instructors.getInstance().getArray());
 
         Assert.assertEquals(expected, actual);

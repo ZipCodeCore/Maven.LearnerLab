@@ -34,15 +34,7 @@ public abstract class People <E extends Person> {
     }
 
     public abstract E[] getArray();
-//        int index = 0;
-//        Person[] personArray = new Person[personList.size()];
-//        for (Person person: personList) {
-//            personArray[index] = person;
-//            index++;
-//        }
-//        return personArray;
-
-
+//
     public void removeAll() {
         personList.clear();
     }
