@@ -18,9 +18,19 @@ public final class Students extends People {
     }
 
     public static Students getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new Students();
         }
         return instance;
+    }
+
+    public Student[] getStudentArray() {
+        Person[] person = Students.getInstance().getPersonAsArray();
+        Student[] students = new Student[person.length];
+        for (int i = 0; i < person.length; i++) {
+            students[i] = (Student) person[i];
+        }
+        return students;
+
     }
 }
