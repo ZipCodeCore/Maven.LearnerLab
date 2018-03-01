@@ -1,6 +1,6 @@
 package io.zipcoder.interfaces;
 
-public final class Students extends People {
+public final class Students extends People<Student> {
 
     //Singleton - a student collection (meaning that we have one
     // collection of however many students
@@ -19,14 +19,19 @@ public final class Students extends People {
         return INSTANCE;
     }
 //created
-    public Student[] getStudentArray (){
-        Student[] student = new Student[getArray().length];
-        for (int i = 0; i < student.length; i++){
-            student[i] = (Student) getArray()[i];
-        }
+//    public Student[] getStudentArray (){
+//        Student[] student = new Student[getArray().length];
+//        for (int i = 0; i < student.length; i++){
+//            student[i] = (Student) getArray()[i];
+//        }
+//
+//        return student;
+//
+//    }
 
-        return student;
+    @Override
+    public Student[] getArray() {
+        return personList.toArray(new Student[0]);
 
     }
-
 }

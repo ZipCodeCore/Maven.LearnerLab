@@ -12,7 +12,7 @@ public class PeopleTest {
     @Test
     public void add() {
         //Given
-        People people = new People();
+        People <Person> people;
         ArrayList<Person> temp = new ArrayList<Person>();
         Person person1 = new Person(99999);
         Person person2 = new Person(3333);
@@ -33,12 +33,17 @@ public class PeopleTest {
     @Test
     public void findById() {
         //Given
-        People people = new People();
+        People <Person> people = new People<Person>() {
+            @Override
+            public Person[] getArray() {
+                return new Person[0];
+            }
+        };
 //        ArrayList<Person> temp = new ArrayList<Person>();
         Person person1 = new Student(111);
         Person person2 = new Student(222);
         Person person3 = new Student(333);
-        //Person person3 = new Person(333)  also WORKS!
+        //Person person3 = new Person(333)  also WORK
 
         //When
         people.add(person1);
@@ -55,7 +60,12 @@ public class PeopleTest {
     @Test
     public void remove() {
         //Given
-        People people = new People();
+        People people = new People() {
+            @Override
+            public Person[] getArray() {
+                return new Person[0];
+            }
+        };
         ArrayList<Person> temp = new ArrayList<Person>();
         Person person1 = new Student(111);
         Person person2 = new Student(222);

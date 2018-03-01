@@ -16,7 +16,7 @@ public final class ZipCodeWilmington extends People {
 //find the teacher id and add the number of hours to each student
     public  void hostLecture(Teacher teacher, double numberOfHours){
 
-        teacher.lecture(students.getStudentArray(), numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
     }
 
 
@@ -27,5 +27,13 @@ public final class ZipCodeWilmington extends People {
 
 
 //        currentInstructor.lecture(students.getStudentArray(), numberOfHours);
+    }
+
+    public void hostLecture (Educator educator, double numberOfHours){
+        educator.lecture(students.getArray(), numberOfHours);
+    }
+    @Override
+    public Person[] getArray() {
+        return new Person[0];
     }
 }
