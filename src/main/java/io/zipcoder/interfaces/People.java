@@ -4,10 +4,14 @@ import java.util.ArrayList;
 
 public class People {
 
-    private ArrayList<Person> personList;
+    public ArrayList<Person> personList;
 
     public People(){
         this.personList = new ArrayList<Person>();
+    }
+
+    public ArrayList<Person> getPersonList() {
+        return personList;
     }
 
     public void add(Person person) {
