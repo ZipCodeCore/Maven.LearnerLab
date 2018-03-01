@@ -3,6 +3,8 @@ package io.zipcoder.interfaces;
 public class Instructor extends Person implements Teacher {
 
 
+    public double timeWorked;
+
     public Instructor(long id) {
         super(id);
     }
@@ -16,6 +18,7 @@ public class Instructor extends Person implements Teacher {
         for(int i = 0; i <learner.length; i++) {
             learner[i].learn(numberOfHoursPerLearner);
         }
+        timeWorked += numberOfHours;
 
     }
 }

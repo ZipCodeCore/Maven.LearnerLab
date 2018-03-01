@@ -30,11 +30,13 @@ public class StudentTest {
     //ensures a Student's totalStudyTime instance variable is
         // incremented by the specified numberOfHours by invoking the .learn method
         Student student = new Student(00045);
+        double numberOfHours = 4;
+
         //When
-        int numberOfHours = 4;
+        student.learn(numberOfHours);
         double expected = 4;
         double actual = student.getTotalStudyTime();
         //Then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual, .001);
     }
 }

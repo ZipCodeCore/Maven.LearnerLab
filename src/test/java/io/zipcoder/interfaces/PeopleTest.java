@@ -13,7 +13,7 @@ public class PeopleTest {
 
     @Test
     public void addTest() {
-         ArrayList<Person> personList = new ArrayList<Person>();
+        ArrayList<Person> personList = new ArrayList<Person>();
         //Given
         Person person = new Person(123);
         //When
@@ -25,7 +25,7 @@ public class PeopleTest {
     @Test
     public void findByIdTest() {
         ArrayList<Person> personList = new ArrayList<Person>();
-        People people = new People();
+        People people = new ConcretePeople();
         //Given
         Person person = new Student(123);
         Person person1 = new Student(124);
@@ -44,7 +44,7 @@ public class PeopleTest {
 
     @Test
     public void removeTest() {
-        People people = new People();
+        People people = new ConcretePeople();
         ArrayList<Person> personList = new ArrayList<Person>();
         //Given
         Person person = new Person(123);
