@@ -41,15 +41,13 @@ public class People {
     }
 
     public Person[] getArray() {
-        // return an array representation of personList
-        return null;
+        Person[] personArray = new Person[personList.size()];
+        personArray = personList.toArray(personArray);
+        return personArray;
     }
 
     public void removeAll() {
         personList.clear();
     }
-
-
-
 
 }
