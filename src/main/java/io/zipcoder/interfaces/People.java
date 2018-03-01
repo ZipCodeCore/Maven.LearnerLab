@@ -2,30 +2,20 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public class People {
+public abstract class People<E extends Person> {
 
-//    Create a People class.
-//    The class should instantiate an ArrayList field of Person objects named personList.
-//    The class should define a method named add which adds a Person to the personList.
-//    The class should define a method named findById which makes use of a long id parameter to return a Person object with the respective id field.
-//    The class should define a method named remove which makes use of a Person person parameter to remove a respective Person object.
-//    The class should define a method named remove which makes use of a long id parameter to remove a Person object with the respective id field.
-//            The class should define a method named getCount which returns the size of personList.
-//    The class should define a method named getArray which returns an array representation of the personList field.
-//    The class should define a named removeAll which clears our personList field.
+    ArrayList<E>personList = new ArrayList<E>();
 
 
-    protected ArrayList<Person>personList;
+    public People(){
 
-    public People(ArrayList<Person> personList) {
-        this.personList = personList;
     }
 
-    public void add(Person aPerson){
+    public void add(E aPerson){
         personList.add(aPerson);
     }
-    public Person findById(long id){
-        for (Person aPerson:personList) {
+    public E findById(long id){
+        for (E aPerson:personList) {
             if(aPerson.getId()==id){
                 return aPerson;
             }
@@ -33,11 +23,11 @@ public class People {
         return null;
     }
 
-    public void remove(Person person){
+    public void remove(E person){
         personList.remove(person);
     }
     public void remove(long id){
-        for (Person aPerson:personList) {
+        for (E aPerson:personList) {
             if(aPerson.getId()==id){
                 personList.remove(aPerson);
 
@@ -48,10 +38,28 @@ public class People {
     public int getCount(){
         return personList.size();
     }
-    public Person[] getArray(){
-        return (Person[]) personList.toArray();
-    }
-    public void removeAll(ArrayList<Person> anArrayList){
+    public abstract E[] getArray();
+//    {
+//       E[] personArray = new E[personList.size()];
+//
+//        for (int i = 0; i < personArray.length; i++) {
+//            personArray[i] = personList.get(i);
+//        }
+//        return personArray;
+//        for(int i =0; i<students.length;i++){
+//            students[i]=(Student)getArray()[i];
+//
+//        return  personList.toArray(new Person[0]);
+//    }
+//    public Student[] getStudentArray(){
+//        Student[] students = new Student[getArray().length];
+//        for(int i =0; i<students.length;i++){
+//            students[i]=(Student)getArray()[i];
+//        }
+//        return students;
+//    }
+
+    public void removeAll(ArrayList<E> anArrayList){
         removeAll(anArrayList);
     }
 
