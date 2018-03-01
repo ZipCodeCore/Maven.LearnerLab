@@ -6,7 +6,7 @@ public abstract class People<E extends Person>{
 
     // E stands for Person
 
-     private ArrayList<E> personList;
+    ArrayList<E> personList;
 
      public People(){
          this.personList = new ArrayList<E>();
@@ -16,7 +16,7 @@ public abstract class People<E extends Person>{
          this.personList.add(person);
      }
 
-     public Person findById (long id){
+     public E findById (long id){
 
          for (E person : personList){
              if(id == person.getId()){
@@ -38,10 +38,13 @@ public abstract class People<E extends Person>{
          return this.personList.size();
      }
 
-     public E[] getArray(){
-         E[] arrayOfPerson = new E[this.personList.size()];
-         return this.personList.toArray(arrayOfPerson);
-     }
+     public abstract E[] getArray();
+
+
+
+//         E[] arrayOfPerson = new E[this.personList.size()];
+//         return this.personList.toArray(arrayOfPerson);
+
 
      public void removeAll(){
          this.personList.clear();

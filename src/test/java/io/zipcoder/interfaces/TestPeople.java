@@ -8,10 +8,11 @@ import java.util.Arrays;
 
 public class TestPeople {
 
-    People peopleTest = new People();
+    People peopleTest = new ConcretePeople();
+
 
     @Test
-    public void addTest(){
+    public void addTest() {
         //Given
         Person personTest = new Person(666666L);
         Person personTest2 = new Person(555555L);
@@ -29,7 +30,7 @@ public class TestPeople {
     }
 
     @Test
-    public void removeTest(){
+    public void removeTest() {
         //Given
         Person personTest = new Person(666666L);
         Person personTest2 = new Person(555555L);
@@ -50,7 +51,7 @@ public class TestPeople {
     }
 
     @Test
-    public void testFindByIdTest(){
+    public void testFindByIdTest() {
         //Given
         Person personTest = new Person(666666L);
         Person personTest2 = new Person(555555L);
@@ -107,7 +108,7 @@ public class TestPeople {
     }
 
     @Test
-    public void getArray(){
+    public void getArray() {
         //Given
         Person personTest = new Person(777777);
         Person personTest2 = new Person(555555L);
@@ -145,5 +146,6 @@ public class TestPeople {
 
         //Then
         Assert.assertEquals(expected, actual);
+
     }
 }
