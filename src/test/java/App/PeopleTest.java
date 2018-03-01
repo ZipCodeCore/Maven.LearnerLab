@@ -6,28 +6,28 @@ import org.junit.Test;
 
 public class PeopleTest {
 
-    People people;
-    Person person1;
-    Person person2;
-
-    @Before
-    public void setup() {
-        people = new People();
-        person1 = new Person(1555);
-        person2 = new Person(1666);
-    }
+    People people = new People() {
+        @Override
+        public Person[] getArray() {
+            return new Person[0];
+        }
+    };
 
     @Test
     public void addPersonTest() {
+        Person person1 = new Person(1555);
         people.addPerson(person1);
-        double expected = 1555;
-        double actual = people.personList.get(0).getId();
+        double expected = 1;
+        double actual = people.personList.size();
 
         Assert.assertEquals(expected, actual, .001);
     }
 
     @Test
     public void findByIdTest() {
+        Person person1 = new Person(1555);
+        Person person2 = new Person(1666);
+
         people.addPerson(person1);
         people.addPerson(person2);
 
@@ -40,6 +40,10 @@ public class PeopleTest {
 
     @Test
     public void removeTest() {
+
+        Person person1 = new Person(1555);
+        Person person2 = new Person(1666);
+
         people.addPerson(person1);
         people.addPerson(person2);
 
@@ -53,6 +57,10 @@ public class PeopleTest {
 
     @Test
     public void getCountTest() {
+
+        Person person1 = new Person(1555);
+        Person person2 = new Person(1666);
+
         people.addPerson(person1);
         people.addPerson(person2);
 
@@ -63,20 +71,11 @@ public class PeopleTest {
     }
 
     @Test
-    public void getArrayTest() {
-
-        people.addPerson(person1);
-        people.addPerson(person2);
-
-        Object[] expected = {person1, person2};
-        Object[] actual = people.getArray();
-
-        Assert.assertEquals(expected, actual);
-
-    }
-
-    @Test
     public void removeAllTest() {
+
+        Person person1 = new Person(1555);
+        Person person2 = new Person(1666);
+
         people.addPerson(person1);
         people.addPerson(person2);
 

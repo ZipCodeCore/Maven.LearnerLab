@@ -9,9 +9,10 @@ public class ZipCodeWilmingtonTest {
     @Test
     public void hostLectureTest() {
 
-        Instructors instructors = Instructors.getInstance();;
+        Instructors instructors = Instructors.getInstance();
+        ;
         Students students = Students.getInstance();
-        ZipCodeWilmington.hostLecture(5, 120);
+        ZipCodeWilmington.getInstance().hostLecture(5, 120);
 
         Student student4 = (Student) students.findById(2);
         Student student5 = (Student) students.findById(6);
@@ -27,5 +28,4 @@ public class ZipCodeWilmingtonTest {
         Assert.assertEquals(expected, actual3, 0.1);
 
     }
-
 }

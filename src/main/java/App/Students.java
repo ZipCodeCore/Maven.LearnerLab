@@ -2,7 +2,7 @@ package App;
 
 import java.util.Arrays;
 
-public class Students extends People {
+public class Students extends People<Student> {
 
     private static final Students INSTANCE = new Students();
 
@@ -17,6 +17,10 @@ public class Students extends People {
         return INSTANCE;
     }
 
+    @Override
+    public Student[] getArray() {
+        return personList.stream().toArray(Student[]::new);
+    }
 }
 
 

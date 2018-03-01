@@ -1,19 +1,18 @@
 package App;
 
-import io.zipcoder.interfaces.Learner;
-
 import java.util.ArrayList;
+import java.util.List;
 
-public class People {
+public abstract class People <E extends Person> {
 
-    public ArrayList<Person> personList = new ArrayList<>();
+    public List<E> personList = new ArrayList<>();
 
-    public void addPerson(Person person) {
+    public void addPerson(E person) {
         personList.add(person);
     }
 
-    public Person findById(long id) {
-        for (Person person : this.personList) {
+    public E findById(long id) {
+        for (E person : this.personList) {
             if (person.getId() == id) {
                 return person;
             }
@@ -22,10 +21,10 @@ public class People {
     }
 
     public void remove(long id) {
-        remove(findById(id));
+        personList.remove(findById(id));
     }
 
-    public void remove(Person person) {
+    public void remove(E person) {
         personList.remove(person);
     }
 
@@ -33,10 +32,7 @@ public class People {
         return personList.size();
     }
 
-    public Student[] getArray() {
-        Student[] personArray = personList.toArray(new Student[personList.size()]);
-        return personArray;
-    }
+    public abstract E[] getArray();
 
     public void removeAll() {
         personList.clear();

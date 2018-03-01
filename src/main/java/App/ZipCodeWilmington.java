@@ -17,12 +17,17 @@ public final class ZipCodeWilmington {
     private ZipCodeWilmington() {
     }
 
-    private static void hostLecture(Teacher teacher, double numberOfHours) {
+    private void hostLecture(Educator educator, double numberOfHours){
+        Teacher teacher = educator;
         teacher.lecture(students.getArray(), numberOfHours);
     }
 
-    protected static void hostLecture(long id, double numberOfNumbers) {
-        Instructor teach = (Instructor) instructors.findById(id);
+    private void hostLecture(Teacher teacher, double numberOfHours) {
+        teacher.lecture(students.getArray(), numberOfHours);
+    }
+
+    protected void hostLecture(long id, double numberOfNumbers) {
+        Instructor teach = instructors.findById(id);
         hostLecture(teach, numberOfNumbers);
     }
 }
