@@ -22,6 +22,14 @@ public class TestStudents {
         Assert.assertSame(expected,actual);
 
     }
+    @Test
+    public void getArrayTest(){
+        int expected = 4;
+        int actual = instance.getArray().length;
+
+        Assert.assertEquals(expected,actual);
+
+    }
 
 
 
