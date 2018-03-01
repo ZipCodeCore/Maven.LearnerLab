@@ -128,7 +128,6 @@
 
 -
 ### Part 9.1 - Create `ZipCodeWilmington` Class
-* Use `Part 7` as a reference.
 * Create a `ZipCodeWilmington` singleton.
 	* The class should declare a field that references the instance of `Students` called `students`.
 	* The class should declare a field that references the instance of `Instructors` called `instructors`.
