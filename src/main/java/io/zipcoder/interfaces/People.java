@@ -18,39 +18,37 @@ public class People extends Person {
     }
 
     public Person findPersonById(long id) {
-        Person p1 = new Person(id, getName());
+        Person p1 = null;
         for (Person p : personList) {
-            if (p.equals(id)) {
-                p = p1;
+            if (p.getId() == (id)) {
+                p1 = p;
             }
         }
         return p1;
     }
-    public void removePersonByName(String name){
-        if(personList.contains(name)){
+
+    public void removePersonByName(String name) {
+        if (personList.contains(name)) {
             personList.remove(name);
         }
+    }
 
+    public void removePersonById(long id) {
+        Person p1 = findPersonById(id);
+        personList.remove(p1);
     }
-    public void removePersonById(long id){
-        for(Person p : personList){
-            if(p.equals(id)){
-                personList.remove(p);`
-            }
-        }
-    }
-    public Integer getCountOfList(){
+
+    public Integer getCountOfList() {
         return personList.size();
     }
-//    public Object[] getListAsArray(ArrayList<Person> personList){
-//        return personList.toArray();
-//    }
-//    public void removeAllEntries(ArrayList<Person> personList){
-//        personList.removeAll(personList);
 
+    public Object[] getListAsArray() {
+        return personList.toArray();
+    }
 
-    public ArrayList<Person> getPersonList() {
-        return personList;
+    public void removeAllEntries(ArrayList<Person> personList) {
+        personList.removeAll(personList);
+
     }
 }
 

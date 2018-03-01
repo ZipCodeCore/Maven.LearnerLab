@@ -3,16 +3,17 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 
 public class PeopleTest {
+     ArrayList<Person> personList = new ArrayList<>();
 
     @Test
     public void addPersonTest(){
         //Given
         People people = new People();
-        String expectedName = "James";
-        long expectedId = 786;
-        Person person1 = new Person(expectedId, expectedName);
+        Person person1 = new Person(765);
         //When
         people.addPerson(person1);
         boolean personHasBeenAdded = (people.getCountOfList() == 1);
@@ -24,10 +25,10 @@ public class PeopleTest {
         //Given
         People people = new People();
         Person person1 = new Person(634);
-        //When
         people.addPerson(person1);
-        people.removePersonById(person1.getId());
         Person expectedName = null;
+        //When
+        people.removePersonById(person1.getId());
         Person actualName = people.findPersonById(person1.getId());
         //Then
         Assert.assertEquals(expectedName,actualName);
@@ -36,15 +37,50 @@ public class PeopleTest {
     public void findPersonByIdTest(){
         //Given
         People people = new People();
-        String expectedName= "Jim";
-        long expectedId = 684;
-        Person person1 = new Person(expectedId, expectedName);
-        //When
+        Person person1 = new Person(754);
         people.addPerson(person1);
-        people.findPersonById(expectedId);
-        boolean personHasBeenFound = people.getPersonList().contains(person1);
-                //Then
-        Assert.assertTrue(personHasBeenFound);
+        Person expected = person1;
+        //When
+        Person actual = people.findPersonById(expected.getId());
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void removePersonByNameTest(){
+        //Given
+        People people = new People();
+        Person person = new Person(987);
+        people.addPerson(person);
+        Person expected = null;
+        //When
+        people.removePersonByName(people.getName());
+        Person actual = people.findPersonById(people.getId());
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void getListAsArray(){
+        //Given
+        People people = new People();
+        Person person = new Person(987);
+        Person person2 = new Person(354);
+        people.addPerson(person);
+        people.addPerson(person2);
+        Object[] expected = people.getListAsArray();
+        //When
+        Object[] actual = people.getListAsArray();
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void removeAllEntries(){
+        //Given
+        People people = new People();
+        Person person = new Person(987);
+        Person person2 = new Person(354);
+        people.addPerson(person);
+        people.addPerson(person2);
+        people.getListAsArray();
     }
 
 }
