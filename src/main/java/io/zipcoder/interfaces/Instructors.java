@@ -26,9 +26,9 @@ public final class Instructors extends People<Instructor> {
     }
 
     public Instructor[] getArray() {
-        Instructor[] array = new Instructor[getArray().length];
-        for (int i = 0; i < getArray().length; i++) {
-            array[i] = getArray()[i];
+        Instructor[] array = new Instructor[personList.size()];
+        for (int i = 0; i < personList.size(); i++) {
+            array[i] = personList.get(i);
         }
         return array;
     }
