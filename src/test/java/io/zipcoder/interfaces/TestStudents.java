@@ -11,8 +11,8 @@ public class TestStudents {
     @Test
     public void testSingleton(){
         Students students = Students.getInstance();
-        int expected = 8;
-        int actual = students.getCount();
+        String expected = "Carolynn";
+        String actual = students.findById(102).getName();
         Assert.assertEquals(expected, actual);
     }
 }

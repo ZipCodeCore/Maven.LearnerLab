@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class People {
 
-    public ArrayList<Person> personList;
+    protected ArrayList<Person> personList;
 
     public People(){
         this.personList = new ArrayList<Person>();

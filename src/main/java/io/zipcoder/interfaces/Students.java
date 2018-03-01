@@ -7,26 +7,46 @@ public final class Students extends People {
 
     private static final Students INSTANCE = new Students();
 
-    private Students(){
-        Student Anthony = new Student(100);
-        Student April = new Student(101);
-        Student Carolynn = new Student(102);
-        Student Daniel = new Student(103);
-        Student Frankie = new Student(104);
-        Student Jess = new Student(105);
-        Student Joe = new Student(106);
-        Student Luis = new Student(107);
-        personList.add(Anthony);
-        personList.add(April);
-        personList.add(Carolynn);
-        personList.add(Daniel);
-        personList.add(Frankie);
-        personList.add(Jess);
-        personList.add(Joe);
-        personList.add(Luis);
+
+    private Students() {
+        Student p1 = new Student(100);
+        p1.setName("Anthony");
+        Student p2 = new Student(101);
+        p2.setName("April");
+        Student p3 = new Student(102);
+        p3.setName("Carolynn");
+        Student p4 = new Student(103);
+        p4.setName("Daniel");
+        Student p5 = new Student(104);
+        p5.setName("Frankie");
+        Student p6 = new Student(105);
+        p6.setName("Jess");
+        Student p7 = new Student(106);
+        p7.setName("Joe");
+        Student p8 = new Student(107);
+        p8.setName("Luis");
+        this.add(p1);
+        this.add(p2);
+        this.add(p3);
+        this.add(p4);
+        this.add(p5);
+        this.add(p6);
+        this.add(p7);
+        this.add(p8);
+    }
+    public void add(Student person) {
+        personList.add(person);
     }
 
-    public static Students getInstance(){
+    public Student[] getArray(){
+        Student[] personArray = new Student[personList.size()];
+        for(int i = 0; i<personList.size(); i++) {
+            personArray[i] = (Student) personList.get(i);
+        }
+        return personArray;
+    }
+
+    public static Students getInstance() {
         return INSTANCE;
     }
 
