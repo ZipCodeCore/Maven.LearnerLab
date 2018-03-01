@@ -10,12 +10,12 @@ public class Person {
         this.name = "";
     }
 
-    public Person(long ID, String name) {
-        this.ID = ID;
+    public Person(long id, String name) {
+        this.ID = id;
         this.name = name;
     }
 
-    public long getID() {
+    public long getId() {
         return ID;
     }
 

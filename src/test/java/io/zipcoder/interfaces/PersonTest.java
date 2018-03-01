@@ -14,7 +14,7 @@ public class PersonTest {
         String expectedName = null;
         // When
         person = new Person(expectedID, expectedName);
-        long actualID = person.getID();
+        long actualID = person.getId();
         // Then
         Assert.assertEquals(expectedID, actualID);
     }
@@ -26,7 +26,7 @@ public class PersonTest {
         String expectedName = "name";
         // When
         person = new Person(expectedID, expectedName);
-        long actualID = person.getID();
+        long actualID = person.getId();
         // Then
         Assert.assertEquals(expectedID, actualID);
     }
