@@ -23,7 +23,7 @@ public class PeopleTest {
     determinedDan = new Student(1);
     eliteEric = new Student(2);
     gentleJoe = new Student(5);
-    test = new People();
+    test = new ConcretePeople();
 
 }
 

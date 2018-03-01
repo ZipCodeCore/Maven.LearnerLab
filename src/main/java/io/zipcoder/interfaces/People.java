@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class People <E extends Person> {
 
-    private ArrayList<E> personList;
+    ArrayList<E> personList;
 
     public People() {
         this.personList = new ArrayList<E>();
@@ -39,10 +39,10 @@ public abstract class People <E extends Person> {
         return this.personList.size();
     }
 
-    public E[] getArray() {
-        E[] temp = new E[this.personList.size()];
-        return this.personList.toArray(temp);
-    }
+    public abstract E[] getArray();
+//        E[] temp = new E[this.personList.size()];
+//        return this.personList.toArray(temp);
+
 
 
     public void removeAll() {
