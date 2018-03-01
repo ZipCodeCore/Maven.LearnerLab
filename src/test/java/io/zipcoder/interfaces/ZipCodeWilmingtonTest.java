@@ -8,7 +8,7 @@ public class ZipCodeWilmingtonTest {
     public void hostLectureTest(){
         //Given
         ZipCodeWilmington.getInstance().hostLecture(2000,150);
-        Student student = (Student) Students.getInstance().personList.get(0);
+        Student student =  Students.getInstance().personList.get(0);
         double expected = 30;
         //When
         double actual = student.getTotalStudyTime();
@@ -19,9 +19,9 @@ public class ZipCodeWilmingtonTest {
     @Test
     public void hostLecture2Test(){
         //Given
-        Instructor instructor =(Instructor) Instructors.getInstance().personList.get(1);
+        Instructor instructor = Instructors.getInstance().personList.get(1);
         ZipCodeWilmington.getInstance().hostLecture(instructor,150);
-        Student student = (Student) Students.getInstance().personList.get(0);
+        Student student = Students.getInstance().personList.get(0);
         double expected = 30;
         //When
         double actual = student.getTotalStudyTime();

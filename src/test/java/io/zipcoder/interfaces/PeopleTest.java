@@ -4,7 +4,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class PeopleTest{
-        People people = new People();
+        People people = new People() {
+            @Override
+            public Person[] getArray() {
+                return new Person[0];
+            }
+        };
     @Test
     public void addTest(){
         Person expected = new Person("Sue",3);
@@ -65,21 +70,6 @@ public class PeopleTest{
         Integer actual = people.getCount();
         //Then
         Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void getArrayTest(){
-        //Given
-        Person person1= new Person("Sue",3);
-        Person person2= new Person("Sally",6);
-        people.addPerson(person1);
-        people.addPerson(person2);
-        Person[] expected = {person1, person2};
-        //When
-        Person[] actual = people.getArray();
-        //Then
-        Assert.assertEquals(expected, actual);
-
     }
 
     @Test
