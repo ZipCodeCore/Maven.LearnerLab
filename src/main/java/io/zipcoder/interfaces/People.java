@@ -3,13 +3,13 @@ package io.zipcoder.interfaces;
 import java.util.ArrayList;
 
 public class People {
-    private final ArrayList<Person> personList = new ArrayList<Person>();
+    ArrayList<Person> personList = new ArrayList<Person>();
 
-    protected void addPerson(Person person){
+    public void addPerson(Person person){
         personList.add(person);
     }
 
-    protected Person findById(final long id){
+    public Person findById(final long id){
         for (Person person : personList){
             if (person.getId() == id){
                 return person;
@@ -18,11 +18,11 @@ public class People {
         return null;
     }
 
-    protected void removePerson(Person person){
+    public void removePerson(Person person){
         personList.remove(person);
     }
 
-    protected void removeById(final long id){
+    public void removeById(final long id){
        for (int i = 0; i < personList.size(); i++){
            if (personList.get(i).getId() == (id)) {
                personList.remove(i);
@@ -30,17 +30,17 @@ public class People {
        }
     }
 
-    protected Integer getCount(){
+    public Integer getCount(){
         return personList.size();
     }
 
-    protected Person[] getArray(){
+    public Person[] getArray(){
         Person[] personArray = new Person[personList.size()];
         personArray = personList.toArray(personArray);
         return personArray;
     }
 
-    protected void removeAll(){
+    public void removeAll(){
         personList.clear();
     }
 }

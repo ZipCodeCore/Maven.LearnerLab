@@ -6,8 +6,8 @@ import org.junit.Test;
 public class StudentsTest {
     @Test
     public void studentsInSingletonTest(){
-        String expected = "Madeline";
-        Person studentTest = Students.getInstance().findById(1000);
-        Assert.assertEquals(expected, studentTest.getName());
+    Integer expected = 5;
+    Integer actual = Students.getInstance().getCount();
+    Assert.assertEquals(expected,actual);
     }
 }
