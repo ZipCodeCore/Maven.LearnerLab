@@ -18,6 +18,10 @@ public final class ZipCodeWilmington {
         teacher.lecture(students.getArray(), numberOfHours);
     }
 
+    public void hostLecture(Educator educator, double numberOfHours){
+        educator.lecture(students.getArray(), numberOfHours);
+    }
+
 
 
     public static ZipCodeWilmington getInstance(){
