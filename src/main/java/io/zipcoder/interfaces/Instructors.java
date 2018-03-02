@@ -1,43 +1,43 @@
 package io.zipcoder.interfaces;
 
-public final class  Instructors  extends People<Instructor> {
+import java.util.ArrayList;
+import static io.zipcoder.interfaces.Educator.TARIQ;
+
+public final class Instructors extends People<Instructor> implements Teacher {
 
     private static final Instructors INSTANCE = new Instructors();
 
     private Instructors(){
         Instructor dirOfEd = new Instructor(1000);
-        dirOfEd.setName("Tariq");
-        Instructor instruct1 = new Instructor(1001);
-        instruct1.setName("Wilhelm");
-        Instructor instruct2 = new Instructor(1002);
-        instruct2.setName("Leon");
-        Instructor instruct3 = new Instructor(1003);
-        instruct3.setName("Froilan");
-        Instructor instruct4 = new Instructor(1004);
-        instruct4.setName("Nhu");
-        Instructor instruct5 = new Instructor(1005);
-        instruct5.setName("Kris");
-        Instructor instruct6 = new Instructor(1006);
-        instruct6.setName("Dolio");
+
         this.add(dirOfEd);
+        Instructor instruct1 = new Instructor( 1001);
+        instruct1.setName("Wilhelm");
         this.add(instruct1);
+        Instructor instruct2 = new Instructor( 1002);
+        instruct2.setName("Leon");
         this.add(instruct2);
+        Instructor instruct3 = new Instructor( 1003);
+        instruct3.setName("Froilan");
         this.add(instruct3);
+        Instructor instruct4 = new Instructor( 1004);
+        instruct4.setName("Nhu");
         this.add(instruct4);
+        Instructor instruct5 = new Instructor( 1005);
+        instruct5.setName("Kris");
         this.add(instruct5);
+        Instructor instruct6 = new Instructor( 1006);
+        instruct6.setName("Dolio");
         this.add(instruct6);
+
     }
 
-
-    public void add(Instructor person) {
-        personList.add(person);
-    }
 
     @Override
     public Instructor[] getArray(){
         Instructor[] personArray = new Instructor[personList.size()];
         for(int i = 0; i<personList.size(); i++) {
-            personArray[i] =(Instructor) personList.get(i);
+//            personArray[i] = personList.get(i);
         }
         return personArray;
     }
@@ -47,4 +47,11 @@ public final class  Instructors  extends People<Instructor> {
         return INSTANCE;
     }
 
+    public void teach(Learner learner, double numberOfHours) {
+
+    }
+
+    public void lecture(Learner[] learners, double numberOfHours) {
+
+    }
 }

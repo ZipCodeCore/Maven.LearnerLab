@@ -1,6 +1,10 @@
 package io.zipcoder.interfaces;
 
-public class Instructor extends Person implements Teacher{
+import java.util.Arrays;
+
+import static io.zipcoder.interfaces.Educator.TARIQ;
+
+public class Instructor extends Person implements Teacher {
 
     private String name;
 
