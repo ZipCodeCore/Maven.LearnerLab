@@ -1,6 +1,6 @@
 package io.zipcoder.interfaces;
 
-public class Instructor extends Person implements Teacher {
+public class Instructor extends Person<Instructor> implements Teacher {
 
     public Instructor(Long id){
         super(id);

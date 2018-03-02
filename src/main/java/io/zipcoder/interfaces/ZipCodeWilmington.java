@@ -1,10 +1,6 @@
 package io.zipcoder.interfaces;
 
-public final class ZipCodeWilmington extends People {
-
-
-
-
+public final class ZipCodeWilmington {
     private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
     Students students = Students.getInstance();
     Instructors instructors = Instructors.getInstance();
@@ -17,7 +13,7 @@ public final class ZipCodeWilmington extends People {
         return INSTANCE;
     }
 
-    public void hostLecture(Teacher teacher, double numberOfHours){
+    void hostLecture(Instructor teacher, double numberOfHours){
 
         Student[] s = students.getStudentArray();
         teacher.lecture(s, numberOfHours);

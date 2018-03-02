@@ -1,6 +1,6 @@
 package io.zipcoder.interfaces;
 
-public class Person {
+public class Person <E>{
     //I don't want anyone to be able to access, and final is a constant
     private final Long id;
     private String name;

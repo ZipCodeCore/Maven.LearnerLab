@@ -6,7 +6,7 @@ import org.junit.Test;
 public class ZipCodeWilmingtonTest {
 
     @Test
-    public void hostLecture(){
+    public void testHostLecture(){
         ZipCodeWilmington zipcodew = ZipCodeWilmington.getInstance();
         Students cohort = Students.getInstance();
         Instructors cohortInstructors = Instructors.getInstance();

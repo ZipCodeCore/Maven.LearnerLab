@@ -1,6 +1,6 @@
 package io.zipcoder.interfaces;
 
-public class Student extends Person implements Learner {
+public class Student extends Person<Student> implements Learner {
 
     private double totalStudytime;
 

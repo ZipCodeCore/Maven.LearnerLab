@@ -16,6 +16,21 @@ public final class Students extends People {
 
         studentsArray = new Student[]{rodney, amonnie, imani, nate, hannah};
     }
+
+    Person[] getArray() {
+        return new Person[0];
+    }
+
+    @Override
+    public void removeId(Instructor person) {
+
+    }
+
+    @Override
+    public void removeId(Person person) {
+
+    }
+
     //the getInstance method returns an instance and is type Student
     public static Students getInstance(){
 

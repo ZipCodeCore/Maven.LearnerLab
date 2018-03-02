@@ -12,7 +12,22 @@ public class PeopleTest {
     @Test
     public void testAdd() {
         //Given
-        People people = new People();
+        People people = new People() {
+            @Override
+            Person[] getArray() {
+                return new Person[0];
+            }
+
+            @Override
+            public void removeId(Instructor person) {
+
+            }
+
+            @Override
+            public void removeId(Person person) {
+
+            }
+        };
 
         //First I need to create new person
         Person person = new Person(1L);
@@ -35,7 +50,21 @@ public class PeopleTest {
     @Test
     public void testFindById() {
 
-        People people = new People();
+        People people = new People() {
+            Person[] getArray() {
+                return new Person[0];
+            }
+
+            @Override
+            public void removeId(Instructor person) {
+
+            }
+
+            @Override
+            public void removeId(Person person) {
+
+            }
+        };
 
         //First I need to create new person
         Person person = new Person(1L);
@@ -60,7 +89,21 @@ public class PeopleTest {
     @Test
     public void testRemoveId() {
 
-        People people = new People();
+        People people = new People() {
+            Person[] getArray() {
+                return new Person[0];
+            }
+
+            @Override
+            public void removeId(Instructor person) {
+
+            }
+
+            @Override
+            public void removeId(Person person) {
+
+            }
+        };
 
         //First I need to create new person
         Person person = new Person(1L);
@@ -74,7 +117,7 @@ public class PeopleTest {
 
         //now we need to add the new persons we just made to our people object
         //When
-        people.remove(person);
+        people.removeId(person);
 
         Person[] expected = {person1, person2};
         Person[] actual = people.getArray();
