@@ -14,6 +14,16 @@ public class Instructor extends Person implements Teacher{
         return id;
     }
 
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
     public void teach(Learner learner, double numberOfHours) {
         learner.learn(numberOfHours);
     }

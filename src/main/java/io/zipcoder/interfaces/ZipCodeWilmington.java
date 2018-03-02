@@ -12,14 +12,18 @@ public final class ZipCodeWilmington extends People {
 
     }
 
+    public Person[] getArray() {
+        return new Person[0];
+    }
+
     public void hostLecture(Teacher teacher, double numberOfHours) {
-        Student[] allStudents = (Student[]) students.getArray();
-        teacher.lecture((Learner[]) allStudents, numberOfHours);
+        Student[] allStudents = students.getArray();
+        teacher.lecture( allStudents, numberOfHours);
     }
 
    public void hostLecture(long id, double numberOfHours){
-       Student[] allStudents =  (Student[]) students.getArray();
-       Instructor instructor = (Instructor) instructors.findById(id);
+       Student[] allStudents =   students.getArray();
+       Instructor instructor = instructors.findById(id);
        instructor.lecture(allStudents, numberOfHours);
     }
 
