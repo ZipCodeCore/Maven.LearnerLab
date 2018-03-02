@@ -12,6 +12,10 @@ public class Student extends Person implements Learner {
         this.totalStudyTime = totalStudyTime;
     }
 
+    public Student(long id, String name) {
+        super(id, name);
+    }
+
     public void learn(double numberOfHours) {
         this.totalStudyTime += numberOfHours;
     }
