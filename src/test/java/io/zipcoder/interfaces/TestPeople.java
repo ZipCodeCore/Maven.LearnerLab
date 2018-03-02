@@ -27,20 +27,20 @@ public class TestPeople {
         test.add(craig);
         test.add(mike);
         test.add(pete);
-        test.remove(3244);
-        Person[] expected = {craig, mike, null};
+        test.remove(pete);
+        Person[] expected = {craig, mike};
         Person[] actual = test.getArray();
         Assert.assertEquals(expected, actual);
     }
     @Test
     public void testFindById(){
         Student mike =new Student(309423809);
-        Student pete = new Student(3244);
-        People test = new PeopleConcrete();
+        Student pete = new Student(324412312);
+        PeopleConcrete test = new PeopleConcrete();
         test.add(mike);
         test.add(pete);
-        Person expected = pete;
-        Person actual = test.findById(3244);
+        Person expected = mike;
+        Person actual = test.findById(309423809);
         Assert.assertEquals(expected, actual);
     }
 }

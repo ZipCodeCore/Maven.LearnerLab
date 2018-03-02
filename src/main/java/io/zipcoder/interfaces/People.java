@@ -29,9 +29,9 @@ public abstract class People<E extends Person>{
     public int getCount(){
         return personList.size();
     }
-    public abstract E[] getArray() ; /* {
-        //return personList.toArray();
-    } */
+    public abstract E[] getArray();
+
+
     public void removeAll() {
         personList.clear();
     }
