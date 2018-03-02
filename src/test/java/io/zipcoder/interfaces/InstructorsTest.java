@@ -8,6 +8,7 @@ public class InstructorsTest {
     @Test
     public void getInstanceTest(){
         //Given
+
         //When
         Instructors ione = Instructors.getInstance();
         Instructors itwo = Instructors.getInstance();
