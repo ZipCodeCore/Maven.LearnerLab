@@ -17,22 +17,20 @@ public class TestPeople {
     public void setUp() {
         student = new Student(1);
         instructor = new Instructor(2);
-        people = new People();
+        people = Students.getInstance();
         personList = new ArrayList<String>();
     }
     @Test
     public void testAdd(){
-        people.add(student);
         // can add a student bc it is a person
-        Boolean actual = true;
+        Boolean actual = people.add(student);
         Assert.assertTrue(actual);
 
     }
     @Test
     public void testRemove(){
         people.remove(3);
-        Boolean actual = true;
-        Assert.assertTrue(actual);
+        Assert.assertNull(people.findById(3));
     }
     @Test
     public void testFindById(){

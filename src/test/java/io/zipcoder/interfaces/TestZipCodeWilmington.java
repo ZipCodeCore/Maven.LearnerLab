@@ -14,11 +14,12 @@ public class TestZipCodeWilmington {
         Instructor instructor1 = new Instructor("Kris");
 
         zcw.hostLecture( instructor1,45);
-
+        // When
         double expected = 3;
         double actual = ppl[0].getTotalStudyTime();
-
+        //Then
         Assert.assertEquals(expected, actual,0.01);
+
 
     }
 }

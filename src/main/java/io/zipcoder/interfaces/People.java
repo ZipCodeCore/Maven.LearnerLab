@@ -5,22 +5,19 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class People {
+public abstract class People <E extends Person> {
 
-    ArrayList<Person> personList = new ArrayList<Person>();
-    Person person;
+    ArrayList<E> personList = new ArrayList<>();
 
-    {
-        personList = new ArrayList<Person>();
-        person = new Person(3);
+    public People() {
     }
 
-    public Boolean add(Person person) {
+    public Boolean add(E person) {
         return personList.add(person);
     }
 
-    public Person findById(long id) {
-        for (Person person : personList) {
+    public E findById(long id) {
+        for (E person : personList) {
             if (id == person.getId()) {
                 return person;
                 // for every person in the personList if the id is equal to the id in
@@ -39,12 +36,12 @@ public class People {
         return personList.size();
     }
 
-    public Person[] getArray(){
-       Person[] person =  personList.toArray(new Person[0]);
-       // have to cast to person []
-        return person;
-    }
-
+    public abstract E[] getArray();//{
+//       E[] person =  personList.toArray(new E[0]);
+//       // have to cast to person []
+//        return person;
+//    }
+// have to comment out bc method doesnt know if the variable that we are entering is able to be instantiated upon
     public void removeAll() {
         personList.clear();
     }
