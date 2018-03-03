@@ -6,7 +6,7 @@ import org.junit.Test;
 public class ZipCodeWilmingtonTest {
 
     @Test
-    public void hostLectureTest() {
+    public void hostLectureByTeacherTest() {
         // Given
         double expectedNumberOfHours = 7;
         double expectedNumberOfStudents = 7;
@@ -17,6 +17,17 @@ public class ZipCodeWilmingtonTest {
         double actualNumberOfHoursPerStudent = Students.getInstance().getArray()[0].getTotalStudyTime();
         // Then
         Assert.assertEquals(expectedNumberOfHoursPerStudent, actualNumberOfHoursPerStudent, 0.01);
+    }
+
+    @Test
+    public void hostLectureByEducatorTest() {
+        // Given
+        double expectedNumberOfHoursWorked = 7;
+        // When
+        ZipCodeWilmington.getInstance().hostLecture(Educator.TARIQ, expectedNumberOfHoursWorked);
+        double actualNumberOfHoursWorked = Educator.TARIQ.getTimeWorked();
+        // Then
+        Assert.assertEquals(expectedNumberOfHoursWorked, actualNumberOfHoursWorked, 0.01);
     }
 
 }

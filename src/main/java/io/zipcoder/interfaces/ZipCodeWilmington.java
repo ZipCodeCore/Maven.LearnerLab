@@ -26,4 +26,8 @@ public final class ZipCodeWilmington {
         hostLecture(instructors.findById(id), numberOfHours);
     }
 
+    public void hostLecture(Educator educator, double numberOfHours) {
+        hostLecture(educator.getInstructor(), numberOfHours);
+        educator.addTimeWorked(numberOfHours);
+    }
 }
