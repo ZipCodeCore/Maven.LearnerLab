@@ -1,7 +1,7 @@
 package io.zipcoder.interfaces;
 
 //final make the class unextendable
-public final class Students extends People {
+public final class Students extends People<Student> {
     //now this is the only student we have and private and final keep people who need
     //to use our code from changing it
     private static final Students INSTANCE = new Students();
@@ -17,8 +17,8 @@ public final class Students extends People {
         studentsArray = new Student[]{rodney, amonnie, imani, nate, hannah};
     }
 
-    Person[] getArray() {
-        return new Person[0];
+    Student[] getArray() {
+        return (Student[]) new Person[0];
     }
 
     @Override
@@ -38,6 +38,7 @@ public final class Students extends People {
     }
 
     public Student[] getStudentArray(){
+
         return this.studentsArray;
     }
 }

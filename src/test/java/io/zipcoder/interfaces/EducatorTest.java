@@ -1,15 +1,15 @@
 package io.zipcoder.interfaces;
 
 import org.junit.Assert;
-
 import org.junit.Test;
 
+import static org.junit.Assert.*;
 
-public class PeopleTest {
-
+public class EducatorTest {
 
     @Test
-    public void testAdd() {
+    public void testAdd(){
+
         People people = new People() {
             @Override
             Person[] getArray() {
@@ -26,20 +26,19 @@ public class PeopleTest {
 
             }
         };
-        Person expected = new Person(-1L);
+        Person expected = new Person(10L);
 
-        //When
         people.add(expected);
         Person actual = people.findById(expected.getId());
 
-        //Then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindById() {
+    public void testRemove(){
 
         People people = new People() {
+            @Override
             Person[] getArray() {
                 return new Person[0];
             }
@@ -54,31 +53,25 @@ public class PeopleTest {
 
             }
         };
-
-        //First I need to create new person
-        Person person = new Person(1L);
-        Person person1 = new Person(2L);
-
-
-        //now we need to add the new persons we just made to our people object
-        //When
+        Person person = new Person(5L);
+        Person expected = null;
         people.add(person);
-        people.add(person1);
 
-        Person expected = person1;
-        Person actual = people.findById(2L);
+
+        people.remove(person);
+        Person actual = people.findById(person.getId());
+
 
         Assert.assertEquals(expected, actual);
-
-
-
-
-    }
+        }
 
     @Test
-    public void testRemoveId() {
+    public void testByFindId() {
 
+        long id = 50;
+        String name = "Bobby";
         People people = new People() {
+            @Override
             Person[] getArray() {
                 return new Person[0];
             }
@@ -93,17 +86,13 @@ public class PeopleTest {
 
             }
         };
-        String name = "Bobby";
-        Person expected = new Person(3L);
-
-        //When
+        Person expected = new Person(id);
         people.add(expected);
-        Person actual = people.findById(expected.getId());
 
-        //Then
+
+        Person actual = people.findById(id);
+
         Assert.assertEquals(expected, actual);
-
-
-
     }
+
 }

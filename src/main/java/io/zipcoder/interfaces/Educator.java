@@ -4,9 +4,6 @@ public enum Educator implements Teacher {
     SAMANTHA(0),
     KRIS(1),
     LEON(2),
-    WILHEM(3),
-    NHU(4),
-    DOLIO(5),
     LACEY(6),
     MELANIE(7);
 
@@ -30,7 +27,7 @@ public enum Educator implements Teacher {
 
     @Override
     public void lecture(Learner[] learners, double numberOfHours) {
-        timeWorked += numberOfHours; // subjective
+        timeWorked += numberOfHours;
         instructor.lecture(learners, numberOfHours);
     }
 }
