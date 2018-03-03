@@ -13,7 +13,7 @@ public class ZipCodeWilmingtonTest {
         Student student5 = new Student("Vince",1);
         Students instance = Students.getInstance();
         instance.add(student5);
-        Instructor instructor1 = new Instructor("Kris",10);
+        //Instructor instructor1 = new Instructor("Kris",10);
 
         zcw.hostLecture(Educator.LEON,400);
 

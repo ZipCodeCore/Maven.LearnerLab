@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public abstract class People<E extends Person> {
 
-    ArrayList<E>personList = new ArrayList<E>();
+    public ArrayList<E>personList;
 
 
     public People(){
+        personList = new ArrayList<E>();
 
     }
 
