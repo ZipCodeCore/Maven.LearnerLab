@@ -5,30 +5,25 @@ import org.junit.Test;
 
 public class ZipCodeWilmingtonTest {
 
-    ZipCodeWilmington zipCodeWilmington;
+    ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
 
     @Test
     public void hostLectureTest(){
         //Given
-        double expectedNumberOfHours = 10;
-        Student student = new Student();
-        Instructor instructor = new Instructor();
+        Instructors instructors = Instructors.getInstance();
+        Students students = Students.getINSTANCE();
+        Student student = (Student) students.findPersonById(4);
+
         //When
-        zipCodeWilmington.hostLecture(instructor, expectedNumberOfHours);
+        double expectedNumberOfHours = 100;
+        ZipCodeWilmington.hostOfLecture(6, 100);
         double actualNumberOfHours = student.getTotalStudyTime();
+
+
         //Then
         Assert.assertEquals(expectedNumberOfHours, actualNumberOfHours);
 
-    }
-    @Test
-    public void hostOfLectureTest(){
-        //Given
-        double expectedNumberOfHours = 10;
-        Instructor i1 = new Instructor(876, "Mark");
 
-        //When
-        zipCodeWilmington.hostOfLecture(876, expectedNumberOfHours);
-
-        //Then
     }
+
 }

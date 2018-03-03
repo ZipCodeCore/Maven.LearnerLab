@@ -42,12 +42,13 @@ public class People extends Person {
         return personList.size();
     }
 
-    public Object[] getListAsArray() {
-        return personList.toArray();
+    public Student[] getListAsArray() {
+        return personList.toArray(new Student[personList.size()]);
     }
 
-    public void removeAllEntries(ArrayList<Person> personList) {
+    public void removeAllEntries() {
         personList.removeAll(personList);
+
 
     }
 }

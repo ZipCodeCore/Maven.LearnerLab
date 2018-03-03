@@ -73,14 +73,18 @@ public class PeopleTest {
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void removeAllEntries(){
+    public void removeAllEntriesTest() {
         //Given
         People people = new People();
         Person person = new Person(987);
         Person person2 = new Person(354);
         people.addPerson(person);
         people.addPerson(person2);
-        people.getListAsArray();
+        int expected = 0;
+        //When
+        people.removeAllEntries();
+        int actual = people.getCountOfList();
+        //Then
+        Assert.assertEquals(expected, actual);
     }
-
 }
