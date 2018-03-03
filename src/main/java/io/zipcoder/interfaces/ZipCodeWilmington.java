@@ -1,8 +1,5 @@
 package io.zipcoder.interfaces;
 
-import io.zipcoder.interfaces.Learner;
-import io.zipcoder.interfaces.Teacher;
-
 public final class ZipCodeWilmington {
 
     private static final ZipCodeWilmington instance = new ZipCodeWilmington();
@@ -22,11 +19,11 @@ public final class ZipCodeWilmington {
     // so go to Students class (singleton) with this information
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
-        teacher.lecture(students.getStudentArray(), numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours) {
-        hostLecture(instructors.findInstructorById(id), numberOfHours);
+        hostLecture(instructors.findById(id), numberOfHours);
     }
 
 }

@@ -13,8 +13,8 @@ public class ZipCodeWilmingtonTest {
         double expectedNumberOfHoursPerStudent = expectedNumberOfHours / expectedNumberOfStudents;
         // When
         Instructor instructor = new Instructor();
-        instructor.lecture(Students.getInstance().getStudentArray(), expectedNumberOfHours);
-        double actualNumberOfHoursPerStudent = Students.getInstance().getStudentArray()[0].getTotalStudyTime();
+        instructor.lecture(Students.getInstance().getArray(), expectedNumberOfHours);
+        double actualNumberOfHoursPerStudent = Students.getInstance().getArray()[0].getTotalStudyTime();
         // Then
         Assert.assertEquals(expectedNumberOfHoursPerStudent, actualNumberOfHoursPerStudent, 0.01);
     }
