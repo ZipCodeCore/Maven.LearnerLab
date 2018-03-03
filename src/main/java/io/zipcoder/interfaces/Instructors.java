@@ -14,7 +14,7 @@ package io.zipcoder.interfaces;
 // final classes - cannot be extended or subclassed. prevents unwanted extensions
 // Singleton - ensures that only 1 instance of the class exists in JVM
 
-public final class Instructors extends People {
+public final class Instructors extends People<Instructor> {
 
     private static final Instructors INSTANCE = new Instructors(); // singleton
 
@@ -42,5 +42,7 @@ public final class Instructors extends People {
     }
 
 
-
+    public Instructor[] getArray() {        // implemented from the changes made in people
+        return new Instructor[0];
+    }
 }

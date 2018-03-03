@@ -7,7 +7,15 @@ import static org.junit.Assert.*;
 
 public class TestPeople {
 
-    People testPeople = new People();
+    People testPeople;
+
+    public TestPeople() {
+        testPeople = new People() {
+            public Person[] getArray() {
+                return new Person[0];
+            }
+        };
+    }
 
     @Test
     public void addTest() {

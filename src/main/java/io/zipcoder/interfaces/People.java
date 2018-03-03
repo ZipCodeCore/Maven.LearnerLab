@@ -1,17 +1,22 @@
 package io.zipcoder.interfaces;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 
-public class People {
+//public class People {         before part 10
 
-    ArrayList<Person> personList = new ArrayList<Person>();
+        // part 10 change
+    public abstract class People <E extends Person> {
 
-    public void add(Person person) {
+    //  ArrayList<Person> personList = new ArrayList<Person>();     before part 10
+            ArrayList<E> personList = new ArrayList<E>();           // part 10
+
+    public void add(E person) {     // changed Person to E
         personList.add(person);
     }
 
-    public Person findByID(long id) {
-        for (Person person : personList) {
+    public E findByID(long id) {           // changed Person to E
+        for (E person : personList) {
             if (person.getId() == id) {     // getId from person class
                 return person;
             }
@@ -20,7 +25,7 @@ public class People {
     }
 
 
-    public void remove(Person person) {
+    public void remove(E person) {      // changed Person to E
         personList.remove(person);
     }
 
@@ -32,13 +37,13 @@ public class People {
         return personList.size();
     }
 
-    public Person[] getArray() {
+    public abstract E[] getArray(); /* {
         Person[] personArray = new Person[personList.size()];
         for(int i = 0; i < personArray.length; i++) {
             personArray[i] = personList.get(i);
         }
         return personArray;
-    }
+    }       */           // before part 10
 
 
     public void removeAll() {

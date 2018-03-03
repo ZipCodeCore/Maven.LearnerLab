@@ -42,4 +42,7 @@ public class ZipCodeWilmington extends People {
 //        lectureInstructor.lecture((Learner[]) students.getArray(), numberOfHours);
     }
 
+    public Person[] getArray() {
+        return new Person[0];
+    }
 }

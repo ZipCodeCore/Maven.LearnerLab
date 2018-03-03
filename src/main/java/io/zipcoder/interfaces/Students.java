@@ -12,7 +12,7 @@ package io.zipcoder.interfaces;
 // unextendable - all constructors made private
 // final classes - cannot be extended or subclassed. prevents unwanted extensions
 
-public final class Students extends People {
+public final class Students extends People<Student> {       // add <Student> to be parameterized type of Student
 
 
     private static final Students INSTANCE = new Students();
@@ -41,5 +41,9 @@ public final class Students extends People {
 
     public Student[] getStudentsArray() {
         return studentsArray;
+    }
+
+    public Student[] getArray() {           // implemented from the changes made in people
+        return new Student[0];
     }
 }
