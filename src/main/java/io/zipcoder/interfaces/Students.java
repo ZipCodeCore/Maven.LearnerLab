@@ -25,5 +25,19 @@ public final class Students extends People {
         return INSTANCE;
     }
 
+    // students.getArray() = Students.getInstance().getArray() = INSTANCE.getArray()
+    // INSTANCE.getArray() ==> this returns Person[], not Student[], so need to downcast from Person to Student
+    //    Animal animal = new Animal();
+    //    Dog dog = (Dog) animal
+    //    Student student = (Student) person;
+
+    public Student[] getStudentArray() {
+        Student[] students = new Student[INSTANCE.getArray().length];
+        for (int i = 0; i < INSTANCE.getArray().length; i++) {
+            Student student = (Student) INSTANCE.getArray()[i];
+            students[i] = student;
+        }
+        return students;
+    }
 
 }

@@ -26,4 +26,14 @@ public final class Instructors extends People {
         return INSTANCE;
     }
 
+    public Instructor findInstructorById(long id) {
+        Instructor instructor = new Instructor();
+        for (Person person : personList) {
+            if (person.getId() == id) {
+                instructor = (Instructor) person;
+            }
+        }
+        return instructor;
+    }
+
 }
