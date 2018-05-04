@@ -1,8 +1,5 @@
 package io.zipcoder.interfaces;
 
-import java.util.Arrays;
-
-import static io.zipcoder.interfaces.Educator.TARIQ;
 
 public class Instructor extends Person implements Teacher {
 
@@ -10,12 +7,12 @@ public class Instructor extends Person implements Teacher {
 
     public Instructor(long id) {
         super(id);
-        this.name = name;
+        this.name = "";
     }
 
-    @Override
-    public long getId() {
-        return id;
+    public Instructor(long id, String name){
+        super(id);
+        this.name = name;
     }
 
     @Override

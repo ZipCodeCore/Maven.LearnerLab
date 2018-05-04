@@ -26,4 +26,12 @@ public class TestStudent {
         double actual = student.getTotalStudyTime();
         Assert.assertEquals(expected, actual, 0.0);
     }
+
+    @Test
+    public void testGetId(){
+        Student student = new Student(97, "Luis");
+        Long actual = student.getId();
+        Long expected = Long.valueOf(97);
+        Assert.assertEquals(expected, actual);
+    }
 }

@@ -9,22 +9,14 @@ public final class Students extends People<Student> {
 
 
     private Students() {
-        Student p1 = new Student(100);
-        p1.setName("Anthony");
-        Student p2 = new Student(101);
-        p2.setName("April");
-        Student p3 = new Student(102);
-        p3.setName("Carolynn");
-        Student p4 = new Student(103);
-        p4.setName("Daniel");
-        Student p5 = new Student(104);
-        p5.setName("Frankie");
-        Student p6 = new Student(105);
-        p6.setName("Jess");
-        Student p7 = new Student(106);
-        p7.setName("Joe");
-        Student p8 = new Student(107);
-        p8.setName("Luis");
+        Student p1 = new Student(100, "Anthony");
+        Student p2 = new Student(101, "April");
+        Student p3 = new Student(102, "Carolynn");
+        Student p4 = new Student(103, "Daniel");
+        Student p5 = new Student(104, "Frankie");
+        Student p6 = new Student(105, "Jess");
+        Student p7 = new Student(106, "Joe");
+        Student p8 = new Student(107, "Luis");
         this.add(p1);
         this.add(p2);
         this.add(p3);
@@ -36,16 +28,24 @@ public final class Students extends People<Student> {
 
     }
 
-    public void add(Student person) {
-        personList.add(person);
+    public void add(Student student) {
+        getPersonList().add(student);
     }
 
     public Student[] getArray(){
-        Student[] personArray = new Student[personList.size()];
-        for(int i = 0; i<personList.size(); i++) {
-            personArray[i] = personList.get(i);
+        Student[] personArray = new Student[getPersonList().size()];
+        for(int i = 0; i<personArray.length; i++) {
+            personArray[i] = getPersonList().get(i);
         }
         return personArray;
+    }
+
+    public String studentArrayToString(Student[] array){
+        String x = "";
+        for(Student student: array){
+            x+= student.getName() + " ";
+        }
+        return x;
     }
 
     public static Students getInstance() {

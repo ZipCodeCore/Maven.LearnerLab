@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 public class Person {
 
-    protected final long id;
+    private final long id;
     private String name;
 
     public Person(long id) {

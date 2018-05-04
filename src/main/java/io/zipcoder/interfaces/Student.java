@@ -1,7 +1,6 @@
 package io.zipcoder.interfaces;
 
 public class Student extends Person implements Learner {
-
     private double totalStudyTime;
     private String name;
 
@@ -9,11 +8,11 @@ public class Student extends Person implements Learner {
         super(id);
         this.name = "";
     }
-
-    @Override
-    public long getId(){
-        return super.id;
+    public Student(long id, String name){
+        super(id);
+        this.name = name;
     }
+
     public void setName(String name) {
         this.name = name;
     }

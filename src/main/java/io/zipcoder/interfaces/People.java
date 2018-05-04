@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class People <E extends Person> {
 
-    protected ArrayList<E> personList;
+    private ArrayList<E> personList;
     protected long id;
 
     public People(){
@@ -14,6 +14,10 @@ public abstract class People <E extends Person> {
 
     public void add(E person) {
         personList.add(person);
+    }
+
+    public ArrayList<E> getPersonList(){
+        return personList;
     }
 
     public <E extends Person> E findById(long id) {
