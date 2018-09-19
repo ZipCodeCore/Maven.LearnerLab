@@ -1,6 +1,8 @@
 package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+
 import static io.zipcoder.interfaces.Educator.TARIQ;
 
 public final class Instructors extends People<Instructor> {
@@ -8,21 +10,15 @@ public final class Instructors extends People<Instructor> {
     private static final Instructors INSTANCE = new Instructors();
 
     private Instructors(){
-        Instructor dirOfEd = new Instructor(1000, "Tariq");
-        Instructor bigData = new Instructor( 1001, "Wilhem");
-        Instructor enumKing = new Instructor( 1002, "Leon");
-        Instructor farmer = new Instructor( 1003, "Froilan");
-        Instructor instruct4 = new Instructor( 1004, "Nhu");
-        Instructor instruct5 = new Instructor( 1005, "Kris");
-        Instructor instruct6 = new Instructor( 1006, "Dolio");
-        this.add(dirOfEd);
-        this.add(bigData);
-        this.add(enumKing);
-        this.add(farmer);
-        this.add(instruct4);
-        this.add(instruct5);
-        this.add(instruct6);
-
+        Instructor dirOfEd = Educator.TARIQ.instructor;
+        Instructor bigData = Educator.WILHELM.instructor;
+        Instructor enumKing = Educator.LEON.instructor;
+        Instructor farmer = Educator.FROILAN.instructor;
+        Instructor instruct4 = Educator.NHU.instructor;
+        Instructor instruct5 = Educator.KRIS.instructor;
+        Instructor instruct6 = Educator.DOLIO.instructor;
+        Instructor[] instructors = {dirOfEd,bigData,enumKing,farmer,instruct4,instruct5,instruct6};
+        this.addAll(instructors);
     }
 
     @Override
@@ -32,6 +28,7 @@ public final class Instructors extends People<Instructor> {
             personArray[i] = getPersonList().get(i);
         }
         return personArray;
+
     }
 
     public String instructorArrayToString(Instructor[] array){

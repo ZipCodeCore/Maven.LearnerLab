@@ -5,10 +5,11 @@ import org.junit.Test;
 
 public class TestZipCodeWilmington {
 
+    ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
+    Students students = Students.getInstance();
     @Test
     public void testHostLectureOne(){
-        ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
-        Students students = Students.getInstance();
+
         Student student1 = students.findById(102);
         student1.setTotalStudyTime(50);
         Instructor dirOfEd = Instructors.getInstance().findById(1000);
@@ -20,8 +21,6 @@ public class TestZipCodeWilmington {
 
     @Test
     public void testHostLectureTwo(){
-        ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
-        Students students = Students.getInstance();
         Student student1 = students.findById(102);
         student1.setTotalStudyTime(50);
         zipCodeWilmington.hostLecture(1000, 24);

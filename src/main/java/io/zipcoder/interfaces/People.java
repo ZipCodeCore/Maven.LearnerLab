@@ -1,6 +1,7 @@
 package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public abstract class People <E extends Person> {
 
@@ -18,6 +19,10 @@ public abstract class People <E extends Person> {
 
     public ArrayList<E> getPersonList(){
         return personList;
+    }
+
+    public void addAll(E[] people){
+        personList.addAll(Arrays.asList(people));
     }
 
     public <E extends Person> E findById(long id) {
@@ -45,14 +50,16 @@ public abstract class People <E extends Person> {
         }
     }
 
+    public void removeAll() {
+        personList.clear();
+    }
+
     public int getCount() {
         return personList.size();
     }
 
     public abstract E[] getArray();
 
-    public void removeAll() {
-        personList.clear();
-    }
+
 
 }

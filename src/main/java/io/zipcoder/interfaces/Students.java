@@ -25,22 +25,24 @@ public final class Students extends People<Student> {
         this.add(p6);
         this.add(p7);
         this.add(p8);
-
+        getPersonList();
     }
 
     public void add(Student student) {
-        getPersonList().add(student);
+        this.getPersonList().add(student);
     }
 
     public Student[] getArray(){
+
         Student[] personArray = new Student[getPersonList().size()];
         for(int i = 0; i<personArray.length; i++) {
             personArray[i] = getPersonList().get(i);
         }
         return personArray;
+
     }
 
-    public String studentArrayToString(Student[] array){
+    public String toString(Student[] array){
         String x = "";
         for(Student student: array){
             x+= student.getName() + " ";
