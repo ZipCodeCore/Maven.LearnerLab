@@ -20,7 +20,7 @@
 -
 ### Part 1.0 - Test `Person`
 * Create a `TestPerson` class.
-	* Create a `testConstructor` method which ensures that a `Person` object's `id` field is being set upon construction.
+	* Create a `testConstructor` method which ensures that a `Person` object's `id` and `name` field are being set upon construction.
 	* Create a `testSetName` method which ensures that a `Person` object's `name` variable is being set by invoking the `.setName` method.
 
 -
