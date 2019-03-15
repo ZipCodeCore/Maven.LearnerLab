@@ -91,14 +91,16 @@
 -
 ### Part 6.1 - Create `People` class
 * Create a `People` class.
-	* The class should instantiate an `ArrayList` field of `Person` objects named `personList`.
+	* The class should instantiate a `List` field of `Person` objects named `personList`.
 	* The class should define a method named `add` which adds a `Person` to the `personList`.
 	* The class should define a method named `findById` which makes use of a `long id` parameter to return a `Person` object with the respective `id` field.
+	* The class should define a named `contains` which makes use of a `Person person` parameter to return `true` if the `personList` contains the respective `Person` object.
 	* The class should define a method named `remove` which makes use of a `Person person` parameter to remove a respective `Person` object.
 	* The class should define a method named `remove` which makes use of a `long id` parameter to remove a `Person` object with the respective `id` field.
-	* The class should define a method named `getCount` which returns the size of `personList`.
-	* The class should define a method named `getArray` which returns an array representation of the `personList` field.
 	* The class should define a named `removeAll` which clears our `personList` field.
+	* The class should define a method named `count` which returns the size of `personList`.
+	* The class should define a method named `toArray` which returns an array representation of the `personList` field.
+	* The class should implement `Iterable<E>` and define a method named `iterator` which makes use of the `personList` field to generate a new a `Iterator<E>`.
 	
 -
 ### Part 6.0 - Test `People`
@@ -141,6 +143,7 @@
 	* The class should declare a field that references the instance of `Instructors` called `instructors`.
 	* The class should define a method `hostLecture` which makes use of a `Teacher teacher, double numberOfHours` parameter to host a `lecture` to the composite `personList` field in the `students` reference.
 	* The class should define a method `hostLecture` which makes use of a `long id, double numberOfHours` parameter to identify a respective `Instructor` to host a `lecture` to the composite `personList` field in the `cohort` reference.
+	* The class should define a method `getStudyMap` which returns a <u>new instance</u> of a _mapping_ from `Student` objects to `Double` objects, representative of each respective student's `totalStudyTime`.
 
 -
 ### Part 9.0 - Test `ZipCodeWilmington`
