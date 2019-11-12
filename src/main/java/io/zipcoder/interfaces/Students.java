@@ -1,4 +1,11 @@
 package io.zipcoder.interfaces;
 
-public class Students{
+final class Students{
+
+    final static Students INSTANCE = null;
+
+    private Students(){
+
+
+    }
 }
