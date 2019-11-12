@@ -55,8 +55,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestStudents">
-    <configuration name="TestPeople.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestInstructors.testGetInstance">
+    <configuration name="TestInstructors.testGetInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="interfaces-1" />
       <extension name="coverage">
         <pattern>
@@ -65,8 +65,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
-      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestPeople" />
-      <option name="METHOD_NAME" value="findById" />
+      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestInstructors" />
+      <option name="METHOD_NAME" value="testGetInstance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestInstructors.testGetInstance" />
         <item itemvalue="JUnit.TestStudents" />
         <item itemvalue="JUnit.TestStudents.testContains" />
         <item itemvalue="JUnit.TestStudents.testStudents" />
         <item itemvalue="JUnit.TestPeople.remove" />
-        <item itemvalue="JUnit.TestPeople.findById" />
       </list>
     </recent_temporary>
   </component>

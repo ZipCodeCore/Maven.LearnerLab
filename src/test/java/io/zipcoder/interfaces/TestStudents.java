@@ -6,7 +6,7 @@ import org.junit.Test;
 public class TestStudents {
 
     @Test
-    public void testStudent(){
+    public void testGetInstance(){
         Students s = Students.getInstance();
         Person julio = s.findById(2);
 

@@ -7,7 +7,7 @@ public class Students extends People{
         super();
         super.add(new Student(1, "Morgan"));
         super.add(new Student(2, "Julio"));
-        super.add(new Student(3, "Jose"));
+        super.add(new Student(3, "Cuervo"));
     }
 
     public static Students getInstance(){
