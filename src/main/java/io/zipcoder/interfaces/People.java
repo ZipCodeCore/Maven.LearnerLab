@@ -1,6 +1,7 @@
 package io.zipcoder.interfaces;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -8,6 +9,7 @@ public class People implements Iterable{
     private List<Person> personList;
 
     public People() {
+        personList = new ArrayList<Person>();
     }
 
     public void add(Person person) {
