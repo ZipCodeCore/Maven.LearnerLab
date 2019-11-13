@@ -17,6 +17,7 @@ public class Instructors extends People<Instructor> {
         for (int i = 0; i < 5; i++) {
             INSTANCE.add(new Instructor(Long.valueOf(i+1), "instructor"+i));
         }
+
     }
 
     public Instructor[] toArray() {
