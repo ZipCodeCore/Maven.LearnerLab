@@ -1,11 +1,16 @@
 package io.zipcoder.interfaces;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class People implements Iterable<Person> {
 
     List<Person> personList;
+
+    public People(){
+        personList = new ArrayList<Person>();
+    }
 
     public void add(Person person){
         personList.add(person);
@@ -28,9 +33,7 @@ public class People implements Iterable<Person> {
     }
 
     public void removeById(long id){
-        for(Person person : personList)
-            if(person.getId() == id)
-                personList.remove(person);
+        personList.remove(findById(id));
     }
 
     public void removeAll(){
@@ -46,6 +49,6 @@ public class People implements Iterable<Person> {
     }
 
     public Iterator<Person> iterator() {
-        return null;
+        return personList.iterator();
     }
 }
