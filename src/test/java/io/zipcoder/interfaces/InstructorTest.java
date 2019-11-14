@@ -38,5 +38,19 @@ public class InstructorTest {
 
     @Test
     public void lecture() {
+        testInstructor = new Instructor(32L,"John");
+        Student student1 = new Student(44L,"Joe");
+        Student student2 = new Student(43L,"Sam");
+        Student student3 = new Student(41L,"Jack");
+
+        Student[] students = {student1,student2,student3};
+
+        testInstructor.lecture(students,9);
+
+        double expected = 3;
+        double actual = student1.getTotalStudyTime();
+
+        Assert.assertEquals(expected,actual,0.0);
+
     }
 }
