@@ -1,5 +1,5 @@
 # Leon's Lengthy Learner Lab 
-* **Objective** - to implement a `ZipCodeWilmington` class which _mediates_ a _composite_ `Students` and `Instructors` _singleton_ reference.
+* **Objective** - to implement a `ZipCodeWilmington` class which _mediates_ a _composite_ `io.zipcoder.interfaces.Students` and `Instructors` _singleton_ reference.
 * **Purpose** - to demonstrate the use of
 	* [interfaces](https://stackoverflow.com/questions/1321122/what-is-an-interface-in-java)
 	* [abstract classes](https://stackoverflow.com/questions/1320745/abstract-class-in-java)
@@ -111,11 +111,11 @@
 
 
 -
-### Part 7.1 - Create `Students` singleton
+### Part 7.1 - Create `io.zipcoder.interfaces.Students` singleton
 * **Note:** The creation of this class will demonstrate an implementation of [singleton design pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples#eager-initialization).
-* Create a `Students` class.
+* Create a `io.zipcoder.interfaces.Students` class.
 	* The class should be an _unextendable_ subclass of the `People` class.
-	* The class should _statically instantiate_ a `final` field named `INSTANCE` of type `Students`.
+	* The class should _statically instantiate_ a `final` field named `INSTANCE` of type `io.zipcoder.interfaces.Students`.
 	* The class should define a _private nullary constructor_ which populates the `INSTANCE` field with respective `Student` representations of your colleagues.
 		* Each student should have a _relatively_ unique `id` field.
 	* The class should define a `getInstance` method which returns the `INSTANCE` field.
@@ -123,9 +123,9 @@
 	
 
 -
-### Part 7.0 - Test `Students` singleton
+### Part 7.0 - Test `io.zipcoder.interfaces.Students` singleton
 * Create a `TestStudents` class.
-	* Create a `test` method which ensures that each of the students in your current cohort are in your `Students` singleton.
+	* Create a `test` method which ensures that each of the students in your current cohort are in your `io.zipcoder.interfaces.Students` singleton.
 
 
 
@@ -139,7 +139,7 @@
 -
 ### Part 9.1 - Create `ZipCodeWilmington` Class
 * Create a `ZipCodeWilmington` singleton.
-	* The class should declare a field that references the instance of `Students` called `students`.
+	* The class should declare a field that references the instance of `io.zipcoder.interfaces.Students` called `students`.
 	* The class should declare a field that references the instance of `Instructors` called `instructors`.
 	* The class should define a method `hostLecture` which makes use of a `Teacher teacher, double numberOfHours` parameter to host a `lecture` to the composite `personList` field in the `students` reference.
 	* The class should define a method `hostLecture` which makes use of a `long id, double numberOfHours` parameter to identify a respective `Instructor` to host a `lecture` to the composite `personList` field in the `cohort` reference.
@@ -176,7 +176,7 @@
 
 -
 ### Part 10.2 - Modify `People` subclasses
-* Modify the `Students` class signature to ensure that it is a subclass of `People` of parameterized type `Student`.
+* Modify the `io.zipcoder.interfaces.Students` class signature to ensure that it is a subclass of `People` of parameterized type `Student`.
 * Modify the `Instructors` class signature to ensure that it is a subclass of `People` of parameterized type `Instructor`.
 * Provide concrete implementations of the `getArray` method in each of these classes.
 

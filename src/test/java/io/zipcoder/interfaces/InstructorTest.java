@@ -19,9 +19,25 @@ public class InstructorTest {
     }
     @Test
     public void testTeach() {
+        Instructor instructor = new Instructor(null,null);
+        Student student = new Student(null,null);
+        Double expected = 10D;
+        instructor.teach(student,expected);
+
+        Assert.assertEquals(expected,student.getTotalStudyTime());
     }
 
     @Test
     public void testLecture() {
+        Instructor instructor = new Instructor(null, null);
+        Student student = new Student(null, null);
+        Student student2 = new Student(null, null);
+        Student student3 = new Student(null, null);
+        Learner[] students = {student, student2, student3};
+        Double numberOfHours = 9D;
+        Double totalHoursSplit = numberOfHours / students.length;
+
+        instructor.lecture(students, numberOfHours);
+        Assert.assertEquals(totalHoursSplit, student.getTotalStudyTime());
     }
 }
