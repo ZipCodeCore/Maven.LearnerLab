@@ -25,6 +25,15 @@ public class InstructorTest {
 
     @Test
     public void teach() {
+        testInstructor = new Instructor(32L,"John");
+        Student testStudent = new Student(44L,"Joe");
+
+        testInstructor.teach(testStudent,24);
+
+        double expected = 24;
+        double actual = testStudent.getTotalStudyTime();
+
+        Assert.assertEquals(expected,actual,0.0);
     }
 
     @Test
