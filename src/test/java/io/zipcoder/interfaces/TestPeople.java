@@ -5,38 +5,34 @@ import org.junit.Test;
 
 public class TestPeople {
 
+
     @Test
     public void addTest(){
-        People newPeople = new People();
-        Person personOne = new Person(398429847L, "Brian");
-
-        int expectedPeeps = 1;
+        Student personOne = new Student(398429847L, "Brian");
+        Students newPeople = Students.getInstance();
         newPeople.add(personOne);
-        int actualPeeps = newPeople.count();
 
-        Assert.assertEquals(expectedPeeps, actualPeeps);
+        Assert.assertTrue(newPeople.contains(personOne));
     }
 
     @Test
     public void removebyIDTest(){
-        People newPeople = new People();
-        Person personOne = new Person(398429847L, "Brian");
-        Person personTwo = new Person(242487613L, "Mike");
+        Students newPeople = Students.getInstance();
+        Student personOne = new Student(398429847L, "Brian");
+        Student personTwo = new Student(242487613L, "Mike");
 
-        int expectedPeeps = 1;
         newPeople.add(personOne);
         newPeople.add(personTwo);
         newPeople.removeById(242487613L);
-        int actualPeeps = newPeople.count();
 
-        Assert.assertEquals(expectedPeeps, actualPeeps);
+        Assert.assertFalse(newPeople.contains(personTwo));
     }
 
     @Test
     public void removeAllTest(){
-        People newPeople = new People();
-        Person personOne = new Person(398429847L, "Brian");
-        Person personTwo = new Person(242487613L, "Mike");
+        Students newPeople = Students.getInstance();
+        Student personOne = new Student(398429847L, "Brian");
+        Student personTwo = new Student(242487613L, "Mike");
 
         int expectedPeeps = 0;
         newPeople.add(personOne);
@@ -50,8 +46,8 @@ public class TestPeople {
 
     @Test
     public void findByIdTest(){
-        People newPeople = new People();
-        Person personOne = new Person(398429847L, "Brian");
+        Students newPeople = Students.getInstance();
+        Student personOne = new Student(398429847L, "Brian");
 
         long expectedPersonById = 398429847L;
         newPeople.add(personOne);

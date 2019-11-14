@@ -26,7 +26,7 @@ public class TestInstructors {
             if(person.getId().equals(311412L) && person.getName().equals("Dolio"))
                 personOne = true;
 
-            if(person.getId().equals(121231L) && person.getName().equals("Roberto"))
+            if(person.getId().equals(24302L) && person.getName().equals("Roberto"))
                 personTwo = true;
         }
 
