@@ -9,7 +9,7 @@ public class PeopleTest {
     People testPerson;
 
     @Test
-    public void add() {
+    public void testAdd() {
         testPerson = new People();
         Person person = new Person(32L,"Joe");
         Integer actual;
@@ -27,10 +27,17 @@ public class PeopleTest {
     }
 
     @Test
-    public void findById() {
+    public void testFindById() {
+        testPerson = new People();
+        Person person = new Person(32L,"Joe");
+
+        testPerson.add(person);
+
+        Assert.assertEquals(person,testPerson.findById(32L));
+        Assert.assertNotEquals(person,testPerson.findById(31L));
     }
 
     @Test
-    public void remove() {
+    public void testRemove() {
     }
 }
