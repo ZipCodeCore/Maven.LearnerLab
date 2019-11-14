@@ -39,5 +39,17 @@ public class PeopleTest {
 
     @Test
     public void testRemove() {
+        testPerson = new People();
+        Person person = new Person(32L,"Joe");
+        Person person1 = new Person(30L,"Jack");
+
+        testPerson.add(person);
+        testPerson.add(person1);
+
+        Integer expected = 1;
+        testPerson.remove(32L);
+        Integer actual = testPerson.count();
+
+        Assert.assertEquals(expected,actual);
     }
 }
