@@ -3,16 +3,17 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestStudents {
+public class TestInstructors {
+
 
     @Test
-    public void studentsContainsTest(){
-        Students test = Students.getInstance();
+    public void studentsContainsTest() {
+        Instructors test = Instructors.getInstance();
 
         int actual = test.count();
         int expected = 3;
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -20,11 +21,12 @@ public class TestStudents {
     }
 
     @Test
-    public void studentsContainsTest2(){
-        Students test = Students.getInstance();
-        Person actual = test.findById(25L);
+    public void instructorsContainsTest2() {
+        Instructors test = Instructors.getInstance();
+        Person actual = test.findById(35L);
         Person expected = test.personList.get(0);
 
         Assert.assertEquals(expected, actual);
     }
 }
+
