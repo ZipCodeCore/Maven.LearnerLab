@@ -59,8 +59,11 @@ public class TestZipCodeWilmington {
     @Test
     public void testHostLecture() {
         Instructor instructor = Instructors.getInstance().findById(Long.valueOf(1));
+
         ZipCodeWilmington.hostLecture(instructor, 350.0);
+
         Map<Student, Double> map =  ZipCodeWilmington.getStudyMap();
+
         StringBuilder output = new StringBuilder();
         for (Student student: map.keySet()) {
             output.append(String.format("%s\t%s\n",student.getName(), map.get(student)));

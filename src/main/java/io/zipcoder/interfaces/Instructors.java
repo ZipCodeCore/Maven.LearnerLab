@@ -21,6 +21,6 @@ public class Instructors extends People<Instructor> {
     }
 
     public Instructor[] toArray() {
-        return personList.toArray(new Instructor[personList.size()]);
+        return personList.toArray(new Instructor[0]);
     }
 }

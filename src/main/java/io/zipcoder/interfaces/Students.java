@@ -5,21 +5,21 @@ public class Students extends People<Student> {
 
     private Students() {}
 
-    public static Students getInstance() {
+    static Students getInstance() {
         if (INSTANCE == null) {
-            INSTANCE.add(new Student(Long.valueOf(3), "Wes"));
+            INSTANCE.add(new Student(3L, "Wes"));
         }
         return INSTANCE;
     }
 
     static {
         INSTANCE = new Students();
-        for (int i = 0; i < 35; i++) {
-            INSTANCE.add(new Student(Long.valueOf(i+1), "student"+i));
+        for (long i = 0; i < 35; i++) {
+            INSTANCE.add(new Student(i+1L, "student"+i));
         }
     }
 
     public Student[] toArray() {
-        return personList.toArray(new Student[personList.size()]);
+        return personList.toArray(new Student[0]);
     }
 }

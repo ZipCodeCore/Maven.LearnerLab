@@ -1,36 +1,38 @@
 package io.zipcoder.interfaces;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestPeople {
-    @Test
-    public void testAdd1() {
-        Person person1 = new Person(Long.valueOf(3), "rake");
-        Person person2 = new Person(Long.valueOf(2), "ferb");
-        People people = new ConcretePeople();
+    People<Person> people;
+    Person person1, person2, person3;
+
+    @Before
+    public void setUp() {
+        people = new ConcretePeople();
+        person1 = new Person(3L, "rake");
+        person2 = new Person(2L, "ferb");
+        person3 = new Person(5L, "jimothy");
         people.add(person1);
         people.add(person2);
-        Assert.assertTrue(people.contains(person1));
+    }
+
+    @Test
+    public void testAdd1() {
+        people.add(person3);
+        Assert.assertTrue(people.contains(person3));
     }
 
     @Test
     public void testAdd2() {
-        Person person1 = new Person(Long.valueOf(3), "rake");
-        Person person2 = new Person(Long.valueOf(2), "ferb");
-        People people = new ConcretePeople();
-        people.add(person1);
-        people.add(person2);
-        Assert.assertTrue(people.contains(person2));
+        Person person4 = new Person(6L, "lump");
+        people.add(person4);
+        Assert.assertTrue(people.contains(person4));
     }
 
     @Test
     public void testRemove() {
-        Person person1 = new Person(Long.valueOf(3), "rake");
-        Person person2 = new Person(Long.valueOf(2), "ferb");
-        People people = new ConcretePeople();
-        people.add(person1);
-        people.add(person2);
         Assert.assertTrue(people.contains(person2));
         people.remove(person2);
         Assert.assertFalse(people.contains(person2));
@@ -38,11 +40,6 @@ public class TestPeople {
 
     @Test
     public void testRemoveById() {
-        Person person1 = new Person(Long.valueOf(3), "rake");
-        Person person2 = new Person(Long.valueOf(2), "ferb");
-        People people = new ConcretePeople();
-        people.add(person1);
-        people.add(person2);
         Assert.assertTrue(people.contains(person2));
         people.remove(Long.valueOf(2));
         Assert.assertFalse(people.contains(person2));
@@ -50,11 +47,6 @@ public class TestPeople {
 
     @Test
     public void testRemoveAll() {
-        Person person1 = new Person(Long.valueOf(3), "rake");
-        Person person2 = new Person(Long.valueOf(2), "ferb");
-        People people = new ConcretePeople();
-        people.add(person1);
-        people.add(person2);
         Assert.assertTrue(people.contains(person2));
         people.removeAll();
         Integer actual = people.count();
@@ -64,23 +56,13 @@ public class TestPeople {
 
     @Test
     public void testFindById() {
-        Person person1 = new Person(Long.valueOf(3), "rake");
-        Person person2 = new Person(Long.valueOf(2), "ferb");
-        People people = new ConcretePeople();
-        people.add(person1);
-        people.add(person2);
-        Person actual = people.findById(Long.valueOf(3));
+        Person actual = people.findById(3L);
         Person expected = person1;
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testToArray() {
-        Person person1 = new Person(Long.valueOf(3), "rake");
-        Person person2 = new Person(Long.valueOf(2), "ferb");
-        People people = new ConcretePeople();
-        people.add(person1);
-        people.add(person2);
         Person[] personArr = people.toArray();
         Assert.assertEquals(2, personArr.length);
     }
