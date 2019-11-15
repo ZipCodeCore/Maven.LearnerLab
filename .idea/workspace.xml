@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc010251-3cea-4969-8e23-820dab37fa5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ConcretePeople.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestZipCodeWilmington.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Instructors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/People.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/Students.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipCodeWilmington.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zipcoder/interfaces/ZipCodeWilmington.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPeople.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestPeople.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestZipCodeWilmington.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/zipcoder/interfaces/TestZipCodeWilmington.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,71 +49,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestPeople.testToArray">
-    <configuration name="TestPeople.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interfaces-1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
-      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestPeople" />
-      <option name="METHOD_NAME" value="findById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPeople.testCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interfaces-1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
-      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestPeople" />
-      <option name="METHOD_NAME" value="testCount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPeople.testRemoveAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interfaces-1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
-      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestPeople" />
-      <option name="METHOD_NAME" value="testRemoveAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPeople.testRemoveById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interfaces-1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
-      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestPeople" />
-      <option name="METHOD_NAME" value="testRemoveById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestZipCodeWilmington">
     <configuration name="TestPeople.testToArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="interfaces-1" />
       <extension name="coverage">
@@ -144,13 +66,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestZipCodeWilmington" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interfaces-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestZipCodeWilmington" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestZipCodeWilmington.testGetStudyMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interfaces-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestZipCodeWilmington" />
+      <option name="METHOD_NAME" value="testGetStudyMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestZipCodeWilmington.testHostLecture1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interfaces-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestZipCodeWilmington" />
+      <option name="METHOD_NAME" value="testHostLecture1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestZipCodeWilmington.testHostLecture2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interfaces-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.zipcoder.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.zipcoder.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="io.zipcoder.interfaces.TestZipCodeWilmington" />
+      <option name="METHOD_NAME" value="testHostLecture2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestZipCodeWilmington" />
+        <item itemvalue="JUnit.TestZipCodeWilmington.testHostLecture2" />
+        <item itemvalue="JUnit.TestZipCodeWilmington.testGetStudyMap" />
+        <item itemvalue="JUnit.TestZipCodeWilmington.testHostLecture1" />
         <item itemvalue="JUnit.TestPeople.testToArray" />
-        <item itemvalue="JUnit.TestPeople.testCount" />
-        <item itemvalue="JUnit.TestPeople.testRemoveAll" />
-        <item itemvalue="JUnit.TestPeople.testRemoveById" />
-        <item itemvalue="JUnit.TestPeople.findById" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573841788344</updated>
-      <workItem from="1573841791187" duration="4829000" />
+      <workItem from="1573841791187" duration="8433000" />
     </task>
     <servers />
   </component>
