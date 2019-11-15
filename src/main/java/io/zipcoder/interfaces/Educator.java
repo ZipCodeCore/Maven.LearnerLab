@@ -2,10 +2,10 @@ package io.zipcoder.interfaces;
 
 public enum Educator implements Teacher {
 
-    BIP(new Instructor(2323L, "BIP")), BOOP(new Instructor(3232L, "BOOP"));
+    ONE(new Instructor(2323L, "BIP")), BOOP(new Instructor(3232L, "BOOP"));
 
     Instructor instructor;
-    Double timeWorked;
+    Double timeWorked = 0D;
 
     Educator(Instructor instructor) {
     this.instructor = instructor;

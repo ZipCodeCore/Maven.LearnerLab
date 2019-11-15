@@ -9,21 +9,31 @@ public class EducatorTest {
 
     @Test
     public void testImplementation(){
-        Instructor instructor = new Instructor(null,null);
+        Educator instructor = Educator.BOOP;
         Assert.assertTrue(instructor instanceof Teacher);
     }
 
     @Test
-    public void testInheritance(){
-        Instructor instructor = new Instructor(null,null);
-        Assert.assertTrue(instructor instanceof Person);
-    }
-
-    @Test
     public void teach() {
+        Student student = new Student(null,null);
+        Double numberOfHours = 3D;
+        Educator.BOOP.teach(student, numberOfHours);
+        Double expectedHours = 3D;
+
+        Assert.assertEquals(expectedHours, student.getTotalStudyTime());
     }
 
     @Test
     public void lecture() {
+        Instructor instructor = new Instructor(null, null);
+        Student student = new Student(null, null);
+        Student student2 = new Student(null, null);
+        Student student3 = new Student(null, null);
+        Learner[] students = {student, student2, student3};
+        Double numberOfHours = 9D;
+        Double totalHoursSplit = numberOfHours / students.length;
+        Educator.BOOP.lecture(students, numberOfHours);
+
+        Assert.assertEquals(totalHoursSplit, student.getTotalStudyTime());
     }
 }

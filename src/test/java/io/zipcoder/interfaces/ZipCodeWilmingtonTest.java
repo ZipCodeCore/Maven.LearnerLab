@@ -49,6 +49,20 @@ public class ZipCodeWilmingtonTest {
     }
 
     @Test
+    public void hostByLectureEducatorTest() {
+        Students students = Students.getInstance();
+        Educator educator = Educator.BOOP;
+        Long expectedStudentId = 34L;
+        Student student = students.findByID(expectedStudentId);
+        Double numberOfHours = 12D;
+        ZipCodeWilmington zipCodeWilmington = new ZipCodeWilmington();
+        zipCodeWilmington.hostLecture(educator,numberOfHours);
+        Double expectedHours = 3D;
+
+        Assert.assertEquals(expectedHours, student.getTotalStudyTime());
+    }
+
+    @Test
     public void getStudyMapTest(){
         Students students = Students.getInstance();
         Long expectedTeacherId = 2323L;

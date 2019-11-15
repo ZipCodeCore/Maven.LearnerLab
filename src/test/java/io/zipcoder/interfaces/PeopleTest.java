@@ -8,10 +8,6 @@ import org.junit.Test;
 
 public class PeopleTest {
 
-    @Before
-    public void createInstance(){
-    }
-
     @Test
     public void addTest() {
         Student student = new Student(34L,"Gau");
