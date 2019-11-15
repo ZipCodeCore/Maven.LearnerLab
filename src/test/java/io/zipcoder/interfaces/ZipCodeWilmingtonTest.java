@@ -1,5 +1,6 @@
 package io.zipcoder.interfaces;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -7,9 +8,9 @@ import static org.junit.Assert.*;
 public class ZipCodeWilmingtonTest {
 
     @Test
-    public void getStudyMap() {
-        Students students = Students.INSTANCE.getInstance();
-        Instructors instructors = Instructors.INSTANCE.getInstance();
+    public void getStudyMapByNameTest() {
+        Students students = Students.getInstance();
+        Instructors instructors = Instructors.getInstance();
         Long expectedTeacherId = 2323L;
         Teacher teacher = instructors.findByID(expectedTeacherId);
         Long expectedStudentId = 34L;
@@ -17,7 +18,24 @@ public class ZipCodeWilmingtonTest {
         Double numberOfHours = 12D;
         ZipCodeWilmington zipCodeWilmington = new ZipCodeWilmington();
         zipCodeWilmington.hostLecture(teacher,numberOfHours);
-        System.out.println(student.getTotalStudyTime());
+        Double expectedHours = 3D;
+
+        Assert.assertEquals(expectedHours, student.getTotalStudyTime());
+
+    }
+
+    @Test
+    public void getStudyMapByIdTest() {
+        Students students = Students.getInstance();
+        Student student = new Student (98L, "Edgar");
+        students.add(student);
+        Long expectedTeacherId = 2323L;
+        Double numberOfHours = 12D;
+        ZipCodeWilmington zipCodeWilmington = new ZipCodeWilmington();
+        zipCodeWilmington.hostLecture(expectedTeacherId,numberOfHours);
+        Double expectedHours = 2.4;
+
+        Assert.assertEquals(expectedHours, student.getTotalStudyTime());
 
     }
 }
