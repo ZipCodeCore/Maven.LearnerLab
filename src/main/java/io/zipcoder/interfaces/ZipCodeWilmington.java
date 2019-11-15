@@ -3,7 +3,7 @@ package io.zipcoder.interfaces;
 import java.util.HashMap;
 
 public class ZipCodeWilmington {
-
+    private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
     private static final Students students = Students.getInstance();
     private static final Instructors instructors = Instructors.getInstance();
 

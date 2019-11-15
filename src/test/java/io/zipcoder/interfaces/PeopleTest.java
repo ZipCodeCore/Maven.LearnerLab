@@ -1,10 +1,16 @@
 package io.zipcoder.interfaces;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class PeopleTest {
+
+    @Before
+    public void createInstance(){
+    }
 
     @Test
     public void addTest() {
@@ -48,5 +54,13 @@ public class PeopleTest {
         instructors.remove(instructor);
 
         Assert.assertFalse(instructors.contains(instructor));
+    }
+
+    @After
+    public void clearInstance(){
+        Students students = Students.getInstance();
+        for(int i = 4; i < students.personList.size(); i++){
+            students.personList.remove(i);
+        }
     }
 }

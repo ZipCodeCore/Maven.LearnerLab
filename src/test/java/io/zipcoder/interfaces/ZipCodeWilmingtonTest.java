@@ -1,14 +1,25 @@
 package io.zipcoder.interfaces;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.HashMap;
 
 import static org.junit.Assert.*;
 
 public class ZipCodeWilmingtonTest {
 
+    @Before
+    public void singletonReset(){
+        Students students = Students.getInstance();
+        for(Student s: students.personList){
+            s.setTotalStudyTime(0D);
+        }
+    }
+
     @Test
-    public void getStudyMapByNameTest() {
+    public void hostLectureByTeacherTest() {
         Students students = Students.getInstance();
         Instructors instructors = Instructors.getInstance();
         Long expectedTeacherId = 2323L;
@@ -21,21 +32,37 @@ public class ZipCodeWilmingtonTest {
         Double expectedHours = 3D;
 
         Assert.assertEquals(expectedHours, student.getTotalStudyTime());
-
     }
 
     @Test
-    public void getStudyMapByIdTest() {
+    public void hostLectureByIdTest() {
         Students students = Students.getInstance();
-        Student student = new Student (98L, "Edgar");
-        students.add(student);
         Long expectedTeacherId = 2323L;
+        Long expectedStudentId = 34L;
+        Student student = students.findByID(expectedStudentId);
         Double numberOfHours = 12D;
         ZipCodeWilmington zipCodeWilmington = new ZipCodeWilmington();
         zipCodeWilmington.hostLecture(expectedTeacherId,numberOfHours);
-        Double expectedHours = 2.4;
+        Double expectedHours = 3D;
 
         Assert.assertEquals(expectedHours, student.getTotalStudyTime());
+    }
 
+    @Test
+    public void getStudyMapTest(){
+        Students students = Students.getInstance();
+        Long expectedTeacherId = 2323L;
+        Long expectedStudentId = 34L;
+        Student student = students.findByID(expectedStudentId);
+        Double expectedHours = 3D;
+        Double numberOfHours = 12D;
+        ZipCodeWilmington zipCodeWilmington = new ZipCodeWilmington();
+        zipCodeWilmington.hostLecture(expectedTeacherId,numberOfHours);
+        HashMap<Student, Double> expectedHashMap = new HashMap<>();
+
+        expectedHashMap.put(student,expectedHours);
+        HashMap<Student,Double> actualHashMap = zipCodeWilmington.getStudyMap(student);
+
+        Assert.assertEquals(expectedHashMap.get(student), actualHashMap.get(student));
     }
 }
