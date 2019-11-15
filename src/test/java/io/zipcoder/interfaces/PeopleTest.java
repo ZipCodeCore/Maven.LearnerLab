@@ -9,7 +9,7 @@ public class PeopleTest {
 
     @Test
     public void addTest(){
-        People newPeople = new People();
+        People newPeople = new PeopleClass();
         Person newPerson = new Person(98L, "Sam");
 
         newPeople.add(newPerson);
@@ -22,7 +22,7 @@ public class PeopleTest {
 
     @Test
     public void removeTest(){
-        People newPeople = new People();
+        People newPeople = new PeopleClass();
         Person newPerson = new Person(98L, "Sam");
         Person newPerson2 = new Person(34L, "Mike");
         Person newPerson3 = new Person(10L, "Julia");
@@ -41,7 +41,7 @@ public class PeopleTest {
 
     @Test
     public void removeByIdTest(){
-        People newPeople = new People();
+        People newPeople = new PeopleClass();
         Person newPerson = new Person(98L, "Sam");
         Person newPerson2 = new Person(34L, "Mike");
         Person newPerson3 = new Person(10L, "Julia");
@@ -58,7 +58,7 @@ public class PeopleTest {
     @Test
     public void RemoveAllTest() {
 
-        People newPeople = new People();
+        People newPeople = new PeopleClass();
         Person newPerson = new Person(98L, "Sam");
         Person newPerson2 = new Person(34L, "Mike");
         Person newPerson3 = new Person(10L, "Julia");
@@ -77,7 +77,7 @@ public class PeopleTest {
         @Test
     public void findByIdTest(){
 
-        People newPeople = new People();
+        People newPeople = new PeopleClass();
         Person newPerson = new Person(98L, "Sam");
         Person newPerson2 = new Person(34L, "Mike");
         Person newPerson3 = new Person(10L, "Julia");
@@ -89,24 +89,6 @@ public class PeopleTest {
         Person actual = newPeople.findById(34L);
 
         Assert.assertEquals(newPerson2, actual);
-    }
-
-    @Test
-    public void toArrayTest(){
-
-        People newPeople = new People();
-        Person newPerson = new Person(98L, "Sam");
-        Person newPerson2 = new Person(34L, "Mike");
-        Person newPerson3 = new Person(10L, "Julia");
-
-        newPeople.add(newPerson);
-        newPeople.add(newPerson2);
-        newPeople.add(newPerson3);
-
-        Person[] newArray = newPeople.toArray();
-        Person actual = newArray[2];
-
-        Assert.assertEquals(newPerson3, actual);
     }
 
 }
