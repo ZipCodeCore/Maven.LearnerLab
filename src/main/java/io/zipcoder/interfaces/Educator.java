@@ -3,7 +3,8 @@ package io.zipcoder.interfaces;
 public enum Educator implements Teacher {
     SAM,
     NICK,
-    FRANK;
+    FRANK,
+    CHRIS;
 
     private final Instructor instructor;
     private Double timeWorked = 0.0;
