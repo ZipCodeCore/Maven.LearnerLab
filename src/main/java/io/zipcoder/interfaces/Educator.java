@@ -6,7 +6,6 @@ import interfaces.Teacher;
 public enum Educator implements Teacher {
 
     DOLIO (new Instructor(20L,"Wil"),0.0),
-    FROILAN (new Instructor(21L,"Joe"),0.0),
     ROBERTO (new Instructor(22L,"Jack"),0.0);
 
     private final Instructor instructor;
