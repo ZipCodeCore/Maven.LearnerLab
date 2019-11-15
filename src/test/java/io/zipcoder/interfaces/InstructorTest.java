@@ -8,7 +8,8 @@ import static org.junit.Assert.*;
 
 public class InstructorTest {
     Instructor instructor;
-
+    double totalStudyTime;
+    double numberOfHours;
 
     @Before
     public void setUp() throws Exception {
@@ -31,7 +32,7 @@ public class InstructorTest {
         double expected = 100.0;
         instructor.teach(student, expected);
 
-        Assert.assertEquals(expected, student.getTotalStudyTime());
+        Assert.assertEquals(expected, student.getTotalStudyTime(), 0.000001);
     }
 
     @Test
@@ -40,13 +41,13 @@ public class InstructorTest {
 
         for (int i = 0; i < students.length; i++) {
             students[i] = new Student(i, "Charlotte");
+        }
             instructor.lecture(students, 12);
-            Double expected = 3.0;
 
-            double totalStudyTime +=( double numberOfHours/students.length);
+            totalStudyTime += numberOfHours/students.length;
 
-            Assert.assertEquals(expected, students[1].getTotalStudyTime());
+            Assert.assertEquals(3.0, students[1].getTotalStudyTime(), 0.0000001);
         }
     }
-}
+
 
