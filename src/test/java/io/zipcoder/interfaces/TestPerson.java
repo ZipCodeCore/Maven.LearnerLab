@@ -19,7 +19,6 @@ public class TestPerson {
         Assert.assertEquals(actual1,expected1);
     }
     @Test
-
     public void setNameTest() {
         Person person = new Person(9, "Bob");
         person.setName("Jim");

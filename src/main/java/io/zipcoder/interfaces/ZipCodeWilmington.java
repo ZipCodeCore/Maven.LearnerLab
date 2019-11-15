@@ -5,8 +5,8 @@ import java.util.Map;
 
 public final class ZipCodeWilmington {
     private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
-    Students students = Students.getInstance();
-    Instructors instructors;
+    private static final Students students = Students.getInstance();
+    private static final Instructors instructors = Instructors.getInstance();
 
 
     private ZipCodeWilmington() {
@@ -21,15 +21,20 @@ public final class ZipCodeWilmington {
         Teacher teacher = (Instructor) instructors.findById(id);
         teacher.lecture(students.toArray(), numberOfHours);
 
+
     }
 
     public Map getStudyMap() {
         Map<Student, Double> timeMap = new HashMap<Student, Double>();
 
-        for (Person student : students) {
-            timeMap.put(student, student.);
+        for (Student s : students) {
+            timeMap.put(s, s.getTotalStudyTime());
         }
         return timeMap;
+    }
+
+    public static ZipCodeWilmington getInstance() {
+        return INSTANCE;
     }
 
 
