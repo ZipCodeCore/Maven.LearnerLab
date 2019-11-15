@@ -7,18 +7,28 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ZipCodeWilmington {
+public final class ZipCodeWilmington {
 
+    private static final ZipCodeWilmington INSTANCE =new ZipCodeWilmington();
 
-    private List<Student> students = Students.getInstance();
-    private List<Instructor> instructors = Instructors.getInstance();
+    private Students students = Students.getInstance();
+    private Instructors instructors = Instructors.getInstance();
     private Map<Student, Double> studyMap;
+
+    private ZipCodeWilmington(){
+        // constructor;
+    }
+
+    public static ZipCodeWilmington getInstance(){
+        return INSTANCE;
+    }
+
+
 
     public void hostLecture(Teacher teacher, double numberOfHours){
         for (Instructor eachInstructor : instructors){
             if (eachInstructor == teacher){
-//              needed to cast (new Learner[0])
-                eachInstructor.lecture((Learner[]) students.toArray(),numberOfHours);
+                eachInstructor.lecture(students.toArray(),numberOfHours);
             }
         }
     }
@@ -26,8 +36,7 @@ public class ZipCodeWilmington {
     public void hostLecture(long id, double numberOfHours){
         for (Instructor eachInstructor : instructors){
             if (eachInstructor.getId() == id){
-//              needed to cast (new Learner[0])
-                eachInstructor.lecture((Learner[]) students.toArray(),numberOfHours);
+                eachInstructor.lecture(students.toArray(),numberOfHours);
             }
         }
     }

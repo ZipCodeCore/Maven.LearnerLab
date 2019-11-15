@@ -9,7 +9,7 @@ public class StudentsTest {
 
     @Test
     public void getInstance() {
-        List<Student> testStudents = Students.getInstance();
+        Students testStudents = Students.getInstance();
         Student student1 = new Student(32L,"Joe");
         Student student2 = new Student(31L,"Jack");
 
@@ -21,7 +21,7 @@ public class StudentsTest {
         }
 
         Integer expected = 2;
-        Integer actual = testStudents.size();
+        Integer actual = testStudents.count();
         Assert.assertEquals(expected,actual);
     }
 }

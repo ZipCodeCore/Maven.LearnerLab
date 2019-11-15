@@ -5,20 +5,19 @@ import java.util.List;
 
 public final class Students extends People<Student> {
 
-    private static final List<Student> INSTANCE = new ArrayList<>();
+    private static final Students INSTANCE = new Students();
 
-    private Students(Student student){
+    private Students(){
         // private constructor to avoid client applications to use constructor
-        INSTANCE.add(student);
     }
 
-    public static List<Student> getInstance(){
+    public static Students getInstance(){
         return INSTANCE;
     }
 
 
     public Student[] toArray() {
-        Student[] studentArray = new Student[this.INSTANCE.size()];
+        Student[] studentArray = new Student[this.INSTANCE.count()];
         int i = 0;
         for (Student eachStudent : this.INSTANCE){
             studentArray[i++] = eachStudent;

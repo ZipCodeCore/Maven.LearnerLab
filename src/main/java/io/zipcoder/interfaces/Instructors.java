@@ -5,20 +5,21 @@ import java.util.List;
 
 public final class Instructors extends People<Instructor> {
 
-    private static final List<Instructor> INSTANCE = new ArrayList<>();
+    private static final Instructors INSTANCE = new Instructors();
 
-    private Instructors (Instructor instructor){
+    private Instructors (){
         // private constructor
-        INSTANCE.add(instructor);
     }
 
-    public static List<Instructor> getInstance(){
+    public static Instructors getInstance(){
         return INSTANCE;
     }
 
 
+
+
     public Instructor[] toArray() {
-        Instructor[] instructorsArray = new Instructor[this.INSTANCE.size()];
+        Instructor[] instructorsArray = new Instructor[this.INSTANCE.count()];
         int i = 0;
         for (Instructor eachInstructor : this.INSTANCE){
             instructorsArray[i++] = eachInstructor;

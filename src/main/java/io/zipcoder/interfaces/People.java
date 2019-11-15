@@ -1,5 +1,6 @@
 package io.zipcoder.interfaces;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -47,7 +48,7 @@ public abstract class People <E extends Person> implements Iterable<E>{
     public abstract E[] toArray();
 
     public Iterator<E> iterator() {
-
         return this.personList.iterator();
     }
+
 }

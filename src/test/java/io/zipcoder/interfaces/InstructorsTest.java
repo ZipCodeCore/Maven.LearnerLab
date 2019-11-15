@@ -9,7 +9,7 @@ public class InstructorsTest {
 
     @Test
     public void getInstance() {
-        List<Instructor> testInstructors = Instructors.getInstance();
+        Instructors testInstructors = Instructors.getInstance();
         Instructor instructor1 = new Instructor(33L,"Kris");
         Instructor instructor2 = new Instructor(35L,"Dolio");
         Instructor instructor3 = new Instructor(34L,"Roberto");
@@ -22,7 +22,7 @@ public class InstructorsTest {
         }
 
         Integer expected = 3;
-        Integer actual = testInstructors.size();
+        Integer actual = testInstructors.count();
 
         Assert.assertEquals(expected,actual);
     }
