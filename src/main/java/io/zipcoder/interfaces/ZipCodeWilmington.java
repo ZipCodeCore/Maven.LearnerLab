@@ -17,8 +17,8 @@ public class ZipCodeWilmington {
     public void hostLecture(Teacher teacher, double numberOfHours){
         for (Instructor eachInstructor : instructors){
             if (eachInstructor == teacher){
-                //              needed to cast (new Learner[0])
-                eachInstructor.lecture(students.toArray(new Learner[0]),numberOfHours);
+//              needed to cast (new Learner[0])
+                eachInstructor.lecture((Learner[]) students.toArray(),numberOfHours);
             }
         }
     }
@@ -27,13 +27,16 @@ public class ZipCodeWilmington {
         for (Instructor eachInstructor : instructors){
             if (eachInstructor.getId() == id){
 //              needed to cast (new Learner[0])
-                eachInstructor.lecture(students.toArray(new Learner[0]),numberOfHours);
+                eachInstructor.lecture((Learner[]) students.toArray(),numberOfHours);
             }
         }
     }
 
     public Map<Student,Double> getStudyMap(){
         studyMap = new HashMap<Student, Double>();
+        for (Student eachStudent : this.students){
+            studyMap.put(eachStudent,eachStudent.getTotalStudyTime());
+        }
         return studyMap;
     }
 }
