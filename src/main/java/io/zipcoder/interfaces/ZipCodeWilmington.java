@@ -3,7 +3,9 @@ package io.zipcoder.interfaces;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ZipCodeWilmington {
+public final class ZipCodeWilmington {
+
+    private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
 
     Students students = Students.getInstance();
     Instructors instructors = Instructors.getInstance();
@@ -11,32 +13,38 @@ public class ZipCodeWilmington {
 
     public ZipCodeWilmington() {
 
+        studyMap = new HashMap<Student, Double>();
+
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
 
-        teacher.lecture((Learner[]) students.toArray(), numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
 
     }
 
     public void hostLecture(Long id, double numberOfHours) {
 
-        Teacher teacher = (Teacher) instructors.findById(id);
+        Teacher teacher = instructors.findById(id);
 
-        teacher.lecture((Learner[]) students.toArray(), numberOfHours);
+        teacher.lecture(students.getArray(), numberOfHours);
 
     }
 
-    public void getStudyMap() {
+    public Map<Student, Double> getStudyMap() {
 
-        studyMap = new HashMap<Student, Double>();
-
-        for (Person person : students) {
-            Student student = (Student) person;
+        for (Student student : students) {
 
             studyMap.put(student, student.getTotalStudyTime());
         }
 
+        return studyMap;
+    }
+
+
+    public static ZipCodeWilmington getInstance(){
+
+        return INSTANCE;
     }
 
 }
