@@ -175,7 +175,7 @@
 * Modify `people` field to enforce that is a container of objects of type `E`.
 * Modify the `add` method to ensure that it handles object of type `E`.
 * Modify the `findById` method to ensure that it returns an object of type `E`.
-* Modify the `getArray` method signature by declaring it `abstract` of return tyoe `E`.
+* Modify the `getArray` method signature by declaring it `abstract` of return type `E`.
 	* An abstract method is a subclass's contractual agreement to the deferment of an implementation of a respective method.
 
 -

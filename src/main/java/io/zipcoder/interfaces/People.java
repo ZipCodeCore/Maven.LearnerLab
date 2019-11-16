@@ -7,56 +7,54 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People  implements Iterable<Person>{
-    private ArrayList<Person> personList;
+public abstract class People <E extends Person>  implements Iterable<E>{
+    private ArrayList<E> eList;
 
-    public People(ArrayList<Person> personList){
-        this.personList = personList;
+    public People(ArrayList<E> eList){
+        this.eList = eList;
     }
     public People(){
-        this.personList = new ArrayList<Person>();
+        this.eList = new ArrayList<E>();
     }
 
-    public void add(Person person) {
-        this.personList.add(person);
+    public void add(E e) {
+        this.eList.add(e);
     }
 
-    public Person findById(long id) {
-        for(Person person : this.personList){
-            if(person.getId() == id) {
-                return person;
+    public E findById(long id) {
+        for(E e : this.eList){
+            if(e.getId() == id) {
+                return e;
             }
         }  return null;
     }
-    public boolean contains(Person person) {
-       return this.personList.contains(person);
+    public boolean contains(E e) {
+       return this.eList.contains(e);
     }
 
-    public void remove(Person person) {
-        this.personList.remove(person);
+    public void remove(E e) {
+        this.eList.remove(e);
     }
 
     public void remove(long id){
-         Person personToBeFound = this.findById(id);
-         if(personToBeFound != null) {
-             this.remove(personToBeFound);
+         E eToBeFound = this.findById(id);
+         if(eToBeFound != null) {
+             this.remove(eToBeFound);
          }
     }
 
     public void removeAll() {
-        this.personList.clear();
+        this.eList.clear();
     }
 
     public int count() {
-        return this.personList.size();
+        return this.eList.size();
     }
 
-    public Person[] toArray() {
-        return this.personList.toArray(new Person[this.count()]);
-    }
+        abstract E[] toArray();
 
 
-    public Iterator<Person> iterator() {
-        return this.personList.iterator();
+    public Iterator<E> iterator() {
+        return this.eList.iterator();
     }
 }
