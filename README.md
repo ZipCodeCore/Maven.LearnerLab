@@ -141,14 +141,18 @@
 * Create a `ZipCodeWilmington` singleton.
 	* The class should declare a field that references the instance of `Students` called `students`.
 	* The class should declare a field that references the instance of `Instructors` called `instructors`.
-	* The class should define a method `hostLecture` which makes use of a `Teacher teacher, double numberOfHours` parameter to host a `lecture` to the composite `personList` field in the `students` reference.
-	* The class should define a method `hostLecture` which makes use of a `long id, double numberOfHours` parameter to identify a respective `Instructor` to host a `lecture` to the composite `personList` field in the `cohort` reference.
-	* The class should define a method `getStudyMap` which returns a <u>new instance</u> of a _mapping_ from `Student` objects to `Double` objects, representative of each respective student's `totalStudyTime`.
+	* The class should define a method `hostLecture` which makes use of a `Teacher teacher, double numberOfHours` parameter to host
+	 a `lecture` to the composite `personList` field in the `students` reference.
+	* The class should define a method `hostLecture` which makes use of a `long id, double numberOfHours` parameter to identify 
+	a respective `Instructor` to host a `lecture` to the composite `personList` field in the `cohort` reference.
+	* The class should define a method `getStudyMap` which returns a <u>new instance</u> of a _mapping_ from `Student` objects 
+	to `Double` objects, representative of each respective student's `totalStudyTime`.
 
 -
 ### Part 9.0 - Test `ZipCodeWilmington`
 * Create a `TestZipCodeWilmington` class.
-	* Create a `testHostLecture` method which ensures that each of the `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` upon invoking the `hostLecture` method.
+	* Create a `testHostLecture` method which ensures that each of the `Student`'s `totalStudyTime` instance variable is incremented by 
+	the specified `numberOfHours` upon invoking the `hostLecture` method.
 
 
 
@@ -171,7 +175,7 @@
 * Modify `people` field to enforce that is a container of objects of type `E`.
 * Modify the `add` method to ensure that it handles object of type `E`.
 * Modify the `findById` method to ensure that it returns an object of type `E`.
-* Modify the `getArray` method signature by declaring it `abstract` of return tyoe `E`.
+* Modify the `getArray` method signature by declaring it `abstract` of return type `E`.
 	* An abstract method is a subclass's contractual agreement to the deferment of an implementation of a respective method.
 
 -
@@ -192,19 +196,25 @@
 
 
 
-
 -
 # Notice the Design Flaw - Non-Intuitive Orientation
-* You may have noticed that `findById` makes it difficult to intuitively identify _which_ `Person` object is being returned. To remedy this issue, we can make use of an `enum` which manipulates a composite `instructor` object.
+* You may have noticed that `findById` makes it difficult to intuitively identify _which_ 
+`Person` object is being returned. To remedy this issue, we can make use of an `enum` which 
+manipulates a composite `instructor` object.
 
 -
 ### Part 11.1 - Create `Educator` enum
 * Create an enum named `Educator`.
 	* The enum should implement `Teacher`.
-	* The enum should have an enumeration for each of the instructors represented in the `Instructors` class.
-	* Upon construction each enumeration of the enum should instantiate a respective `Instructor` and assign it to a final `instructor` field upon construction. The `instructor` should be added to the `Instructors` singleton.
-	* Calls to the `teach` and `lecture` method should be deferred to the composite `instructor` reference.
-	* The enum should have a `double timeWorked` field which keeps track of the hours that the `Educator` has taught.
+	* The enum should have an enumeration for each of the instructors represented in the 
+	`Instructors` class.
+	* Upon construction each enumeration of the enum should instantiate a respective 
+	`Instructor` and assign it to a final `instructor` field upon construction. The 
+	`instructor` should be added to the `Instructors` singleton.
+	* Calls to the `teach` and `lecture` method should be deferred to the composite 
+	`instructor` reference.
+	* The enum should have a `double timeWorked` field which keeps track of the hours 
+	that the `Educator` has taught.
 
 -
 ### Part 11.0 - Test `Educator`
