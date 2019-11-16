@@ -14,13 +14,27 @@ public class ZipCodeWilmingtonTest {
     public void testHostLecture() {
         ZipCodeWilmington mySchool = ZipCodeWilmington.getInstance();
 
-        mySchool.hostLecture(74, 70);
+        mySchool.hostLecture(6, 70);
 
         HashMap<Student, Double> map = mySchool.getStudyMap();
 
         for (Student student : map.keySet()) {
             Assert.assertEquals(10, student.getTotalStudyTime(), .01);
         }
+    }
+
+    @Test
+    public void testHostLecturEducator() {
+        ZipCodeWilmington mySchool = new ZipCodeWilmington();
+
+        mySchool.hostLecture(Educator.ROBERTO, 70);
+
+        HashMap<Student, Double> map = mySchool.getStudyMap();
+
+        for (Student student : map.keySet()) {
+            Assert.assertEquals(10, student.getTotalStudyTime(), .01);
+        }
+        Assert.assertEquals(70, Educator.ROBERTO.getTimeWorked(), .01);
     }
 }
 

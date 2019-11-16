@@ -6,11 +6,11 @@ import java.util.HashMap;
 public final class ZipCodeWilmington {
     Students students;
     Instructors instructors;
-
+    private Educator educator;
     private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
 
 
-    protected ZipCodeWilmington() {
+    public ZipCodeWilmington() {
         this.instructors = Instructors.getInstance();
         this.students = Students.getInstance();
     }

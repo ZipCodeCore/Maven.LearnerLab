@@ -7,11 +7,14 @@ public final class Instructors extends People<Instructor> {
 
     protected Instructors(){
 
-        this.add(new Instructor(75, "Dolio"));
-        this.add(new Instructor(74, "Kris"));
-        this.add(new Instructor(73 , "Christopher"));
-        this.add(new Instructor(72, "Roberto"));
-        this.add(new Instructor(71, "Froilan"));
+        for (Educator ed : Educator.values()) {
+            this.add(new Instructor(ed.getId(), ed.getName()));
+        }
+//        this.add(new Instructor(1, "Kris"));
+//        this.add(new Instructor(9, "Chris"));
+//        this.add(new Instructor(10, "Froilan"));
+//        this.add(new Instructor(11, "Dolio"));
+//        this.add(new Instructor(6, "Roberto"));
     }
 
     public static Instructors getInstance() {
