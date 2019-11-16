@@ -12,14 +12,14 @@ public class ZipCodeWilmingtonTest {
 
     @Test
     public void testHostLecture() {
-        ZipCodeWilmington mySchool = new ZipCodeWilmington();
+        ZipCodeWilmington mySchool = ZipCodeWilmington.getInstance();
 
-        mySchool.hostLecture(1, 20);
+        mySchool.hostLecture(74, 70);
 
         HashMap<Student, Double> map = mySchool.getStudyMap();
 
         for (Student student : map.keySet()) {
-            Assert.assertEquals(4, student.getTotalStudyTime(), .01);
+            Assert.assertEquals(10, student.getTotalStudyTime(), .01);
         }
     }
 }

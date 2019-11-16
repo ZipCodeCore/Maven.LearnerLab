@@ -19,6 +19,7 @@ public final class ZipCodeWilmington {
         Learner[] newArr = Arrays.copyOf(students.toArray(), students.count(), Learner[].class);
          teacher.lecture(newArr, numberOfHours);
     }
+
     public void hostLecture(long id, double numberOfHours) {
         Teacher teacher = (Teacher) instructors.findById(id);
         hostLecture(teacher, numberOfHours);
@@ -30,5 +31,9 @@ public final class ZipCodeWilmington {
             studyMap.put((Student) student,((Student) student).getTotalStudyTime());
         }
         return studyMap;
+    }
+
+    public static ZipCodeWilmington getInstance(){
+        return INSTANCE;
     }
 }
