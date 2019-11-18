@@ -8,18 +8,18 @@ import java.util.Map;
 public class ZipCodeWilmington {
     private static final Students students = Students.getInstance();
     private static final Instructors instructors = Instructors.getInstance();
-    private ZipCodeWilmington zcwINSTANCE = new ZipCodeWilmington();
+    private static final ZipCodeWilmington zcwINSTANCE = new ZipCodeWilmington();
 
     public ZipCodeWilmington() {
 
     }
 
-    public static void hostLecture(Teacher teacher, double numberOfHours) {
+   public void hostLecture(Teacher teacher, double numberOfHours) {
 
         teacher.lecture(students.toArray(), numberOfHours);
     }
 
-    public static void hostLecture(long id, double numberOfHours) {
+   public void hostLecture(long id, double numberOfHours) {
         instructors.findById(id).lecture(students.toArray(), numberOfHours);
     }
 
@@ -30,6 +30,8 @@ public class ZipCodeWilmington {
         }
         return studyMap;
     }
-
+    public static ZipCodeWilmington getInstance() {
+        return zcwINSTANCE;
+    }
 
 }

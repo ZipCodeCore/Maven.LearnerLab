@@ -8,7 +8,7 @@ public class TestStudents {
     public void testExistence(){
 Student s=new Student(Long.MIN_VALUE,"",0);
 Students students= Students.getInstance();
-        Student s1= new Student(1L, "Julia", 4);
+       /* Student s1= new Student(1L, "Julia", 4);
         Student s2 = new Student(2L, "Miral", 5);
         Student s3 = new Student(3L, "Chris", 3);
         Student s4 = new Student(4L, "Mike", 4);
@@ -30,7 +30,7 @@ Students students= Students.getInstance();
         students.add(s8);
         students.add(s9);
         students.add(s10);
-        students.add(s11);
+        students.add(s11);*/
 
 
 

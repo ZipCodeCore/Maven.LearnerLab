@@ -7,16 +7,21 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People<E extends Person> implements Iterable<E> {
+
+public abstract class People<E extends Person> implements Iterable<E> {
     List<E> personList;
 
-    public People() {
-        this.personList = new ArrayList<E>();
+    public People(ArrayList<E>personList) {
+        this.personList = personList;
     }
 
-    void add(E person) {
+    public People(){
+        this.personList=new ArrayList<E>();
+    }
 
-        personList.add(person);
+    void add(E e) {
+
+        personList.add(e);
     }
 
     public E findById(Long id) {
@@ -58,15 +63,18 @@ public class People<E extends Person> implements Iterable<E> {
     public int count() {
         return personList.size();
     }
-    public Person[] toArray(List<E> personList){
-        Person[]arr=new Person[personList.size()];
+
+    //we have to modify the method to add generics
+    public abstract E[] toArray();
+        /*Person[]arr=new Person[personList.size()];
         int j=0;
         for(int i=0;i<personList.size();i++){
             arr[j]=personList.get(i);
             j++;
         }
-        return arr;
-    }
+        return arr;*/
+
+
 
 
     public Iterator<E> iterator() {
