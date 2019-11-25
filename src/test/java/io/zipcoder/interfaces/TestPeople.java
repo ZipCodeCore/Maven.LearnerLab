@@ -4,11 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TestPeople {
-    People personList;
+    People peopleObject;
     Person person;
     Person person2;
     Person person3;
@@ -16,7 +13,7 @@ public class TestPeople {
 
     @Before
     public void testContr(){
-        personList = new People();
+        peopleObject = new People();
         person = new Person(11, "Zan");
         person2 = new Person(01, "Johnny");
         person3 = new Person(02, "Elliot");
@@ -24,36 +21,35 @@ public class TestPeople {
 
     @Test
     public void testAdd(){
-        personList.add(person);
+        peopleObject.add(person);
 
         Integer expected = 1;
-        Integer actual = personList.personList.size();
+        Integer actual = peopleObject.personList.size();
 
         Assert.assertEquals(expected,actual);
     }
 
     @Test
     public void testRemove(){
-        personList.add(person);
-        personList.add(person2);
-        personList.add(person3);
-        personList.remove(person);
+        peopleObject.add(person2);
+        peopleObject.add(person3);
+        peopleObject.remove(person2);
 
-        Integer expected = 2;
-        Integer actual = personList.personList.size();
+        Integer expected = 1;
+        Integer actual = peopleObject.personList.size();
 
         Assert.assertEquals(expected,actual);
     }
 
     @Test
     public void testFindById(){
-        personList.add(person);
+        peopleObject.add(person2);
 
 
-        Person expected = person;
-        Person actualId = personList.findById(person.getId());
+        Person expected = person2;
+        Person actualId = peopleObject.findById(1);
 
-        Assert.assertEquals(expected,actualId);
+        Assert.assertEquals(expected.getId(),actualId.getId());
     }
 
 }
