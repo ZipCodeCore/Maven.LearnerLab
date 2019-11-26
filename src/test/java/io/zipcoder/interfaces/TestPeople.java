@@ -13,7 +13,11 @@ public class TestPeople {
 
     @Before
     public void testContr(){
-        peopleObject = new People();
+        peopleObject = new People() {
+            public Person[] toArray() {
+                return new Person[0];
+            }
+        };
         person = new Person(11, "Zan");
         person2 = new Person(01, "Johnny");
         person3 = new Person(02, "Elliot");

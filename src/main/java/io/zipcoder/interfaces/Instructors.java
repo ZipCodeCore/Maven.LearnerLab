@@ -9,7 +9,7 @@ public final class Instructors extends People<Instructor>{
     private Instructors(){
         ArrayList<String> instructorZan = new ArrayList<String>();
         instructorZan.add(0,"ZANN");
-        instructorZan.add(1,"is Annoying");
+        instructorZan.add(1,"isAnnoying");
 
         for (int i = 0; i < instructorZan.size(); i++) {
             super.add(new Instructor(i,instructorZan.get(i)));
@@ -17,7 +17,7 @@ public final class Instructors extends People<Instructor>{
     }
 
     public Instructor[] toArray() {
-        return new Instructor[0];
+        return personList.toArray(new Instructor[personList.size()]);
     }
 
     public static Instructors getInstance(){

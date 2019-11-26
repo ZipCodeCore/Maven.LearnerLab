@@ -11,10 +11,9 @@ public class TestZipCodeWilmington {
         Students students = Students.getInstance();
         Instructors instructors = Instructors.getInstance();
 
-        zcw.hostLecture(instructors.findById(11L),3);
+        zcw.hostLecture(Educator.ZAN,3);
 
-        Student student1 = new Student;
-        Assert.assertEquals(3, student1.getTotalStudyTime());
+        Assert.assertEquals(3, Educator.ZAN.getTimeWorked(),0);
 
     }
 

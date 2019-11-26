@@ -9,8 +9,8 @@ public final class Students extends People<Person>{
         super.add(new Student(06, "chod"));
     }
 
-    public Person[] toArray() {
-        return new Person[0];
+    public Student[] toArray() {
+        return personList.toArray(new Student[personList.size()]);
     }
 
     public static Students getInstance(){
