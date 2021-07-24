@@ -7,7 +7,7 @@ public class Person {
     String name;
 
     public Person () {
-        this.id = Long.MIN_VALUE;
+        this.id = System.nanoTime();
         this.name = "";
     }
 

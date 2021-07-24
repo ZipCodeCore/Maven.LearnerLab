@@ -8,7 +8,8 @@ public class Instructor extends Person implements Teacher {
 
     public void lecture(Learner[] learners, double numberOfHours) {
         for (int i = 0; i < learners.length; i++) {
-            learners[i].learn(numberOfHours/ learners.length);
+            Double numOfHoursPerLearner = numberOfHours/ learners.length;
+            learners[i].learn(numOfHoursPerLearner);
         }
     }
 }
