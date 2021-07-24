@@ -20,9 +20,9 @@ public class TestInstructor {
     @Test
     public void testTeach() {
         //given
-        double expected = 16.0;
+        double expected = 8.0;
         Instructor instructor = new Instructor(0, "Leon");
-        Learner learner = new Student(0, "Stephen", 8.0);
+        Learner learner = new Student(0, "Stephen");
         //when
         instructor.teach(learner, 8.0);
         double actual = learner.getTotalStudyTime();
@@ -33,12 +33,12 @@ public class TestInstructor {
     @Test
     public void testLecture() {
         //given
-        double expected1 = 12.0;
-        double expected2 = 10.0;
-        double expected3 = 14.0;
-        Learner learner1 = new Student(0, "Sabrina", 7.0);
-        Learner learner2 = new Student(1, "Nicolette", 5.0);
-        Learner learner3 = new Student(2, "Jason", 9.0);
+        double expected1 = 5.0;
+        double expected2 = 5.0;
+        double expected3 = 5.0;
+        Learner learner1 = new Student(0, "Sabrina");
+        Learner learner2 = new Student(1, "Nicolette");
+        Learner learner3 = new Student(2, "Jason");
         //when
         Instructor instructor = new Instructor(0, "Ted");
         Learner[] learners = new Learner[]{learner1, learner2, learner3};
