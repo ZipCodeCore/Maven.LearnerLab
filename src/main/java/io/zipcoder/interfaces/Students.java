@@ -20,4 +20,8 @@ import java.util.List;
     public static Students getInstance() {
         return Students.INSTANCE;
     }
-}
+
+     public Student[] getArray () {
+         return super.personList.toArray(new Student[0]);
+    }
+ }
