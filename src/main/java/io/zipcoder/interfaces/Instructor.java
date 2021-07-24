@@ -3,6 +3,7 @@ package io.zipcoder.interfaces;
 public class Instructor extends Person implements Teacher{
 
     Learner[] learners;
+    double numberOfHoursPerLearner;
 
     public Instructor(long id, String name) {
         super(id, name);
@@ -15,8 +16,9 @@ public class Instructor extends Person implements Teacher{
 
     @Override
     public void lecture(Learner[] learners, double numberOfHours) {
+        numberOfHoursPerLearner = numberOfHours / learners.length;
         for(Learner element : learners) {
-            element.learn(numberOfHours / learners.length);
+            element.learn(numberOfHoursPerLearner);
         }
     }
 }
