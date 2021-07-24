@@ -2,13 +2,13 @@ package io.zipcoder.interfaces;
 
 import java.util.ArrayList;
 
-public final class Students extends People {
+public final class Students extends People<Student> {
     private static final Students INSTANCE = new Students();
 
-    private Students (){
+    private Students() {
         this.add(new Student(644L, "Nick"));
         this.add(new Student(645L, "Char"));
-        this.add(new Student (646L, "Sitara"));
+        this.add(new Student(646L, "Sitara"));
         this.add(new Student(647L, "Zach"));
         this.add(new Student(648L, "Dipinti"));
         this.add(new Student(649L, "Jeremy"));
@@ -26,7 +26,12 @@ public final class Students extends People {
 
     }
 
-    public static Students getInstance(){
+    public static Students getInstance() {
         return INSTANCE;
+    }
+
+    @Override
+    public Student[] getArray() {
+        return personList.toArray(new Student[0]);
     }
 }

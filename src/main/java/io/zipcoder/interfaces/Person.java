@@ -1,5 +1,7 @@
 package io.zipcoder.interfaces;
 
+import java.util.Objects;
+
 public class Person {
     private final Long id;
     private String name;
@@ -19,5 +21,18 @@ public class Person {
 
     public Long getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o){
+        return o.toString().equals(toString());
     }
 }

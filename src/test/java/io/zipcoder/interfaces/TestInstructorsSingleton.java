@@ -18,4 +18,19 @@ public class TestInstructorsSingleton {
         Assert.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void findByIdTest(){
+        //given
+        People people = Instructors.getInstance();
+        Long id = 444L;
+        Person expected = new Person(id, "Dolio");
+
+        //when
+        Person actual = people.findById(id);
+
+        //then
+        Assert.assertEquals(expected,actual);
+
+    }
 }
