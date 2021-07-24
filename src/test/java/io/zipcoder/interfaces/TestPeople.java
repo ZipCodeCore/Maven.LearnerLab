@@ -31,10 +31,10 @@ public class TestPeople {
     @Test
     public void testFindById() {
         //given
-        Person person = new Person(0L, "Bo");
+        Person person = new Person(6L, "Stewart");
         //when
         people.add(person);
-        Person actual = people.findByID(0L);
+        Person actual = people.findByID(6L);
         //then
         Assert.assertEquals(person, actual);
     }
