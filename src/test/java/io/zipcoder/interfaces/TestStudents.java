@@ -9,7 +9,7 @@ public class TestStudents {
     public void testInstance(){
         Students instance = Students.getINSTANCE();
         Integer actual=instance.personList.size();
-        Integer expected = 4;
+        Integer expected = 5;
         Assert.assertEquals(expected,actual);
     }
 }
