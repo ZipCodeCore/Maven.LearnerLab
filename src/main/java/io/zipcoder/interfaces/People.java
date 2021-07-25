@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public abstract class People<E extends Person> implements Iterator<Person> {
+public abstract class People<E extends Person> implements Iterable<E> {
 
     List<E> personList = new ArrayList<>();
 
@@ -12,8 +12,8 @@ public abstract class People<E extends Person> implements Iterator<Person> {
         personList.add(person);
     }
 
-    public Person findById(Long id){
-        for (Person person : personList) {
+    public E findById(Long id){
+        for (E person : personList) {
             Long currentId = person.getId();
             boolean isSameId = currentId.equals(id);
            if (isSameId)
@@ -40,16 +40,9 @@ public abstract class People<E extends Person> implements Iterator<Person> {
 
     public abstract E[] getArray();
 
-
+    @Override
     public Iterator<E> iterator(){
         return  personList.iterator();
     }
 
-    public boolean hasNext() {
-        return false;
-    }
-
-    public Person next() {
-        return null;
-    }
 }
