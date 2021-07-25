@@ -41,12 +41,24 @@ public class TestInstructor {
     public void lectureTest(){
         //given
         Instructor instructor = new Instructor(null, null);
-        Learner[] learners = new Learner[20];
+        Student student1 = new Student(null,null);
+        Student student2 = new Student(null,null);
+        Learner[] learners = {student1,student2};
+
 
         //when
         instructor.lecture(learners, 10.0);
-        Double actual = learners
+
+        Double actual1 = student1.getTotalStudyTime();
+        Double actual2 = student2.getTotalStudyTime();
+
+        Double expected1 = 5.0;
+        Double expected2 = 5.0;
+
         //then
+        Assert.assertEquals(expected1,actual1);
+        Assert.assertEquals(expected2,actual2);
+
 
     }
 
