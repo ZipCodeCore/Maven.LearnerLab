@@ -7,6 +7,7 @@ public class TestPeople {
 
     @Test
     public void addPersonTest(){
+        //test will fail if run after Enum instances
         //given
         People people = Instructors.getInstance();
         Person person2 = new Instructor(5555L, "Dr.Jay");
