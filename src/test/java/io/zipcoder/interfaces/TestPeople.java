@@ -42,20 +42,18 @@ public class TestPeople {
     @Test
     public void testFindById() {
         // Given
-        List<Person> personList = new ArrayList<>();
-        Person person1;
-        Person person2;
-        personList.add(person1 = new Person(123450L, "Jawn"));
-        personList.add(person2 = new Person(246810L, "Jawnay"));
+        Students student = Students.getInstance();
+        Long expectedId = 122L;
+        String expectedName = "Manny";
 
         // When
-        People people = new People();
-        Person expectedPerson = person1;
-
-        Person actualPerson = people.findById(person1.getId());
+        Student actualStudent = student.findById(122L);
+        String actualName = actualStudent.getName();
+        Long actualId = actualStudent.getId();
 
         // Then
-        //Assert.assertEquals(expectedPerson, actualPerson);
-        System.out.println(actualPerson);
+        Assert.assertEquals(expectedId, actualId);
+        Assert.assertEquals(expectedName, actualName);
+
     }
 }

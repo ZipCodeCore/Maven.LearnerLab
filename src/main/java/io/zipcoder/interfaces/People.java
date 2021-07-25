@@ -5,17 +5,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People<E> implements Iterable<E> {
-    List<Person> personList = new ArrayList<>();
+public abstract class People<E extends Person> implements Iterable<E> {
+
+    List<E> personList = new ArrayList<>();
 
 
-    public void add(Person person) {
+
+    public void add(E person) {
         personList.add(person);
     }
 
-    public Person findById(Long id) {
-        for(Person person : personList){
-            if (person.getId().equals(id)) {
+    public E findById(Long id) {
+        for(E person : personList){
+            if (person.getId() == (id)) {
                 return person;
             }
         }
@@ -23,8 +25,12 @@ public class People<E> implements Iterable<E> {
     }
 
     public Boolean contains(Person person) {
-        if (personList.contains(person)) {
-            return true;
+        //if (personList.contains(person)) {
+        for( Person person1 : personList) {
+            if (person1.getName() == person.name
+                    && person1.getId() == person.id) {
+                return true;
+            }
         }
         return false;
     }
@@ -45,24 +51,12 @@ public class People<E> implements Iterable<E> {
         return personList.size();
     }
 
-    public Person[] toArray() {
-        return personList.toArray(new Person[0]);
-    }
+    public abstract E[] toArray();
 
 
     @Override
     public Iterator<E> iterator() {
-        Iterator<E> personList = new Iterator<E>() {
-            @Override
-            public boolean hasNext() {
-                return false;
-            }
-
-            @Override
-            public E next() {
-                return null;
-            }
-        };
-        return personList;
+        Iterator iteratorList = personList.iterator();
+        return iteratorList;
     }
 }

@@ -54,4 +54,5 @@ public class TestInstructor {
         // Then
         Assert.assertEquals(expectedStudyTimePerStudent,actualStudyTimePerStudent);
     }
+
 }
