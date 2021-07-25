@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TestInstructor {
     @Test
@@ -38,6 +39,8 @@ public class TestInstructor {
     @Test
     public void testLecture() {
         // Given
+//        List<Student> studentList = new ArrayList<>();
+//        studentList.add(new Student(null, null));
         Instructor instructor = new Instructor(null, null);
         Student student1 = new Student(null, "Jawn");
         Student student2 = new Student(null, "Jawnay");
