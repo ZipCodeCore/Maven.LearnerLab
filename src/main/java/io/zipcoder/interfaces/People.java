@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People<E extends Person > implements Iterable<E> {
+public abstract class People<E extends Person > implements Iterable<E> {
     List<E> personList;
    // Person person = new Person(null, null);
 
@@ -27,19 +27,25 @@ public class People<E extends Person > implements Iterable<E> {
     }
 
     public void remove(String name) {
+        List<E> toRemove = new ArrayList<E>();
         for (E element : personList) {
             if (element.getName() == name) {
-                personList.remove(element);
+                toRemove.add(element);
+
             }
         }
+        personList.removeAll(toRemove);
     }
 
     public void remove(Long id){
+        //List<E> personList= new ArrayList<E>();;
+        List<E> toRemove = new ArrayList<E>();
         for (E element : personList) {
             if (element.getId() == id) {
-                personList.remove(element);
+                toRemove.add(element);
             }
         }
+        personList.removeAll(toRemove);
     }
 
     public void removeAll(){
