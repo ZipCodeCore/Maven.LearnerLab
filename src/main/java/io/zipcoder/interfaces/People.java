@@ -1,51 +1,57 @@
 package io.zipcoder.interfaces;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class People implements Iterable<Person> {
 
-    private List<Person> personList;
 
-    public void add(Person person){
+    public List<Person> personList = new ArrayList<Person>();
+
+
+    public void addPerson(Person person) {
         personList.add(person);
+
     }
 
-    public Person findById(Long id){
-        for(Person person : personList){
-            if(person.getId() == id)
+    public Person findById(Long id) {
+        for (Person person : personList) {
+            if (person.getId() == id)
                 return person;
         }
 
         return null;
     }
-    public  boolean contains(Person person){
-        if(personList.contains(person)) {
+
+    public boolean containsPerson(Person person) {
+        if (personList.contains(person)) {
             return true;
         }
         return false;
     }
 
-    public void remove(Person person){
+    public void removePerson(Person person) {
         personList.remove(person);
     }
 
-    public void removeById(Long id){
-        for(Person person : personList){
-            if(person.getId() == id)
+    public void removeById(Long id) {
+        for (Person person : personList) {
+            if (person.getId() == id)
                 personList.remove(person);
         }
     }
 
-    public void removeAll(){
+    public void removeAllPeople() {
         personList.clear();
     }
 
-    public Integer count(){
+    public Integer count() {
+
         return personList.size();
     }
 
-    public Person[] toArray(){
+    public Person[] toArray() {
         Person[] people = personList.toArray(new Person[0]);
         return people;
     }
@@ -54,3 +60,4 @@ public class People implements Iterable<Person> {
         return personList.iterator();
     }
 }
+
