@@ -19,4 +19,18 @@ public class TestZipcodeWilmington {
         //then
         Assert.assertEquals(expectedValue,actualValue,0.0);
     }
+
+    @Test
+    public void testHostLectureByEducator(){
+        //given
+        Educator educator=Educator.LEON;
+        Students students=Students.getInstance();
+        double expectedValue=5.0;
+        //when
+        ZipcodeWilmington zcw=new ZipcodeWilmington();
+        zcw.hostLecture(educator,25);
+        double actualValue=zcw.getStudyMap().get(students.findByID(2l));
+        //then
+        Assert.assertEquals(expectedValue,actualValue,0.0);
+    }
 }

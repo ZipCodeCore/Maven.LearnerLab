@@ -6,7 +6,7 @@ public class Instructors extends People<Instructor>{
     private Instructors(){
         this.add(new Instructor(1l,"Dolio"));
         this.add(new Instructor(2l,"Leon"));
-        this.add(new Instructor(3l,"kris"));
+        this.add(new Instructor(3l,"Kris"));
     }
 
     public static Instructors getInstance(){return instance;}
