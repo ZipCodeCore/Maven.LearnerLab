@@ -4,7 +4,8 @@ import java.lang.reflect.Field;
 
 
 public class Person {
-    protected long id;
+
+     final long id;
     String name;
 
 
@@ -13,6 +14,10 @@ public class Person {
         this.name = name;
 
 
+    }
+    public long getId() {
+        return id;
+        //return this.id; ??????????????????
     }
 
     public String getName() {
@@ -23,15 +28,11 @@ public class Person {
         this.name = name;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-
 
 
 }
+
+
+
+
+

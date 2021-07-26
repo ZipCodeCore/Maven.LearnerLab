@@ -2,9 +2,12 @@ package io.zipcoder.interfaces;
 
 public interface Learner {
 
-    public void learn(Double numbersOfHours);
+     void learn(Double numbersOfHours);
 
-    public double getTotalStudyTime();
+     Double getTotalStudyTime();
+
+
+     //////////// ADD PUBLIC ??????????????
 
 
 }

@@ -13,50 +13,47 @@ public class TestPeople {
     @Test
     public void testAdd(){
 
-        Person one1 = new Person(243282, "laura");
-        List<Person> personList = new ArrayList<>();
-        personList.add(one1);
+        Students lo = Students.getInstance();
+        Student uno = new Student(234, "martha");
+        Student dos = new Student(567, "Liz");
 
-//        People persona = new People();
-//        List<People> peopleList = new ArrayList<>();
-//        peopleList.add(persona);
+        lo.add(uno);
+        lo.add(dos);
 
-        int expected = 1;
-        //int actual = peopleList.size();
-        int actual2 = personList.size();
+        Assert.assertTrue(lo.contains(uno));
+        Assert.assertTrue(lo.contains(dos));
 
-        Assert.assertEquals(expected, actual2);
 
     }
 
     @Test
     public void testRemove(){
+        Students lo = Students.getInstance();
+        Student uno = new Student(234, "martha");
+        Student dos = new Student(567, "Liz");
 
-        People people = new People();
-        People people2 = new People();
-        List<People> pepsList = new ArrayList<>();
-        pepsList.add(people);
-        pepsList.add(people2);
+        lo.add(uno);
+        lo.add(dos);
 
-        pepsList.remove(people);
+        lo.remove(uno);
+        lo.remove(dos);
 
-        int expected = 1;
-        int actual = pepsList.size();
+        Assert.assertFalse(lo.contains(uno));
+        Assert.assertFalse(lo.contains(dos));
 
-        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void findById(){
+        Students lo = Students.getInstance();
+        Student uno = new Student(234,"mc&cheese");
+        Student dos = new Student(567,"suga");
 
-        Person person = new Person(234,"mc&cheese");
-        Person personO = new Person(567,"suga");
-        List<Person> personList = new ArrayList<>();
-        personList.add(personO);
-        personList.add(person);
+        lo.add(uno);
+        lo.add(dos);
 
         int expected = 567;
-        long actual = personO.getId();
+        long actual = dos.getId();
 
         Assert.assertEquals(expected, actual);
     }
@@ -64,3 +61,37 @@ public class TestPeople {
 
 
 }
+//        Person one1 = new Person(243282, "laura");
+//        List<Person> personList = new ArrayList<>();
+//        personList.add(one1);
+//
+////        People persona = new People();
+////        List<People> peopleList = new ArrayList<>();
+////        peopleList.add(persona);
+//
+//        int expected = 1;
+//        //int actual = peopleList.size();
+//        int actual2 = personList.size();
+//
+//        Assert.assertEquals(expected, actual2);
+
+
+
+
+
+
+
+
+
+//        People people = new People();
+//        People people2 = new People();
+//        List<People> pepsList = new ArrayList<>();
+//        pepsList.add(people);
+//        pepsList.add(people2);
+//
+//        pepsList.remove(people);
+//
+//        int expected = 1;
+//        int actual = pepsList.size();
+//
+//        Assert.assertEquals(expected, actual);

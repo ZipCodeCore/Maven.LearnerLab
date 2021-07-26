@@ -35,18 +35,6 @@ public class TestPerson {
         Assert.assertEquals(expected,actual);
     }
 
-    @Test
-    public void SetIdTest(){
-        //GIVEN
-        Person person = new Person(123, "Mickey");
 
-        // WHEN
-        long expected = 465;
-        person.setId(expected);
-        long actual = person.getId();
-
-        //THEN
-        Assert.assertEquals(expected, actual);
-    }
 
 }

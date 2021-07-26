@@ -6,24 +6,49 @@ import java.util.List;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class People implements Iterable {
-    List<Person> personList = new ArrayList<>();
+public abstract class People< E extends Person> implements Iterable {
 
-    public void add(Person person){
-        personList.add(person);
+    List<E> personList;
+
+    public People(){
+        this.personList = new ArrayList<E>();
 
     }
-    public Person findById(long id){
-        Person person = new Person(123, "lll");
-        for (Person pep : personList){
-            if (pep.getId() == id){
-                person = pep;
+
+    public void add(E person){
+        this.personList.add(person);
+
+    }
+    public E findById(long id){
+
+        Iterator<E> name = iterator();
+        while(name.hasNext()) {
+           E per = name.next();
+            if (per.getId() == id) {
+                return per;
             }
         }
-        return person;
+        return null;
+
+//    SomeType person = null;
+//        for (Person pep : personList) {
+//            if (pep.getId() == id) {
+//                person = pep;
+//            }
+//        }
+//        return person;
     }
 
-    public boolean contains(Person person){
+//        Person person = new Person(123, "lll");
+//        for (Person pep : personList){
+//            if (pep.getId() == id){
+//                person = pep;
+//            }
+//        }
+//        return null;
+
+
+    public boolean contains(E person){
        return personList.contains(person);
 //        for(Person po : personList) {
 //              if(personList.contains(person) ){
@@ -33,7 +58,7 @@ public class People implements Iterable {
 //        return false;
 }
 
-    public void remove(Person person){
+    public void remove(E person){
         personList.remove(person);
     }
 
@@ -48,22 +73,22 @@ public class People implements Iterable {
     }
 
     public void removeAll(){
-        personList.removeAll(personList);
-       // personList.clear();
+       // personList.removeAll(personList);
+        personList.clear();
     }
 
     public int count (){
         return personList.size();
     }
 
-    public Person[] toArray() {
-        return new Person[0]; // change or remove this
 
-    }
+       // return new Person[0]; // change or remove this
+
+    public abstract E[] toArray();
 
 
     @Override
-    public Iterator iterator() {
+    public Iterator<E> iterator() {
         return personList.iterator();
     }
 
