@@ -13,7 +13,7 @@ public class TestZipCodeWilmington {
         ZipCodeWilmington zipCodeWilmington = new ZipCodeWilmington();
         Instructors instructors = Instructors.getInstance();
         Students students = Students.getInstance();
-        Instructor leon = (Instructor) instructors.findById(100L);
+        Instructor leon = instructors.findById(100L);
         Map<Student,Double> preStudyMap = zipCodeWilmington.getStudyMap();
         Double numberOfHoursToTeach = 1000.0;
         Double expectedNumberOfHoursLearned = numberOfHoursToTeach/students.count();

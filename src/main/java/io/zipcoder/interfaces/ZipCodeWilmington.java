@@ -10,7 +10,7 @@ public class ZipCodeWilmington {
         teacher.lecture(students.personList.toArray(new Learner[0]),numberOfHours);
     }
     public void hostLecture(Long id, double numberOfHours){
-        hostLecture((Teacher)instructors.findById(id),numberOfHours);
+        hostLecture(instructors.findById(id),numberOfHours);
     }
 
     public Map<Student,Double> getStudyMap(){

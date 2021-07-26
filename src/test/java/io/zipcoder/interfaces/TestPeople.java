@@ -11,7 +11,7 @@ public class TestPeople {
     public void testAdd(){
         //given
         List<Person> personList = new ArrayList<Person>();
-        People people = new People();
+        People people = Students.getInstance();
         Person person1 = new Person(39L,"john");
         Person person2 = new Person(34L,"rob");
         Person person3 = new Person(293L,"haley");
@@ -33,7 +33,7 @@ public class TestPeople {
     }
     @Test
     public void testRemove(){
-        People people = new People();
+        People people = Students.getInstance();
         Person person1 = new Person(null, null);
         Person person2 = new Person(null,null);
 
@@ -51,7 +51,7 @@ public class TestPeople {
     @Test
     public void testFindById(){
         //given
-        People migos = new People();
+        People migos = Students.getInstance();
         Person quavo = new Person(100L, "Quavo");
         Person takeoff = new Person(101L, "Takeoff");
         Person offset = new Person(102L, "Offset");
