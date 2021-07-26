@@ -32,4 +32,29 @@ public class TestZipCodeWilmington {
             Assert.assertEquals(expected, actual);
         }
     }
+    @Test
+    public void testEducator() {
+        //given
+        ZipCodeWilmington zipCodeWilmington = new ZipCodeWilmington();
+        Students students = Students.getInstance();
+        Educator leon = Educator.LEON;
+        Map<Student,Double> preStudyMap = zipCodeWilmington.getStudyMap();
+        Double numberOfHoursToTeach = 1000.0;
+        Double expectedNumberOfHoursLearned = numberOfHoursToTeach/students.count();
+
+        //when
+        zipCodeWilmington.hostLecture(leon, numberOfHoursToTeach);
+        Map<Student, Double> postStudyMap = zipCodeWilmington.getStudyMap();
+        Set<Student> keySet = postStudyMap.keySet();
+        for(Student student : keySet) {
+            Double preStudyTime = preStudyMap.get(student);
+            Double expected = preStudyTime + expectedNumberOfHoursLearned;
+            Double actual = postStudyMap.get(student);
+
+
+            //then
+            Assert.assertEquals(expected, actual);
+        }
+    }
+
 }
