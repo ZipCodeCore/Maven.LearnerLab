@@ -34,7 +34,7 @@ public class TestInstructor extends TestCase {
         double expectedValue=5.0;
         //when
         instructor.teach(student,5);
-        double actualValue=student.totalStudyTime;
+        double actualValue=student.getTotalStudyTime();
         //then
         Assert.assertEquals(expectedValue,actualValue,0);
     }
@@ -49,7 +49,7 @@ public class TestInstructor extends TestCase {
         double expectedValue=10/2;
         //when
         instructor.lecture(studentArray,10);
-        double actualValue=student1.totalStudyTime;
+        double actualValue=student1.getTotalStudyTime();
         //then
         Assert.assertEquals(expectedValue,actualValue,0);
     }

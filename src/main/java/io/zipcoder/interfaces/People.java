@@ -1,52 +1,53 @@
 package io.zipcoder.interfaces;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People<E> implements Iterable<E>{
-    private List<Person> personList;
+public abstract class People<E extends Person> implements Iterable<E>{
 
-    public People(List<Person> personList) {
-        this.personList = personList;
-    }
+    List<E> personList = new ArrayList<E>();
 
-    public void add(Person person){
+    public void add(E person) {
         personList.add(person);
     }
 
-    public Person findById(long id){
-        for (int i = 0; i < personList.size(); i++) {
-             if(personList.get(i).getId()==id){
-                 return personList.get(i);
-             }
-        }
+    public E findByID(Long id) {
+        for (E person : personList)
+            if (person.getId() == (id))
+                return person;
         return null;
     }
 
-    public boolean contains(Person person){
-            if(personList.contains(person))
-                return true;
-            return false;
-    }
-
-    public void remove(Person person){
+    public boolean contains(E person) {
         if(personList.contains(person))
+            return true;
+        return false;
+    }
+
+    public void remove(E person) {
+        if(contains(person)) {
             personList.remove(person);
+        }
     }
 
-    public void removeAll(){
-        personList.removeAll(personList);
+    public void removeById(Long id) {
+        E person = findByID(id);
+        remove(person);
     }
 
-    public int count(){
+    public void removeAll() {
+        personList.clear();
+    }
+
+    public Integer count() {
         return personList.size();
     }
 
-    public Person[] toArray(){
-        return personList.toArray(new Person[0]);
-    }
+    public abstract E[] getArray();
 
     public Iterator<E> iterator() {
-        return (Iterator<E>) personList.iterator();
+        return personList.iterator();
     }
+
 }

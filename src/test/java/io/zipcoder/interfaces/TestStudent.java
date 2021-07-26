@@ -33,7 +33,7 @@ public class TestStudent extends TestCase {
         Double expectedValue=5.0;
         //when
         newStudent.learn(5);
-        Double actualValue=newStudent.totalStudyTime;
+        Double actualValue=newStudent.getTotalStudyTime();
         //then
         Assert.assertEquals(expectedValue,actualValue);
     }
