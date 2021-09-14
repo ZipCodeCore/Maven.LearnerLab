@@ -17,7 +17,7 @@ public class Person {
     }
     public long getId() {
         return id;
-        //return this.id; ??????????????????
+
     }
 
     public String getName() {
@@ -28,7 +28,6 @@ public class Person {
         this.name = name;
     }
 
-//
 
 }
 

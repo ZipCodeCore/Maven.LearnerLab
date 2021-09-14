@@ -19,14 +19,7 @@ public class ZipcodeWilmington {
 
     }
 
-//    public HashMap<Student, Double> getStudyMap(){
-//        HashMap<Student, Double> studyTime = new HashMap<Student, Double>();
-//        for(learner/Person i : students){
-//            studyTime.put((Student) i, ((Student) i).getTotalStudyTime());
-//        }
-//
-//        return studyTime;
-//    }
+
 
 
 

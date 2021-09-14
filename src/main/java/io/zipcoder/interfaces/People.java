@@ -30,22 +30,10 @@ public abstract class People< E extends Person> implements Iterable {
         }
         return null;
 
-//    SomeType person = null;
-//        for (Person pep : personList) {
-//            if (pep.getId() == id) {
-//                person = pep;
-//            }
-//        }
-//        return person;
+
     }
 
-//        Person person = new Person(123, "lll");
-//        for (Person pep : personList){
-//            if (pep.getId() == id){
-//                person = pep;
-//            }
-//        }
-//        return null;
+
 
 
     public boolean contains(E person){
@@ -63,8 +51,7 @@ public abstract class People< E extends Person> implements Iterable {
     }
 
     public void removeById(long id ){
-//        Person removePerson = findById(id);
-//        personList.remove(removePerson);
+
          for (Person pep : personList){
              if(pep.getId() == id){
                  personList.remove(pep);
@@ -81,8 +68,6 @@ public abstract class People< E extends Person> implements Iterable {
         return personList.size();
     }
 
-
-       // return new Person[0]; // change or remove this
 
     public abstract E[] toArray();
 
